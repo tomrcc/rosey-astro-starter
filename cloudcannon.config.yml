@@ -130,7 +130,6 @@ collection_groups:
     collections:
       - data
       - translations
-
 _inputs:
   markdown_content:
     type: markdown
