@@ -1,5 +1,7 @@
-// TODO: Should we switch to uuids for the tags and just run checks over them?
-// We'd have to switch our logic to add everything to translations and locales, then delete them from both if they come up as a status of unused
+// TODO:
+// Test how blog content would go in this setup with Rosey check
+// IDEAS
+// Consider switch to uuids for the tags and just run checks over them?
 // We could run the checks after everything we've run and further update the existing generated input config
 // Eg. Could use this to generate a label like 'Out of date translation', 'New Translation'
 // Could even look into using a text differ to show what changed
