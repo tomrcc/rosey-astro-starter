@@ -64,21 +64,41 @@ async function main(locale) {
   // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
   const translationsFiles = await fs.readdirSync(translationsLocalePath);
+  const recursivetranslationsFiles = await fs.readdirSync(
+    translationsLocalePath,
+    {
+      recursive: true,
+    }
+  );
 
-  for (file in translationsFiles) {
-    const fileNameWithExt = translationsFiles[file];
+  for (file in recursivetranslationsFiles) {
+    const fileNameWithExt = recursivetranslationsFiles[file];
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    const fileNameHTML = fileNameWithExt
-      .replace('yaml', 'html')
-      .replace('home', 'index');
-    console.log(
-      `Checking if ${fileNameHTML} still exists in the ${pages} in our base.json`
-    );
-    if (!pages.includes(fileNameHTML)) {
-      console.log(`${fileNameHTML} is going to be deleted`);
-      await fs.unlink(filePath, (err) => {
+    const filePathIfDir = filePath.replace('.yaml', '');
+
+    const isDirectory =
+      fs.existsSync(filePathIfDir) && fs.lstatSync(filePathIfDir).isDirectory();
+
+    const fileNameFormatted = isDirectory
+      ? filePathIfDir + '/index.html'
+      : fileNameWithExt.replace('yaml', 'html').replace('home', 'index');
+
+    isDirectory
+      ? console.log(
+          `Checking if ${fileNameWithExt} still exists in the pages in our base.json. ${fileNameWithExt} is a directory so doesn't get checked.`
+        )
+      : console.log(
+          `Checking if ${fileNameWithExt} still exists in the pages in our base.json`
+        );
+    console.log('Pages: ', pages);
+    if (!pages.includes(fileNameFormatted) && !isDirectory) {
+      console.log(
+        `${fileNameFormatted} doesn't exist in the pages in our base.json`
+      );
+
+      await fs.unlinkSync(filePath, (err) => {
         if (err) throw err;
-        console.log(`${filePath} was deleted`);
+        console.log(`${fileNameFormatted} at ${filePath} was deleted`);
       });
     }
   }
