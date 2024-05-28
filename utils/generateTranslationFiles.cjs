@@ -59,9 +59,7 @@ async function main(locale) {
     return accumulator;
   }, []);
 
-  // TODO: Scan the pages in a translations
-  // If a page is in a translations folder, but not the base.json the page has been deleted and we need to remove it from our translations
-
+  // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
   const translationsFiles = await fs.readdirSync(translationsLocalePath);
 
@@ -80,7 +78,7 @@ async function main(locale) {
     }
   }
 
-  // Loop through the pages
+  // Loop through the pages present in the base.json
   for (item in pages) {
     const page = pages[item];
     // Format the page name
@@ -215,13 +213,13 @@ async function main(locale) {
         const options = markdownTextInput
           ? {
               bold: true,
+              format: 'p h1 h2 h3 h4',
               italic: true,
-              strike: true,
-              underline: true,
               link: true,
               undo: true,
               redo: true,
               removeformat: true,
+              copyformatting: true,
             }
           : {};
 
