@@ -23,17 +23,25 @@ async function main(locale) {
   const translationsFiles = await fs.readdirSync(translationsLocalePath, {
     recursive: true,
   });
+
   for (item in translationsFiles) {
     const file = translationsFiles[item];
     const translationsPath = translationsLocalePath + file;
 
-    if (fs.existsSync(translationsPath)) {
+    console.log(`Reading file ${translationsPath}`);
+    const isDirectory =
+      fs.existsSync(translationsPath) &&
+      fs.lstatSync(translationsPath).isDirectory();
+
+    if (fs.existsSync(translationsPath) && !isDirectory) {
       const data = YAML.parse(fs.readFileSync(translationsPath, 'utf-8'));
       translationsFileData.push(data);
+    } else if (isDirectory) {
+      console.log(`${translationsPath} is a directory - skipping read`);
     } else {
       console.log(`${translationsPath} does not exist`);
     }
-    // // Add each obj to our locales data, excluding '_inputs' object.
+    // Add each obj to our locales data, excluding '_inputs' object.
     for (item in translationsFileData) {
       const page = translationsFileData[item];
 
