@@ -67,12 +67,15 @@ async function main(locale) {
 
   for (file in translationsFiles) {
     const fileNameWithExt = translationsFiles[file];
-    const fileName = fileNameWithExt.replace('.yaml', '');
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
     const fileNameHTML = fileNameWithExt
       .replace('yaml', 'html')
       .replace('home', 'index');
+    console.log(
+      `Checking if ${fileNameHTML} still exists in the pages in our base.json`
+    );
     if (!pages.includes(fileNameHTML)) {
+      console.log(`${fileNameHTML} is going to be deleted`);
       await fs.unlink(filePath, (err) => {
         if (err) throw err;
         console.log(`${filePath} was deleted`);
