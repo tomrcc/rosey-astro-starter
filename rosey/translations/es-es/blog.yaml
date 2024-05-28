@@ -1,18 +1,18 @@
-blog: ""
+blog: Blog
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](http://localhost:4321/blog/)"
+    comment: '[Go to Page](http://localhost:4321/blog/)'
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](http://localhost:4321/blog/)"
+          comment: '[To be translated](http://localhost:4321/blog/)'
           inputs:
             - blog
             - rss-feed
         - heading: Translated
-          comment: "[Already translated](http://localhost:4321/blog/)"
+          comment: '[Already translated](http://localhost:4321/blog/)'
           inputs: []
   blog:
     label: Translation (es-es)
@@ -26,4 +26,4 @@ _inputs:
     type: text
     options: {}
     comment: RSS Feed | [See Context](http://localhost:4321/blog/#:~:text=RSS%20Feed)
-rss-feed: ""
+rss-feed: RSS Feed (Espanol)
