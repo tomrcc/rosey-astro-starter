@@ -1,5 +1,11 @@
 ---
 import { header } from '../../../data/navigation.json';
+import slugify from 'slugify';
+
+const generateRoseyID = (text: string) => {
+  const formattedText = text.toLowerCase();
+  return slugify(formattedText, { remove: /[.*,]/g });
+};
 ---
 
 <header
@@ -40,7 +46,10 @@ import { header } from '../../../data/navigation.json';
           header.links.map((link) => {
             return (
               <li class="header__nav-item">
-                <a class="header__nav-link" href={link.link}>
+                <a
+                  class="header__nav-link"
+                  href={link.link}
+                  data-rosey={generateRoseyID(link.text)}>
                   {link.text}
                 </a>
               </li>
