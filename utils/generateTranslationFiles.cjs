@@ -59,12 +59,27 @@ async function main(locale) {
     return accumulator;
   }, []);
 
-  // console.log('Pages: ', pages);
   // TODO: Scan the pages in a translations
   // If a page is in a translations folder, but not the base.json the page has been deleted and we need to remove it from our translations
 
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
   const translationsFiles = await fs.readdirSync(translationsLocalePath);
+
+  for (file in translationsFiles) {
+    const fileNameWithExt = translationsFiles[file];
+    const fileName = fileNameWithExt.replace('.yaml', '');
+    const filePath = translationsLocalePath + '/' + fileNameWithExt;
+    if (
+      !pages.includes(
+        fileNameWithExt.replace('yaml', 'html').replace('home', 'index')
+      )
+    ) {
+      await fs.unlink(filePath, (err) => {
+        if (err) throw err;
+        console.log(`${filePath} was deleted`);
+      });
+    }
+  }
 
   // Loop through the pages
   for (item in pages) {
@@ -81,18 +96,6 @@ async function main(locale) {
 
     let outputFileData = {};
     let cleanedOutputFileData = {};
-
-    for (file in translationsFiles) {
-      const fileNameWithExt = translationsFiles[file];
-      const fileName = fileNameWithExt.replace('.yaml', '');
-      const filePath = translationsLocalePath + '/' + fileNameWithExt;
-      if (fileName !== pageName) {
-        fs.unlink(filePath, (err) => {
-          if (err) throw err;
-          console.log(`${filePath} was deleted`);
-        });
-      }
-    }
 
     // Get our old translations file
     if (fs.existsSync(translationFilePath)) {
