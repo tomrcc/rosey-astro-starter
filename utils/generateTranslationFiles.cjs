@@ -72,7 +72,7 @@ async function main(locale) {
       .replace('yaml', 'html')
       .replace('home', 'index');
     console.log(
-      `Checking if ${fileNameHTML} still exists in the pages in our base.json`
+      `Checking if ${fileNameHTML} still exists in the ${pages} in our base.json`
     );
     if (!pages.includes(fileNameHTML)) {
       console.log(`${fileNameHTML} is going to be deleted`);
