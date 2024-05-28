@@ -1,6 +1,6 @@
 paths:
   data: data
-  static: "public"
+  static: 'public'
   uploads: public/images
 _editables:
   content:
@@ -36,7 +36,7 @@ _editables:
 collections_config:
   pages:
     path: src/content/pages
-    url: "/[full_slug]/"
+    url: '/[full_slug]/'
     output: true
     icon: laptop_mac
     _enabled_editors:
@@ -53,12 +53,23 @@ collections_config:
         path: schemas/page.md
         remove_extra_inputs: false
     create:
-      path: "[relative_base_path]/{title|slugify}.md"
+      path: '[relative_base_path]/{title|slugify}.md'
+  translations:
+    path: rosey/translations
+    output: false
+    icon: translate
+    disable_add: false
+    add_options:
+      - name: Add Language
+        icon: translate
+        href: cloudcannon:settings/build
+    disable_add_folder: true
+    disable_file_actions: true
   posts:
     path: src/content/blog
     parser: front-matter
     output: true
-    url: "/blog/[full_slug]/"
+    url: '/blog/[full_slug]/'
     _enabled_editors:
       - content
       - visual
@@ -71,7 +82,7 @@ collections_config:
         name: New Post
         path: schemas/post.mdx
     create:
-      path: "[relative_base_path]/{title|slugify}.mdx"
+      path: '[relative_base_path]/{title|slugify}.mdx'
     _inputs:
       title:
         options:
@@ -152,18 +163,18 @@ _inputs:
         - image/jpeg
         - image/gif
       paths:
-        static: "."
+        static: '.'
         uploads: src/assets/images
   alt_text:
     label: Image Alt Text
     type: textarea
-    hidden: "!image_path"
+    hidden: '!image_path'
   width:
     type: number
   height:
     type: number
   background_color:
-    hidden: "border_only"
+    hidden: 'border_only'
     type: select
     options:
       values: data.colors
@@ -208,10 +219,10 @@ _inputs:
       preview:
         icon: query_stats
         text:
-          - "Search engine optimization"
+          - 'Search engine optimization'
         subtext:
           - key: page_description
-          - "Update SEO values for the page"
+          - 'Update SEO values for the page'
   layout:
     hidden: true
   date:
@@ -229,10 +240,10 @@ _inputs:
         icon: link
         text:
           - key: text
-          - "Link"
+          - 'Link'
         subtext:
           - key: link
-          - "Add a social link"
+          - 'Add a social link'
   social_icon:
     type: select
     options:
@@ -293,7 +304,7 @@ _snippets:
     preview:
       text:
         - key: alert_message
-        - "Alert"
+        - 'Alert'
     definitions:
       component_name: SnippetsAlert
       named_args:
