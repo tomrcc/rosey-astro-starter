@@ -69,11 +69,10 @@ async function main(locale) {
     const fileNameWithExt = translationsFiles[file];
     const fileName = fileNameWithExt.replace('.yaml', '');
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    if (
-      !pages.includes(
-        fileNameWithExt.replace('yaml', 'html').replace('home', 'index')
-      )
-    ) {
+    const fileNameHTML = fileNameWithExt
+      .replace('yaml', 'html')
+      .replace('home', 'index');
+    if (!pages.includes(fileNameHTML)) {
       await fs.unlink(filePath, (err) => {
         if (err) throw err;
         console.log(`${filePath} was deleted`);
