@@ -58,13 +58,13 @@ _inputs:
     type: markdown
     options:
       bold: true
+      format: p h1 h2 h3 h4
       italic: true
-      strike: true
-      underline: true
       link: true
       undo: true
       redo: true
       removeformat: true
+      copyformatting: true
     comment: A starting point for **developers looking to build a website with
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
@@ -76,13 +76,13 @@ _inputs:
     type: markdown
     options:
       bold: true
+      format: p h1 h2 h3 h4
       italic: true
-      strike: true
-      underline: true
       link: true
       undo: true
       redo: true
       removeformat: true
+      copyformatting: true
     comment: >-
       To help save you time, some features are set up in this template, like:
 
