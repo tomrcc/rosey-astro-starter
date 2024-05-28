@@ -1,0 +1,30 @@
+blog: ""
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](http://localhost:4321/tags/Bells/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be translated](http://localhost:4321/tags/Bells/)"
+          inputs:
+            - blog
+            - rss-feed
+        - heading: Translated
+          comment: "[Already translated](http://localhost:4321/tags/Bells/)"
+          inputs: []
+  blog:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See Context](http://localhost:4321/tags/Bells/#:~:text=Blog)
+  rss-feed:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](http://localhost:4321/tags/Bells/#:~:text=RSS%20Feed)
+rss-feed: ""

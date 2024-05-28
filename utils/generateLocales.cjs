@@ -20,7 +20,9 @@ async function main(locale) {
   const localePath = localesDirPath + '/' + locale + '.json';
   const translationsLocalePath = translationsDirPath + '/' + locale + '/';
 
-  const translationsFiles = await fs.readdirSync(translationsLocalePath);
+  const translationsFiles = await fs.readdirSync(translationsLocalePath, {
+    recursive: true,
+  });
   for (item in translationsFiles) {
     const file = translationsFiles[item];
     const translationsPath = translationsLocalePath + file;

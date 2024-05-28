@@ -2,19 +2,23 @@ astro-bookshop-starter: ""
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://ample-sea.cloudvent.net/)"
+    comment: "[Go to Page](http://localhost:4321/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](https://ample-sea.cloudvent.net/)"
+          comment: "[To be translated](http://localhost:4321/)"
           inputs:
             - astro-bookshop-starter
+            - blog
+            - cloudcannon
+            - github
+            - keep-what-you-need-delete-the-rest
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
-            - markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum
-            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - rss-feed
         - heading: Translated
-          comment: "[Already translated](https://ample-sea.cloudvent.net/)"
+          comment: "[Already translated](http://localhost:4321/)"
           inputs: []
   astro-bookshop-starter:
     label: Translation (fr-fr)
@@ -22,59 +26,63 @@ _inputs:
     type: textarea
     options: {}
     comment: Astro Bookshop Starter | [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+      Context](http://localhost:4321/#:~:text=Astro%20Bookshop%20Starter)
+  blog:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See Context](http://localhost:4321/#:~:text=Blog)
+  cloudcannon:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: CloudCannon | [See Context](http://localhost:4321/#:~:text=CloudCannon)
+  github:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: GitHub | [See Context](http://localhost:4321/#:~:text=GitHub)
+  keep-what-you-need-delete-the-rest:
+    label: Translation (fr-fr)
+    hidden: false
+    type: textarea
+    options: {}
+    comment: Keep what you need. Delete the rest. | [See
+      Context](http://localhost:4321/#:~:text=Keep%20what%20you,Delete%20the%20rest)
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: Translation (fr-fr)
     hidden: false
     type: markdown
     options:
       bold: true
+      format: p h1 h2 h3 h4
       italic: true
-      strike: true
-      underline: true
       link: true
       undo: true
       redo: true
       removeformat: true
+      copyformatting: true
     comment: A starting point for **developers looking to build a website with
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
-  markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum:
+      Context](http://localhost:4321/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (fr-fr)
     hidden: false
     type: markdown
     options:
       bold: true
+      format: p h1 h2 h3 h4
       italic: true
-      strike: true
-      underline: true
       link: true
       undo: true
       redo: true
       removeformat: true
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum. | [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=Lorem%20ipsum%20dolor,id%20est%20laborum)
-  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
-    label: Translation (fr-fr)
-    hidden: false
-    type: markdown
-    options:
-      bold: true
-      italic: true
-      strike: true
-      underline: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
+      copyformatting: true
     comment: >-
       To help save you time, some features are set up in this template, like:
 
@@ -103,7 +111,17 @@ _inputs:
       * CloudCannon configuration
 
       * CSS variables | [See
-      Context](https://ample-sea.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+      Context](http://localhost:4321/#:~:text=To%20help%20save,CSS%20variables)
+  rss-feed:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See Context](http://localhost:4321/#:~:text=RSS%20Feed)
+blog: ""
+cloudcannon: ""
+github: ""
+keep-what-you-need-delete-the-rest: ""
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
-markdown:lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum: ""
-markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-bookshophttps://cloudcannoncom/documentation/guides/bookshop-astro-guide/-blog-with-pagination-tags-and-snippetshttps://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx-image-optimizationhttps://docsastrobuild/en/guides/images/#image-astroassets-seo-controls-responsive-header-and-footer-font-awesome-iconshttps://fontawesomecom/search?o=randm=free-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+rss-feed: ""

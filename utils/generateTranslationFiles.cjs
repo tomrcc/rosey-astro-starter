@@ -1,5 +1,7 @@
-// TODO: Should we switch to uuids for the tags and just run checks over them?
-// We'd have to switch our logic to add everything to translations and locales, then delete them from both if they come up as a status of unused
+// TODO:
+// Test how blog content would go in this setup with Rosey check
+// IDEAS
+// Consider switch to uuids for the tags and just run checks over them?
 // We could run the checks after everything we've run and further update the existing generated input config
 // Eg. Could use this to generate a label like 'Out of date translation', 'New Translation'
 // Could even look into using a text differ to show what changed
@@ -59,14 +61,49 @@ async function main(locale) {
     return accumulator;
   }, []);
 
-  // console.log('Pages: ', pages);
-  // TODO: Scan the pages in a translations
-  // If a page is in a translations folder, but not the base.json the page has been deleted and we need to remove it from our translations
-
+  // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
   const translationsFiles = await fs.readdirSync(translationsLocalePath);
+  const recursivetranslationsFiles = await fs.readdirSync(
+    translationsLocalePath,
+    {
+      recursive: true,
+    }
+  );
 
-  // Loop through the pages
+  for (file in recursivetranslationsFiles) {
+    const fileNameWithExt = recursivetranslationsFiles[file];
+    const filePath = translationsLocalePath + '/' + fileNameWithExt;
+    const filePathIfDir = filePath.replace('.yaml', '');
+
+    const isDirectory =
+      fs.existsSync(filePathIfDir) && fs.lstatSync(filePathIfDir).isDirectory();
+
+    const fileNameFormatted = isDirectory
+      ? filePathIfDir + '/index.html'
+      : fileNameWithExt.replace('yaml', 'html').replace('home', 'index');
+
+    isDirectory
+      ? console.log(
+          `Checking if ${fileNameWithExt} still exists in the pages in our base.json. ${fileNameWithExt} is a directory so doesn't get checked.`
+        )
+      : console.log(
+          `Checking if ${fileNameWithExt} still exists in the pages in our base.json`
+        );
+    console.log('Pages: ', pages);
+    if (!pages.includes(fileNameFormatted) && !isDirectory) {
+      console.log(
+        `${fileNameFormatted} doesn't exist in the pages in our base.json`
+      );
+
+      await fs.unlinkSync(filePath, (err) => {
+        if (err) throw err;
+        console.log(`${fileNameFormatted} at ${filePath} was deleted`);
+      });
+    }
+  }
+
+  // Loop through the pages present in the base.json
   for (item in pages) {
     const page = pages[item];
     // Format the page name
@@ -81,18 +118,6 @@ async function main(locale) {
 
     let outputFileData = {};
     let cleanedOutputFileData = {};
-
-    for (file in translationsFiles) {
-      const fileNameWithExt = translationsFiles[file];
-      const fileName = fileNameWithExt.replace('.yaml', '');
-      const filePath = translationsLocalePath + '/' + fileNameWithExt;
-      if (fileName !== pageName) {
-        fs.unlink(filePath, (err) => {
-          if (err) throw err;
-          console.log(`${filePath} was deleted`);
-        });
-      }
-    }
 
     // Get our old translations file
     if (fs.existsSync(translationFilePath)) {
@@ -213,13 +238,13 @@ async function main(locale) {
         const options = markdownTextInput
           ? {
               bold: true,
+              format: 'p h1 h2 h3 h4',
               italic: true,
-              strike: true,
-              underline: true,
               link: true,
               undo: true,
               redo: true,
               removeformat: true,
+              copyformatting: true,
             }
           : {};
 

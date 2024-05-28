@@ -1,0 +1,29 @@
+blog: ""
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](http://localhost:4321/404)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be translated](http://localhost:4321/404)"
+          inputs:
+            - blog
+            - rss-feed
+        - heading: Translated
+          comment: "[Already translated](http://localhost:4321/404)"
+          inputs: []
+  blog:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See Context](http://localhost:4321/404#:~:text=Blog)
+  rss-feed:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See Context](http://localhost:4321/404#:~:text=RSS%20Feed)
+rss-feed: ""
