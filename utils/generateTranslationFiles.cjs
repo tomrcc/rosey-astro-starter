@@ -1,10 +1,10 @@
-// TODO:
-// Test how blog content would go in this setup with Rosey check
-// IDEAS
-// Consider switch to uuids for the tags and just run checks over them?
-// We could run the checks after everything we've run and further update the existing generated input config
-// Eg. Could use this to generate a label like 'Out of date translation', 'New Translation'
-// Could even look into using a text differ to show what changed
+// TODO: BLOG PART
+// Add blog section and use the slug as a key
+// Before we run the generate fs scripts, and after we run rosey generate run Rosey check
+// If key has a namespace of blog see if theres anything in the check file
+// If the entry has changed. grab the old and new versions and display in the comment
+// Comment doesn't need highlight link, just a page link
+// Add a label that says 'edited - requires updated translation'
 
 const {
   NodeHtmlMarkdown,
