@@ -48,22 +48,35 @@ async function main(locale) {
       for (const key in page) {
         const translationEntry = page[key];
 
-        // If obj doesn't exist in our locales file or has a blank value, and isn't the inputs object, add it with the translated value
+        // If obj doesn't exist in our locales file
+        // or has a blank value, and isn't the inputs object,
+        // add it with the translated value
         if (key !== '_inputs') {
+          if (translationEntry) {
+            console.log(translationEntry);
+          }
+
           const isKeyMarkdown = key.slice(0, 10).includes('markdown:');
 
-          const value =
-            translationEntry == ''
-              ? roseyJSON[key]?.original
-              : isKeyMarkdown
-              ? md.render(translationEntry)
-              : translationEntry;
+          // We need the value to be
+          // any translated value that appears in translations files
+          // If no value detected, write the original to value as a fallback
 
-          localeData[key] = {
-            original: roseyJSON[key]?.original,
-            value: value,
-          };
+          if (translationEntry) {
+            localeData[key] = {
+              original: roseyJSON[key]?.original,
+              value: isKeyMarkdown
+                ? md.render(translationEntry)
+                : translationEntry,
+            };
+          } else if (localeData[key]?.value == '') {
+            localeData[key] = {
+              original: roseyJSON[key]?.original,
+              value: roseyJSON[key]?.original,
+            };
+          }
         }
+        // console.log('localeData: :', localeData);
       }
     }
   }
