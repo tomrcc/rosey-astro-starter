@@ -1,0 +1,62 @@
+about-page: ""
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/about/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+          inputs:
+            - about-page
+            - blog
+            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
+            - rss-feed
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+          inputs: []
+  about-page:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: About page | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
+  blog:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
+  markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
+    label: Translation (fr-fr)
+    hidden: false
+    type: markdown
+    options:
+      bold: true
+      format: p h1 h2 h3 h4
+      italic: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
+    comment: >-
+      This is all about what we're _about_ like what we're really _**about**_
+
+
+      ## A heading halfway through lel | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
+  rss-feed:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
+blog: ""
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
+rss-feed: ""
