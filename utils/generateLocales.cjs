@@ -82,10 +82,10 @@ async function main(locale) {
           if (translationEntry) {
             // Write the value to the locales
             localeData[keyName] = {
-              original: baseFileData[keyName]?.original.trim(),
+              original: baseFileData[keyName]?.original,
               value: isKeyMarkdown
-                ? md.render(translationEntry).trim()
-                : translationEntry.trim(),
+                ? md.render(translationEntry)
+                : translationEntry,
             };
 
             // Write to the rest of the entries
@@ -103,7 +103,6 @@ async function main(locale) {
                     translationsPagesObj[overWriteFile] || {};
                   if (Object.keys(overWriteTranslationObj).includes(keyName)) {
                     overWriteTranslationObj[keyName] = translationEntry;
-                    console.log(overWriteFilePath);
 
                     fs.writeFileSync(
                       overWriteFilePath,
@@ -123,8 +122,8 @@ async function main(locale) {
           ) {
             // This is just a fallback if there's no translation
             localeData[keyName] = {
-              original: baseFileData[keyName]?.original.trim(),
-              value: baseFileData[keyName]?.original.trim(),
+              original: baseFileData[keyName]?.original,
+              value: baseFileData[keyName]?.original,
             };
           }
         }

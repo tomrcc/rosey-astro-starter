@@ -5,6 +5,11 @@ npx @bookshop/generate
 echo "🌹Generating site with Rosey"
 npx rosey generate --source dist
 echo "🌹Generated a base.json from the built site"
+# TODO: ADD ROSEY CHECK HERE
+# Compares the locales original and base.json
+# If something has been changed on last save they'll be mismatched
+# Add a comment that has both entries to help compare 
+# Maybe use this https://www.npmjs.com/package/diff
 echo "🌹Generating translation files from base.json"
 node utils/generateTranslationFiles.cjs
 echo "🌹Generated translation files to be edited"
