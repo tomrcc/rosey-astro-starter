@@ -53,9 +53,9 @@ async function main(locale) {
       fs.lstatSync(translationsPath).isDirectory();
 
     if (fs.existsSync(translationsPath) && !isDirectory) {
-      const data = YAML.parse(fs.readFileSync(translationsPath, 'utf-8'));
+      const data = await fs.readFileSync(translationsPath, 'utf-8');
       // Push to an array to loop through, and an obj for seeing the current translation entry (important for dupicate entries)
-      translationsFileData.push(data);
+      translationsFileData.push(YAML.parse(data));
       translationsPagesObj[translationFile] = data;
     } else if (isDirectory) {
       console.log(`${translationsPath} is a directory - skipping read`);
