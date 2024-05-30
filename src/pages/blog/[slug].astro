@@ -15,9 +15,8 @@ if (!post) {
   throw new Error('Failed to get post with slug: ' + Astro.params.slug);
 }
 const { Content } = await post.render();
-const roseyId = 'blog:' + Astro.url.pathname;
 ---
 
-<PostLayout {...post.data} body={post.body} data-rosey={roseyId}>
+<PostLayout {...post.data} body={post.body}>
   <Content />
 </PostLayout>
