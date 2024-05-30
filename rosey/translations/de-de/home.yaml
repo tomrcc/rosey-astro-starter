@@ -11,6 +11,7 @@ _inputs:
           inputs:
             - astro-bookshop-starter
             - blog
+            - cloudcannon
             - github
             - keep-what-you-need-delete-the-rest
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
@@ -18,8 +19,7 @@ _inputs:
             - rss-feed
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
-          inputs:
-            - cloudcannon
+          inputs: []
   astro-bookshop-starter:
     label: Translation (de-de)
     hidden: false
@@ -123,7 +123,7 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
 blog: ""
-cloudcannon: Translated Button (DE)
+cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
