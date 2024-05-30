@@ -13,13 +13,13 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/all-the-\
             bells-and-whistles/)"
           inputs:
-            - blog
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/all-the-\
             bells-and-whistles/)"
-          inputs: []
+          inputs:
+            - blog
   blog:
     label: Translation (de-de)
     hidden: false

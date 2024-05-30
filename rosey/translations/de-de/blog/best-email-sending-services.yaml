@@ -13,13 +13,13 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
           inputs:
-            - blog
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
-          inputs: []
+          inputs:
+            - blog
   blog:
     label: Translation (de-de)
     hidden: false

@@ -11,13 +11,13 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/tags/Whistles\
             /)"
           inputs:
-            - blog
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/Whistles\
             /)"
-          inputs: []
+          inputs:
+            - blog
   blog:
     label: Translation (de-de)
     hidden: false

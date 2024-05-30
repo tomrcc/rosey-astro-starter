@@ -10,12 +10,12 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs:
-            - blog
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
-          inputs: []
+          inputs:
+            - blog
   blog:
     label: Translation (de-de)
     hidden: false
