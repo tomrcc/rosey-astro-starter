@@ -6,6 +6,9 @@
 // Comment doesn't need highlight link, just a page link
 // Add a label that says 'edited - requires updated translation'
 
+// TODO: When we write duplicates entries to our inputs
+// We need to also change the _inputs obj for that page - move the overwritten duplicate entry to the translated group
+
 const fs = require('file-system');
 const YAML = require('yaml');
 const markdownit = require('markdown-it');
@@ -85,6 +88,7 @@ async function main(locale) {
                 : translationEntry.trim(),
             };
 
+            // Write to the rest of the entries
             if (translationEntry != oldLocaleData[keyName].value) {
               for (file in translationsFiles) {
                 const overWriteFile = translationsFiles[file];
