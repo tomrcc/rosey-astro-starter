@@ -1,4 +1,4 @@
-blog: Blog (DE) - Every page
+blog: Blog (DE)
 _inputs:
   $:
     type: object
