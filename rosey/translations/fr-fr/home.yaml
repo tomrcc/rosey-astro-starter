@@ -2,12 +2,12 @@ astro-bookshop-starter: ""
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](http://localhost:4321/)"
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](http://localhost:4321/)"
+          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - astro-bookshop-starter
             - cloudcannon
@@ -16,7 +16,7 @@ _inputs:
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Translated
-          comment: "[Already translated](http://localhost:4321/)"
+          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs: []
   astro-bookshop-starter:
     label: Translation (fr-fr)
@@ -24,26 +24,28 @@ _inputs:
     type: textarea
     options: {}
     comment: Astro Bookshop Starter | [See
-      Context](http://localhost:4321/#:~:text=Astro%20Bookshop%20Starter)
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
   cloudcannon:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: CloudCannon | [See Context](http://localhost:4321/#:~:text=CloudCannon)
+    comment: CloudCannon | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
   github:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: GitHub | [See Context](http://localhost:4321/#:~:text=GitHub)
+    comment: GitHub | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
   keep-what-you-need-delete-the-rest:
     label: Translation (fr-fr)
     hidden: false
     type: textarea
     options: {}
     comment: Keep what you need. Delete the rest. | [See
-      Context](http://localhost:4321/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: Translation (fr-fr)
     hidden: false
@@ -61,7 +63,7 @@ _inputs:
       Astro, using Bookshop components in CloudCannon**. Create your own copy,
       and start creating your own components to use in the CloudCannon CMS. |
       [See
-      Context](http://localhost:4321/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (fr-fr)
     hidden: false
@@ -103,7 +105,7 @@ _inputs:
       * CloudCannon configuration
 
       * CSS variables | [See
-      Context](http://localhost:4321/#:~:text=To%20help%20save,CSS%20variables)
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
 cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""
