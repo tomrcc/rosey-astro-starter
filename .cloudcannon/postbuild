@@ -10,6 +10,8 @@ echo "🌹Generated a base.json from the built site"
 # If something has been changed on last save they'll be mismatched
 # Add a comment that has both entries to help compare 
 # Maybe use this https://www.npmjs.com/package/diff
+echo "🌹Checking locales files against base.json to see if there are any differences"
+npx rosey check
 echo "🌹Generating translation files from base.json"
 node utils/generateTranslationFiles.cjs
 echo "🌹Generated translation files to be edited"
