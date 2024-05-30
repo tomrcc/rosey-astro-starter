@@ -1,0 +1,35 @@
+blog: Blog (DE) - Every page
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/Whistles/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/Whistles\
+            /)"
+          inputs:
+            - rss-feed
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/Whistles\
+            /)"
+          inputs:
+            - blog
+  blog:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/Whistles/#:~:text=Blog)
+  rss-feed:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/Whistles/#:~:text=RSS%20Feed)
+rss-feed: ""

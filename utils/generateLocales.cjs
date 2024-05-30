@@ -6,6 +6,9 @@
 // Comment doesn't need highlight link, just a page link
 // Add a label that says 'edited - requires updated translation'
 
+// TODO: When we write duplicates entries to our inputs
+// We need to also change the _inputs obj for that page - move the overwritten duplicate entry to the translated group
+
 const fs = require('file-system');
 const YAML = require('yaml');
 const markdownit = require('markdown-it');
@@ -32,6 +35,7 @@ async function main(locale) {
   const translationsLocalePath = translationsDirPath + '/' + locale + '/';
 
   let translationsFileData = [];
+  let translationsPagesObj = {};
   let localeData = {};
 
   const translationsFiles = await fs.readdirSync(translationsLocalePath, {
@@ -50,10 +54,9 @@ async function main(locale) {
 
     if (fs.existsSync(translationsPath) && !isDirectory) {
       const data = YAML.parse(fs.readFileSync(translationsPath, 'utf-8'));
-      console.log(
-        `Pushing ${data} to translationsFileData, which now reads \n ${translationsFileData}`
-      );
+      // Push to an array to loop through, and an obj for seeing the current translation entry (important for dupicate entries)
       translationsFileData.push(data);
+      translationsPagesObj[translationFile] = data;
     } else if (isDirectory) {
       console.log(`${translationsPath} is a directory - skipping read`);
     } else {
@@ -84,13 +87,41 @@ async function main(locale) {
                 ? md.render(translationEntry).trim()
                 : translationEntry.trim(),
             };
-            console.log(`Adding ${localeData[keyName]}`);
+
+            // Write to the rest of the entries
+            if (translationEntry != oldLocaleData[keyName].value) {
+              for (file in translationsFiles) {
+                const overWriteFile = translationsFiles[file];
+                const overWriteFilePath =
+                  translationsLocalePath + overWriteFile;
+                const isDirectory =
+                  fs.existsSync(overWriteFilePath) &&
+                  fs.lstatSync(overWriteFilePath).isDirectory();
+
+                if (!isDirectory) {
+                  let overWriteTranslationObj =
+                    translationsPagesObj[overWriteFile] || {};
+                  if (Object.keys(overWriteTranslationObj).includes(keyName)) {
+                    overWriteTranslationObj[keyName] = translationEntry;
+                    console.log(overWriteFilePath);
+
+                    fs.writeFileSync(
+                      overWriteFilePath,
+                      YAML.stringify(overWriteTranslationObj),
+                      (err) => {
+                        if (err) throw err;
+                        console.log(overWriteFilePath + ' updated succesfully');
+                      }
+                    );
+                  }
+                }
+              }
+            }
           } else if (
             localeData[keyName]?.value == '' ||
             localeData[keyName]?.value == undefined
           ) {
             // This is just a fallback if there's no translation
-            console.log(`Writing original to value to prevent a blank value`);
             localeData[keyName] = {
               original: baseFileData[keyName]?.original.trim(),
               value: baseFileData[keyName]?.original.trim(),

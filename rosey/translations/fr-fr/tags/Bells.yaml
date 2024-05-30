@@ -1,0 +1,33 @@
+blog: ""
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/Bells/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/Bells/)"
+          inputs:
+            - blog
+            - rss-feed
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/Bells/)"
+          inputs: []
+  blog:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/Bells/#:~:text=Blog)
+  rss-feed:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/Bells/#:~:text=RSS%20Feed)
+rss-feed: ""
