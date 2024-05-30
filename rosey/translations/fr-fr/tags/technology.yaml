@@ -1,0 +1,35 @@
+blog: ""
+_inputs:
+  $:
+    type: object
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Untranslated
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
+            gy/)"
+          inputs:
+            - blog
+            - rss-feed
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
+            gy/)"
+          inputs: []
+  blog:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
+  rss-feed:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
+rss-feed: ""

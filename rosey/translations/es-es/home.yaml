@@ -10,11 +10,13 @@ _inputs:
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - astro-bookshop-starter
+            - blog
             - cloudcannon
             - github
             - keep-what-you-need-delete-the-rest
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - rss-feed
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs: []
@@ -25,6 +27,13 @@ _inputs:
     options: {}
     comment: Astro Bookshop Starter | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+  blog:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
   cloudcannon:
     label: Translation (es-es)
     hidden: false
@@ -106,8 +115,17 @@ _inputs:
 
       * CSS variables | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+  rss-feed:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
+blog: ""
 cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+rss-feed: ""
