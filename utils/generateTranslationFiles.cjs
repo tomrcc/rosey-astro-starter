@@ -81,7 +81,9 @@ async function main(locale) {
 
     const fileNameFormatted = isDirectory
       ? filePath + '/index.html'
-      : fileNameWithExt.replace('yaml', 'html').replace('home', 'index');
+      : fileNameWithExt
+          .replace('.yaml', '/index.html')
+          .replace('home', 'index');
 
     isDirectory
       ? console.log(
@@ -91,6 +93,8 @@ async function main(locale) {
           `Checking if ${fileNameWithExt} still exists in the pages in our base.json`
         );
 
+    console.log('✅✅ Pages: ', pages);
+    console.log('✅✅ FileName: ', fileNameFormatted);
     if (!pages.includes(fileNameFormatted) && !isDirectory) {
       console.log(
         `${fileNameFormatted} doesn't exist in the pages in our base.json`
