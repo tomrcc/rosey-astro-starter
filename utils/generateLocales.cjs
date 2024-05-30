@@ -1,3 +1,11 @@
+// TODO: BLOG & LONG FORM ENTRIES
+// Add blog section and use the slug as a key
+// Run Rosey check - Before we run the generate fs scripts, and after we run rosey generate
+// If key has a namespace of blog see if theres anything in the check file
+// If the entry has changed. grab the old and new versions and display in the comment
+// Comment doesn't need highlight link, just a page link
+// Add a label that says 'edited - requires updated translation'
+
 const fs = require('file-system');
 const YAML = require('yaml');
 const markdownit = require('markdown-it');
@@ -12,49 +20,82 @@ const locales = process.env.LOCALES?.toLowerCase().split(',') || [
   'fr-fr',
 ];
 
+// The generateLocales function runs on each separate locale
 async function main(locale) {
   const baseFile = await fs.readFileSync('./rosey/base.json');
-  const roseyJSON = JSON.parse(baseFile).keys;
+  const baseFileData = JSON.parse(baseFile).keys;
+
+  const localePath = localesDirPath + '/' + locale + '.json';
+  const oldLocale = await fs.readFileSync(localePath);
+  const oldLocaleData = JSON.parse(oldLocale);
+
+  const translationsLocalePath = translationsDirPath + '/' + locale + '/';
+
   let translationsFileData = [];
   let localeData = {};
-  const localePath = localesDirPath + '/' + locale + '.json';
-  const translationsLocalePath = translationsDirPath + '/' + locale + '/';
 
   const translationsFiles = await fs.readdirSync(translationsLocalePath, {
     recursive: true,
   });
-  for (item in translationsFiles) {
-    const file = translationsFiles[item];
-    const translationsPath = translationsLocalePath + file;
 
-    if (fs.existsSync(translationsPath)) {
+  // Loop through each file in the translations directory
+  for (file in translationsFiles) {
+    const translationFile = translationsFiles[file];
+    const translationsPath = translationsLocalePath + translationFile;
+
+    // Read files if not directory and add each pages as an obj to
+    const isDirectory =
+      fs.existsSync(translationsPath) &&
+      fs.lstatSync(translationsPath).isDirectory();
+
+    if (fs.existsSync(translationsPath) && !isDirectory) {
       const data = YAML.parse(fs.readFileSync(translationsPath, 'utf-8'));
+      console.log(
+        `Pushing ${data} to translationsFileData, which now reads \n ${translationsFileData}`
+      );
       translationsFileData.push(data);
+    } else if (isDirectory) {
+      console.log(`${translationsPath} is a directory - skipping read`);
     } else {
       console.log(`${translationsPath} does not exist`);
     }
-    // // Add each obj to our locales data, excluding '_inputs' object.
-    for (item in translationsFileData) {
-      const page = translationsFileData[item];
 
-      for (const key in page) {
-        const translationEntry = page[key];
+    // Check if theres a translation and
+    // Add each obj to our locales data, excluding '_inputs' object.
+    for (obj in translationsFileData) {
+      const pageObj = translationsFileData[obj];
+      const pageKeys = Object.keys(pageObj);
 
-        // If obj doesn't exist in our locales file or has a blank value, and isn't the inputs object, add it with the translated value
-        if (key !== '_inputs') {
+      for (const key in pageKeys) {
+        const keyName = pageKeys[key];
+        const translationEntry = pageObj[keyName];
+
+        if (keyName !== '_inputs') {
           const isKeyMarkdown = key.slice(0, 10).includes('markdown:');
 
-          const value =
-            translationEntry == ''
-              ? roseyJSON[key]?.original
-              : isKeyMarkdown
-              ? md.render(translationEntry)
-              : translationEntry;
+          // Write the value to be any translated value that appears in translations files
+          // If no value detected, and the locale value is an empty string, write the original to value as a fallback
 
-          localeData[key] = {
-            original: roseyJSON[key]?.original,
-            value: value,
-          };
+          if (translationEntry) {
+            // Write the value to the locales
+            localeData[keyName] = {
+              original: baseFileData[keyName]?.original.trim(),
+              value: isKeyMarkdown
+                ? md.render(translationEntry).trim()
+                : translationEntry.trim(),
+            };
+            console.log(`Adding ${localeData[keyName]}`);
+          } else if (
+            localeData[keyName]?.value == '' ||
+            localeData[keyName]?.value == undefined
+          ) {
+            // This is just a fallback if there's no translation
+            console.log(`Writing original to value to prevent a blank value`);
+            localeData[keyName] = {
+              original: baseFileData[keyName]?.original.trim(),
+              value: baseFileData[keyName]?.original.trim(),
+            };
+          }
         }
       }
     }

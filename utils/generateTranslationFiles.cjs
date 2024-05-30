@@ -1,10 +1,12 @@
-// TODO:
-// Test how blog content would go in this setup with Rosey check
-// IDEAS
-// Consider switch to uuids for the tags and just run checks over them?
-// We could run the checks after everything we've run and further update the existing generated input config
-// Eg. Could use this to generate a label like 'Out of date translation', 'New Translation'
-// Could even look into using a text differ to show what changed
+// TODO: Test readding stuff to blog section or a diff directory and test behaviour
+
+// TODO: BLOG PART
+// Add blog section and use the slug as a key
+// Before we run the generate fs scripts, and after we run rosey generate run Rosey check
+// If key has a namespace of blog see if theres anything in the check file
+// If the entry has changed. grab the old and new versions and display in the comment
+// Comment doesn't need highlight link, just a page link
+// Add a label that says 'edited - requires updated translation'
 
 const {
   NodeHtmlMarkdown,
@@ -63,7 +65,6 @@ async function main(locale) {
 
   // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
-  const translationsFiles = await fs.readdirSync(translationsLocalePath);
   const recursivetranslationsFiles = await fs.readdirSync(
     translationsLocalePath,
     {
@@ -74,13 +75,12 @@ async function main(locale) {
   for (file in recursivetranslationsFiles) {
     const fileNameWithExt = recursivetranslationsFiles[file];
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    const filePathIfDir = filePath.replace('.yaml', '');
 
     const isDirectory =
-      fs.existsSync(filePathIfDir) && fs.lstatSync(filePathIfDir).isDirectory();
+      fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory();
 
     const fileNameFormatted = isDirectory
-      ? filePathIfDir + '/index.html'
+      ? filePath + '/index.html'
       : fileNameWithExt.replace('yaml', 'html').replace('home', 'index');
 
     isDirectory

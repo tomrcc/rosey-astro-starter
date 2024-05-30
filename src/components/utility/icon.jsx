@@ -36,6 +36,7 @@ import {
   faShopLock,
   faCar,
   faCircleHalfStroke,
+  faLanguage,
   faLocationDot,
   faLocationPin,
   faLocationCrosshairs,
@@ -70,6 +71,8 @@ import {
 
 export default function Icon({ icon }) {
   switch (icon) {
+    case 'Language':
+      return <FontAwesomeIcon icon={faLanguage} />;
     case 'Envelope':
       return <FontAwesomeIcon icon={faEnvelope} />;
     case 'User':

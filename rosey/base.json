@@ -9,25 +9,6 @@
       },
       "total": 1
     },
-    "blog": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "404.html": 1,
-        "blog/5-things-to-improve-you-email-templates/index.html": 1,
-        "blog/all-the-bells-and-whistles/index.html": 1,
-        "blog/best-email-sending-services/index.html": 1,
-        "blog/email-delivery-tips/index.html": 1,
-        "blog/index.html": 1,
-        "index.html": 1,
-        "tags/Bells/index.html": 1,
-        "tags/Whistles/index.html": 1,
-        "tags/email/index.html": 1,
-        "tags/marketing/index.html": 1,
-        "tags/technology/index.html": 1
-      },
-      "total": 12
-    },
     "cloudcannon": {
       "original": " CloudCannon ",
       "value": null,
@@ -67,25 +48,6 @@
         "index.html": 1
       },
       "total": 1
-    },
-    "rss-feed": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "404.html": 1,
-        "blog/5-things-to-improve-you-email-templates/index.html": 1,
-        "blog/all-the-bells-and-whistles/index.html": 1,
-        "blog/best-email-sending-services/index.html": 1,
-        "blog/email-delivery-tips/index.html": 1,
-        "blog/index.html": 1,
-        "index.html": 1,
-        "tags/Bells/index.html": 1,
-        "tags/Whistles/index.html": 1,
-        "tags/email/index.html": 1,
-        "tags/marketing/index.html": 1,
-        "tags/technology/index.html": 1
-      },
-      "total": 12
     }
   }
 }
