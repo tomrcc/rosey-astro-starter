@@ -10,14 +10,14 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
             gy/)"
-          inputs:
-            - rss-feed
+          inputs: []
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
             gy/)"
           inputs:
             - blog
+            - rss-feed
   blog:
     label: Translation (de-de)
     hidden: false

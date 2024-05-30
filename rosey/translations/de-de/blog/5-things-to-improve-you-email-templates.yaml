@@ -14,13 +14,13 @@ _inputs:
             -to-improve-you-email-templates/)"
           inputs:
             - blog:/blog/5-things-to-improve-you-email-templates/
-            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
             -to-improve-you-email-templates/)"
           inputs:
             - blog
+            - rss-feed
   blog:
     label: Translation (de-de)
     hidden: false
