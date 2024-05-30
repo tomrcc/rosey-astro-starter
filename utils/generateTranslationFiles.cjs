@@ -1,3 +1,5 @@
+// TODO: Test readding stuff to blog section or a diff directory and test behaviour
+
 // TODO: BLOG PART
 // Add blog section and use the slug as a key
 // Before we run the generate fs scripts, and after we run rosey generate run Rosey check
@@ -63,7 +65,6 @@ async function main(locale) {
 
   // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
-  const translationsFiles = await fs.readdirSync(translationsLocalePath);
   const recursivetranslationsFiles = await fs.readdirSync(
     translationsLocalePath,
     {
@@ -74,13 +75,12 @@ async function main(locale) {
   for (file in recursivetranslationsFiles) {
     const fileNameWithExt = recursivetranslationsFiles[file];
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    const filePathIfDir = filePath.replace('.yaml', '');
 
     const isDirectory =
-      fs.existsSync(filePathIfDir) && fs.lstatSync(filePathIfDir).isDirectory();
+      fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory();
 
     const fileNameFormatted = isDirectory
-      ? filePathIfDir + '/index.html'
+      ? filePath + '/index.html'
       : fileNameWithExt.replace('yaml', 'html').replace('home', 'index');
 
     isDirectory

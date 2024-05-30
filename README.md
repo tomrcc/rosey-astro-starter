@@ -1,5 +1,15 @@
 # Astro Rosey Starter
 
+TODO: Writing a translation to other inputs that share the same key
+// Write the value to other translations files that have the same key
+// 1. If we change the value on any translation input and its different to whats in the current locales value thats the new translation
+// 2. Loop through all the translations pages
+//// To make sure we're not detecting an already overwritten key and retriggering the loop over and over
+//// a. Push to an array of objects that keeps track of if we've overwritten this round of saves
+//// b. If the entry isn't in the alreadyOverwritten array, and the entry value is different to the value currently in the locales file
+//// c. We can then proceed with the overwrite loop, and can also write the entry to localeData
+// 3. Write to the same key the value we just detected was a new translation
+
 If you're looking for some help getting a multilingual site up and running in Astro using CloudCannon's CMS, get in touch with our [sales team](mailto:sales@cloudcannon.com) - we offer migrations starting from $500, depending on the size of the site. Otherwise feel free to use this starter to get your own translation workflow up and running in CloudCannon.
 
 TODO: Put screenshot here of translation workflow here
