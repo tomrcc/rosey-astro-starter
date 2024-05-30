@@ -90,7 +90,7 @@ async function main(locale) {
       : console.log(
           `Checking if ${fileNameWithExt} still exists in the pages in our base.json`
         );
-    console.log('Pages: ', pages);
+
     if (!pages.includes(fileNameFormatted) && !isDirectory) {
       console.log(
         `${fileNameFormatted} doesn't exist in the pages in our base.json`
