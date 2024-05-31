@@ -183,7 +183,9 @@ async function main(locale) {
         // Trim and encode the resulting phrase
         const originalPhraseArray = markdownOriginal
           .trim()
+          // Remove all md links
           .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+          // Remove special chars
           .replaceAll(/[&\/\\#,+()$~%.'":*?<>{}]/gm, '')
           .split(/[\n]+/);
         const firstPhrase = originalPhraseArray[0];
