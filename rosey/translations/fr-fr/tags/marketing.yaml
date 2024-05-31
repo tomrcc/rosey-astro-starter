@@ -1,4 +1,4 @@
-blog: ""
+about: ""
 _inputs:
   $:
     type: object
@@ -11,6 +11,7 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
             g/)"
           inputs:
+            - about
             - blog
             - rss-feed
         - heading: Translated
@@ -18,6 +19,13 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
             g/)"
           inputs: []
+  about:
+    label: Translation (fr-fr)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
@@ -32,4 +40,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
+blog: ""
 rss-feed: ""

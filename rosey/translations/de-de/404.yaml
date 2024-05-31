@@ -1,4 +1,4 @@
-blog: Blooooooog
+about: ""
 _inputs:
   $:
     type: object
@@ -8,12 +8,20 @@ _inputs:
       groups:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/404)"
-          inputs: []
+          inputs:
+            - about
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/404)"
           inputs:
             - blog
             - rss-feed
+  about:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
@@ -28,4 +36,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)
+blog: Blooooooog
 rss-feed: RSS Feeeeeeeed

@@ -1,6 +1,23 @@
 {
   "version": 2,
   "keys": {
+    "about": {
+      "original": " About ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/5-things-to-improve-you-email-templates/index.html": 1,
+        "blog/best-email-sending-services/index.html": 1,
+        "blog/email-delivery-tips/index.html": 1,
+        "blog/index.html": 1,
+        "index.html": 1,
+        "tags/email/index.html": 1,
+        "tags/marketing/index.html": 1,
+        "tags/technology/index.html": 1
+      },
+      "total": 10
+    },
     "about-page": {
       "original": " About page ",
       "value": null,

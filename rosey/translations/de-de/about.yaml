@@ -1,4 +1,4 @@
-about-page: ""
+about: ""
 _inputs:
   $:
     type: object
@@ -9,6 +9,7 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
+            - about
             - about-page
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
         - heading: Translated
@@ -17,6 +18,13 @@ _inputs:
           inputs:
             - blog
             - rss-feed
+  about:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
   about-page:
     label: Translation (de-de)
     hidden: false
@@ -57,6 +65,7 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
+about-page: ""
 blog: Blooooooog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
 rss-feed: RSS Feeeeeeeed

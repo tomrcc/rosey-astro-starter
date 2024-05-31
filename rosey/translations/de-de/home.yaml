@@ -1,4 +1,4 @@
-astro-bookshop-starter: ""
+about: ""
 _inputs:
   $:
     type: object
@@ -9,6 +9,7 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
+            - about
             - astro-bookshop-starter
             - cloudcannon
             - github
@@ -20,6 +21,13 @@ _inputs:
           inputs:
             - blog
             - rss-feed
+  about:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
   astro-bookshop-starter:
     label: Translation (de-de)
     hidden: false
@@ -122,6 +130,7 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
+astro-bookshop-starter: ""
 blog: Blooooooog
 cloudcannon: ""
 github: ""

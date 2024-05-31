@@ -1,4 +1,4 @@
-blog: ""
+about: ""
 _inputs:
   $:
     type: object
@@ -10,12 +10,20 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs:
+            - about
             - blog
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs: []
+  about:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About)
   blog:
     label: Translation (es-es)
     hidden: false
@@ -30,4 +38,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%20Feed)
+blog: ""
 rss-feed: ""

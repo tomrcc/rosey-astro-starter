@@ -1,4 +1,4 @@
-blog: Blooooooog
+about: ""
 _inputs:
   $:
     type: object
@@ -13,6 +13,7 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/email-de\
             livery-tips/)"
           inputs:
+            - about
             - blog:/blog/email-delivery-tips/
         - heading: Translated
           comment: "[Already
@@ -21,6 +22,13 @@ _inputs:
           inputs:
             - blog
             - rss-feed
+  about:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
@@ -119,5 +127,6 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
+blog: Blooooooog
 blog:/blog/email-delivery-tips/: ""
 rss-feed: RSS Feeeeeeeed

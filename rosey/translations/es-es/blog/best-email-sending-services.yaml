@@ -1,4 +1,4 @@
-blog: ""
+about: ""
 _inputs:
   $:
     type: object
@@ -13,6 +13,7 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
           inputs:
+            - about
             - blog
             - blog:/blog/best-email-sending-services/
             - rss-feed
@@ -21,6 +22,13 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
           inputs: []
+  about:
+    label: Translation (es-es)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (es-es)
     hidden: false
@@ -122,5 +130,6 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
+blog: ""
 blog:/blog/best-email-sending-services/: ""
 rss-feed: ""
