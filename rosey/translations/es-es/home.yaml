@@ -9,7 +9,7 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
-            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
@@ -81,7 +81,7 @@ _inputs:
       and start creating your own components to use in the CloudCannon CMS. |
       [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
-  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
+  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (es-es)
     hidden: false
     type: markdown
@@ -139,5 +139,5 @@ markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-u
   Un punto de partida para los **desarrolladores que buscan crear un sitio web
   con Astro, utilizando componentes de Bookshop en CloudCannon**. Cree su propia
   copia y comience a crear sus propios componentes para usar en CloudCannon CMS.
-markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
 rss-feed: RSS Feed

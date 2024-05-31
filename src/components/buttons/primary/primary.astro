@@ -8,7 +8,7 @@ const generateRoseyID = (text: string) => {
     /(?:__[*#])|\[(.*?)\]\(.*?\)/gm,
     /$1/
   );
-  return slugify(formattedText, { remove: /[.*,:]/g });
+  return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
 interface Props {
   button_text: string;

@@ -39,8 +39,16 @@ _inputs:
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: Translation (de-de)
     hidden: false
-    type: textarea
-    options: {}
+    type: markdown
+    options:
+      bold: true
+      format: p h1 h2 h3 h4
+      italic: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
     comment: >-
       ### Use an ESP
 

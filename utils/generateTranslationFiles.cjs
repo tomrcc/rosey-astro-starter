@@ -89,12 +89,6 @@ async function main(locale) {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
 
-    // fileNameHTMLFormatted = isDirectory
-    //   ? filePath + '/index.html'
-    //   : fileNameWithExt
-    //       .replace('.yaml', '/index.html')
-    //       .replace('home', 'index');
-
     isDirectory
       ? console.log(
           `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
@@ -105,7 +99,7 @@ async function main(locale) {
 
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
-        `❌ ${fileNameHTMLFormatted} doesn't exist in the pages in our base.json`
+        `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
       );
 
       console.log(`Deleting ${filePath}`);
@@ -156,6 +150,7 @@ async function main(locale) {
       // If input exists on this page
       if (inputTranslationObjectPages.includes(page)) {
         const originalPhrase = inputTranslationObj.original.trim();
+        // Turn into markdown
         const markdownOriginal = nhm.translate(originalPhrase);
 
         // Only add the key to our output data if it still exists in base.json
@@ -172,15 +167,12 @@ async function main(locale) {
           cleanedOutputFileData[inputKey] = '';
         }
 
-        // Write the string to link to the location
-        const urlHighlighterWordLength = 3;
-        // Get the first and last complete innerText element of the phrase, up to three words, and use those as the start and endHighlight
-        // Turn into markdown
-        // Get rid of any special characters in markdown
-        // Get the first and last line of the markdown so we only have complete lines in the highlight url
-        // Get rid of links in the markdown
+        // Write the highlight string
+
         // Limit each phrase to 3 words
-        // Trim and encode the resulting phrase
+        const urlHighlighterWordLength = 3;
+        // Get rid of any special characters in markdown
+        // Get rid of links in the markdown
         const originalPhraseArray = markdownOriginal
           .trim()
           // Remove all md links
@@ -188,6 +180,7 @@ async function main(locale) {
           // Remove special chars
           .replaceAll(/[&\/\\#,+()$~%.'":*?<>{}]/gm, '')
           .split(/[\n]+/);
+        // Get the first and last line of the markdown so we only have complete lines in the highlight url
         const firstPhrase = originalPhraseArray[0];
         const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
         const endHighlightArrayAll = lastPhrase.split(' ');
@@ -201,12 +194,11 @@ async function main(locale) {
           endHighlightArrayAll.length
         );
 
-        // Look to see if original phrase is 5 words or shorter
-        // if it is fallback to the encoded original phrase for the highlight link
         const originalPhraseArrayByWord = originalPhraseArray
           .join(' ')
           .split(' ');
 
+        // Trim and encode the resulting phrase
         const startHighlight = startHighlightArray.join(' ').trim();
         const endHighlight = endHighlightArray.join(' ').trim();
 
@@ -215,6 +207,8 @@ async function main(locale) {
         const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
 
         const pageString = page.replace('.html', '').replace('index', '');
+        // Look to see if original phrase is 5 words or shorter
+        // if it is fallback to the encoded original phrase for the highlight link
         const locationString =
           originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
             ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
@@ -249,7 +243,9 @@ async function main(locale) {
         }
 
         // Add each entry to our _inputs obj
-        const markdownTextInput = inputKey.slice(0, 10).includes('markdown:');
+        const markdownTextInput =
+          inputKey.slice(0, 10).includes('markdown:') ||
+          inputKey.slice(0, 10).includes('blog:');
         const inputType = markdownTextInput
           ? 'markdown'
           : originalPhrase.length < 20

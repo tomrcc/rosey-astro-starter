@@ -12,8 +12,7 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
-          inputs:
-            - blog:/blog/best-email-sending-services/
+          inputs: []
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
@@ -21,6 +20,7 @@ _inputs:
           inputs:
             - about
             - blog
+            - blog:/blog/best-email-sending-services/
             - rss-feed
   about:
     label: Translation (de-de)
@@ -39,10 +39,18 @@ _inputs:
   blog:/blog/best-email-sending-services/:
     label: Translation (de-de)
     hidden: false
-    type: textarea
-    options: {}
+    type: markdown
+    options:
+      bold: true
+      format: p h1 h2 h3 h4
+      italic: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
     comment: >-
-      Changed!
+      Changed! Testing if the rosey check works
 
 
       When you send an email campaign, you expect it to reach your readers,
@@ -122,7 +130,7 @@ _inputs:
       sending out emails related to your business, be sure to follow-up with
       customers or clients and make sure that they are getting their emails in a
       timely manner. | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!,a%20timely%20manner)
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!%20Testing%20if,a%20timely%20manner)
   rss-feed:
     label: Translation (de-de)
     hidden: false
@@ -131,5 +139,24 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: Blog
-blog:/blog/best-email-sending-services/: ""
+blog:/blog/best-email-sending-services/: >-
+  Geändert! Testen Sie, ob der Rosey-Check funktioniert. Wenn Sie eine
+  E-Mail-Kampagne versenden, erwarten Sie, dass diese Ihre Leser erreicht, oder?
+  Was aber, wenn die E-Mails direkt in den Spam-Ordnern Ihrer Abonnenten landen
+  und nicht in deren Posteingängen? Um sicherzustellen, dass Ihre E-Mails ihre
+  Empfänger erfolgreich erreichen, befolgen Sie diese Tipps zur
+  E-Mail-Zustellung.
+
+
+  ### Verwenden Sie einen ESP.
+
+
+  Verwenden Sie einen E-Mail-Dienstanbieter (ESP), der von
+  E-Mail-Zertifizierungsdiensten Dritter getestet wurde. Dadurch wird
+  sichergestellt, dass Ihre E-Mails von den großen ISPs akzeptiert werden. Ein
+  ESP, das mehrere IP-Adressen bietet, oder eines, das Ihnen bei Bedarf die
+  Verwendung Ihrer eigenen IP-Adresse ermöglicht.
+
+
+  &nbsp;
 rss-feed: RSS Feed
