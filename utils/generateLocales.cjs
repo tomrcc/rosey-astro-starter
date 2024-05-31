@@ -53,14 +53,14 @@ async function main(locale) {
       fs.lstatSync(translationsPath).isDirectory();
 
     if (fs.existsSync(translationsPath) && !isDirectory) {
-      const data = YAML.parse(fs.readFileSync(translationsPath, 'utf-8'));
+      const data = await fs.readFileSync(translationsPath, 'utf-8');
       // Push to an array to loop through, and an obj for seeing the current translation entry (important for dupicate entries)
-      translationsFileData.push(data);
-      translationsPagesObj[translationFile] = data;
+      translationsFileData.push(YAML.parse(data));
+      translationsPagesObj[translationFile] = YAML.parse(data);
     } else if (isDirectory) {
-      console.log(`${translationsPath} is a directory - skipping read`);
+      console.log(`🔍 ${translationsPath} is a directory - skipping read`);
     } else {
-      console.log(`${translationsPath} does not exist`);
+      console.log(`❌ ${translationsPath} does not exist`);
     }
 
     // Check if theres a translation and
@@ -80,16 +80,17 @@ async function main(locale) {
           // If no value detected, and the locale value is an empty string, write the original to value as a fallback
 
           if (translationEntry) {
-            // Write the value to the locales
-            localeData[keyName] = {
-              original: baseFileData[keyName]?.original.trim(),
-              value: isKeyMarkdown
-                ? md.render(translationEntry).trim()
-                : translationEntry.trim(),
-            };
-
             // Write to the rest of the entries
-            if (translationEntry != oldLocaleData[keyName].value) {
+            if (translationEntry != oldLocaleData[keyName]?.value) {
+              console.log(`🔍 Detected a new translation`);
+              console.log(`🔨 Writing to any duplicate entries`);
+              // Write the value to the locales
+              localeData[keyName] = {
+                original: baseFileData[keyName]?.original,
+                value: isKeyMarkdown
+                  ? md.render(translationEntry)
+                  : translationEntry,
+              };
               for (file in translationsFiles) {
                 const overWriteFile = translationsFiles[file];
                 const overWriteFilePath =
@@ -98,22 +99,32 @@ async function main(locale) {
                   fs.existsSync(overWriteFilePath) &&
                   fs.lstatSync(overWriteFilePath).isDirectory();
 
-                if (!isDirectory) {
-                  let overWriteTranslationObj =
-                    translationsPagesObj[overWriteFile] || {};
-                  if (Object.keys(overWriteTranslationObj).includes(keyName)) {
-                    overWriteTranslationObj[keyName] = translationEntry;
-                    console.log(overWriteFilePath);
+                let overWriteTranslationObj =
+                  translationsPagesObj[overWriteFile] || {};
+                const overWriteTranslationObjData = overWriteTranslationObj;
 
-                    fs.writeFileSync(
-                      overWriteFilePath,
-                      YAML.stringify(overWriteTranslationObj),
-                      (err) => {
-                        if (err) throw err;
-                        console.log(overWriteFilePath + ' updated succesfully');
-                      }
-                    );
-                  }
+                const overWriteTranslationObjKeys = overWriteTranslationObjData
+                  ? Object.keys(overWriteTranslationObjData)
+                  : [];
+                console.log(
+                  `Will overwrite if we find the right key in \n${overWriteTranslationObjKeys}`
+                );
+                console.log(`The key we're checking for is ${keyName}`);
+                if (overWriteTranslationObjKeys.includes(keyName)) {
+                  overWriteTranslationObj[keyName] = translationEntry;
+                  console.log(
+                    `✅ Detected a duplicate key - overwriting with new translation`
+                  );
+                  fs.writeFileSync(
+                    overWriteFilePath,
+                    YAML.stringify(overWriteTranslationObj),
+                    (err) => {
+                      if (err) throw err;
+                      console.log(
+                        `✅ ${overWriteFilePath} succesfully updated with duplicate entry: ${translationEntry}!`
+                      );
+                    }
+                  );
                 }
               }
             }
@@ -123,8 +134,8 @@ async function main(locale) {
           ) {
             // This is just a fallback if there's no translation
             localeData[keyName] = {
-              original: baseFileData[keyName]?.original.trim(),
-              value: baseFileData[keyName]?.original.trim(),
+              original: baseFileData[keyName]?.original,
+              value: baseFileData[keyName]?.original,
             };
           }
         }
@@ -134,7 +145,7 @@ async function main(locale) {
   // Write locales data
   fs.writeFileSync(localePath, JSON.stringify(localeData), (err) => {
     if (err) throw err;
-    console.log(localePath + ' updated succesfully');
+    console.log(`✅✅ ${localePath} + ' updated succesfully`);
   });
 }
 
@@ -143,7 +154,7 @@ for (let i = 0; i < locales.length; i++) {
   const locale = locales[i];
 
   main(locale).catch((err) => {
-    console.error(`Encountered an error translating ${locale}:`, err);
+    console.error(`❌❌ Encountered an error translating ${locale}:`, err);
   });
 }
 

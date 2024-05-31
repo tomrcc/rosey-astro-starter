@@ -1,4 +1,4 @@
-blog: Blog (DE)
+blog: Blooooooog
 _inputs:
   $:
     type: object
@@ -13,14 +13,14 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
             -to-improve-you-email-templates/)"
           inputs:
+            - blog
             - blog:/blog/5-things-to-improve-you-email-templates/
             - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
             -to-improve-you-email-templates/)"
-          inputs:
-            - blog
+          inputs: []
   blog:
     label: Translation (de-de)
     hidden: false

@@ -1,4 +1,4 @@
-blog: Blog (DE)
+blog: Blooooooog
 _inputs:
   $:
     type: object
@@ -9,11 +9,11 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/blog/)"
           inputs:
+            - blog
             - rss-feed
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/blog/)"
-          inputs:
-            - blog
+          inputs: []
   blog:
     label: Translation (de-de)
     hidden: false
