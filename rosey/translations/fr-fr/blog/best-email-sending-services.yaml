@@ -49,15 +49,12 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Changed! Testing if the rosey check works
-
-
-      When you send an email campaign, you expect it to reach your readers,
-      right? But what if the emails go straight to your subscribers’ spam
-      folders instead of their inboxes? To make sure your emails reach their
-      recipients successfully, follow these email delivery tips.
-
+    comment: >2-
+       REMOVED:  where did it go | When you send an email campaign, you expect
+      it to reach your readers, right? But what if the emails go straight to
+      your subscribers’ spam folders instead of their inboxes? To make sure your
+      emails reach their recipients successfully, follow these email delivery
+      tips.
 
       ### Use an ESP
 
@@ -65,9 +62,9 @@ _inputs:
       Use an email service provider (ESP) that has been tested by third-party
       email certification services. This ensures that your emails will be
       accepted by the major ISPs. An ESP that offers multiple IP addresses, or
-      one that allows you to use your own IP address if necessary. ISPs often
-      block messages from unknown senders, so having your own IP address helps
-      get around this issue.
+      one that allows you to use your own IP multiple lines as well this time
+      address if necessary. ISPs often block messages from unknown senders, so
+      having your own IP address helps get around this issue.
 
 
       Be aware of what’s normal for your target customers’ inboxes. If you’re
@@ -130,7 +127,7 @@ _inputs:
       sending out emails related to your business, be sure to follow-up with
       customers or clients and make sure that they are getting their emails in a
       timely manner. | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!%20Testing%20if,a%20timely%20manner)
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
   rss-feed:
     label: Translation (fr-fr)
     hidden: false

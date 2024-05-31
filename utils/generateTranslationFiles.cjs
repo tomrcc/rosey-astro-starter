@@ -20,6 +20,7 @@ const nhm = new NodeHtmlMarkdown(
   /* customTransformers (optional) */ undefined,
   /* customCodeBlockTranslators (optional) */ undefined
 );
+const Diff = require('diff');
 
 const inputFilePath = './rosey/base.json';
 const translationFilesDirPath = './rosey/translations';
@@ -29,10 +30,16 @@ let locales = process.env.LOCALES?.toLowerCase().split(',') || [
   'de-de',
   'fr-fr',
 ];
+const localesDirPath = './rosey/locales';
 
 async function main(locale) {
   // Get the Rosey generated data
   let inputFileData = {};
+
+  const localePath = localesDirPath + '/' + locale + '.json';
+  const oldLocale = await fs.readFileSync(localePath);
+  const oldLocaleData = JSON.parse(oldLocale);
+  // console.log('Old locale data for the blog diff: ', oldLocaleData);
 
   if (fs.existsSync(inputFilePath)) {
     inputFileData = await JSON.parse(fs.readFileSync(inputFilePath)).keys;
@@ -152,6 +159,9 @@ async function main(locale) {
         const originalPhrase = inputTranslationObj.original.trim();
         // Turn into markdown
         const markdownOriginal = nhm.translate(originalPhrase);
+        const oldMarkdownOriginal = oldLocaleData[inputKey]?.original
+          ? nhm.translate(oldLocaleData[inputKey].original)
+          : '';
 
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
@@ -246,11 +256,35 @@ async function main(locale) {
         const markdownTextInput =
           inputKey.slice(0, 10).includes('markdown:') ||
           inputKey.slice(0, 10).includes('blog:');
+
+        const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
+
+        const diff = isStaticKeyInput
+          ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
+          : [];
+
+        // TODO: Only run diff if we find something in the checks.json
+        let diffStringAdded = '';
+        let diffStringRemoved = '';
+        diff.forEach((part) => {
+          // green for additions, red for deletions
+          if (part.added) {
+            diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
+          }
+          if (part.removed) {
+            diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value;
+          }
+        });
+        const diffString = `${diffStringAdded} ${diffStringRemoved}`;
+
+        console.log(diffString);
+
         const inputType = markdownTextInput
           ? 'markdown'
           : originalPhrase.length < 20
           ? 'text'
           : 'textarea';
+
         const options = markdownTextInput
           ? {
               bold: true,
@@ -264,12 +298,17 @@ async function main(locale) {
             }
           : {};
 
+        const joinedComment =
+          diffStringAdded.length > 0 || diffStringRemoved.length
+            ? `${diffString} | ${markdownOriginal} | ${locationString}`
+            : `${markdownOriginal} | ${locationString}`;
+
         cleanedOutputFileData['_inputs'][inputKey] = {
           label: `Translation (${locale})`,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
-          comment: `${markdownOriginal} | ${locationString}`,
+          comment: joinedComment,
         };
 
         // Add each entry to page object group depending on whether they are translated or not
