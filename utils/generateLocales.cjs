@@ -1,11 +1,3 @@
-// TODO: BLOG & LONG FORM ENTRIES
-// Add blog section and use the slug as a key
-// Run Rosey check - Before we run the generate fs scripts, and after we run rosey generate
-// If key has a namespace of blog see if theres anything in the check file
-// If the entry has changed. grab the old and new versions and display in the comment
-// Comment doesn't need highlight link, just a page link
-// Add a label that says 'edited - requires updated translation'
-
 // TODO: When we write duplicates entries to our inputs
 // We need to also change the _inputs obj for that page - move the overwritten duplicate entry to the translated group
 
@@ -74,7 +66,8 @@ async function main(locale) {
         const translationEntry = pageObj[keyName];
 
         if (keyName !== '_inputs') {
-          const isKeyMarkdown = key.slice(0, 10).includes('markdown:');
+          const isKeyMarkdown = keyName.slice(0, 10).includes('markdown:');
+          const isKeyBlog = keyName.slice(0, 8).includes('blog:');
 
           // Write the value to be any translated value that appears in translations files
           // If no value detected, and the locale value is an empty string, write the original to value as a fallback
@@ -84,20 +77,21 @@ async function main(locale) {
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
+              // TODO: Find out why this isn't rendering the markdown
+              const markdownTranslation = md.render(translationEntry);
+              const localeValue =
+                isKeyMarkdown || isKeyBlog
+                  ? markdownTranslation
+                  : translationEntry;
               // Write the value to the locales
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
-                value: isKeyMarkdown
-                  ? md.render(translationEntry)
-                  : translationEntry,
+                value: localeValue,
               };
               for (file in translationsFiles) {
                 const overWriteFile = translationsFiles[file];
                 const overWriteFilePath =
                   translationsLocalePath + overWriteFile;
-                const isDirectory =
-                  fs.existsSync(overWriteFilePath) &&
-                  fs.lstatSync(overWriteFilePath).isDirectory();
 
                 let overWriteTranslationObj =
                   translationsPagesObj[overWriteFile] || {};

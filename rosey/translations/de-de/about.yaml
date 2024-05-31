@@ -10,13 +10,13 @@ _inputs:
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about-page
-            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about
             - blog
+            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
     label: Translation (de-de)
@@ -67,5 +67,8 @@ _inputs:
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
 about-page: ""
 blog: Blog
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
+  This is all about what we're *about* like what we're really ***about***
+
+  ## \## A heading halfway through lel
 rss-feed: RSS Feed

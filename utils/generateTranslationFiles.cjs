@@ -277,8 +277,6 @@ async function main(locale) {
         });
         const diffString = `${diffStringAdded} ${diffStringRemoved}`;
 
-        console.log(diffString);
-
         const inputType = markdownTextInput
           ? 'markdown'
           : originalPhrase.length < 20
