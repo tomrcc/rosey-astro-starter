@@ -9,7 +9,6 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
-            - about
             - astro-bookshop-starter
             - cloudcannon
             - github
@@ -19,6 +18,7 @@ _inputs:
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
+            - about
             - blog
             - rss-feed
   about:
@@ -131,7 +131,7 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
 astro-bookshop-starter: ""
-blog: Blooooooog
+blog: Bloooooooga
 cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""

@@ -10,13 +10,13 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
             g/)"
-          inputs:
-            - about
+          inputs: []
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
             g/)"
           inputs:
+            - about
             - blog
             - rss-feed
   about:
@@ -40,5 +40,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
-blog: Blooooooog
+blog: Bloooooooga
 rss-feed: RSS Feeeeeeeed
