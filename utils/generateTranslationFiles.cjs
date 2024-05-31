@@ -75,17 +75,16 @@ async function main(locale) {
   for (file in recursivetranslationsFiles) {
     const fileNameWithExt = recursivetranslationsFiles[file];
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    const filePathExtensionless =
-      translationsLocalePath + '/' + fileNameWithExt.replace('.yaml', '');
+    const filePathExtensionless = fileNameWithExt.replace('.yaml', '');
     let fileNameHTMLFormatted = '';
 
     const isDirectory =
       fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory();
 
     if (filePathExtensionless === 'home') {
-      fileNameHTMLFormatted = translationsLocalePath + '/index.html';
+      fileNameHTMLFormatted = 'index.html';
     } else if (filePathExtensionless === '404') {
-      fileNameHTMLFormatted = translationsLocalePath + '404.html';
+      fileNameHTMLFormatted = '404.html';
     } else {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
@@ -98,26 +97,26 @@ async function main(locale) {
 
     isDirectory
       ? console.log(
-          `Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
+          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
         )
       : console.log(
-          `Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
+          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
         );
 
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
-        `${fileNameHTMLFormatted} doesn't exist in the pages in our base.json`
+        `❌ ${fileNameHTMLFormatted} doesn't exist in the pages in our base.json`
       );
 
       console.log(`Deleting ${filePath}`);
 
       await fs.unlinkSync(filePath, (err) => {
         if (err) throw err;
-        console.log(`${fileNameHTMLFormatted} at ${filePath} was deleted`);
+        console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
       });
     } else {
       console.log(
-        `${fileNameHTMLFormatted} was present in base.json and won't be deleted`
+        `✅ ${fileNameHTMLFormatted} was present in base.json and won't be deleted`
       );
     }
   }
@@ -144,7 +143,7 @@ async function main(locale) {
         fs.readFileSync(translationFilePath, 'utf8')
       );
     } else {
-      console.log(`${translationFilePath} does not exist, creating one now`);
+      console.log(`🔨 ${translationFilePath} does not exist, creating one now`);
       await fs.writeFileSync(translationFilePath, '_inputs: {}');
     }
 
@@ -294,7 +293,7 @@ async function main(locale) {
         YAML.stringify(cleanedOutputFileData),
         (err) => {
           if (err) throw err;
-          console.log(translationFilePath + ' updated succesfully');
+          console.log('✅✅ ' + translationFilePath + ' updated succesfully');
         }
       );
     }
@@ -306,7 +305,7 @@ for (let i = 0; i < locales.length; i++) {
   const locale = locales[i];
 
   main(locale).catch((err) => {
-    console.error(`Encountered an error translating ${locale}:`, err);
+    console.error(`❌❌ Encountered an error translating ${locale}:`, err);
   });
 }
 
