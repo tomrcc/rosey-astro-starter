@@ -266,15 +266,17 @@ async function main(locale) {
         // TODO: Add Diff
         // TODO: Only run diff if we find something in the checks.json
         // console.log(diff);
+        let diffString = '';
         diff.forEach((part) => {
           // green for additions, red for deletions
           if (part.added) {
-            console.log('ADDED: ', part.value);
+            diffString = diffString + 'ADDED: ' + part.value;
           }
           if (part.removed) {
-            console.log('REMOVED: ', part.value);
+            diffString = diffString + 'REMOVED: ' + part.value;
           }
         });
+        console.log(diffString);
 
         const inputType = markdownTextInput
           ? 'markdown'
