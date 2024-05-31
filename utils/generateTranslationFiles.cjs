@@ -260,7 +260,7 @@ async function main(locale) {
         const staticKeyInput = inputKey.slice(0, 10).includes('blog:');
 
         const diff = staticKeyInput
-          ? Diff.diffChars(markdownOriginal, oldMarkdownOriginal)
+          ? Diff.diffChars(oldMarkdownOriginal, markdownOriginal)
           : [];
 
         // TODO: Add Diff
