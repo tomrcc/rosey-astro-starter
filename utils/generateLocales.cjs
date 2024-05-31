@@ -85,10 +85,11 @@ async function main(locale) {
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
-              const localeValue =
-                isKeyMarkdown || isKeyBlog
-                  ? md.render(translationEntry)
-                  : translationEntry;
+              // const localeValue =
+              //   isKeyMarkdown || isKeyBlog
+              //     ? md.render(translationEntry)
+              //     : translationEntry;
+              const localeValue = md.render(translationEntry);
               // Write the value to the locales
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
