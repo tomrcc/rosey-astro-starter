@@ -257,15 +257,13 @@ async function main(locale) {
           inputKey.slice(0, 10).includes('markdown:') ||
           inputKey.slice(0, 10).includes('blog:');
 
-        const staticKeyInput = inputKey.slice(0, 10).includes('blog:');
+        const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
 
-        const diff = staticKeyInput
+        const diff = isStaticKeyInput
           ? Diff.diffLines(oldMarkdownOriginal, markdownOriginal)
           : [];
 
-        // TODO: Add Diff
         // TODO: Only run diff if we find something in the checks.json
-        // console.log(diff);
         let diffString = '';
         diff.forEach((part) => {
           // green for additions, red for deletions
@@ -283,6 +281,7 @@ async function main(locale) {
           : originalPhrase.length < 20
           ? 'text'
           : 'textarea';
+
         const options = markdownTextInput
           ? {
               bold: true,
@@ -296,12 +295,17 @@ async function main(locale) {
             }
           : {};
 
+        const joinedComment =
+          diffString.length > 0
+            ? `${diffString} | ${markdownOriginal} | ${locationString}`
+            : `${markdownOriginal} | ${locationString}`;
+
         cleanedOutputFileData['_inputs'][inputKey] = {
           label: `Translation (${locale})`,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
-          comment: `${markdownOriginal} | ${locationString}`,
+          comment: joinedComment,
         };
 
         // Add each entry to page object group depending on whether they are translated or not
