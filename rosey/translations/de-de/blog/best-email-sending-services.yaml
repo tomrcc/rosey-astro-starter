@@ -50,9 +50,23 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      REMOVED: Changed! These words are changed and lets see the diff
+      ADDED: Some different lines changed
 
-      ADDED: No more confusing words in my diffa
+
+      REMOVED: Use an email service provider (ESP) that has been tested by
+      third-party email certification services. This ensures that your emails
+      will be accepted by the major ISPs. An ESP that offers multiple IP
+      addresses, or one that allows you to use your own IP address if necessary.
+      ISPs often block messages from unknown senders, so having your own IP
+      address helps get around this issue.
+
+      ADDED: Use an email service provider (ESP) that has been tested by
+      third-party email certification services. This ensures that your emails
+      will be accepted by the major ISPs. An ESP that offers multiple IP
+      addresses, or one that allows you to use your own IP multiple lines as
+      well this time address if necessary. ISPs often block messages from
+      unknown senders, so having your own IP address helps get around this
+      issue.
        | No more confusing words in my diffa
 
       When you send an email campaign, you expect it to reach your readers,
@@ -61,15 +75,18 @@ _inputs:
       recipients successfully, follow these email delivery tips.
 
 
+      Some different lines changed
+
+
       ### Use an ESP
 
 
       Use an email service provider (ESP) that has been tested by third-party
       email certification services. This ensures that your emails will be
       accepted by the major ISPs. An ESP that offers multiple IP addresses, or
-      one that allows you to use your own IP address if necessary. ISPs often
-      block messages from unknown senders, so having your own IP address helps
-      get around this issue.
+      one that allows you to use your own IP multiple lines as well this time
+      address if necessary. ISPs often block messages from unknown senders, so
+      having your own IP address helps get around this issue.
 
 
       Be aware of what’s normal for your target customers’ inboxes. If you’re
