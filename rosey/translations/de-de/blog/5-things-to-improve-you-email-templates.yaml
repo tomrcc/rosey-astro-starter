@@ -2,21 +2,21 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: >-
-      [Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
+    comment: "[Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: >-
-            [To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
+            -to-improve-you-email-templates/)"
           inputs: []
         - heading: Translated
-          comment: >-
-            [Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
+            -to-improve-you-email-templates/)"
           inputs:
             - about
             - blog
@@ -27,16 +27,14 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      About | [See
+    comment: About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Blog | [See
+    comment: Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: Translation (de-de)
@@ -129,8 +127,7 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      RSS Feed | [See
+    comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
 blog: Blog
 blog:/blog/5-things-to-improve-you-email-templates/: >-

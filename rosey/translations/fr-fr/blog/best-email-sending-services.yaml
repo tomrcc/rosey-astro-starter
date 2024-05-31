@@ -1,42 +1,40 @@
-about: à propos
+about: Á propos
 _inputs:
   $:
     type: object
-    comment: >-
-      [Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
+    comment: "[Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: >-
-            [To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
+            il-sending-services/)"
           inputs:
             - blog
-            - blog:/blog/best-email-sending-services/
             - rss-feed
         - heading: Translated
-          comment: >-
-            [Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
+            il-sending-services/)"
           inputs:
             - about
+            - blog:/blog/best-email-sending-services/
   about:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      About | [See
+    comment: About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Blog | [See
+    comment: Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (fr-fr)
@@ -135,10 +133,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      RSS Feed | [See
+    comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
-blog: ''
+blog: Blog
 blog:/blog/best-email-sending-services/: >-
   Lorsque vous envoyez une campagne par e-mail, vous vous attendez à ce qu'elle
   atteigne vos lecteurs, n'est-ce pas ? Mais que se passe-t-il si les e-mails
@@ -168,4 +165,4 @@ blog:/blog/best-email-sending-services/: >-
 
 
   &nbsp;
-rss-feed: ''
+rss-feed: RSS Feed
