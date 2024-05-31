@@ -9,12 +9,12 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/404)"
           inputs:
-            - about
             - blog
             - rss-feed
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/404)"
-          inputs: []
+          inputs:
+            - about
   about:
     label: Translation (fr-fr)
     hidden: false
