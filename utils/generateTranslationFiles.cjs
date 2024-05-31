@@ -260,20 +260,23 @@ async function main(locale) {
         const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
 
         const diff = isStaticKeyInput
-          ? Diff.diffLines(oldMarkdownOriginal, markdownOriginal)
+          ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
           : [];
 
         // TODO: Only run diff if we find something in the checks.json
-        let diffString = '';
+        let diffStringAdded = '';
+        let diffStringRemoved = '';
         diff.forEach((part) => {
           // green for additions, red for deletions
           if (part.added) {
-            diffString = diffString + 'ADDED: ' + part.value;
+            diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
           }
           if (part.removed) {
-            diffString = diffString + 'REMOVED: ' + part.value;
+            diffStringRemoved = 'REMOVED: ' + diffString + part.value;
           }
         });
+        const diffString = `${diffStringAdded} | ${diffStringRemoved}`;
+
         console.log(diffString);
 
         const inputType = markdownTextInput
