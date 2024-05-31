@@ -2,20 +2,18 @@ about: Umm fresh
 _inputs:
   $:
     type: object
-    comment: '[Go to Page](https://glamorous-sanctuary.cloudvent.net/about/)'
+    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/about/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: '[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)'
+          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about-page
-            - >-
-              markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
+            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
         - heading: Translated
-          comment: >-
-            [Already
-            translated](https://glamorous-sanctuary.cloudvent.net/about/)
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about
             - blog
@@ -25,24 +23,21 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      About | [See
+    comment: About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
   about-page:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      About page | [See
+    comment: About page | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Blog | [See
+    comment: Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
     label: Translation (de-de)
@@ -68,10 +63,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      RSS Feed | [See
+    comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
-about-page: ''
+about-page: ""
 blog: Blooooogfresh
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ''
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
 rss-feed: RSS Feeeeeeeedddfresh
