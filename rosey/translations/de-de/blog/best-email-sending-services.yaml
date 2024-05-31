@@ -137,11 +137,11 @@ _inputs:
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: Blog
 blog:/blog/best-email-sending-services/: >-
-  Wenn Sie eine E-Mail-Kampagne versenden, erwarten Sie, dass diese Ihre Leser
-  erreicht, oder? Was aber, wenn die E-Mails direkt in den Spam-Ordnern Ihrer
-  Abonnenten landen und nicht in deren Posteingängen? Um sicherzustellen, dass
-  Ihre E-Mails ihre Empfänger erfolgreich erreichen, befolgen Sie diese Tipps
-  zur E-Mail-Zustellung.
+  Wenn Sie eine E-Mail-Kampagne **versenden**, erwarten Sie, *dass* diese Ihre
+  Leser erreicht, oder? Was aber, wenn die E-Mails direkt in den Spam-Ordnern
+  Ihrer Abonnenten landen und nicht in deren Posteingängen? Um sicherzustellen,
+  dass Ihre E-Mails ihre Empfänger erfolgreich erreichen, befolgen Sie diese
+  Tipps zur E-Mail-Zustellung.
 
 
   ### Verwenden Sie einen ESP.
@@ -164,7 +164,7 @@ blog:/blog/best-email-sending-services/: >-
   bevor Sie Massenmarketingkampagnen versenden.
 
 
-  ### \### Double-Opt-In
+  ### Double-Opt-In
 
 
   Bevor Sie eine Kampagne mit einem E-Mail-Marketing-Tool versenden, stellen Sie
