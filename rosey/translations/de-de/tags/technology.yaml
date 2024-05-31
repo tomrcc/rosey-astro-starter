@@ -1,4 +1,4 @@
-about: Umm
+about: Umm fresh
 _inputs:
   $:
     type: object
@@ -40,5 +40,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
-blog: Blooooog
-rss-feed: RSS Feeeeeeeeddd
+blog: Blooooogfresh
+rss-feed: RSS Feeeeeeeedddfresh
