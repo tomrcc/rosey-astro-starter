@@ -14,7 +14,7 @@ _inputs:
             - github
             - keep-what-you-need-delete-the-rest
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
-            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
@@ -81,7 +81,7 @@ _inputs:
       and start creating your own components to use in the CloudCannon CMS. |
       [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
-  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
+  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: Translation (de-de)
     hidden: false
     type: markdown
@@ -136,5 +136,5 @@ cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
-markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-/bookshop/-blog-with-pagination-tags-and-/snippets/-/image-optimization/-seo-controls-responsive-header-and-footer-/font-awesome-icons/-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
 rss-feed: RSS Feed
