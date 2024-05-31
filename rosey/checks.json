@@ -1,83 +1,83 @@
 {
   "de-de": {
-    "current": true,
+    "current": false,
     "baseTotal": 14,
     "total": 14,
     "states": {
+      "outdated": 1,
       "missing": 0,
-      "outdated": 0,
-      "current": 14,
+      "current": 13,
       "unused": 0
     },
     "keys": {
+      "blog:/blog/best-email-sending-services/": "outdated",
+      "about-page": "current",
+      "astro-bookshop-starter": "current",
+      "cloudcannon": "current",
+      "keep-what-you-need-delete-the-rest": "current",
       "rss-feed": "current",
+      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
+      "blog": "current",
       "about": "current",
       "github": "current",
-      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "current",
-      "astro-bookshop-starter": "current",
-      "blog:/blog/email-delivery-tips/": "current",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
-      "blog:/blog/best-email-sending-services/": "current",
       "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "current",
-      "blog": "current",
-      "cloudcannon": "current",
       "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "about-page": "current"
+      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "current",
+      "blog:/blog/email-delivery-tips/": "current"
     }
   },
   "es-es": {
-    "current": true,
+    "current": false,
     "baseTotal": 14,
     "total": 14,
     "states": {
+      "outdated": 1,
       "missing": 0,
-      "unused": 0,
-      "outdated": 0,
-      "current": 14
+      "current": 13,
+      "unused": 0
     },
     "keys": {
-      "blog": "current",
-      "blog:/blog/email-delivery-tips/": "current",
       "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "current",
-      "about-page": "current",
-      "cloudcannon": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "github": "current",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
-      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "current",
       "astro-bookshop-starter": "current",
-      "about": "current",
-      "blog:/blog/best-email-sending-services/": "current",
+      "cloudcannon": "current",
       "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "current",
-      "rss-feed": "current"
+      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
+      "about-page": "current",
+      "keep-what-you-need-delete-the-rest": "current",
+      "blog:/blog/best-email-sending-services/": "outdated",
+      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "current",
+      "rss-feed": "current",
+      "blog:/blog/email-delivery-tips/": "current",
+      "about": "current",
+      "blog": "current",
+      "github": "current"
     }
   },
   "fr-fr": {
-    "current": true,
+    "current": false,
     "baseTotal": 14,
     "total": 14,
     "states": {
-      "outdated": 0,
-      "missing": 0,
+      "current": 13,
       "unused": 0,
-      "current": 14
+      "missing": 0,
+      "outdated": 1
     },
     "keys": {
-      "blog": "current",
       "about-page": "current",
-      "about": "current",
-      "blog:/blog/email-delivery-tips/": "current",
-      "cloudcannon": "current",
-      "github": "current",
-      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "current",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "current",
-      "astro-bookshop-starter": "current",
-      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "current",
       "rss-feed": "current",
-      "blog:/blog/best-email-sending-services/": "current"
+      "astro-bookshop-starter": "current",
+      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "current",
+      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "current",
+      "cloudcannon": "current",
+      "blog:/blog/best-email-sending-services/": "outdated",
+      "about": "current",
+      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "current",
+      "github": "current",
+      "blog:/blog/5-things-to-improve-you-email-templates/": "current",
+      "blog:/blog/email-delivery-tips/": "current",
+      "keep-what-you-need-delete-the-rest": "current",
+      "blog": "current"
     }
   }
 }
