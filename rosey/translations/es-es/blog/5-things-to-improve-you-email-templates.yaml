@@ -49,8 +49,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-       REMOVED:  What tf is goin hon | ### Use an ESP
+    comment: >-
+      ### Use an ESP
+
 
       Use an email service provider (ESP) that has been tested by third-party
       email certification services. This ensures that your emails will be
