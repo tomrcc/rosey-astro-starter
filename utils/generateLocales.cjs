@@ -85,21 +85,19 @@ async function main(locale) {
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
+              const localeValue =
+                isKeyMarkdown || isKeyBlog
+                  ? md.render(translationEntry)
+                  : translationEntry;
               // Write the value to the locales
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
-                value:
-                  isKeyMarkdown || isKeyBlog
-                    ? md.render(translationEntry)
-                    : translationEntry,
+                value: localeValue,
               };
               for (file in translationsFiles) {
                 const overWriteFile = translationsFiles[file];
                 const overWriteFilePath =
                   translationsLocalePath + overWriteFile;
-                const isDirectory =
-                  fs.existsSync(overWriteFilePath) &&
-                  fs.lstatSync(overWriteFilePath).isDirectory();
 
                 let overWriteTranslationObj =
                   translationsPagesObj[overWriteFile] || {};
