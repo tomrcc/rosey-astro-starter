@@ -105,7 +105,7 @@ async function main(locale) {
 
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
-        `❌ ${fileNameHTMLFormatted} doesn't exist in the pages in our base.json`
+        `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
       );
 
       console.log(`Deleting ${filePath}`);
