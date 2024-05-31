@@ -50,7 +50,7 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      Changed! These words are changed again
+      Changed! These words are changed and lets see the diff
 
 
       When you send an email campaign, you expect it to reach your readers,
