@@ -1,4 +1,4 @@
-about: ""
+about: à propos
 _inputs:
   $:
     type: object
@@ -9,7 +9,6 @@ _inputs:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
-            - about
             - about-page
             - blog
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
@@ -17,7 +16,8 @@ _inputs:
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/about/)"
-          inputs: []
+          inputs:
+            - about
   about:
     label: Translation (fr-fr)
     hidden: false
