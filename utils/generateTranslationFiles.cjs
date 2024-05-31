@@ -75,33 +75,50 @@ async function main(locale) {
   for (file in recursivetranslationsFiles) {
     const fileNameWithExt = recursivetranslationsFiles[file];
     const filePath = translationsLocalePath + '/' + fileNameWithExt;
+    const filePathExtensionless =
+      translationsLocalePath + '/' + fileNameWithExt.replace('.yaml', '');
+    let fileNameHTMLFormatted = '';
 
     const isDirectory =
       fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory();
 
-    const fileNameFormatted = isDirectory
-      ? filePath + '/index.html'
-      : fileNameWithExt
-          .replace('.yaml', '/index.html')
-          .replace('home', 'index');
+    if (filePathExtensionless === 'home') {
+      fileNameHTMLFormatted = translationsLocalePath + '/index.html';
+    } else if (filePathExtensionless === '404') {
+      fileNameHTMLFormatted = translationsLocalePath + '404.html';
+    } else {
+      fileNameHTMLFormatted = filePathExtensionless + '/index.html';
+    }
+
+    // fileNameHTMLFormatted = isDirectory
+    //   ? filePath + '/index.html'
+    //   : fileNameWithExt
+    //       .replace('.yaml', '/index.html')
+    //       .replace('home', 'index');
 
     isDirectory
       ? console.log(
-          `Checking if ${fileNameWithExt} still exists in the pages in our base.json. ${fileNameWithExt} is a directory so doesn't get checked.`
+          `Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
         )
       : console.log(
-          `Checking if ${fileNameWithExt} still exists in the pages in our base.json`
+          `Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
         );
 
-    if (!pages.includes(fileNameFormatted) && !isDirectory) {
+    if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
-        `${fileNameFormatted} doesn't exist in the pages in our base.json`
+        `${fileNameHTMLFormatted} doesn't exist in the pages in our base.json`
       );
+
+      console.log(`Deleting ${filePath}`);
 
       await fs.unlinkSync(filePath, (err) => {
         if (err) throw err;
-        console.log(`${fileNameFormatted} at ${filePath} was deleted`);
+        console.log(`${fileNameHTMLFormatted} at ${filePath} was deleted`);
       });
+    } else {
+      console.log(
+        `${fileNameHTMLFormatted} was present in base.json and won't be deleted`
+      );
     }
   }
 
