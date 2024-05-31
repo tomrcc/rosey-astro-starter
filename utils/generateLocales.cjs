@@ -66,8 +66,8 @@ async function main(locale) {
         const translationEntry = pageObj[keyName];
 
         if (keyName !== '_inputs') {
-          const isKeyMarkdown = key.slice(0, 10).includes('markdown:');
-          const isKeyBlog = key.slice(0, 8).includes('blog:');
+          const isKeyMarkdown = keyName.slice(0, 10).includes('markdown:');
+          const isKeyBlog = keyName.slice(0, 8).includes('blog:');
 
           // Write the value to be any translated value that appears in translations files
           // If no value detected, and the locale value is an empty string, write the original to value as a fallback
@@ -78,11 +78,11 @@ async function main(locale) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
               // TODO: Find out why this isn't rendering the markdown
+              const markdownTranslation = md.render(translationEntry);
               const localeValue =
                 isKeyMarkdown || isKeyBlog
-                  ? md.render(translationEntry)
+                  ? markdownTranslation
                   : translationEntry;
-              // const localeValue = md.render(translationEntry);
               // Write the value to the locales
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
