@@ -159,9 +159,9 @@ async function main(locale) {
         const originalPhrase = inputTranslationObj.original.trim();
         // Turn into markdown
         const markdownOriginal = nhm.translate(originalPhrase);
-        const oldMarkdownOriginal = nhm.translate(
-          oldLocaleData[inputKey].original
-        );
+        const oldMarkdownOriginal = oldLocaleData[inputKey]?.original
+          ? nhm.translate(oldLocaleData[inputKey].original)
+          : '';
 
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
