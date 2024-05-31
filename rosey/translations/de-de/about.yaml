@@ -11,12 +11,12 @@ _inputs:
           inputs:
             - about-page
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
-            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - blog
+            - rss-feed
   about-page:
     label: Translation (de-de)
     hidden: false
@@ -59,4 +59,4 @@ _inputs:
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
 blog: Blooooooog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
-rss-feed: ""
+rss-feed: RSS Feeeeeeeed

@@ -86,7 +86,7 @@ async function main(locale) {
               console.log(`🔨 Writing to any duplicate entries`);
               // Write the value to the locales
               localeData[keyName] = {
-                original: baseFileData[keyName]?.original,
+                original: baseFileData[keyName]?.original.trim(),
                 value: isKeyMarkdown
                   ? md.render(translationEntry)
                   : translationEntry,
@@ -134,8 +134,8 @@ async function main(locale) {
           ) {
             // This is just a fallback if there's no translation
             localeData[keyName] = {
-              original: baseFileData[keyName]?.original,
-              value: baseFileData[keyName]?.original,
+              original: baseFileData[keyName]?.original.trim(),
+              value: baseFileData[keyName]?.original.trim(),
             };
           }
         }

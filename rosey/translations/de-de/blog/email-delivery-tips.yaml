@@ -13,14 +13,14 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/email-de\
             livery-tips/)"
           inputs:
-            - blog
             - blog:/blog/email-delivery-tips/
-            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/email-de\
             livery-tips/)"
-          inputs: []
+          inputs:
+            - blog
+            - rss-feed
   blog:
     label: Translation (de-de)
     hidden: false
@@ -120,4 +120,4 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
 blog:/blog/email-delivery-tips/: ""
-rss-feed: ""
+rss-feed: RSS Feeeeeeeed
