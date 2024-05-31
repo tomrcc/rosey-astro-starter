@@ -8,13 +8,13 @@ _inputs:
       groups:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/blog/)"
+          inputs: []
+        - heading: Translated
+          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/blog/)"
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Translated
-          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/blog/)"
-          inputs: []
   about:
     label: Translation (es-es)
     hidden: false

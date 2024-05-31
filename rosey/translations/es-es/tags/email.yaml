@@ -9,14 +9,14 @@ _inputs:
         - heading: Untranslated
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+          inputs: []
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
-          inputs: []
   about:
     label: Translation (es-es)
     hidden: false
