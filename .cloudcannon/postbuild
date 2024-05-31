@@ -2,6 +2,8 @@
 
 npx @bookshop/generate
 
+if [[ $TRANSLATE == "false" ]];
+then
 echo "🌹Generating site with Rosey"
 npx rosey generate --source dist
 echo "🌹Generated a base.json from the built site"
@@ -18,6 +20,7 @@ echo "🌹Generated translation files to be edited"
 echo "🌹Generating the locales files Rosey needs from our translation files"
 node utils/generateLocales.cjs
 echo "🌹Generated locales"
+fi
 
 if [[ $TRANSLATE == "true" ]];
 then
