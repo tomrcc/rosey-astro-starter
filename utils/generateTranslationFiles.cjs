@@ -275,7 +275,7 @@ async function main(locale) {
             diffStringRemoved = 'REMOVED: ' + diffString + part.value;
           }
         });
-        const diffString = `${diffStringAdded} | ${diffStringRemoved}`;
+        const diffString = `${diffStringAdded} ${diffStringRemoved}`;
 
         console.log(diffString);
 
@@ -299,7 +299,7 @@ async function main(locale) {
           : {};
 
         const joinedComment =
-          diffString.length > 0
+          diffStringAdded.length > 0 || diffStringRemoved.length
             ? `${diffString} | ${markdownOriginal} | ${locationString}`
             : `${markdownOriginal} | ${locationString}`;
 
