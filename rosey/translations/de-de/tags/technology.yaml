@@ -1,4 +1,4 @@
-blog: Blog (DE)
+blog: ""
 _inputs:
   $:
     type: object
@@ -10,14 +10,14 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
             gy/)"
-          inputs: []
+          inputs:
+            - blog
+            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
             gy/)"
-          inputs:
-            - blog
-            - rss-feed
+          inputs: []
   blog:
     label: Translation (de-de)
     hidden: false
@@ -32,4 +32,4 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
-rss-feed: RSS Feed (DE)
+rss-feed: ""

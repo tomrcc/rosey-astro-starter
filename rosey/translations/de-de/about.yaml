@@ -10,13 +10,13 @@ _inputs:
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about-page
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
-          inputs:
             - blog
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+          inputs: []
   about-page:
     label: Translation (de-de)
     hidden: false
@@ -57,11 +57,6 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
-blog: Blog (DE)
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: >-
-  Hier geht es darum, worum es bei uns *geht*, also darum, worum es uns wirklich
-  ***geht***
-
-
-  ## Ein Kurs auf halbem Weg durch LEL
-rss-feed: RSS Feed (DE)
+blog: ""
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
+rss-feed: ""
