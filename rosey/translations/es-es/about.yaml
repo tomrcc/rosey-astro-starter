@@ -23,22 +23,23 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
+    comment: " |  | About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
   about-page:
     label: Translation (es-es)
     hidden: false
     type: text
     options: {}
-    comment: About page | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
+    comment: " |  | About page | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%2\
+      0page)"
   blog:
     label: Translation (es-es)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
+    comment: " |  | Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
     label: Translation (es-es)
     hidden: false
@@ -52,9 +53,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      This is all about what we're _about_ like what we're really _**about**_
-
+    comment: >2-
+       |  | This is all about what we're _about_ like what we're really
+      _**about**_
 
       ## A heading halfway through lel | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
@@ -63,8 +64,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
+    comment: " |  | RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20F\
+      eed)"
 about-page: acerca de la página
 blog: Blog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
