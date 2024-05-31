@@ -50,7 +50,7 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      Changed!
+      Changed! Testing if the rosey check works
 
 
       When you send an email campaign, you expect it to reach your readers,
@@ -130,7 +130,7 @@ _inputs:
       sending out emails related to your business, be sure to follow-up with
       customers or clients and make sure that they are getting their emails in a
       timely manner. | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!,a%20timely%20manner)
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!%20Testing%20if,a%20timely%20manner)
   rss-feed:
     label: Translation (fr-fr)
     hidden: false
