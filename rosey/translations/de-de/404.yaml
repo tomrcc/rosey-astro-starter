@@ -2,16 +2,16 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/404)"
+    comment: '[Go to Page](https://glamorous-sanctuary.cloudvent.net/404)'
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/404)"
+          comment: '[To be translated](https://glamorous-sanctuary.cloudvent.net/404)'
           inputs:
             - about
         - heading: Translated
-          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/404)"
+          comment: '[Already translated](https://glamorous-sanctuary.cloudvent.net/404)'
           inputs:
             - blog
             - rss-feed
@@ -20,21 +20,24 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: About | [See
+    comment: >-
+      About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
+    comment: >-
+      Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)
   rss-feed:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
+    comment: >-
+      RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)
-blog: Blooooooog
+blog: Bloooooooga
 rss-feed: RSS Feeeeeeeed
