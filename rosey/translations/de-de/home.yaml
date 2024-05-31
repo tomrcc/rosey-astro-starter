@@ -1,4 +1,4 @@
-about: Um
+about: Umm
 _inputs:
   $:
     type: object
@@ -131,10 +131,10 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
 astro-bookshop-starter: ""
-blog: Blooog
+blog: Blooooog
 cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: ""
 markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
-rss-feed: RSS Feeeeeeeed
+rss-feed: RSS Feeeeeeeeddd
