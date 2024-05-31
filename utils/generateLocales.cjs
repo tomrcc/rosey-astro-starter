@@ -81,7 +81,7 @@ async function main(locale) {
 
           if (translationEntry) {
             // Write to the rest of the entries
-            if (translationEntry != oldLocaleData[keyName]?.value) {
+            if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
               // Write the value to the locales
@@ -135,8 +135,8 @@ async function main(locale) {
               };
             }
           } else if (
-            localeData[keyName]?.value == '' ||
-            localeData[keyName]?.value == undefined
+            localeData[keyName]?.value === '' ||
+            localeData[keyName]?.value === undefined
           ) {
             // This is just a fallback if there's no translation
             localeData[keyName] = {
