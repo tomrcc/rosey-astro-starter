@@ -272,7 +272,7 @@ async function main(locale) {
             diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
           }
           if (part.removed) {
-            diffStringRemoved = 'REMOVED: ' + diffString + part.value;
+            diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value;
           }
         });
         const diffString = `${diffStringAdded} ${diffStringRemoved}`;
