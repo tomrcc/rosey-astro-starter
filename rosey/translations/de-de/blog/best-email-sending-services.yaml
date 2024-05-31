@@ -2,41 +2,39 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: >-
-      [Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
+    comment: "[Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/)"
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: >-
-            [To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs:
-            - blog:/blog/best-email-sending-services/
+          comment: "[To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
+            il-sending-services/)"
+          inputs: []
         - heading: Translated
-          comment: >-
-            [Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
+            il-sending-services/)"
           inputs:
             - about
             - blog
+            - blog:/blog/best-email-sending-services/
             - rss-feed
   about:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      About | [See
+    comment: About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Blog | [See
+    comment: Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (de-de)
@@ -138,8 +136,7 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      RSS Feed | [See
+    comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: Blog
 blog:/blog/best-email-sending-services/: >-
