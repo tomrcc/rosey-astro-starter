@@ -1,4 +1,4 @@
-about: ""
+about: Acerca de
 _inputs:
   $:
     type: object
@@ -8,16 +8,16 @@ _inputs:
       groups:
         - heading: Untranslated
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+          inputs: []
+        - heading: Translated
+          comment: "[Already
+            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about
             - about-page
             - blog
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
-          inputs: []
   about:
     label: Translation (es-es)
     hidden: false
@@ -65,7 +65,10 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
-about-page: ""
-blog: ""
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
-rss-feed: ""
+about-page: acerca de la página
+blog: Blog
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
+  This is all about what we're *about* like what we're really ***about***
+
+  ## \## A heading halfway through lel
+rss-feed: RSS Feed
