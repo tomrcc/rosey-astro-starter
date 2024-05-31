@@ -4,25 +4,25 @@
     "baseTotal": 13,
     "total": 12,
     "states": {
-      "current": 0,
-      "outdated": 12,
       "unused": 0,
-      "missing": 1
+      "outdated": 12,
+      "missing": 1,
+      "current": 0
     },
     "keys": {
-      "about-page": "outdated",
-      "blog:/blog/best-email-sending-services/": "outdated",
-      "rss-feed": "missing",
-      "blog": "outdated",
-      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated",
-      "keep-what-you-need-delete-the-rest": "outdated",
-      "github": "outdated",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated",
       "cloudcannon": "outdated",
-      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "outdated",
+      "about-page": "outdated",
       "blog:/blog/email-delivery-tips/": "outdated",
+      "github": "outdated",
       "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "outdated",
-      "astro-bookshop-starter": "outdated"
+      "blog:/blog/best-email-sending-services/": "outdated",
+      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated",
+      "keep-what-you-need-delete-the-rest": "outdated",
+      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "outdated",
+      "blog": "missing",
+      "rss-feed": "outdated",
+      "astro-bookshop-starter": "outdated",
+      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated"
     }
   },
   "es-es": {
@@ -36,19 +36,19 @@
       "outdated": 13
     },
     "keys": {
-      "astro-bookshop-starter": "outdated",
       "blog": "outdated",
-      "keep-what-you-need-delete-the-rest": "outdated",
-      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "outdated",
-      "blog:/blog/email-delivery-tips/": "outdated",
-      "blog:/blog/best-email-sending-services/": "outdated",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated",
-      "rss-feed": "outdated",
-      "github": "outdated",
-      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated",
-      "cloudcannon": "outdated",
       "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "outdated",
-      "about-page": "outdated"
+      "github": "outdated",
+      "cloudcannon": "outdated",
+      "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "outdated",
+      "astro-bookshop-starter": "outdated",
+      "about-page": "outdated",
+      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated",
+      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated",
+      "keep-what-you-need-delete-the-rest": "outdated",
+      "rss-feed": "outdated",
+      "blog:/blog/email-delivery-tips/": "outdated",
+      "blog:/blog/best-email-sending-services/": "outdated"
     }
   },
   "fr-fr": {
@@ -56,25 +56,25 @@
     "baseTotal": 13,
     "total": 13,
     "states": {
-      "current": 0,
       "outdated": 13,
+      "current": 0,
       "missing": 0,
       "unused": 0
     },
     "keys": {
-      "github": "outdated",
-      "keep-what-you-need-delete-the-rest": "outdated",
-      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "outdated",
-      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated",
       "blog": "outdated",
-      "rss-feed": "outdated",
-      "astro-bookshop-starter": "outdated",
+      "github": "outdated",
       "markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like:-[bookshop](https://cloudcannoncom/documentation/guides/bookshop-astro-guide/)-blog-with-pagination-tags-and-[snippets](https://docsastrobuild/en/guides/markdown-content/#using-components-in-mdx)-[image-optimization](https://docsastrobuild/en/guides/images/#image-astroassets)-seo-controls-responsive-header-and-footer-[font-awesome-icons](https://fontawesomecom/search?o=randm=free)-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": "outdated",
+      "astro-bookshop-starter": "outdated",
       "blog:/blog/email-delivery-tips/": "outdated",
-      "cloudcannon": "outdated",
-      "about-page": "outdated",
+      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated",
+      "markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": "outdated",
       "blog:/blog/best-email-sending-services/": "outdated",
-      "blog:/blog/5-things-to-improve-you-email-templates/": "outdated"
+      "keep-what-you-need-delete-the-rest": "outdated",
+      "rss-feed": "outdated",
+      "cloudcannon": "outdated",
+      "markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": "outdated",
+      "about-page": "outdated"
     }
   }
 }
