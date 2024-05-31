@@ -1,4 +1,4 @@
-blog: Blooooooog
+about: Um
 _inputs:
   $:
     type: object
@@ -10,7 +10,8 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
             g/)"
-          inputs: []
+          inputs:
+            - about
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/tags/marketin\
@@ -18,6 +19,13 @@ _inputs:
           inputs:
             - blog
             - rss-feed
+  about:
+    label: Translation (de-de)
+    hidden: false
+    type: text
+    options: {}
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
@@ -32,4 +40,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
+blog: Blooooooog
 rss-feed: RSS Feeeeeeeed
