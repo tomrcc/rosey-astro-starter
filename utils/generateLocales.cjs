@@ -131,7 +131,7 @@ async function main(locale) {
               // Preserve the old translation if there is one
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
-                value: md.render(oldLocaleData[keyName]?.value),
+                value: oldLocaleData[keyName]?.value,
               };
             }
           } else if (
