@@ -50,8 +50,10 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      Changed! These words are changed and lets see the diff
+      REMOVED: Changed! These words are changed and lets see the diff
 
+      ADDED: No more confusing words in my diffa
+       | No more confusing words in my diffa
 
       When you send an email campaign, you expect it to reach your readers,
       right? But what if the emails go straight to your subscribers’ spam
@@ -130,7 +132,7 @@ _inputs:
       sending out emails related to your business, be sure to follow-up with
       customers or clients and make sure that they are getting their emails in a
       timely manner. | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Changed!%20These%20words,a%20timely%20manner)
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=No%20more%20confusing,a%20timely%20manner)
   rss-feed:
     label: Translation (fr-fr)
     hidden: false
