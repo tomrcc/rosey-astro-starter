@@ -1,4 +1,4 @@
-about: Um
+about: Umm
 _inputs:
   $:
     type: object
@@ -129,4 +129,4 @@ _inputs:
       Context](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
 blog: Blooooog
 blog:/blog/email-delivery-tips/: ""
-rss-feed: RSS Feeeeeeeed
+rss-feed: RSS Feeeeeeeeddd
