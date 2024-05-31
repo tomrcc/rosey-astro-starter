@@ -269,13 +269,10 @@ async function main(locale) {
         diff.forEach((part) => {
           // green for additions, red for deletions
           if (part.added) {
-            console.log('Part: ', part.added);
+            console.log('ADDED: ', part.value);
           }
           if (part.removed) {
-            console.log('Part: ', part.removed);
-          }
-          if (part.added || part.removed) {
-            console.log(`Something changed for: ${part.value}`);
+            console.log('REMOVED: ', part.value);
           }
         });
 
