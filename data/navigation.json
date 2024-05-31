@@ -12,6 +12,10 @@
       {
         "link": "/feed.xml",
         "text": "RSS Feed"
+      },
+      {
+        "link": "/about/",
+        "text": "About"
       }
     ],
     "locales": [
