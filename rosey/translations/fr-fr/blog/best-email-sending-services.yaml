@@ -2,24 +2,24 @@ about: à propos
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/)"
+    comment: >-
+      [Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - blog
             - blog:/blog/best-email-sending-services/
             - rss-feed
         - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
   about:
@@ -27,14 +27,16 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: About | [See
+    comment: >-
+      About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
+    comment: >-
+      Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (fr-fr)
@@ -133,8 +135,37 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
+    comment: >-
+      RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
-blog: ""
-blog:/blog/best-email-sending-services/: ""
-rss-feed: ""
+blog: ''
+blog:/blog/best-email-sending-services/: >-
+  Lorsque vous envoyez une campagne par e-mail, vous vous attendez à ce qu'elle
+  atteigne vos lecteurs, n'est-ce pas ? Mais que se passe-t-il si les e-mails
+  vont directement dans les dossiers spam de vos abonnés au lieu de leur boîte
+  de réception ? Pour vous assurer que vos e-mails parviennent correctement à
+  leurs destinataires, suivez ces conseils de livraison d'e-mails.
+
+
+  ### Utilisez un ESP
+
+
+  Utilisez un fournisseur de services de messagerie (ESP) qui a été testé par
+  des services de certification de messagerie tiers. Cela garantit que vos
+  e-mails seront acceptés par les principaux FAI. Un ESP qui propose plusieurs
+  adresses IP, ou un autre qui vous permet d'utiliser votre propre adresse IP
+  sur plusieurs lignes ainsi que cette adresse si nécessaire. Les FAI bloquent
+  souvent les messages provenant d'expéditeurs inconnus. Avoir votre propre
+  adresse IP permet donc de contourner ce problème. Soyez conscient de ce qui
+  est normal pour les boîtes de réception de vos clients cibles. Si vous envoyez
+  des e-mails à des personnes qui utilisent des comptes Gmail et Yahoo, il y a
+  peu de chances qu'elles soient bloquées car leurs adresses n'ont pas encore
+  été signalées comme spam. Mais si vous contactez des personnes possédant des
+  adresses Outlook ou AOL, il y a de fortes chances que votre message soit
+  signalé comme courrier indésirable et finisse dans leur dossier spam avant
+  qu'elles ne le voient. Assurez-vous de tester différents types d'adresses
+  avant de lancer des campagnes de marketing de masse.
+
+
+  &nbsp;
+rss-feed: ''
