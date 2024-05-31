@@ -127,6 +127,12 @@ async function main(locale) {
                   );
                 }
               }
+            } else {
+              // Preserve the old translation if there is one
+              localeData[keyName] = {
+                original: baseFileData[keyName]?.original,
+                value: baseFileData[keyName]?.value,
+              };
             }
           } else if (
             localeData[keyName]?.value == '' ||
