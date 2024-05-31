@@ -24,24 +24,21 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:te\
-      xt=About)"
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: " |  | Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:te\
-      xt=Blog)"
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
   rss-feed:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: " |  | RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:te\
-      xt=RSS%20Feed)"
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
 blog: Blog
 rss-feed: RSS Feed

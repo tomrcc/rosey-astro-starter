@@ -27,17 +27,15 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sendin\
-      g-services/#:~:text=About)"
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: " |  | Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sendin\
-      g-services/#:~:text=Blog)"
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (fr-fr)
     hidden: false
@@ -51,8 +49,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-       |  | No more confusing words in my diffa
+    comment: >-
+      No more confusing words in my diffa
+
 
       When you send an email campaign, you expect it to reach your readers,
       right? But what if the emails go straight to your subscribers’ spam
@@ -140,9 +139,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sendin\
-      g-services/#:~:text=RSS%20Feed)"
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: ""
 blog:/blog/best-email-sending-services/: ""
 rss-feed: ""

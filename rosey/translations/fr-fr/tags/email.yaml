@@ -22,24 +22,21 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Ab\
-      out)"
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: " |  | Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Bl\
-      og)"
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)
   rss-feed:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: " |  | RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RS\
-      S%20Feed)"
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%20Feed)
 blog: ""
 rss-feed: ""

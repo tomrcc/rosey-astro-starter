@@ -27,17 +27,15 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-impro\
-      ve-you-email-templates/#:~:text=About)"
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
   blog:
     label: Translation (es-es)
     hidden: false
     type: text
     options: {}
-    comment: " |  | Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-impro\
-      ve-you-email-templates/#:~:text=Blog)"
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: Translation (es-es)
     hidden: false
@@ -51,8 +49,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-       |  | ### Use an ESP
+    comment: >-
+      ### Use an ESP
+
 
       Use an email service provider (ESP) that has been tested by third-party
       email certification services. This ensures that your emails will be
@@ -128,9 +127,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-impro\
-      ve-you-email-templates/#:~:text=RSS%20Feed)"
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
 blog: Blog
 blog:/blog/5-things-to-improve-you-email-templates/: ""
 rss-feed: RSS Feed

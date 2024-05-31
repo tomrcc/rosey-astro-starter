@@ -20,22 +20,21 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: " |  | About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)"
+    comment: About | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)
   blog:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: " |  | Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)"
+    comment: Blog | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)
   rss-feed:
     label: Translation (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: " |  | RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed\
-      )"
+    comment: RSS Feed | [See
+      Context](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)
 blog: ""
 rss-feed: ""
