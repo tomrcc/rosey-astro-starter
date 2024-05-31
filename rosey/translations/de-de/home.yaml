@@ -12,14 +12,14 @@ _inputs:
             - astro-bookshop-starter
             - cloudcannon
             - github
-            - keep-what-you-need-delete-the-rest
-            - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Translated
           comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - about
             - blog
+            - keep-what-you-need-delete-the-rest
+            - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - rss-feed
   about:
     label: Translation (de-de)
@@ -134,7 +134,14 @@ astro-bookshop-starter: ""
 blog: Blog
 cloudcannon: ""
 github: ""
-keep-what-you-need-delete-the-rest: ""
-markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
+keep-what-you-need-delete-the-rest: Behalten Sie, was Sie brauchen. Den Rest löschen.
+markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: >-
+  Ein Ausgangspunkt für Entwickler, die mit **Astro eine Website erstellen
+  möchten und dabei Bookshop-Komponenten in CloudCannon verwenden**. Erstellen
+  Sie Ihre eigene Kopie und beginnen Sie mit der Erstellung Ihrer eigenen
+  Komponenten zur Verwendung im CloudCannon CMS.
+
+
+  &nbsp;
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
 rss-feed: RSS Feed

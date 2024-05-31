@@ -1,4 +1,4 @@
-about: à propos
+about: Á propos
 _inputs:
   $:
     type: object
@@ -40,5 +40,5 @@ _inputs:
     options: {}
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
-blog: ""
-rss-feed: ""
+blog: Blog
+rss-feed: RSS Feed

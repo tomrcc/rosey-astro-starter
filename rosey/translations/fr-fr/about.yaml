@@ -1,4 +1,4 @@
-about: à propos
+about: Á propos
 _inputs:
   $:
     type: object
@@ -10,14 +10,14 @@ _inputs:
           comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about-page
-            - blog
-            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
-            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about
+            - blog
+            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
+            - rss-feed
   about:
     label: Translation (fr-fr)
     hidden: false
@@ -66,6 +66,11 @@ _inputs:
     comment: RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
 about-page: ""
-blog: ""
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: ""
-rss-feed: ""
+blog: Blog
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
+  Tout dépend de ce que nous faisons, comme de ce que nous faisons vraiment
+
+  ## A à mi-chemin de lel
+
+  &nbsp;
+rss-feed: RSS Feed
