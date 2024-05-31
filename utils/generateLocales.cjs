@@ -1,11 +1,3 @@
-// TODO: BLOG & LONG FORM ENTRIES
-// Add blog section and use the slug as a key
-// Run Rosey check - Before we run the generate fs scripts, and after we run rosey generate
-// If key has a namespace of blog see if theres anything in the check file
-// If the entry has changed. grab the old and new versions and display in the comment
-// Comment doesn't need highlight link, just a page link
-// Add a label that says 'edited - requires updated translation'
-
 // TODO: When we write duplicates entries to our inputs
 // We need to also change the _inputs obj for that page - move the overwritten duplicate entry to the translated group
 
@@ -85,11 +77,12 @@ async function main(locale) {
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
               console.log(`🔨 Writing to any duplicate entries`);
-              // const localeValue =
-              //   isKeyMarkdown || isKeyBlog
-              //     ? md.render(translationEntry)
-              //     : translationEntry;
-              const localeValue = md.render(translationEntry);
+              // TODO: Find out why this isn't rendering the markdown
+              const localeValue =
+                isKeyMarkdown || isKeyBlog
+                  ? md.render(translationEntry)
+                  : translationEntry;
+              // const localeValue = md.render(translationEntry);
               // Write the value to the locales
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
