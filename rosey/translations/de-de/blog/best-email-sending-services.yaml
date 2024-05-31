@@ -2,22 +2,22 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/)"
+    comment: >-
+      [Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - blog:/blog/best-email-sending-services/
         - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
             - blog
@@ -27,14 +27,16 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: About | [See
+    comment: >-
+      About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
+    comment: >-
+      Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (de-de)
@@ -136,8 +138,28 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
+    comment: >-
+      RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: Blog
-blog:/blog/best-email-sending-services/: ""
+blog:/blog/best-email-sending-services/: >-
+  Geändert! Testen Sie, ob der Rosey-Check funktioniert. Wenn Sie eine
+  E-Mail-Kampagne versenden, erwarten Sie, dass diese Ihre Leser erreicht, oder?
+  Was aber, wenn die E-Mails direkt in den Spam-Ordnern Ihrer Abonnenten landen
+  und nicht in deren Posteingängen? Um sicherzustellen, dass Ihre E-Mails ihre
+  Empfänger erfolgreich erreichen, befolgen Sie diese Tipps zur
+  E-Mail-Zustellung.
+
+
+  ### Verwenden Sie einen ESP.
+
+
+  Verwenden Sie einen E-Mail-Dienstanbieter (ESP), der von
+  E-Mail-Zertifizierungsdiensten Dritter getestet wurde. Dadurch wird
+  sichergestellt, dass Ihre E-Mails von den großen ISPs akzeptiert werden. Ein
+  ESP, das mehrere IP-Adressen bietet, oder eines, das Ihnen bei Bedarf die
+  Verwendung Ihrer eigenen IP-Adresse ermöglicht.
+
+
+  &nbsp;
 rss-feed: RSS Feed
