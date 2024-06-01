@@ -12,16 +12,16 @@ _inputs:
           comment: "[To be
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
-          inputs:
-            - blog
-            - rss-feed
+          inputs: []
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
             il-sending-services/)"
           inputs:
             - about
+            - blog
             - blog:/blog/best-email-sending-services/
+            - rss-feed
   about:
     label: Translation (fr-fr)
     hidden: false
@@ -50,10 +50,11 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      When you send an email campaign, you expect it to reach your readers,
-      right? But what if the emails go straight to your subscribers’ spam
-      folders instead of their inboxes? To make sure your emails reach their
-      recipients successfully, follow these email delivery tips.
+      ADDED: Add a change
+
+        | When you send an email campaign, you expect it to reach your readers, right? But what if the emails go straight to your subscribers’ spam folders instead of their inboxes? To make sure your emails reach their recipients successfully, follow these email delivery tips.
+
+      Add a change
 
 
       ### Use an ESP
