@@ -2,22 +2,22 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/)"
+    comment: >-
+      [Go to
+      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
     options:
       place_groups_below: false
       groups:
         - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [To be
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - rss-feed
         - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+          comment: >-
+            [Already
+            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
             - blog
@@ -27,14 +27,16 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: About | [See
+    comment: >-
+      About | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:
     label: Translation (de-de)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
+    comment: >-
+      Blog | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
   blog:/blog/best-email-sending-services/:
     label: Translation (de-de)
@@ -134,7 +136,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
+    comment: >-
+      RSS Feed | [See
       Context](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
 blog: Blog
 blog:/blog/best-email-sending-services/: >-
@@ -143,6 +146,9 @@ blog:/blog/best-email-sending-services/: >-
   Ihrer Abonnenten landen und nicht in deren Posteingängen? Um sicherzustellen,
   dass Ihre E-Mails ihre Empfänger erfolgreich erreichen, befolgen Sie diese
   Tipps zur E-Mail-Zustellung.
+
+
+  Fügen Sie eine Änderung hinzu
 
 
   ### Verwenden Sie einen ESP.
@@ -195,4 +201,4 @@ blog:/blog/best-email-sending-services/: >-
   aber bedenken Sie, dass Bilder bei der Zustellung in den Posteingang Probleme
   verursachen können – insbesondere, wenn sie falsch verwendet oder in
   Massen-E-Mails von Unternehmen enthalten sind, in denen sie versendet werden
-rss-feed: ""
+rss-feed: ''
