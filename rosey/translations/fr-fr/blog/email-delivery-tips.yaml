@@ -13,15 +13,15 @@ _inputs:
             translated](https://glamorous-sanctuary.cloudvent.net/blog/email-de\
             livery-tips/)"
           inputs:
-            - blog
             - blog:/blog/email-delivery-tips/
-            - rss-feed
         - heading: Translated
           comment: "[Already
             translated](https://glamorous-sanctuary.cloudvent.net/blog/email-de\
             livery-tips/)"
           inputs:
             - about
+            - blog
+            - rss-feed
   about:
     label: Translation (fr-fr)
     hidden: false
