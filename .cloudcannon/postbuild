@@ -5,10 +5,10 @@ npx @bookshop/generate
 echo "🌹Generating site with Rosey"
 npx rosey generate --source dist
 echo "🌹Generated a base.json from the built site"
-# TODO: ADD ROSEY CHECK HERE
+# TODO: BUILD TIME SAVE: ADD ROSEY CHECK HERE
 # Compares the locales original and base.json
 # If something has been changed on last save they'll be mismatched
-# Add a comment that has both entries to help compare 
+# Would this save us checking some entries with the diff, therefore saving buildtime?
 # Maybe use this https://www.npmjs.com/package/diff
 echo "🌹Checking locales files against base.json to see if there are any differences"
 npx rosey check
