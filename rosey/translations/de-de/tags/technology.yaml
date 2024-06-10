@@ -6,39 +6,55 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
-            gy/)"
+        - heading: Still to translate (de-de)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
           inputs: []
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
-            gy/)"
+        - heading: Already translated (de-de)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
           inputs:
             - about
             - blog
             - rss-feed
   about:
-    label: Translation (de-de)
+    label: About
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      About)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: About
   blog:
-    label: Translation (de-de)
+    label: Blog
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      Blog)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: Blog
   rss-feed:
-    label: Translation (de-de)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
-blog: Blog
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      RSS%20Feed)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: RSS Feed
+blog: Blog (DE) - Every page
 rss-feed: RSS Feed

@@ -76,8 +76,9 @@ async function main(locale) {
             // Write to the rest of the entries
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
-              console.log(`🔨 Writing to any duplicate entries`);
-              // TODO: Find out why this isn't rendering the markdown
+              console.log(
+                `🔨 Checking for and writing to any duplicate entries`
+              );
               const markdownTranslation = md.render(translationEntry);
               const localeValue =
                 isKeyMarkdown || isKeyBlog
@@ -100,14 +101,10 @@ async function main(locale) {
                 const overWriteTranslationObjKeys = overWriteTranslationObjData
                   ? Object.keys(overWriteTranslationObjData)
                   : [];
-                console.log(
-                  `Will overwrite if we find the right key in \n${overWriteTranslationObjKeys}`
-                );
-                console.log(`The key we're checking for is ${keyName}`);
                 if (overWriteTranslationObjKeys.includes(keyName)) {
                   overWriteTranslationObj[keyName] = translationEntry;
                   console.log(
-                    `✅ Detected a duplicate key - overwriting with new translation`
+                    `✅ Detected a duplicate key in ${file} - overwriting ${keyName} with new translation`
                   );
                   fs.writeFileSync(
                     overWriteFilePath,
@@ -115,7 +112,7 @@ async function main(locale) {
                     (err) => {
                       if (err) throw err;
                       console.log(
-                        `✅ ${overWriteFilePath} succesfully updated with duplicate entry: ${translationEntry}!`
+                        `✅ ${overWriteFilePath} succesfully updated duplicate key: ${keyName}`
                       );
                     }
                   );

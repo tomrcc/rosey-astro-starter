@@ -6,12 +6,11 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+        - heading: Still to translate (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs: []
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/about/)"
+        - heading: Already translated (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/about/)"
           inputs:
             - about
             - about-page
@@ -19,28 +18,44 @@ _inputs:
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
-    label: Translation (es-es)
+    label: About
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: About
   about-page:
-    label: Translation (es-es)
+    label: About page
     hidden: false
     type: text
     options: {}
-    comment: About page | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
+      ge)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: About page
   blog:
-    label: Translation (es-es)
+    label: Blog
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: Blog
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
-    label: Translation (es-es)
+    label: This is all about what we're _about_ like ...
     hidden: false
     type: markdown
     options:
@@ -52,19 +67,30 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      This is all about what we're _about_ like what we're really _**about**_
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
+      20all,halfway%20through%20lel)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: |-
+        This is all about what we're _about_ like what we're really _**about**_
 
-
-      ## A heading halfway through lel | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
+        ## A heading halfway through lel
   rss-feed:
-    label: Translation (es-es)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
+      )"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: RSS Feed
 about-page: acerca de la página
 blog: Blog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-

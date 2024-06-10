@@ -6,12 +6,12 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
+        - heading: Still to translate (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
-        - heading: Translated
-          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
+        - heading: Already translated (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - about
             - astro-bookshop-starter
@@ -22,49 +22,78 @@ _inputs:
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - rss-feed
   about:
-    label: Translation (es-es)
+    label: About
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: About
   astro-bookshop-starter:
-    label: Translation (es-es)
+    label: Astro Bookshop Starter
     hidden: false
     type: textarea
     options: {}
-    comment: Astro Bookshop Starter | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
+      %20Starter)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: Astro Bookshop Starter
   blog:
-    label: Translation (es-es)
+    label: Blog
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: Blog
   cloudcannon:
-    label: Translation (es-es)
+    label: CloudCannon
     hidden: false
     type: text
     options: {}
-    comment: CloudCannon | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: CloudCannon
   github:
-    label: Translation (es-es)
+    label: GitHub
     hidden: false
     type: text
     options: {}
-    comment: GitHub | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: GitHub
   keep-what-you-need-delete-the-rest:
-    label: Translation (es-es)
+    label: Keep what you need Delete the rest
     hidden: false
     type: textarea
     options: {}
-    comment: Keep what you need. Delete the rest. | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
+      u,Delete%20the%20rest)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: Keep what you need. Delete the rest.
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
-    label: Translation (es-es)
+    label: A starting point for developers looking to...
     hidden: false
     type: markdown
     options:
@@ -76,13 +105,18 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: A starting point for **developers looking to build a website with
-      Astro, using Bookshop components in CloudCannon**. Create your own copy,
-      and start creating your own components to use in the CloudCannon CMS. |
-      [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: A starting point for **developers looking to build a website with
+        Astro, using Bookshop components in CloudCannon**. Create your own copy,
+        and start creating your own components to use in the CloudCannon CMS.
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
-    label: Translation (es-es)
+    label: To help save you time some features are se...
     hidden: false
     type: markdown
     options:
@@ -94,42 +128,53 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      To help save you time, some features are set up in this template, like:
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: >-
+        To help save you time, some features are set up in this template, like:
 
 
-      *
-      [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
+        *
+        [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
 
-      * Blog with pagination, tags and
-      [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
+        * Blog with pagination, tags and
+        [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
 
-      * [Image
-      optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
+        * [Image
+        optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
 
-      * SEO Controls
+        * SEO Controls
 
-      * Responsive header and footer
+        * Responsive header and footer
 
-      * [Font Awesome Icons](https://fontawesome.com/search?o=r&m=free)
+        * [Font Awesome Icons](https://fontawesome.com/search?o=r&m=free)
 
-      * Schemas for adding new pages
+        * Schemas for adding new pages
 
-      * Editable color pallete
+        * Editable color pallete
 
-      * Markdown styles
+        * Markdown styles
 
-      * CloudCannon configuration
+        * CloudCannon configuration
 
-      * CSS variables | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+        * CSS variables
   rss-feed:
-    label: Translation (es-es)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
+    context:
+      open: false
+      title: Untranslated Version
+      icon: translate
+      content: RSS Feed
 astro-bookshop-starter: Inicio de la Bookshop Astro
 blog: Blog
 cloudcannon: CloudCannon

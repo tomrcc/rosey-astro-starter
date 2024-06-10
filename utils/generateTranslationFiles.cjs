@@ -1,13 +1,3 @@
-// TODO: Test readding stuff to blog section or a diff directory and test behaviour
-
-// TODO: BLOG PART
-// Add blog section and use the slug as a key
-// Before we run the generate fs scripts, and after we run rosey generate run Rosey check
-// If key has a namespace of blog see if theres anything in the check file
-// If the entry has changed. grab the old and new versions and display in the comment
-// Comment doesn't need highlight link, just a page link
-// Add a label that says 'edited - requires updated translation'
-
 const {
   NodeHtmlMarkdown,
   NodeHtmlMarkdownOptions,
@@ -39,7 +29,6 @@ async function main(locale) {
   const localePath = localesDirPath + '/' + locale + '.json';
   const oldLocale = await fs.readFileSync(localePath);
   const oldLocaleData = JSON.parse(oldLocale);
-  // console.log('Old locale data for the blog diff: ', oldLocaleData);
 
   if (fs.existsSync(inputFilePath)) {
     inputFileData = await JSON.parse(fs.readFileSync(inputFilePath)).keys;
@@ -96,14 +85,6 @@ async function main(locale) {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
 
-    isDirectory
-      ? console.log(
-          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
-        )
-      : console.log(
-          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
-        );
-
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
         `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
@@ -116,9 +97,7 @@ async function main(locale) {
         console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
       });
     } else {
-      console.log(
-        `✅ ${fileNameHTMLFormatted} was present in base.json and won't be deleted`
-      );
+      return;
     }
   }
 
@@ -183,13 +162,13 @@ async function main(locale) {
         const urlHighlighterWordLength = 3;
         // Get rid of any special characters in markdown
         // Get rid of links in the markdown
-        const originalPhraseArray = markdownOriginal
+        const originalPhraseTidied = markdownOriginal
           .trim()
           // Remove all md links
           .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
           // Remove special chars
-          .replaceAll(/[&\/\\#,+()$~%.'":*?<>{}]/gm, '')
-          .split(/[\n]+/);
+          .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
+        const originalPhraseArray = originalPhraseTidied.split(/[\n]+/);
         // Get the first and last line of the markdown so we only have complete lines in the highlight url
         const firstPhrase = originalPhraseArray[0];
         const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
@@ -221,8 +200,8 @@ async function main(locale) {
         // if it is fallback to the encoded original phrase for the highlight link
         const locationString =
           originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
-            ? `[See Context](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
-            : `[See Context](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
+            ? `[See on page](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
+            : `[See on page](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
 
         // Create the inputs obj if there is none
         if (!cleanedOutputFileData['_inputs']) {
@@ -233,18 +212,18 @@ async function main(locale) {
         if (!cleanedOutputFileData['_inputs']['$']) {
           cleanedOutputFileData['_inputs']['$'] = {
             type: 'object',
-            comment: `[Go to Page](${baseURL}${pageString})`,
+            comment: `[See ${pageString}](${baseURL}${pageString})`,
             options: {
               place_groups_below: false,
               groups: [
                 {
-                  heading: 'Untranslated',
-                  comment: `[To be translated](${baseURL}${pageString})`,
+                  heading: `Still to translate (${locale})`,
+                  comment: `Text to translate on [${pageString}](${baseURL}${pageString})`,
                   inputs: [],
                 },
                 {
-                  heading: 'Translated',
-                  comment: `[Already translated](${baseURL}${pageString})`,
+                  heading: `Already translated (${locale})`,
+                  comment: `Text already translated on [${pageString}](${baseURL}${pageString})`,
                   inputs: [],
                 },
               ],
@@ -259,11 +238,11 @@ async function main(locale) {
 
         const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
 
+        // TODO: Only run diff if we find something in the checks.json
         const diff = isStaticKeyInput
           ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
           : [];
 
-        // TODO: Only run diff if we find something in the checks.json
         let diffStringAdded = '';
         let diffStringRemoved = '';
         diff.forEach((part) => {
@@ -297,16 +276,27 @@ async function main(locale) {
           : {};
 
         const joinedComment =
-          diffStringAdded.length > 0 || diffStringRemoved.length
-            ? `${diffString} | ${markdownOriginal} | ${locationString}`
-            : `${markdownOriginal} | ${locationString}`;
+          diffStringAdded.length > 0 || diffStringRemoved.length > 0
+            ? `${diffString} \n ${locationString}`
+            : `${locationString}`;
+
+        const formattedLabel =
+          originalPhraseTidied.length > 42
+            ? `${originalPhraseTidied.substring(0, 42)}...`
+            : originalPhraseTidied;
 
         cleanedOutputFileData['_inputs'][inputKey] = {
-          label: `Translation (${locale})`,
+          label: formattedLabel,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
           comment: joinedComment,
+          context: {
+            open: false,
+            title: 'Untranslated Text',
+            icon: 'translate',
+            content: markdownOriginal,
+          },
         };
 
         // Add each entry to page object group depending on whether they are translated or not
