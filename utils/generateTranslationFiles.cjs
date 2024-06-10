@@ -85,14 +85,6 @@ async function main(locale) {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
 
-    // isDirectory
-    //   ? console.log(
-    //       `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
-    //     )
-    //   : console.log(
-    //       `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
-    //     );
-
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
         `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
@@ -301,7 +293,7 @@ async function main(locale) {
           comment: joinedComment,
           context: {
             open: false,
-            title: 'Untranslated Version',
+            title: 'Untranslated Text',
             icon: 'translate',
             content: markdownOriginal,
           },
