@@ -97,7 +97,7 @@ async function main(locale) {
         console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
       });
     } else {
-      return;
+      console.log(`✅ ${fileNameHTMLFormatted} at ${filePath} was kept`);
     }
   }
 
