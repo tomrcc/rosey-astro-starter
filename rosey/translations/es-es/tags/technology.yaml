@@ -18,7 +18,7 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: About...
+    label: About
     hidden: false
     type: text
     options: {}
@@ -31,7 +31,7 @@ _inputs:
       icon: translate
       content: About
   blog:
-    label: Blog...
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -44,7 +44,7 @@ _inputs:
       icon: translate
       content: Blog
   rss-feed:
-    label: RSS Feed...
+    label: RSS Feed
     hidden: false
     type: text
     options: {}

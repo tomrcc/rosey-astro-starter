@@ -22,7 +22,7 @@ _inputs:
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - rss-feed
   about:
-    label: About...
+    label: About
     hidden: false
     type: text
     options: {}
@@ -33,7 +33,7 @@ _inputs:
       icon: translate
       content: About
   astro-bookshop-starter:
-    label: Astro Bookshop Starter...
+    label: Astro Bookshop Starter
     hidden: false
     type: textarea
     options: {}
@@ -46,7 +46,7 @@ _inputs:
       icon: translate
       content: Astro Bookshop Starter
   blog:
-    label: Blog...
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -57,7 +57,7 @@ _inputs:
       icon: translate
       content: Blog
   cloudcannon:
-    label: CloudCannon...
+    label: CloudCannon
     hidden: false
     type: text
     options: {}
@@ -69,7 +69,7 @@ _inputs:
       icon: translate
       content: CloudCannon
   github:
-    label: GitHub...
+    label: GitHub
     hidden: false
     type: text
     options: {}
@@ -80,7 +80,7 @@ _inputs:
       icon: translate
       content: GitHub
   keep-what-you-need-delete-the-rest:
-    label: Keep what you need Delete the rest...
+    label: Keep what you need Delete the rest
     hidden: false
     type: textarea
     options: {}
@@ -164,7 +164,7 @@ _inputs:
 
         * CSS variables
   rss-feed:
-    label: RSS Feed...
+    label: RSS Feed
     hidden: false
     type: text
     options: {}

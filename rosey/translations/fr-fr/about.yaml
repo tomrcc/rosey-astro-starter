@@ -18,7 +18,7 @@ _inputs:
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
-    label: About...
+    label: About
     hidden: false
     type: text
     options: {}
@@ -30,7 +30,7 @@ _inputs:
       icon: translate
       content: About
   about-page:
-    label: About page...
+    label: About page
     hidden: false
     type: text
     options: {}
@@ -43,7 +43,7 @@ _inputs:
       icon: translate
       content: About page
   blog:
-    label: Blog...
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -79,7 +79,7 @@ _inputs:
 
         ## A heading halfway through lel
   rss-feed:
-    label: RSS Feed...
+    label: RSS Feed
     hidden: false
     type: text
     options: {}

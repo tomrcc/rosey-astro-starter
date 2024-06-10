@@ -23,7 +23,7 @@ _inputs:
             - blog
             - blog:/blog/best-email-sending-services/
   about:
-    label: About...
+    label: About
     hidden: false
     type: text
     options: {}
@@ -36,7 +36,7 @@ _inputs:
       icon: translate
       content: About
   blog:
-    label: Blog...
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -150,7 +150,7 @@ _inputs:
         customers or clients and make sure that they are getting their emails in
         a timely manner.
   rss-feed:
-    label: RSS Feed...
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
