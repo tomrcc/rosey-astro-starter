@@ -212,18 +212,18 @@ async function main(locale) {
         if (!cleanedOutputFileData['_inputs']['$']) {
           cleanedOutputFileData['_inputs']['$'] = {
             type: 'object',
-            comment: `[Go to Page](${baseURL}${pageString})`,
+            comment: `[See ${pageString}](${baseURL}${pageString})`,
             options: {
               place_groups_below: false,
               groups: [
                 {
                   heading: `Still to translate (${locale})`,
-                  comment: `[See page](${baseURL}${pageString})`,
+                  comment: `Text to translate on [${pageString}](${baseURL}${pageString})`,
                   inputs: [],
                 },
                 {
                   heading: `Already translated (${locale})`,
-                  comment: `[See page](${baseURL}${pageString})`,
+                  comment: `Text already translated on [${pageString}](${baseURL}${pageString})`,
                   inputs: [],
                 },
               ],
