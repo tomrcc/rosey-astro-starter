@@ -20,25 +20,43 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      About)"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: About
   blog:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      Blog)"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: Blog
   rss-feed:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      RSS%20Feed)"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: RSS Feed
 blog: Blog
 rss-feed: RSS Feed

@@ -18,25 +18,42 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: About | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About\
+      )"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: About
   blog:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: Blog | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: Blog
   rss-feed:
-    label: Translation (fr-fr)
+    label: Translation Entry (fr-fr)
     hidden: false
     type: text
     options: {}
-    comment: RSS Feed | [See
-      Context](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%2\
+      0Feed)"
+    context:
+      open: true
+      title: Original
+      icon: translate
+      content: RSS Feed
 blog: Blog
 rss-feed: RSS Feed
