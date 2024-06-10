@@ -85,13 +85,13 @@ async function main(locale) {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
 
-    isDirectory
-      ? console.log(
-          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
-        )
-      : console.log(
-          `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
-        );
+    // isDirectory
+    //   ? console.log(
+    //       `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json. ${fileNameHTMLFormatted} is a directory so doesn't get checked.`
+    //     )
+    //   : console.log(
+    //       `🔍 Checking if ${fileNameHTMLFormatted} still exists in the pages in our base.json`
+    //     );
 
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
@@ -105,9 +105,7 @@ async function main(locale) {
         console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
       });
     } else {
-      console.log(
-        `✅ ${fileNameHTMLFormatted} was present in base.json and won't be deleted`
-      );
+      return;
     }
   }
 
