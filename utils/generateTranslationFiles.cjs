@@ -290,8 +290,13 @@ async function main(locale) {
             ? `${diffString} \n ${locationString}`
             : `${locationString}`;
 
+        const formattedLabel =
+          originalPhraseTidied.length > 42
+            ? `${originalPhraseTidied.substring(0, 42)}...`
+            : originalPhraseTidied;
+
         cleanedOutputFileData['_inputs'][inputKey] = {
-          label: `${originalPhraseTidied.substring(0, 42)}...`,
+          label: formattedLabel,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
