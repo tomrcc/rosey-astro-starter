@@ -291,14 +291,14 @@ async function main(locale) {
             : `${locationString}`;
 
         cleanedOutputFileData['_inputs'][inputKey] = {
-          label: markdownOriginal.substring(0, 25),
+          label: `${markdownOriginal.substring(0, 42)}...`,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
           comment: joinedComment,
           context: {
             open: false,
-            title: 'Untranslated',
+            title: 'Untranslated Version',
             icon: 'translate',
             content: markdownOriginal,
           },
