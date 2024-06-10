@@ -227,13 +227,13 @@ async function main(locale) {
               place_groups_below: false,
               groups: [
                 {
-                  heading: 'Untranslated',
-                  comment: `[To be translated](${baseURL}${pageString})`,
+                  heading: `Still to translate (${locale})`,
+                  comment: `[See page](${baseURL}${pageString})`,
                   inputs: [],
                 },
                 {
-                  heading: 'Translated',
-                  comment: `[Already translated](${baseURL}${pageString})`,
+                  heading: `Already translated (${locale})`,
+                  comment: `[See page](${baseURL}${pageString})`,
                   inputs: [],
                 },
               ],
@@ -291,14 +291,14 @@ async function main(locale) {
             : `${locationString}`;
 
         cleanedOutputFileData['_inputs'][inputKey] = {
-          label: `Translation Entry (${locale})`,
+          label: markdownOriginal.substring(0, 25),
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
           comment: joinedComment,
           context: {
-            open: true,
-            title: 'Original',
+            open: false,
+            title: 'Untranslated',
             icon: 'translate',
             content: markdownOriginal,
           },
