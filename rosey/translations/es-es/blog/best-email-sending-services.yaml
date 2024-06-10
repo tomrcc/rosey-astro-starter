@@ -2,23 +2,21 @@ about: Acerca de
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/)"
+    comment: "[See
+      blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.\
+      net/blog/best-email-sending-services/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-es)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sen\
-            ding-services/)"
+          comment: Text to translate on
+            [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - blog:/blog/best-email-sending-services/
             - rss-feed
         - heading: Already translated (es-es)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sen\
-            ding-services/)"
+          comment: Text already translated on
+            [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
             - blog
@@ -32,7 +30,7 @@ _inputs:
       ervices/#:~:text=About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -45,7 +43,7 @@ _inputs:
       ervices/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   blog:/blog/best-email-sending-services/:
@@ -66,7 +64,7 @@ _inputs:
       ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: >-
         When you send an email campaign, you expect it to reach your readers,
@@ -159,7 +157,7 @@ _inputs:
       ervices/#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog

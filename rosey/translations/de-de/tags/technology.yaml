@@ -2,17 +2,19 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
+    comment: "[See
+      tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
+      gy/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
+          comment: Text to translate on
+            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs: []
         - heading: Already translated (de-de)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
+          comment: Text already translated on
+            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs:
             - about
             - blog
@@ -27,7 +29,7 @@ _inputs:
       About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -40,7 +42,7 @@ _inputs:
       Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   rss-feed:
@@ -53,7 +55,7 @@ _inputs:
       RSS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog (DE) - Every page

@@ -2,15 +2,17 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+    comment: "[See tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+          comment: Text to translate on
+            [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs: []
         - heading: Already translated (de-de)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+          comment: Text already translated on
+            [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs:
             - about
             - blog
@@ -25,7 +27,7 @@ _inputs:
       )"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -37,7 +39,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   rss-feed:
@@ -50,7 +52,7 @@ _inputs:
       0Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog (DE) - Every page

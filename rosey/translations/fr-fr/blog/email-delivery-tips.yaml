@@ -2,22 +2,20 @@ about: Á propos
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      )"
+    comment: "[See
+      blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog\
+      /email-delivery-tips/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (fr-fr)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery\
-            -tips/)"
+          comment: Text to translate on
+            [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - blog:/blog/email-delivery-tips/
         - heading: Already translated (fr-fr)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery\
-            -tips/)"
+          comment: Text already translated on
+            [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - about
             - blog
@@ -32,7 +30,7 @@ _inputs:
       #:~:text=About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -45,7 +43,7 @@ _inputs:
       #:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   blog:/blog/email-delivery-tips/:
@@ -66,7 +64,7 @@ _inputs:
       #:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: >-
         When you send an email campaign, you expect it to reach your readers,
@@ -156,7 +154,7 @@ _inputs:
       #:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog

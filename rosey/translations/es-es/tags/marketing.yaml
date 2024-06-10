@@ -2,15 +2,19 @@ about: Acerca de
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)"
+    comment: "[See
+      tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing\
+      /)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-es)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)"
+          comment: Text to translate on
+            [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs: []
         - heading: Already translated (es-es)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)"
+          comment: Text already translated on
+            [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs:
             - about
             - blog
@@ -25,7 +29,7 @@ _inputs:
       bout)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -38,7 +42,7 @@ _inputs:
       log)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   rss-feed:
@@ -51,7 +55,7 @@ _inputs:
       SS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog

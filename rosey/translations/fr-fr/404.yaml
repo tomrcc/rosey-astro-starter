@@ -2,15 +2,17 @@ about: Á propos
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/404)"
+    comment: "[See 404](https://glamorous-sanctuary.cloudvent.net/404)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (fr-fr)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/404)"
+          comment: Text to translate on
+            [404](https://glamorous-sanctuary.cloudvent.net/404)
           inputs: []
         - heading: Already translated (fr-fr)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/404)"
+          comment: Text already translated on
+            [404](https://glamorous-sanctuary.cloudvent.net/404)
           inputs:
             - about
             - blog
@@ -24,7 +26,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -35,7 +37,7 @@ _inputs:
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   rss-feed:
@@ -47,7 +49,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog

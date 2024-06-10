@@ -2,21 +2,19 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[Go to
-      Page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/)"
+    comment: "[See
+      blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuar\
+      y.cloudvent.net/blog/5-things-to-improve-you-email-templates/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-im\
-            prove-you-email-templates/)"
+          comment: Text to translate on
+            [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs: []
         - heading: Already translated (de-de)
-          comment: "[See
-            page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-im\
-            prove-you-email-templates/)"
+          comment: Text already translated on
+            [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
             - about
             - blog
@@ -32,7 +30,7 @@ _inputs:
       you-email-templates/#:~:text=About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   blog:
@@ -45,7 +43,7 @@ _inputs:
       you-email-templates/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   blog:/blog/5-things-to-improve-you-email-templates/:
@@ -69,7 +67,7 @@ _inputs:
       you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: >-
         ### Use an ESP
@@ -153,7 +151,7 @@ _inputs:
       you-email-templates/#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 blog: Blog (DE) - Every page

@@ -2,16 +2,18 @@ about: Á propos
 _inputs:
   $:
     type: object
-    comment: "[Go to Page](https://glamorous-sanctuary.cloudvent.net/about/)"
+    comment: "[See about/](https://glamorous-sanctuary.cloudvent.net/about/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (fr-fr)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/about/)"
+          comment: Text to translate on
+            [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - about-page
         - heading: Already translated (fr-fr)
-          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/about/)"
+          comment: Text already translated on
+            [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - about
             - blog
@@ -26,7 +28,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About
   about-page:
@@ -39,7 +41,7 @@ _inputs:
       ge)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: About page
   blog:
@@ -51,7 +53,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: Blog
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
@@ -72,7 +74,7 @@ _inputs:
       20all,halfway%20through%20lel)"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: |-
         This is all about what we're _about_ like what we're really _**about**_
@@ -88,7 +90,7 @@ _inputs:
       )"
     context:
       open: false
-      title: Untranslated Version
+      title: Untranslated Text
       icon: translate
       content: RSS Feed
 about-page: ""
