@@ -16,7 +16,7 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
@@ -25,11 +25,11 @@ _inputs:
       )"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
@@ -37,11 +37,11 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -50,7 +50,7 @@ _inputs:
       0Feed)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 blog: Blog

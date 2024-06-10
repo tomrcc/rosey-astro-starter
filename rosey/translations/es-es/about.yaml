@@ -18,7 +18,7 @@ _inputs:
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
@@ -26,11 +26,11 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   about-page:
-    label: About page
+    label: About page...
     hidden: false
     type: text
     options: {}
@@ -39,11 +39,11 @@ _inputs:
       ge)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About page
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
@@ -51,11 +51,11 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
-    label: This is all about what we
+    label: This is all about what we're _about_ like ...
     hidden: false
     type: markdown
     options:
@@ -72,14 +72,14 @@ _inputs:
       20all,halfway%20through%20lel)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: |-
         This is all about what we're _about_ like what we're really _**about**_
 
         ## A heading halfway through lel
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -88,7 +88,7 @@ _inputs:
       )"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 about-page: acerca de la página

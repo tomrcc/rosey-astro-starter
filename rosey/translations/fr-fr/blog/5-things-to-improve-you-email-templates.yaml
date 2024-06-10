@@ -23,7 +23,7 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
@@ -32,11 +32,11 @@ _inputs:
       you-email-templates/#:~:text=About)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
@@ -45,14 +45,14 @@ _inputs:
       you-email-templates/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: |-
       ### Use an ESP
 
-      Use an em
+      Use an email service provi...
     hidden: false
     type: markdown
     options:
@@ -69,7 +69,7 @@ _inputs:
       you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: >-
         ### Use an ESP
@@ -144,7 +144,7 @@ _inputs:
         customers or clients and make sure that they are getting their emails in
         a timely manner.
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -153,7 +153,7 @@ _inputs:
       you-email-templates/#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 blog: Blog

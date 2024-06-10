@@ -23,7 +23,7 @@ _inputs:
             - blog
             - blog:/blog/best-email-sending-services/
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
@@ -32,11 +32,11 @@ _inputs:
       ervices/#:~:text=About)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
@@ -45,11 +45,11 @@ _inputs:
       ervices/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   blog:/blog/best-email-sending-services/:
-    label: When you send an email ca
+    label: When you send an email campaign, you expec...
     hidden: false
     type: markdown
     options:
@@ -66,7 +66,7 @@ _inputs:
       ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: >-
         When you send an email campaign, you expect it to reach your readers,
@@ -150,7 +150,7 @@ _inputs:
         customers or clients and make sure that they are getting their emails in
         a timely manner.
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -159,7 +159,7 @@ _inputs:
       ervices/#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 blog: Blog

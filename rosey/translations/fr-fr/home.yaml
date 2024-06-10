@@ -22,18 +22,18 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   astro-bookshop-starter:
-    label: Astro Bookshop Starter
+    label: Astro Bookshop Starter...
     hidden: false
     type: textarea
     options: {}
@@ -42,22 +42,22 @@ _inputs:
       %20Starter)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Astro Bookshop Starter
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   cloudcannon:
-    label: CloudCannon
+    label: CloudCannon...
     hidden: false
     type: text
     options: {}
@@ -65,22 +65,22 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: CloudCannon
   github:
-    label: GitHub
+    label: GitHub...
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: GitHub
   keep-what-you-need-delete-the-rest:
-    label: Keep what you need. Delet
+    label: Keep what you need. Delete the rest....
     hidden: false
     type: textarea
     options: {}
@@ -89,11 +89,11 @@ _inputs:
       u,Delete%20the%20rest)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Keep what you need. Delete the rest.
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
-    label: A starting point for **de
+    label: A starting point for **developers looking ...
     hidden: false
     type: markdown
     options:
@@ -110,13 +110,13 @@ _inputs:
       oint,the%20CloudCannon%20CMS)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: A starting point for **developers looking to build a website with
         Astro, using Bookshop components in CloudCannon**. Create your own copy,
         and start creating your own components to use in the CloudCannon CMS.
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
-    label: To help save you time, so
+    label: To help save you time, some features are s...
     hidden: false
     type: markdown
     options:
@@ -133,7 +133,7 @@ _inputs:
       ,CSS%20variables)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: >-
         To help save you time, some features are set up in this template, like:
@@ -164,7 +164,7 @@ _inputs:
 
         * CSS variables
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -172,7 +172,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 astro-bookshop-starter: ""

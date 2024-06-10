@@ -18,7 +18,7 @@ _inputs:
             - blog
             - rss-feed
   about:
-    label: About
+    label: About...
     hidden: false
     type: text
     options: {}
@@ -27,11 +27,11 @@ _inputs:
       About)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: About
   blog:
-    label: Blog
+    label: Blog...
     hidden: false
     type: text
     options: {}
@@ -40,11 +40,11 @@ _inputs:
       Blog)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: Blog
   rss-feed:
-    label: RSS Feed
+    label: RSS Feed...
     hidden: false
     type: text
     options: {}
@@ -53,7 +53,7 @@ _inputs:
       RSS%20Feed)"
     context:
       open: false
-      title: Untranslated
+      title: Untranslated Version
       icon: translate
       content: RSS Feed
 blog: Blog
