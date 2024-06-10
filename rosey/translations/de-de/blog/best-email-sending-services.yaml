@@ -8,22 +8,22 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+        - heading: Still to translate (de-de)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sen\
+            ding-services/)"
           inputs:
             - rss-feed
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/best-ema\
-            il-sending-services/)"
+        - heading: Already translated (de-de)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sen\
+            ding-services/)"
           inputs:
             - about
             - blog
             - blog:/blog/best-email-sending-services/
   about:
-    label: Translation Entry (de-de)
+    label: About
     hidden: false
     type: text
     options: {}
@@ -31,12 +31,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=About)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: About
   blog:
-    label: Translation Entry (de-de)
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -44,12 +44,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=Blog)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Blog
   blog:/blog/best-email-sending-services/:
-    label: Translation Entry (de-de)
+    label: When you send an email ca
     hidden: false
     type: markdown
     options:
@@ -65,8 +65,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: >-
         When you send an email campaign, you expect it to reach your readers,
@@ -150,7 +150,7 @@ _inputs:
         customers or clients and make sure that they are getting their emails in
         a timely manner.
   rss-feed:
-    label: Translation Entry (de-de)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
@@ -158,8 +158,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=RSS%20Feed)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: RSS Feed
 blog: Blog

@@ -6,12 +6,12 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be translated](https://glamorous-sanctuary.cloudvent.net/)"
+        - heading: Still to translate (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
-        - heading: Translated
-          comment: "[Already translated](https://glamorous-sanctuary.cloudvent.net/)"
+        - heading: Already translated (es-es)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/)"
           inputs:
             - about
             - astro-bookshop-starter
@@ -22,18 +22,18 @@ _inputs:
             - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - rss-feed
   about:
-    label: Translation Entry (es-es)
+    label: About
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: About
   astro-bookshop-starter:
-    label: Translation Entry (es-es)
+    label: Astro Bookshop Starter
     hidden: false
     type: textarea
     options: {}
@@ -41,46 +41,46 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
       %20Starter)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Astro Bookshop Starter
   blog:
-    label: Translation Entry (es-es)
+    label: Blog
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Blog
   cloudcannon:
-    label: Translation Entry (es-es)
+    label: CloudCannon
     hidden: false
     type: text
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: CloudCannon
   github:
-    label: Translation Entry (es-es)
+    label: GitHub
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: GitHub
   keep-what-you-need-delete-the-rest:
-    label: Translation Entry (es-es)
+    label: Keep what you need. Delet
     hidden: false
     type: textarea
     options: {}
@@ -88,12 +88,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
       u,Delete%20the%20rest)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Keep what you need. Delete the rest.
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
-    label: Translation Entry (es-es)
+    label: A starting point for **de
     hidden: false
     type: markdown
     options:
@@ -109,14 +109,14 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
       oint,the%20CloudCannon%20CMS)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: A starting point for **developers looking to build a website with
         Astro, using Bookshop components in CloudCannon**. Create your own copy,
         and start creating your own components to use in the CloudCannon CMS.
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
-    label: Translation Entry (es-es)
+    label: To help save you time, so
     hidden: false
     type: markdown
     options:
@@ -132,8 +132,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
       ,CSS%20variables)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: >-
         To help save you time, some features are set up in this template, like:
@@ -164,15 +164,15 @@ _inputs:
 
         * CSS variables
   rss-feed:
-    label: Translation Entry (es-es)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: RSS Feed
 astro-bookshop-starter: Inicio de la Bookshop Astro

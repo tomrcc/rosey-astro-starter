@@ -8,22 +8,22 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
-            -to-improve-you-email-templates/)"
+        - heading: Still to translate (fr-fr)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-im\
+            prove-you-email-templates/)"
           inputs:
             - blog:/blog/5-things-to-improve-you-email-templates/
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/blog/5-things\
-            -to-improve-you-email-templates/)"
+        - heading: Already translated (fr-fr)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-im\
+            prove-you-email-templates/)"
           inputs:
             - about
             - blog
             - rss-feed
   about:
-    label: Translation Entry (fr-fr)
+    label: About
     hidden: false
     type: text
     options: {}
@@ -31,12 +31,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=About)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: About
   blog:
-    label: Translation Entry (fr-fr)
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -44,12 +44,15 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=Blog)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Blog
   blog:/blog/5-things-to-improve-you-email-templates/:
-    label: Translation Entry (fr-fr)
+    label: |-
+      ### Use an ESP
+
+      Use an em
     hidden: false
     type: markdown
     options:
@@ -65,8 +68,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: >-
         ### Use an ESP
@@ -141,7 +144,7 @@ _inputs:
         customers or clients and make sure that they are getting their emails in
         a timely manner.
   rss-feed:
-    label: Translation Entry (fr-fr)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
@@ -149,8 +152,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=RSS%20Feed)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: RSS Feed
 blog: Blog

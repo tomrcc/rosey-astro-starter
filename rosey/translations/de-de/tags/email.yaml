@@ -6,19 +6,17 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+        - heading: Still to translate (de-de)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs: []
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
+        - heading: Already translated (de-de)
+          comment: "[See page](https://glamorous-sanctuary.cloudvent.net/tags/email/)"
           inputs:
             - about
             - blog
             - rss-feed
   about:
-    label: Translation Entry (de-de)
+    label: About
     hidden: false
     type: text
     options: {}
@@ -26,24 +24,24 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About\
       )"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: About
   blog:
-    label: Translation Entry (de-de)
+    label: Blog
     hidden: false
     type: text
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Blog
   rss-feed:
-    label: Translation Entry (de-de)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
@@ -51,8 +49,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%2\
       0Feed)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: RSS Feed
 blog: Blog

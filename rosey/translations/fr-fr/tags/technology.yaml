@@ -6,21 +6,19 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Untranslated
-          comment: "[To be
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
-            gy/)"
+        - heading: Still to translate (fr-fr)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
           inputs: []
-        - heading: Translated
-          comment: "[Already
-            translated](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
-            gy/)"
+        - heading: Already translated (fr-fr)
+          comment: "[See
+            page](https://glamorous-sanctuary.cloudvent.net/tags/technology/)"
           inputs:
             - about
             - blog
             - rss-feed
   about:
-    label: Translation Entry (fr-fr)
+    label: About
     hidden: false
     type: text
     options: {}
@@ -28,12 +26,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       About)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: About
   blog:
-    label: Translation Entry (fr-fr)
+    label: Blog
     hidden: false
     type: text
     options: {}
@@ -41,12 +39,12 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       Blog)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: Blog
   rss-feed:
-    label: Translation Entry (fr-fr)
+    label: RSS Feed
     hidden: false
     type: text
     options: {}
@@ -54,8 +52,8 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       RSS%20Feed)"
     context:
-      open: true
-      title: Original
+      open: false
+      title: Untranslated
       icon: translate
       content: RSS Feed
 blog: Blog
