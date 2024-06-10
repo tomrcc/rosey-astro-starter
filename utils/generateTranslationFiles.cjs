@@ -172,13 +172,13 @@ async function main(locale) {
         const urlHighlighterWordLength = 3;
         // Get rid of any special characters in markdown
         // Get rid of links in the markdown
-        const originalPhraseArray = markdownOriginal
+        const originalPhraseTidied = markdownOriginal
           .trim()
           // Remove all md links
           .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
           // Remove special chars
-          .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '')
-          .split(/[\n]+/);
+          .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
+        const originalPhraseArray = originalPhraseTidied.split(/[\n]+/);
         // Get the first and last line of the markdown so we only have complete lines in the highlight url
         const firstPhrase = originalPhraseArray[0];
         const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
@@ -291,7 +291,7 @@ async function main(locale) {
             : `${locationString}`;
 
         cleanedOutputFileData['_inputs'][inputKey] = {
-          label: `${markdownOriginal.substring(0, 42)}...`,
+          label: `${originalPhraseTidied.substring(0, 42)}...`,
           hidden: originalPhrase === '' ? true : false,
           type: inputType,
           options: options,
