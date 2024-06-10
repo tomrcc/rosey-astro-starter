@@ -80,7 +80,7 @@ _inputs:
       icon: translate
       content: GitHub
   keep-what-you-need-delete-the-rest:
-    label: Keep what you need. Delete the rest....
+    label: Keep what you need Delete the rest...
     hidden: false
     type: textarea
     options: {}
@@ -93,7 +93,7 @@ _inputs:
       icon: translate
       content: Keep what you need. Delete the rest.
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
-    label: A starting point for **developers looking ...
+    label: A starting point for developers looking to...
     hidden: false
     type: markdown
     options:
@@ -116,7 +116,7 @@ _inputs:
         Astro, using Bookshop components in CloudCannon**. Create your own copy,
         and start creating your own components to use in the CloudCannon CMS.
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
-    label: To help save you time, some features are s...
+    label: To help save you time some features are se...
     hidden: false
     type: markdown
     options:

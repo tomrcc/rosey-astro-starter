@@ -49,10 +49,10 @@ _inputs:
       icon: translate
       content: Blog
   blog:/blog/5-things-to-improve-you-email-templates/:
-    label: |-
-      ### Use an ESP
+    label: |2-
+       Use an ESP
 
-      Use an email service provi...
+      Use an email service provider...
     hidden: false
     type: markdown
     options:

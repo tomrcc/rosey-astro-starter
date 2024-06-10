@@ -49,7 +49,7 @@ _inputs:
       icon: translate
       content: Blog
   blog:/blog/email-delivery-tips/:
-    label: When you send an email campaign, you expec...
+    label: When you send an email campaign you expect...
     hidden: false
     type: markdown
     options:
