@@ -19,16 +19,46 @@ const locales = process.env.LOCALES?.toLowerCase().split(',') || [
 async function main(locale) {
   const baseFile = await fs.readFileSync('./rosey/base.json');
   const baseFileData = JSON.parse(baseFile).keys;
+  const baseURLsFile = await fs.readFileSync('./rosey/base.urls.json');
+  const baseURLFileData = JSON.parse(baseURLsFile).keys;
+  const baseURLFileDataKeys = Object.keys(baseURLFileData);
+  const baseURLFileDataKeysExtensionless = baseURLFileDataKeys.map((key) => {
+    return key.replace('/index.html', '');
+  });
 
   const localePath = localesDirPath + '/' + locale + '.json';
+  const localeURLsPath = localesDirPath + '/' + locale + '.urls.json';
+  const translationsLocalePath = translationsDirPath + '/' + locale + '/';
+
+  // Check if locales files exist otherwise create one
+  if (!fs.existsSync(localePath)) {
+    fs.writeFileSync(localePath, '{}', (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`No locale file exists for ${locale} - creating one now.`);
+      }
+    });
+  }
+  if (!fs.existsSync(localeURLsPath)) {
+    fs.writeFileSync(localeURLsPath, '{}', (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`No locale file exists for ${locale} - creating one now.`);
+      }
+    });
+  }
+
   const oldLocale = await fs.readFileSync(localePath);
   const oldLocaleData = JSON.parse(oldLocale);
-
-  const translationsLocalePath = translationsDirPath + '/' + locale + '/';
+  const oldURLsLocale = await fs.readFileSync(localeURLsPath);
+  const oldURLsLocaleData = oldURLsLocale ? JSON.parse(oldURLsLocale) : {};
 
   let translationsFileData = [];
   let translationsPagesObj = {};
   let localeData = {};
+  let localeURLsData = {};
 
   const translationsFiles = await fs.readdirSync(translationsLocalePath, {
     recursive: true,
@@ -68,11 +98,12 @@ async function main(locale) {
         if (keyName !== '_inputs') {
           const isKeyMarkdown = keyName.slice(0, 10).includes('markdown:');
           const isKeyBlog = keyName.slice(0, 8).includes('blog:');
+          const isKeyURLTranslation = keyName === 'urlTranslation';
 
-          // Write the value to be any translated value that appears in translations files
+          // Write entry values to be any translated value that appears in translations files
           // If no value detected, and the locale value is an empty string, write the original to value as a fallback
 
-          if (translationEntry) {
+          if (translationEntry && !isKeyURLTranslation) {
             // Write to the rest of the entries
             if (translationEntry !== oldLocaleData[keyName]?.value) {
               console.log(`🔍 Detected a new translation`);
@@ -89,6 +120,7 @@ async function main(locale) {
                 original: baseFileData[keyName]?.original,
                 value: localeValue,
               };
+              // Loop through and write any duplicate keys
               for (file in translationsFiles) {
                 const overWriteFile = translationsFiles[file];
                 const overWriteFilePath =
@@ -125,9 +157,39 @@ async function main(locale) {
                 value: oldLocaleData[keyName]?.value,
               };
             }
+          } else if (isKeyURLTranslation) {
+            // Write the URL translation to obj to be written
+            const translationFileWithPageExtension = translationFile.replace(
+              '.yaml',
+              '/index.html'
+            );
+            if (translationEntry) {
+              localeURLsData[translationFileWithPageExtension] = {
+                original: translationFileWithPageExtension,
+                value: translationEntry,
+              };
+            } else if (
+              oldURLsLocaleData[translationFileWithPageExtension]?.value
+            ) {
+              // Preserve the old translation if there is one
+              localeURLsData[translationFileWithPageExtension] = {
+                original:
+                  baseURLFileData[translationFileWithPageExtension]?.original,
+                value:
+                  oldURLsLocaleData[translationFileWithPageExtension]?.value,
+              };
+            } else {
+              localeURLsData[translationFileWithPageExtension] = {
+                original:
+                  baseURLFileData[translationFileWithPageExtension]?.original,
+                value:
+                  oldURLsLocaleData[translationFileWithPageExtension]?.original,
+              };
+            }
           } else if (
-            localeData[keyName]?.value === '' ||
-            localeData[keyName]?.value === undefined
+            (localeData[keyName]?.value === '' ||
+              localeData[keyName]?.value === undefined) &&
+            !isKeyURLTranslation
           ) {
             // This is just a fallback if there's no translation
             localeData[keyName] = {
@@ -143,6 +205,11 @@ async function main(locale) {
   fs.writeFileSync(localePath, JSON.stringify(localeData), (err) => {
     if (err) throw err;
     console.log(`✅✅ ${localePath} + ' updated succesfully`);
+  });
+  // Write locales URL data
+  fs.writeFileSync(localeURLsPath, JSON.stringify(localeURLsData), (err) => {
+    if (err) throw err;
+    console.log(`✅✅ ${localeURLsPath} + ' updated succesfully`);
   });
 }
 

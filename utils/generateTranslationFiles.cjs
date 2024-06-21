@@ -59,7 +59,6 @@ async function main(locale) {
     return accumulator;
   }, []);
 
-  // Remove translations pages no longer present in the base.json file
   const translationsLocalePath = translationFilesDirPath + '/' + locale;
   const recursivetranslationsFiles = await fs.readdirSync(
     translationsLocalePath,
@@ -85,6 +84,7 @@ async function main(locale) {
       fileNameHTMLFormatted = filePathExtensionless + '/index.html';
     }
 
+    // Remove translations pages no longer present in the base.json file
     if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
       console.log(
         `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
@@ -206,6 +206,10 @@ async function main(locale) {
         // Create the inputs obj if there is none
         if (!cleanedOutputFileData['_inputs']) {
           cleanedOutputFileData['_inputs'] = {};
+        }
+        // Create the url key if there is none
+        if (!cleanedOutputFileData['urlTranslation']) {
+          cleanedOutputFileData['urlTranslation'] = '';
         }
 
         // Create the page input object
