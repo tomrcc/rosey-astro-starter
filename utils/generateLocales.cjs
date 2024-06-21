@@ -99,103 +99,126 @@ async function main(locale) {
           const isKeyMarkdown = keyName.slice(0, 10).includes('markdown:');
           const isKeyBlog = keyName.slice(0, 8).includes('blog:');
           const isKeyURLTranslation = keyName === 'urlTranslation';
+          const translationFileWithPageExtension =
+            translationFile === '404.yaml'
+              ? '404.html'
+              : translationFile === 'home.yaml'
+              ? 'index.html'
+              : translationFile.replace('.yaml', '/index.html');
 
           // Write entry values to be any translated value that appears in translations files
           // If no value detected, and the locale value is an empty string, write the original to value as a fallback
 
-          if (translationEntry && !isKeyURLTranslation) {
+          if (translationEntry) {
             // Write to the rest of the entries
-            if (translationEntry !== oldLocaleData[keyName]?.value) {
-              console.log(`🔍 Detected a new translation`);
-              console.log(
-                `🔨 Checking for and writing to any duplicate entries`
-              );
-              const markdownTranslation = md.render(translationEntry);
-              const localeValue =
-                isKeyMarkdown || isKeyBlog
-                  ? markdownTranslation
-                  : translationEntry;
-              // Write the value to the locales
-              localeData[keyName] = {
-                original: baseFileData[keyName]?.original,
-                value: localeValue,
-              };
-              // Loop through and write any duplicate keys
-              for (file in translationsFiles) {
-                const overWriteFile = translationsFiles[file];
-                const overWriteFilePath =
-                  translationsLocalePath + overWriteFile;
+            if (
+              // Check if its a new translation
+              translationEntry !== oldLocaleData[keyName]?.value ||
+              translationEntry !== oldURLsLocaleData[keyName]?.value
+            ) {
+              if (!isKeyURLTranslation) {
+                console.log(
+                  `🔍 Detected a new translation - writing to locales: ${keyName}`
+                );
+                const markdownTranslation = md.render(translationEntry);
+                const localeValue =
+                  isKeyMarkdown || isKeyBlog
+                    ? markdownTranslation
+                    : translationEntry;
+                // Write the value to the locales
+                localeData[keyName] = {
+                  original: baseFileData[keyName]?.original,
+                  value: localeValue,
+                };
+                console.log(
+                  `🔨 Checking for any duplicate entries in other pages`
+                );
+                // Loop through and write any duplicate keys
+                for (file in translationsFiles) {
+                  const overWriteFile = translationsFiles[file];
+                  const overWriteFilePath =
+                    translationsLocalePath + overWriteFile;
 
-                let overWriteTranslationObj =
-                  translationsPagesObj[overWriteFile] || {};
-                const overWriteTranslationObjData = overWriteTranslationObj;
+                  let overWriteTranslationObj =
+                    translationsPagesObj[overWriteFile] || {};
+                  const overWriteTranslationObjData = overWriteTranslationObj;
 
-                const overWriteTranslationObjKeys = overWriteTranslationObjData
-                  ? Object.keys(overWriteTranslationObjData)
-                  : [];
-                if (overWriteTranslationObjKeys.includes(keyName)) {
-                  overWriteTranslationObj[keyName] = translationEntry;
-                  console.log(
-                    `✅ Detected a duplicate key in ${file} - overwriting ${keyName} with new translation`
-                  );
-                  fs.writeFileSync(
-                    overWriteFilePath,
-                    YAML.stringify(overWriteTranslationObj),
-                    (err) => {
+                  const overWriteTranslationObjKeys =
+                    overWriteTranslationObjData
+                      ? Object.keys(overWriteTranslationObjData)
+                      : [];
+                  if (overWriteTranslationObjKeys.includes(keyName)) {
+                    overWriteTranslationObj[keyName] = translationEntry;
+                    console.log(
+                      `✅ Detected a duplicate key in ${overWriteFile} - overwriting with new translation`
+                    );
+                    const yamlData = YAML.stringify(overWriteTranslationObj);
+                    fs.writeFileSync(overWriteFilePath, yamlData, (err) => {
                       if (err) throw err;
                       console.log(
                         `✅ ${overWriteFilePath} succesfully updated duplicate key: ${keyName}`
                       );
-                    }
+                    });
+                  }
+                }
+              } else {
+                if (
+                  // If there's a translated URL and it's a new one
+                  translationEntry &&
+                  translationEntry !== oldURLsLocaleData[keyName]?.value
+                ) {
+                  console.log(
+                    `Detected a new URL translation: ${translationEntry}`
                   );
+                  // Write the URL translation
+
+                  localeURLsData[translationFileWithPageExtension] = {
+                    original: translationFileWithPageExtension,
+                    value: translationEntry,
+                  };
                 }
               }
             } else {
               // Preserve the old translation if there is one
+              if (!isKeyURLTranslation) {
+                localeData[keyName] = {
+                  original: baseFileData[keyName]?.original,
+                  value: oldLocaleData[keyName]?.value,
+                };
+              } else {
+                localeURLsData[translationFileWithPageExtension] = {
+                  original:
+                    baseURLFileData[translationFileWithPageExtension]?.original,
+                  value:
+                    oldURLsLocaleData[translationFileWithPageExtension]?.value,
+                };
+              }
+            }
+          } else if (!isKeyURLTranslation) {
+            if (
+              // Provide a fallback if there's no translation so the translated page entry isn't a blank string
+              localeData[keyName]?.value === '' ||
+              localeData[keyName]?.value === undefined
+            ) {
               localeData[keyName] = {
                 original: baseFileData[keyName]?.original,
-                value: oldLocaleData[keyName]?.value,
+                value: baseFileData[keyName]?.original,
               };
             }
-          } else if (isKeyURLTranslation) {
-            // Write the URL translation to obj to be written
-            const translationFileWithPageExtension = translationFile.replace(
-              '.yaml',
-              '/index.html'
-            );
-            if (translationEntry) {
-              localeURLsData[translationFileWithPageExtension] = {
-                original: translationFileWithPageExtension,
-                value: translationEntry,
-              };
-            } else if (
-              oldURLsLocaleData[translationFileWithPageExtension]?.value
+          } else {
+            if (
+              // Provide a fallback if there's no translated URL so the translated URL isn't a blank string
+              localeURLsData[translationFileWithPageExtension]?.value === '' ||
+              localeURLsData[translationFileWithPageExtension]?.value ===
+                undefined
             ) {
-              // Preserve the old translation if there is one
               localeURLsData[translationFileWithPageExtension] = {
                 original:
                   baseURLFileData[translationFileWithPageExtension]?.original,
                 value:
-                  oldURLsLocaleData[translationFileWithPageExtension]?.value,
-              };
-            } else {
-              localeURLsData[translationFileWithPageExtension] = {
-                original:
                   baseURLFileData[translationFileWithPageExtension]?.original,
-                value:
-                  oldURLsLocaleData[translationFileWithPageExtension]?.original,
               };
             }
-          } else if (
-            (localeData[keyName]?.value === '' ||
-              localeData[keyName]?.value === undefined) &&
-            !isKeyURLTranslation
-          ) {
-            // This is just a fallback if there's no translation
-            localeData[keyName] = {
-              original: baseFileData[keyName]?.original,
-              value: baseFileData[keyName]?.original,
-            };
           }
         }
       }
