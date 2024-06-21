@@ -58,5 +58,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+urlTranslation: ""
 blog: Blog (DE) - Every page
 rss-feed: RSS Feed

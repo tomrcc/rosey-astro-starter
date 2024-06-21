@@ -160,6 +160,7 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+urlTranslation: ""
 blog: Blog
 blog:/blog/best-email-sending-services/: ""
 rss-feed: ""

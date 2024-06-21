@@ -154,6 +154,7 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+urlTranslation: ""
 blog: Blog (DE) - Every page
 blog:/blog/5-things-to-improve-you-email-templates/: >-
   ### Benutze ein ESP

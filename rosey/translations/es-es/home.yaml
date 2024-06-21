@@ -176,6 +176,7 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+urlTranslation: ""
 astro-bookshop-starter: Inicio de la Bookshop Astro
 blog: Blog
 cloudcannon: CloudCannon
