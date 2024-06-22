@@ -79,10 +79,6 @@ async function main(locale) {
       // Push to an array to loop through, and an obj for seeing the current translation entry (important for dupicate entries)
       translationsFileData.push(YAML.parse(data));
       translationsPagesObj[translationFile] = YAML.parse(data);
-    } else if (isDirectory) {
-      console.log(`🔍 ${translationsPath} is a directory - skipping read`);
-    } else {
-      console.log(`❌ ${translationsPath} does not exist`);
     }
 
     // Check if theres a translation and
@@ -117,9 +113,9 @@ async function main(locale) {
               translationEntry !== oldURLsLocaleData[keyName]?.value
             ) {
               if (!isKeyURLTranslation) {
-                console.log(
-                  `🔍 Detected a new translation - writing to locales: ${keyName}`
-                );
+                // console.log(
+                //   `🔍 Detected a new translation - writing to locales: ${keyName}`
+                // );
                 const markdownTranslation = md.render(translationEntry);
                 const localeValue =
                   isKeyMarkdown || isKeyBlog
@@ -130,9 +126,9 @@ async function main(locale) {
                   original: baseFileData[keyName]?.original,
                   value: localeValue,
                 };
-                console.log(
-                  `🔨 Checking for any duplicate entries in other pages`
-                );
+                // console.log(
+                //   `🔨 Checking for any duplicate entries in other pages`
+                // );
                 // Loop through and write any duplicate keys
                 for (file in translationsFiles) {
                   const overWriteFile = translationsFiles[file];
@@ -149,9 +145,9 @@ async function main(locale) {
                       : [];
                   if (overWriteTranslationObjKeys.includes(keyName)) {
                     overWriteTranslationObj[keyName] = translationEntry;
-                    console.log(
-                      `✅ Detected a duplicate key in ${overWriteFile} - overwriting with new translation`
-                    );
+                    // console.log(
+                    //   `✅ Detected a duplicate key in ${overWriteFile} - overwriting with new translation`
+                    // );
                     const yamlData = YAML.stringify(overWriteTranslationObj);
                     fs.writeFileSync(overWriteFilePath, yamlData, (err) => {
                       if (err) throw err;
