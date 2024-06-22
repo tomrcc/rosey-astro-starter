@@ -112,17 +112,27 @@ async function main(locale) {
     const translationFilePath =
       translationFilesDirPath + '/' + locale + '/' + pageName + '.yaml';
 
-    let outputFileData = {};
+    let translationFileData = {};
     let cleanedOutputFileData = {};
 
     // Get our old translations file
     if (fs.existsSync(translationFilePath)) {
-      outputFileData = await YAML.parse(
+      translationFileData = await YAML.parse(
         fs.readFileSync(translationFilePath, 'utf8')
       );
     } else {
       console.log(`🔨 ${translationFilePath} does not exist, creating one now`);
       await fs.writeFileSync(translationFilePath, '_inputs: {}');
+    }
+
+    // Create the url key if there is none
+    if (!cleanedOutputFileData['urlTranslation']) {
+      cleanedOutputFileData['urlTranslation'] = '';
+    } else if (translationFileData['urlTranslation'].length > 0) {
+      cleanedOutputFileData['urlTranslation'] =
+        translationFileData['urlTranslation'];
+    } else {
+      cleanedOutputFileData['urlTranslation'] = page;
     }
 
     for (const inputKey in inputFileData) {
@@ -142,10 +152,10 @@ async function main(locale) {
 
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
-        const outputKeys = Object.keys(outputFileData);
+        const outputKeys = Object.keys(translationFileData);
         outputKeys.forEach((key) => {
           if (inputKey === key) {
-            cleanedOutputFileData[key] = outputFileData[key];
+            cleanedOutputFileData[key] = translationFileData[key];
           }
         });
 
@@ -205,10 +215,6 @@ async function main(locale) {
         if (!cleanedOutputFileData['_inputs']) {
           cleanedOutputFileData['_inputs'] = {};
         }
-        // Create the url key if there is none
-        if (!cleanedOutputFileData['urlTranslation']) {
-          cleanedOutputFileData['urlTranslation'] = '';
-        }
 
         // Create the page input object
         if (!cleanedOutputFileData['_inputs']['$']) {
@@ -240,7 +246,7 @@ async function main(locale) {
 
         const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
 
-        // TODO: Only run diff if we find something in the checks.json
+        // TODO: Optimise this to only run diff if we find something in the checks.json
         const diff = isStaticKeyInput
           ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
           : [];
@@ -314,16 +320,15 @@ async function main(locale) {
           unTranslatedPageGroup.push(inputKey);
         }
       }
-
-      await fs.writeFileSync(
-        translationFilePath,
-        YAML.stringify(cleanedOutputFileData),
-        (err) => {
-          if (err) throw err;
-          console.log('✅✅ ' + translationFilePath + ' updated succesfully');
-        }
-      );
     }
+    await fs.writeFileSync(
+      translationFilePath,
+      YAML.stringify(cleanedOutputFileData),
+      (err) => {
+        if (err) throw err;
+        console.log('✅✅ ' + translationFilePath + ' updated succesfully');
+      }
+    );
   }
 }
 
