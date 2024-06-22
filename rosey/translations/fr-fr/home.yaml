@@ -1,3 +1,4 @@
+urlTranslation: ""
 about: Á propos
 _inputs:
   $:
@@ -176,7 +177,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
-urlTranslation: ""
 astro-bookshop-starter: ""
 blog: Blog
 cloudcannon: ""

@@ -1,3 +1,4 @@
+urlTranslation: ""
 about: Á propos
 _inputs:
   $:
@@ -157,7 +158,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
-urlTranslation: ""
 blog: Blog
 blog:/blog/email-delivery-tips/: ""
 rss-feed: RSS Feed

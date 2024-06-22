@@ -1,3 +1,4 @@
+urlTranslation: ""
 about: Um
 _inputs:
   $:
@@ -160,7 +161,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
-urlTranslation: ""
 blog: Blog (DE) - Every page
 blog:/blog/best-email-sending-services/: >-
   Wenn Sie eine E-Mail-Kampagne **versenden**, erwarten Sie, *dass* diese Ihre

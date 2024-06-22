@@ -1,3 +1,4 @@
+urlTranslation: ""
 about: Um
 _inputs:
   $:
@@ -93,7 +94,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
-urlTranslation: ""
 about-page: ""
 blog: Blog (DE) - Every page
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
