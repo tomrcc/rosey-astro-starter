@@ -2,17 +2,19 @@ about: Um
 _inputs:
   $:
     type: object
-    comment: "[See tags/technology/](http://localhost:4321/tags/technology/)"
+    comment: "[See
+      tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technolo\
+      gy/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
           comment: Text to translate on
-            [tags/technology/](http://localhost:4321/tags/technology/)
+            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
-            [tags/technology/](http://localhost:4321/tags/technology/)
+            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs:
             - about
             - blog
@@ -22,7 +24,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](http://localhost:4321/tags/technology/#:~:text=About)"
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      About)"
     context:
       open: false
       title: Untranslated Text
@@ -33,7 +37,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](http://localhost:4321/tags/technology/#:~:text=Blog)"
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      Blog)"
     context:
       open: false
       title: Untranslated Text
@@ -44,7 +50,9 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](http://localhost:4321/tags/technology/#:~:text=RSS%20Feed)"
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      RSS%20Feed)"
     context:
       open: false
       title: Untranslated Text
