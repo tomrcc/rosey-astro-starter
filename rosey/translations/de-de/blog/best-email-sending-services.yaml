@@ -11,8 +11,7 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs:
-            - rss-feed
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
@@ -20,6 +19,7 @@ _inputs:
             - about
             - blog
             - blog:/blog/best-email-sending-services/
+            - rss-feed
   about:
     label: About
     hidden: false

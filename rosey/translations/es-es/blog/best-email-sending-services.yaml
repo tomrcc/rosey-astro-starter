@@ -13,13 +13,13 @@ _inputs:
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - blog:/blog/best-email-sending-services/
-            - rss-feed
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
             - blog
+            - rss-feed
   about:
     label: About
     hidden: false
