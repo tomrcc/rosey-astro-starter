@@ -106,8 +106,6 @@ collection_groups:
   - heading: Pages
     collections:
       - pages
-  - heading: Blogging
-    collections:
       - posts
   - heading: Data
     collections:
