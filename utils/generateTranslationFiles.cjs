@@ -86,10 +86,10 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   let diffStringRemoved = '';
   diff.forEach((part) => {
     // green for additions, red for deletions
-    if (part.added) {
+    if (part.added && part.value.trim().length > 1) {
       return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
     }
-    if (part.removed) {
+    if (part.removed && part.value.trim().length > 1) {
       return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
     }
   });
@@ -133,6 +133,17 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const diffString = generateDiffString(
     oldOriginalFromLocale,
     untranslatedPhraseMarkdown
+  );
+
+  console.log(
+    '👴 oldOriginalFromLocale: ',
+    oldOriginalFromLocale.slice(0, 50),
+    '\n',
+    '📝untranslatedPhraseMarkdown: ',
+    untranslatedPhraseMarkdown.slice(0, 50),
+    '\n',
+    '⚖️ diffString: ',
+    diffString
   );
 
   const locationString = generateLocationString(originalPhraseTidied, page);
