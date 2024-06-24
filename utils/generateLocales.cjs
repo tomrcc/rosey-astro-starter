@@ -138,9 +138,11 @@ async function processTranslation(
           value: baseURLFileData[translationHTMLFilename]?.original,
         };
       }
-      // TODO handle something here
-
-      return;
+      // Preserve old URL translation
+      return {
+        original: baseURLFileData[translationHTMLFilename]?.original,
+        value: baseURLFileData[translationHTMLFilename]?.value,
+      };
     }
 
     localeData[keyName] = processContentTranslationKey(
