@@ -50,9 +50,7 @@ function processUrlTranslationKey(
     return;
   }
 
-  const isNewTranslation =
-    translationEntry !== oldURLsLocaleData[translationHTMLFilename]?.value;
-  if (isNewTranslation) {
+  if (translationEntry !== oldURLsLocaleData[translationHTMLFilename]?.value) {
     console.log(`Detected a new URL translation: ${translationEntry}`);
     return {
       original: translationHTMLFilename,
@@ -75,7 +73,11 @@ function processContentTranslationKey(
   baseFileData,
   oldLocaleData
 ) {
-  if (!translatedString || translatedString === oldLocaleData[keyName]?.value) {
+  if (
+    !translatedString ||
+    translatedString === oldLocaleData[keyName]?.value ||
+    md.render(translatedString) === oldLocaleData[keyName]?.value
+  ) {
     return !localeData[keyName]
       ? {
           original: baseFileData[keyName]?.original,
@@ -84,7 +86,6 @@ function processContentTranslationKey(
         }
       : localeData[keyName];
   }
-
   // Write the value to the locales
   return {
     original: baseFileData[keyName]?.original,
