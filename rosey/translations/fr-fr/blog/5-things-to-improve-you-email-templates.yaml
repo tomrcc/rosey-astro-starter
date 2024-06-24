@@ -121,8 +121,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      ADDED: Blog
+    comment: >2-
+      
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
   header-link-text-1:
@@ -130,8 +130,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      ADDED: RSS Feed
+    comment: >2-
+      
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
   header-link-text-2:
@@ -139,8 +139,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      ADDED: About
+    comment: >2-
+      
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
 blog:/blog/5-things-to-improve-you-email-templates/: ""
