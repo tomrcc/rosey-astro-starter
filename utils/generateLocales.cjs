@@ -51,7 +51,7 @@ function processUrlTranslationKey(
   }
 
   const isNewTranslation =
-    translationEntry !== oldURLsLocaleData.urlTranslation?.value;
+    translationEntry !== oldURLsLocaleData[translationHTMLFilename]?.value;
   if (isNewTranslation) {
     console.log(`Detected a new URL translation: ${translationEntry}`);
     return {
