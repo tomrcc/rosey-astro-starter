@@ -109,11 +109,15 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const isKeyMarkdown =
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
-  const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
+  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
+  const isKeyURL = inputKey === 'urlTranslation';
+  const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
     ? 'markdown'
-    : untranslatedPhrase.length < 20
+    : isKeyURL
+    ? 'text'
+    : isInputShortText
     ? 'text'
     : 'textarea';
 
@@ -130,9 +134,8 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  // Write the highlight string
-  // Add each entry to our _inputs obj
-  const diffString = isStaticKeyInput
+  // TODO: Read from checks.json to see if a file changes before running this
+  const diffString = isKeyStatic
     ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
     : '';
 
@@ -142,24 +145,35 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       ? `${diffString} \n ${locationString}`
       : `${locationString}`;
 
-  const formattedLabel =
-    originalPhraseTidied.length > 42
-      ? `${originalPhraseTidied.substring(0, 42)}...`
-      : originalPhraseTidied;
+  const isLabelConcat = originalPhraseTidied.length > 42;
 
-  return {
-    label: formattedLabel,
-    hidden: untranslatedPhrase === '' ? true : false,
-    type: inputType,
-    options: options,
-    comment: joinedComment,
-    context: {
-      open: false,
-      title: 'Untranslated Text',
-      icon: 'translate',
-      content: untranslatedPhraseMarkdown,
-    },
-  };
+  const formattedLabel = isLabelConcat
+    ? `${originalPhraseTidied.substring(0, 42)}...`
+    : originalPhraseTidied;
+
+  const inputConfig = isLabelConcat
+    ? {
+        label: formattedLabel,
+        hidden: untranslatedPhrase === '' ? true : false,
+        type: inputType,
+        options: options,
+        comment: joinedComment,
+        context: {
+          open: false,
+          title: 'Untranslated Text',
+          icon: 'translate',
+          content: untranslatedPhraseMarkdown,
+        },
+      }
+    : {
+        label: formattedLabel,
+        hidden: untranslatedPhrase === '' ? true : false,
+        type: inputType,
+        options: options,
+        comment: joinedComment,
+      };
+
+  return inputConfig;
 }
 
 function getTranslationHTMLFilename(translationFilename) {
@@ -271,7 +285,7 @@ async function main(locale) {
       );
       const translationFileData = await YAML.parse(translationFileString);
 
-      // Create the url key if there is none
+      // Create the url key
       if (translationFileData['urlTranslation'].length > 0) {
         cleanedOutputFileData['urlTranslation'] =
           translationFileData['urlTranslation'];
