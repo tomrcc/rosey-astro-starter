@@ -24,11 +24,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   blog:
     label: Blog
     hidden: false
@@ -36,11 +31,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   rss-feed:
     label: RSS Feed
     hidden: false
@@ -48,11 +38,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Acerca de
 blog: Blog
 rss-feed: RSS Feed

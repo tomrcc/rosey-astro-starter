@@ -28,11 +28,6 @@ _inputs:
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   astro-bookshop-starter:
     label: Astro Bookshop Starter
     hidden: false
@@ -41,22 +36,12 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
       %20Starter)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Astro Bookshop Starter
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   cloudcannon:
     label: CloudCannon
     hidden: false
@@ -64,22 +49,12 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: CloudCannon
   github:
     label: GitHub
     hidden: false
     type: text
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: GitHub
   keep-what-you-need-delete-the-rest:
     label: Keep what you need Delete the rest
     hidden: false
@@ -88,11 +63,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
       u,Delete%20the%20rest)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Keep what you need. Delete the rest.
   markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: A starting point for developers looking to...
     hidden: false
@@ -171,11 +141,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Um
 astro-bookshop-starter: ""
 blog: Blog (DE) - Every page

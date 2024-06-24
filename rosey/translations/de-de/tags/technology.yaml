@@ -27,11 +27,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   blog:
     label: Blog
     hidden: false
@@ -40,11 +35,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   rss-feed:
     label: RSS Feed
     hidden: false
@@ -53,11 +43,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       RSS%20Feed)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Um
 blog: Blog (DE) - Every page
 rss-feed: RSS Feed

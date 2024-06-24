@@ -28,11 +28,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   blog:
     label: Blog
     hidden: false
@@ -41,11 +36,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   blog:/blog/best-email-sending-services/:
     label: When you send an email campaign you expect...
     hidden: false
@@ -235,11 +225,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=RSS%20Feed)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Á propos
 blog: Blog
 blog:/blog/best-email-sending-services/: >-

@@ -26,11 +26,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   about-page:
     label: About page
     hidden: false
@@ -39,11 +34,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
       ge)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About page
   blog:
     label: Blog
     hidden: false
@@ -51,11 +41,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
     label: This is all about what we're _about_ like ...
     hidden: false
@@ -88,11 +73,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
       )"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Um
 about-page: ""
 blog: Blog (DE) - Every page

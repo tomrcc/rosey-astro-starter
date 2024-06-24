@@ -28,11 +28,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=About)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: About
   blog:
     label: Blog
     hidden: false
@@ -41,11 +36,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=Blog)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: Blog
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: |2-
        Use an ESP
@@ -220,11 +210,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=RSS%20Feed)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: RSS Feed
 about: Á propos
 blog: Blog
 blog:/blog/5-things-to-improve-you-email-templates/: ""
