@@ -1,5 +1,9 @@
 // TODO: When we write duplicates entries to our inputs
-// We need to also change the _inputs obj for that page - move the overwritten duplicate entry to the translated group
+// Write URLs
+// Fix URL input in CC
+// Only generate context input config if label is concatenated
+// Test with new locale and see how it runs
+// Readme
 
 const fs = require('fs');
 const YAML = require('yaml');
@@ -61,7 +65,7 @@ function processUrlTranslationKey(
   }
 
   const isNewTranslation =
-    translationEntry !== oldURLsLocaleData[keyName]?.value;
+    translationEntry !== oldURLsLocaleData.urlTranslation?.value;
   if (isNewTranslation) {
     console.log(`Detected a new URL translation: ${translationEntry}`);
     return {
@@ -69,6 +73,8 @@ function processUrlTranslationKey(
       value: translationEntry,
     };
   }
+
+  console.log(translationEntry);
 
   return {
     original: baseURLFileData[translationHTMLFilename]?.original,
@@ -120,12 +126,9 @@ async function processTranslation(
 
   const data = YAML.parse(fileContents);
 
-  console.log(translationFilename);
-
   // Check if theres a translation and
   // Add each obj to our locales data, excluding '_inputs' object.
   Object.entries(data).forEach(([keyName, translatedString]) => {
-    console.log({ keyName, translatedString });
     if (keyName === '_inputs') {
       return;
     }
@@ -153,6 +156,7 @@ async function processTranslation(
         };
       }
       // TODO handle something here
+
       return;
     }
 
@@ -216,8 +220,6 @@ async function generateLocale(locale) {
       localeDataEntries[filename] = response;
     })
   );
-
-  console.log('localeDataEntries', Object.keys(localeDataEntries).length);
 
   let localeData = {};
   let localeURLsData = {};

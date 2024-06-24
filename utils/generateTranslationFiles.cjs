@@ -1,148 +1,217 @@
+const fs = require('fs');
+const YAML = require('yaml');
 const {
   NodeHtmlMarkdown,
   NodeHtmlMarkdownOptions,
 } = require('node-html-markdown');
-
-const fs = require('file-system');
-const YAML = require('yaml');
 const nhm = new NodeHtmlMarkdown(
   /* options (optional) */ {},
   /* customTransformers (optional) */ undefined,
   /* customCodeBlockTranslators (optional) */ undefined
 );
 const Diff = require('diff');
+const path = require('path');
 
 const inputFilePath = './rosey/base.json';
+const inputURLFilePath = './rosey/base.urls.json';
 const translationFilesDirPath = './rosey/translations';
+const localesDirPath = './rosey/locales';
+
 const baseURL = process.env.BASEURL || 'http://localhost:4321/';
 let locales = process.env.LOCALES?.toLowerCase().split(',') || [
   'es-es',
   'de-de',
   'fr-fr',
 ];
-const localesDirPath = './rosey/locales';
+
+function initDefaultInputs(data) {
+  // Create the inputs obj if there is none
+  if (!data['_inputs']) {
+    data['_inputs'] = {};
+  }
+
+  // Create the page input object
+  if (!data['_inputs']['$']) {
+    data['_inputs']['$'] = {
+      type: 'object',
+      comment: `[See ${pageString}](${baseURL}${pageString})`,
+      options: {
+        place_groups_below: false,
+        groups: [
+          {
+            heading: `Still to translate (${locale})`,
+            comment: `Text to translate on [${pageString}](${baseURL}${pageString})`,
+            inputs: [],
+          },
+          {
+            heading: `Already translated (${locale})`,
+            comment: `Text already translated on [${pageString}](${baseURL}${pageString})`,
+            inputs: [],
+          },
+        ],
+      },
+    };
+  }
+}
+
+function getTranslationHTMLFilename(translationFilename) {
+  if (translationFilename === '404.yaml') {
+    return '404.html';
+  }
+
+  if (translationFilename === 'home.yaml') {
+    return 'index.html';
+  }
+
+  return translationFilename.replace('.yaml', '/index.html');
+}
+
+async function isDirectory(filepath) {
+  const stat = await fs.promises.stat(filepath);
+
+  return stat.isDirectory();
+}
+
+async function readFileWithFallback(filepath, fallbackString) {
+  try {
+    const buffer = await fs.promises.readFile(filepath);
+    return buffer.toString('utf-8') || fallbackString;
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      return fallbackString;
+    }
+    throw err;
+  }
+}
+
+async function readJsonFromFile(filepath) {
+  const contents = await readFileWithFallback(filepath, '{}');
+  return JSON.parse(contents);
+}
+
+function generateLocationString(markdownOriginal, page) {
+  // Limit each phrase to 3 words
+  const urlHighlighterWordLength = 3;
+  // Get rid of any special characters in markdown
+  // Get rid of links in the markdown
+  const originalPhraseTidied = markdownOriginal
+    .trim()
+    // Remove all md links
+    .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+    // Remove special chars
+    .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
+  const originalPhraseArray = originalPhraseTidied.split(/[\n]+/);
+  // Get the first and last line of the markdown so we only have complete lines in the highlight url
+  const firstPhrase = originalPhraseArray[0];
+  const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
+  const endHighlightArrayAll = lastPhrase.split(' ');
+
+  const startHighlightArray = firstPhrase
+    .split(' ')
+    .slice(0, urlHighlighterWordLength);
+
+  const endHighlightArray = endHighlightArrayAll.slice(
+    endHighlightArrayAll.length - urlHighlighterWordLength,
+    endHighlightArrayAll.length
+  );
+
+  const originalPhraseArrayByWord = originalPhraseArray.join(' ').split(' ');
+
+  // Trim and encode the resulting phrase
+  const startHighlight = startHighlightArray.join(' ').trim();
+  const endHighlight = endHighlightArray.join(' ').trim();
+
+  const encodedStartHighlight = encodeURI(startHighlight);
+  const encodedEndHighlight = encodeURI(endHighlight);
+  const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
+
+  const pageString = page.replace('.html', '').replace('index', '');
+  // Look to see if original phrase is 5 words or shorter
+  // if it is fallback to the encoded original phrase for the highlight link
+  return originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
+    ? `[See on page](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
+    : `[See on page](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
+}
 
 async function main(locale) {
   // Get the Rosey generated data
-  let inputFileData = {};
 
-  const localePath = localesDirPath + '/' + locale + '.json';
-  const oldLocale = await fs.readFileSync(localePath);
-  const oldLocaleData = JSON.parse(oldLocale);
+  const localePath = path.join(localesDirPath, locale, '.json');
+  const oldLocaleData = await readJsonFromFile(localePath);
+  const inputFileData = await readJsonFromFile(inputFilePath);
+  const inputURLFileData = await readJsonFromFile(inputURLFilePath);
 
-  if (fs.existsSync(inputFilePath)) {
-    inputFileData = await JSON.parse(fs.readFileSync(inputFilePath)).keys;
-  } else {
-    console.log('rosey/base.json does not exist');
-  }
+  const pages = Object.keys(inputURLFileData.keys);
 
-  // Get all the pages that appear in the base.json
-  const translationEntryKeys = Object.keys(inputFileData);
-  const translationEntries = translationEntryKeys.map((key) => {
-    const entry = inputFileData[key];
-    return entry;
+  const translationsLocalePath = path.join(translationFilesDirPath, locale);
+  const translationsFiles = await fs.promises.readdir(translationsLocalePath, {
+    recursive: true,
   });
+  console.log(pages);
 
-  let allPages = [];
+  await Promise.all(
+    translationsFiles.map(async (fileNameWithExt) => {
+      const filePath = path.join(translationsLocalePath, fileNameWithExt);
 
-  translationEntries.forEach((entry) => {
-    const entrysPages = Object.keys(entry.pages);
-    entrysPages.forEach((page) => {
-      allPages.push(page);
-    });
-  });
+      if (await isDirectory(filePath)) {
+        return;
+      }
 
-  const pages = allPages.reduce((accumulator, item) => {
-    if (!accumulator.includes(item)) {
-      accumulator.push(item);
-    }
-    return accumulator;
-  }, []);
+      const fileNameHTMLFormatted = getTranslationHTMLFilename(fileNameWithExt);
 
-  const translationsLocalePath = translationFilesDirPath + '/' + locale;
-  const recursivetranslationsFiles = await fs.readdirSync(
-    translationsLocalePath,
-    {
-      recursive: true,
-    }
+      // Remove translations pages no longer present in the base.json file
+      if (!pages.includes(fileNameHTMLFormatted)) {
+        console.log(
+          `❌ Deleting ${fileNameHTMLFormatted}(${filePath}), since it doesn't exist in the pages in our base.json`
+        );
+
+        await fs.promises.unlink(filePath);
+        console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
+      }
+    })
   );
 
-  for (file in recursivetranslationsFiles) {
-    const fileNameWithExt = recursivetranslationsFiles[file];
-    const filePath = translationsLocalePath + '/' + fileNameWithExt;
-    const filePathExtensionless = fileNameWithExt.replace('.yaml', '');
-    let fileNameHTMLFormatted = '';
-
-    const isDirectory =
-      fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory();
-
-    if (filePathExtensionless === 'home') {
-      fileNameHTMLFormatted = 'index.html';
-    } else if (filePathExtensionless === '404') {
-      fileNameHTMLFormatted = '404.html';
-    } else {
-      fileNameHTMLFormatted = filePathExtensionless + '/index.html';
-    }
-
-    // Remove translations pages no longer present in the base.json file
-    if (!pages.includes(fileNameHTMLFormatted) && !isDirectory) {
-      console.log(
-        `❌ ${fileNameHTMLFormatted}(${filePath}) doesn't exist in the pages in our base.json`
-      );
-
-      console.log(`Deleting ${filePath}`);
-
-      await fs.unlinkSync(filePath, (err) => {
-        if (err) throw err;
-        console.log(`❌ ${fileNameHTMLFormatted} at ${filePath} was deleted`);
-      });
-    }
-  }
-
   // Loop through the pages present in the base.json
-  for (item in pages) {
-    const page = pages[item];
-    // Format the page name
-    const pageName = page
-      .replace('/index.html', '')
-      .replace('.html', '')
-      .replace('index', 'home');
+  await Promise.all(
+    pages.map(async (page) => {
+      // Format the page name
+      const pageName = page
+        .replace('/index.html', '')
+        .replace('.html', '')
+        .replace('index', 'home');
 
-    // Find the page file path
-    const translationFilePath =
-      translationFilesDirPath + '/' + locale + '/' + pageName + '.yaml';
-
-    let translationFileData = {};
-    let cleanedOutputFileData = {};
-
-    // Get our old translations file
-    if (fs.existsSync(translationFilePath)) {
-      translationFileData = await YAML.parse(
-        fs.readFileSync(translationFilePath, 'utf8')
-      );
-    } else {
-      console.log(`🔨 ${translationFilePath} does not exist, creating one now`);
-      await fs.writeFileSync(translationFilePath, '_inputs: {}');
-    }
-
-    // Create the url key if there is none
-    if (!cleanedOutputFileData['urlTranslation']) {
-      cleanedOutputFileData['urlTranslation'] = '';
-    } else if (translationFileData['urlTranslation'].length > 0) {
-      cleanedOutputFileData['urlTranslation'] =
-        translationFileData['urlTranslation'];
-    } else {
-      cleanedOutputFileData['urlTranslation'] = page;
-    }
-
-    for (const inputKey in inputFileData) {
-      const inputTranslationObj = inputFileData[inputKey];
-      const inputTranslationObjectPages = Object.keys(
-        inputTranslationObj.pages
+      // Find the page file path
+      const translationFilePath = path.join(
+        translationFilesDirPath,
+        locale,
+        `${pageName}.yaml`
       );
 
-      // If input exists on this page
-      if (inputTranslationObjectPages.includes(page)) {
+      let cleanedOutputFileData = {};
+
+      const translationFileString = await readFileWithFallback(
+        translationFilePath,
+        '_inputs: {}'
+      );
+      const translationFileData = await YAML.parse(translationFileString);
+
+      // Create the url key if there is none
+      if (translationFileData['urlTranslation'].length > 0) {
+        cleanedOutputFileData['urlTranslation'] =
+          translationFileData['urlTranslation'];
+      } else {
+        cleanedOutputFileData['urlTranslation'] = page;
+      }
+
+      initDefaultInputs(cleanedOutputFileData);
+
+      inputFileData.keys.forEach((inputKey) => {
+        const inputTranslationObj = inputFileData.keys[inputKey];
+        // If input exists on this page
+        if (!inputTranslationObj.pages[page]) {
+          return;
+        }
+
         const originalPhrase = inputTranslationObj.original.trim();
         // Turn into markdown
         const markdownOriginal = nhm.translate(originalPhrase);
@@ -152,8 +221,7 @@ async function main(locale) {
 
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
-        const outputKeys = Object.keys(translationFileData);
-        outputKeys.forEach((key) => {
+        Object.keys(translationFileData).forEach((key) => {
           if (inputKey === key) {
             cleanedOutputFileData[key] = translationFileData[key];
           }
@@ -165,79 +233,6 @@ async function main(locale) {
         }
 
         // Write the highlight string
-
-        // Limit each phrase to 3 words
-        const urlHighlighterWordLength = 3;
-        // Get rid of any special characters in markdown
-        // Get rid of links in the markdown
-        const originalPhraseTidied = markdownOriginal
-          .trim()
-          // Remove all md links
-          .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
-          // Remove special chars
-          .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
-        const originalPhraseArray = originalPhraseTidied.split(/[\n]+/);
-        // Get the first and last line of the markdown so we only have complete lines in the highlight url
-        const firstPhrase = originalPhraseArray[0];
-        const lastPhrase = originalPhraseArray[originalPhraseArray.length - 1];
-        const endHighlightArrayAll = lastPhrase.split(' ');
-
-        const startHighlightArray = firstPhrase
-          .split(' ')
-          .slice(0, urlHighlighterWordLength);
-
-        const endHighlightArray = endHighlightArrayAll.slice(
-          endHighlightArrayAll.length - urlHighlighterWordLength,
-          endHighlightArrayAll.length
-        );
-
-        const originalPhraseArrayByWord = originalPhraseArray
-          .join(' ')
-          .split(' ');
-
-        // Trim and encode the resulting phrase
-        const startHighlight = startHighlightArray.join(' ').trim();
-        const endHighlight = endHighlightArray.join(' ').trim();
-
-        const encodedStartHighlight = encodeURI(startHighlight);
-        const encodedEndHighlight = encodeURI(endHighlight);
-        const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
-
-        const pageString = page.replace('.html', '').replace('index', '');
-        // Look to see if original phrase is 5 words or shorter
-        // if it is fallback to the encoded original phrase for the highlight link
-        const locationString =
-          originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
-            ? `[See on page](${baseURL}${pageString}#:~:text=${encodedStartHighlight},${encodedEndHighlight})`
-            : `[See on page](${baseURL}${pageString}#:~:text=${encodedOriginalPhrase})`;
-
-        // Create the inputs obj if there is none
-        if (!cleanedOutputFileData['_inputs']) {
-          cleanedOutputFileData['_inputs'] = {};
-        }
-
-        // Create the page input object
-        if (!cleanedOutputFileData['_inputs']['$']) {
-          cleanedOutputFileData['_inputs']['$'] = {
-            type: 'object',
-            comment: `[See ${pageString}](${baseURL}${pageString})`,
-            options: {
-              place_groups_below: false,
-              groups: [
-                {
-                  heading: `Still to translate (${locale})`,
-                  comment: `Text to translate on [${pageString}](${baseURL}${pageString})`,
-                  inputs: [],
-                },
-                {
-                  heading: `Already translated (${locale})`,
-                  comment: `Text already translated on [${pageString}](${baseURL}${pageString})`,
-                  inputs: [],
-                },
-              ],
-            },
-          };
-        }
 
         // Add each entry to our _inputs obj
         const markdownTextInput =
@@ -283,6 +278,7 @@ async function main(locale) {
             }
           : {};
 
+        const locationString = generateLocationString(markdownOriginal, page);
         const joinedComment =
           diffStringAdded.length > 0 || diffStringRemoved.length > 0
             ? `${diffString} \n ${locationString}`
@@ -319,17 +315,14 @@ async function main(locale) {
         } else {
           unTranslatedPageGroup.push(inputKey);
         }
-      }
-    }
-    await fs.writeFileSync(
-      translationFilePath,
-      YAML.stringify(cleanedOutputFileData),
-      (err) => {
-        if (err) throw err;
-        console.log('✅✅ ' + translationFilePath + ' updated succesfully');
-      }
-    );
-  }
+      });
+      await fs.promises.writeFile(
+        translationFilePath,
+        YAML.stringify(cleanedOutputFileData)
+      );
+      console.log('✅✅ ' + translationFilePath + ' updated succesfully');
+    })
+  );
 }
 
 // Loop through locales
