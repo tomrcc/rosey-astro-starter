@@ -42,6 +42,10 @@ collections_config:
       - name: Add Language
         icon: translate
         href: cloudcannon:settings/build
+    _inputs:
+      urlTranslation:
+        type: text
+        comment: Provide a translation for the URL that Rosey will build this page at.
     disable_add_folder: true
     disable_file_actions: true
   posts:

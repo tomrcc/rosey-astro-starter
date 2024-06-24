@@ -110,13 +110,10 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
   const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
-  const isKeyURL = inputKey === 'urlTranslation';
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
     ? 'markdown'
-    : isKeyURL
-    ? 'text'
     : isInputShortText
     ? 'text'
     : 'textarea';
