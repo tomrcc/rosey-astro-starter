@@ -9,34 +9,41 @@ _inputs:
         - heading: Still to translate (fr-fr)
           comment: Text to translate on
             [404](https://glamorous-sanctuary.cloudvent.net/404)
-          inputs: []
+          inputs:
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [404](https://glamorous-sanctuary.cloudvent.net/404)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)"
-  blog:
+          inputs: []
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)"
-  rss-feed:
+    comment: |2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=Blog)
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)"
-about: Á propos
-blog: Blog
-rss-feed: RSS Feed
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=RSS%20Feed)
+  header-link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/404#:~:text=About)
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""

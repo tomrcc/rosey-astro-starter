@@ -86,10 +86,10 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   let diffStringRemoved = '';
   diff.forEach((part) => {
     // green for additions, red for deletions
-    if (part.added) {
+    if (part.added && part.value.trim().length > 1) {
       return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
     }
-    if (part.removed) {
+    if (part.removed && part.value.trim().length > 1) {
       return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
     }
   });
@@ -109,7 +109,6 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const isKeyMarkdown =
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
-  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
@@ -131,10 +130,21 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  // TODO: Read from checks.json to see if a file changes before running this
-  const diffString = isKeyStatic
-    ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
-    : '';
+  const diffString = generateDiffString(
+    oldOriginalFromLocale,
+    untranslatedPhraseMarkdown
+  );
+
+  console.log(
+    '👴 oldOriginalFromLocale: ',
+    oldOriginalFromLocale.slice(0, 50),
+    '\n',
+    '📝untranslatedPhraseMarkdown: ',
+    untranslatedPhraseMarkdown.slice(0, 50),
+    '\n',
+    '⚖️ diffString: ',
+    diffString
+  );
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =

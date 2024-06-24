@@ -9,61 +9,83 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
-            - astro-bookshop-starter
-            - cloudcannon
-            - github
-            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - /-primary--button-text
+            - /-secondary--button-text
+            - markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag
         - heading: Already translated (de-de)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
-            - about
-            - blog
-            - keep-what-you-need-delete-the-rest
-            - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
-  astro-bookshop-starter:
+            - /-hero--heading-text
+            - /-left_right-1-heading-text
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
+            - markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i
+  /-hero--heading-text:
     label: Astro Bookshop Starter
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
-      %20Starter)"
-  blog:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
-  cloudcannon:
-    label: CloudCannon
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
-  github:
-    label: GitHub
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
-  keep-what-you-need-delete-the-rest:
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+  /-left_right-1-heading-text:
     label: Keep what you need Delete the rest
     hidden: false
     type: textarea
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
-      u,Delete%20the%20rest)"
-  markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+  /-primary--button-text:
+    label: GitHub
+    hidden: false
+    type: text
+    options: {}
+    comment: |2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
+  /-secondary--button-text:
+    label: CloudCannon
+    hidden: false
+    type: text
+    options: {}
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
+  header-link-text-0:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: |2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
+  header-link-text-1:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
+  header-link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: |2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
+  markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
     type: markdown
@@ -76,9 +98,10 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
-      oint,the%20CloudCannon%20CMS)"
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
     context:
       open: false
       title: Untranslated Text
@@ -86,7 +109,7 @@ _inputs:
       content: A starting point for **developers looking to build a website with
         Astro, using Bookshop components in CloudCannon**. Create your own copy,
         and start creating your own components to use in the CloudCannon CMS.
-  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
+  markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag:
     label: To help save you time some features are se...
     hidden: false
     type: markdown
@@ -99,9 +122,10 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
-      ,CSS%20variables)"
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
     context:
       open: false
       title: Untranslated Text
@@ -134,26 +158,16 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
-about: Um
-astro-bookshop-starter: ""
-blog: Blog
-cloudcannon: ""
-github: ""
-keep-what-you-need-delete-the-rest: Behalten Sie, was Sie brauchen. Den Rest löschen.
-markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: >-
-  Ein Ausgangspunkt für Entwickler, die mit **Astro eine Website erstellen
-  möchten und dabei Bookshop-Komponenten in CloudCannon verwenden**. Erstellen
-  Sie Ihre eigene Kopie und beginnen Sie mit der Erstellung Ihrer eigenen
-  Komponenten zur Verwendung im CloudCannon CMS.
-
-
-  &nbsp;
-markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
-rss-feed: RSS Feed
+/-hero--heading-text: Astro Bookshop Starter
+/-left_right-1-heading-text: Behalten Sie, was Sie brauchen. Löschen Sie den Rest
+/-primary--button-text: ""
+/-secondary--button-text: ""
+header-link-text-0: Blog
+header-link-text-1: RSS Feed
+header-link-text-2: Um
+markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
+  Ein Ausgangspunkt für Entwickler, die mit Astro eine Website erstellen möchten
+  und Bookshop-Komponenten in CloudCannon verwenden. Erstellen Sie Ihre eigene
+  Kopie und beginnen Sie mit der Erstellung Ihrer eigenen Komponenten zur
+  Verwendung im CloudCannon CMS.
+markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag: ""

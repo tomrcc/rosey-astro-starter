@@ -13,29 +13,13 @@ _inputs:
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - blog:/blog/email-delivery-tips/
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=About)"
-  blog:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=Blog)"
+          inputs: []
   blog:/blog/email-delivery-tips/:
     label: When you send an email campaign you expect...
     hidden: false
@@ -135,15 +119,34 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
+  header-link-text-0:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=Blog)
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=RSS%20Feed)"
-about: Acerca de
-blog: Blog
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
+  header-link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=About)
 blog:/blog/email-delivery-tips/: ""
-rss-feed: RSS Feed
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""
