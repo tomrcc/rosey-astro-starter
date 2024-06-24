@@ -94,11 +94,11 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
     }
   });
   const addedString =
-    diffString.diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
+    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
   const removedString =
-    diffString.diffStringRemoved.length > 0
-      ? `Removed: ${diffStringRemoved}`
-      : '';
+    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : '';
+
+  console.log(addedString, removedString);
   return addedString.length > 0 || removedString.length > 0
     ? `${addedString}<br>${removedString}<br>`
     : '';
