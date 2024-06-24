@@ -1,5 +1,4 @@
-urlTranslation: ""
-about: Acerca de
+urlTranslation: about/index.html
 _inputs:
   $:
     type: object
@@ -94,6 +93,7 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+about: Acerca de
 about-page: acerca de la página
 blog: Blog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-

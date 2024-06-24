@@ -1,5 +1,4 @@
-urlTranslation: ""
-about: Um
+urlTranslation: index.html
 _inputs:
   $:
     type: object
@@ -177,6 +176,7 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+about: Um
 astro-bookshop-starter: ""
 blog: Blog (DE) - Every page
 cloudcannon: ""

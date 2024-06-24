@@ -1,5 +1,4 @@
-urlTranslation: ""
-about: Á propos
+urlTranslation: tags/email/index.html
 _inputs:
   $:
     type: object
@@ -56,5 +55,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+about: Á propos
 blog: Blog
 rss-feed: RSS Feed

@@ -1,5 +1,4 @@
-urlTranslation: ""
-about: Um
+urlTranslation: 404.html
 _inputs:
   $:
     type: object
@@ -53,5 +52,6 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: RSS Feed
+about: Um
 blog: Blog (DE) - Every page
 rss-feed: RSS Feed
