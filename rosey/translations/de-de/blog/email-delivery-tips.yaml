@@ -12,30 +12,41 @@ _inputs:
           comment: Text to translate on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
+            - /blog/email-delivery-tips/-header--link-text-0
+            - /blog/email-delivery-tips/-header--link-text-1
+            - /blog/email-delivery-tips/-header--link-text-2
             - blog:/blog/email-delivery-tips/
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=About)"
-  blog:
+          inputs: []
+  /blog/email-delivery-tips/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=Blog)"
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=Blog)
+  /blog/email-delivery-tips/-header--link-text-1:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
+  /blog/email-delivery-tips/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=About)
   blog:/blog/email-delivery-tips/:
     label: When you send an email campaign you expect...
     hidden: false
@@ -135,15 +146,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=RSS%20Feed)"
-about: Um
-blog: Blog
+/blog/email-delivery-tips/-header--link-text-0: ""
+/blog/email-delivery-tips/-header--link-text-1: ""
+/blog/email-delivery-tips/-header--link-text-2: ""
 blog:/blog/email-delivery-tips/: ""
-rss-feed: RSS Feed

@@ -11,38 +11,41 @@ _inputs:
         - heading: Still to translate (fr-fr)
           comment: Text to translate on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
-          inputs: []
+          inputs:
+            - /tags/technology/-header--link-text-0
+            - /tags/technology/-header--link-text-1
+            - /tags/technology/-header--link-text-2
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
-      About)"
-  blog:
+          inputs: []
+  /tags/technology/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
-      Blog)"
-  rss-feed:
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
+  /tags/technology/-header--link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
-      RSS%20Feed)"
-about: Á propos
-blog: Blog
-rss-feed: RSS Feed
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
+  /tags/technology/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=About)
+/tags/technology/-header--link-text-0: ""
+/tags/technology/-header--link-text-1: ""
+/tags/technology/-header--link-text-2: ""

@@ -9,35 +9,41 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
-          inputs: []
+          inputs:
+            - /blog/-header--link-text-0
+            - /blog/-header--link-text-1
+            - /blog/-header--link-text-2
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=About)"
-  blog:
+          inputs: []
+  /blog/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Blog)"
-  rss-feed:
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Blog)
+  /blog/-header--link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)"
-about: Um
-blog: Blog
-rss-feed: RSS Feed
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)
+  /blog/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=About)
+/blog/-header--link-text-0: ""
+/blog/-header--link-text-1: ""
+/blog/-header--link-text-2: ""

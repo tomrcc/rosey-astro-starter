@@ -9,39 +9,53 @@ _inputs:
         - heading: Still to translate (es-es)
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs: []
+          inputs:
+            - /about/-header--link-text-0
+            - /about/-header--link-text-1
+            - /about/-header--link-text-2
+            - /about/-hero--heading-text
+            - markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug
         - heading: Already translated (es-es)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs:
-            - about
-            - about-page
-            - blog
-            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
-  about-page:
-    label: About page
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
-      ge)"
-  blog:
+          inputs: []
+  /about/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-  markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
+  /about/-header--link-text-1:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
+  /about/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
+  /about/-hero--heading-text:
+    label: About page
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About page
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
+  markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug:
     label: This is all about what we're _about_ like ...
     hidden: false
     type: markdown
@@ -54,9 +68,14 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
-      20all,halfway%20through%20lel)"
+    comment: >-
+      ADDED: This is all about what we're _about_ like what we're really
+      _**about**_
+
+
+      ## A heading halfway through lel
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
     context:
       open: false
       title: Untranslated Text
@@ -65,19 +84,8 @@ _inputs:
         This is all about what we're _about_ like what we're really _**about**_
 
         ## A heading halfway through lel
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
-      )"
-about: Acerca de
-about-page: acerca de la página
-blog: Blog
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
-  This is all about what we're *about* like what we're really ***about***
-
-  ## A heading halfway through
-rss-feed: RSS Feed
+/about/-header--link-text-0: ""
+/about/-header--link-text-1: ""
+/about/-header--link-text-2: ""
+/about/-hero--heading-text: ""
+markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug: ""

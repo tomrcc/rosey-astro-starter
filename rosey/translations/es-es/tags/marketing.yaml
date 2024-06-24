@@ -11,38 +11,41 @@ _inputs:
         - heading: Still to translate (es-es)
           comment: Text to translate on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
-          inputs: []
+          inputs:
+            - /tags/marketing/-header--link-text-0
+            - /tags/marketing/-header--link-text-1
+            - /tags/marketing/-header--link-text-2
         - heading: Already translated (es-es)
           comment: Text already translated on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=A\
-      bout)"
-  blog:
+          inputs: []
+  /tags/marketing/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=B\
-      log)"
-  rss-feed:
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=Blog)
+  /tags/marketing/-header--link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=R\
-      SS%20Feed)"
-about: Acerca de
-blog: Blog
-rss-feed: RSS Feed
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
+  /tags/marketing/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=About)
+/tags/marketing/-header--link-text-0: ""
+/tags/marketing/-header--link-text-1: ""
+/tags/marketing/-header--link-text-2: ""

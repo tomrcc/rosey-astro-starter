@@ -12,30 +12,41 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
+            - /blog/best-email-sending-services/-header--link-text-0
+            - /blog/best-email-sending-services/-header--link-text-1
+            - /blog/best-email-sending-services/-header--link-text-2
             - blog:/blog/best-email-sending-services/
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs:
-            - about
-            - blog
-            - rss-feed
-  about:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=About)"
-  blog:
+          inputs: []
+  /blog/best-email-sending-services/-header--link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=Blog)"
+    comment: >-
+      ADDED: Blog
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
+  /blog/best-email-sending-services/-header--link-text-1:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: RSS Feed
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
+  /blog/best-email-sending-services/-header--link-text-2:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      ADDED: About
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
   blog:/blog/best-email-sending-services/:
     label: When you send an email campaign you expect...
     hidden: false
@@ -135,15 +146,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=RSS%20Feed)"
-about: Acerca de
-blog: Blog
+/blog/best-email-sending-services/-header--link-text-0: ""
+/blog/best-email-sending-services/-header--link-text-1: ""
+/blog/best-email-sending-services/-header--link-text-2: ""
 blog:/blog/best-email-sending-services/: ""
-rss-feed: RSS Feed
