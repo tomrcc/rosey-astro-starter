@@ -2,14 +2,15 @@ urlTranslation: blog/5-things-to-improve-you-email-templates/index.html
 _inputs:
   $:
     type: object
-    comment: "[See
-      blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuar\
-      y.cloudvent.net/blog/5-things-to-improve-you-email-templates/)"
+    comment: >-
+      [See
+      blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (es-es)
-          comment: Text to translate on
+          comment: >-
+            Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
             - blog:/blog/5-things-to-improve-you-email-templates/
@@ -17,7 +18,8 @@ _inputs:
             - header-link-text-1
             - header-link-text-2
         - heading: Already translated (es-es)
-          comment: Text already translated on
+          comment: >-
+            Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs: []
   blog:/blog/5-things-to-improve-you-email-templates/:
@@ -36,8 +38,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
+    comment: |2-
+
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
     context:
@@ -121,8 +123,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
+    comment: |2-
+
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
   header-link-text-1:
@@ -130,8 +132,8 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
+    comment: |2-
+
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
   header-link-text-2:
@@ -139,11 +141,31 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
+    comment: |2-
+
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
-blog:/blog/5-things-to-improve-you-email-templates/: ""
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+blog:/blog/5-things-to-improve-you-email-templates/: >-
+  ## Usa un ESP
+
+
+  Utilice un proveedor de servicios de correo electrónico (ESP) que haya sido
+  probado por servicios de certificación de correo electrónico de terceros. Esto
+  garantiza que sus correos electrónicos serán aceptados por los principales
+  ISP. Un ESP que ofrece múltiples direcciones IP, o uno que le permite usar su
+  propia dirección IP si es necesario. Los ISP suelen bloquear mensajes de
+  remitentes desconocidos, por lo que tener su propia dirección IP ayuda a
+  solucionar este problema.
+
+
+  Sea consciente de lo que es normal en las bandejas de entrada de sus clientes
+  objetivo. Si envía correos electrónicos a personas que tienen cuentas de Gmail
+  y Yahoo, hay pocas posibilidades de que sean bloqueados porque sus direcciones
+  aún no han sido marcadas como spam. Pero si te comunicas con personas con
+  direcciones de Outlook o AOL, es muy probable que tu mensaje sea marcado como
+  correo no deseado y termine en su carpeta de spam antes de que lo vean.
+  Asegúrese de probar diferentes tipos de direcciones antes de enviar cualquier
+  campaña de marketing masiva.
+header-link-text-0: ''
+header-link-text-1: ''
+header-link-text-2: ''
