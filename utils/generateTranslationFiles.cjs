@@ -131,7 +131,6 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  // TODO: Read from checks.json to see if a file changes before running this
   const diffString = isKeyStatic
     ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
     : '';

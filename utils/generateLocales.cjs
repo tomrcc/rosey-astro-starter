@@ -1,10 +1,3 @@
-// TODO: When we write duplicates entries to our inputs
-// Write URLs
-// Fix URL input in CC
-// Only generate context input config if label is concatenated
-// Test with new locale and see how it runs
-// Readme
-
 const fs = require('fs');
 const YAML = require('yaml');
 const markdownit = require('markdown-it');
