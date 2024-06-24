@@ -33,11 +33,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
@@ -125,31 +123,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=Blog)"
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=RSS%20Feed)"
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=About)"
 blog:/blog/best-email-sending-services/: ""
 header-link-text-0: ""
 header-link-text-1: ""

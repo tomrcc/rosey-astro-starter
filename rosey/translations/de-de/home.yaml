@@ -27,68 +27,49 @@ _inputs:
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
+      %20Starter)"
   /-left_right-1-heading-text:
     label: Keep what you need Delete the rest
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
+      u,Delete%20the%20rest)"
   /-primary--button-text:
     label: GitHub
     hidden: false
     type: text
     options: {}
-    comment: |-
-      Added: 
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
   /-secondary--button-text:
     label: CloudCannon
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
   header-link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: |-
-      Added: 
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: |-
-      Added: 
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
   markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
@@ -102,11 +83,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
     context:
       open: false
       title: Untranslated Text
@@ -127,11 +106,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: 
-
-      Removed: 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
     context:
       open: false
       title: Untranslated Text
