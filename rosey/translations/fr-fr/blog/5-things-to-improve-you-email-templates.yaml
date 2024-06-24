@@ -37,16 +37,9 @@ _inputs:
       removeformat: true
       copyformatting: true
     comment: >-
-      ADDED: ADDED: ADDED: ADDED: Thisissecondparagraph
+      Added: 
 
-      REMOVED: REMOVED: REMOVED: REMOVED: REMOVED: REMOVED: Beawareof what’s
-      normal for your target customers’ inboxes. If you’re sending out emails to
-      people who are on Gmail and Yahoo accounts, then there’s little chance
-      they’ll get blocked because their addresses haven’t been flagged as spam
-      yet. But if you’re reaching out to people with Outlook or AOL addresses,
-      there’s good chance your message will get flagged as junk mail and end up
-      in their spam folder before they ever see it. Make sure you’re testing
-      typesof addresses before sending out any mass marketing campaigns 
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
     context:
       open: false
@@ -122,27 +115,30 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
 blog:/blog/5-things-to-improve-you-email-templates/: ""
 header-link-text-0: ""

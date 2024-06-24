@@ -24,36 +24,40 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20page)
   header-link-text-0:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed)
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)
   markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug:
     label: This is all about what we're _about_ like ...
@@ -68,9 +72,10 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
     context:
       open: false

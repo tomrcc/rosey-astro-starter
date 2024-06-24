@@ -33,9 +33,10 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=When%20you%20send,a%20timely%20manner)
     context:
       open: false
@@ -124,27 +125,30 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=Blog)
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=About)
 blog:/blog/email-delivery-tips/: ""
 header-link-text-0: ""

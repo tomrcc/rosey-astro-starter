@@ -22,27 +22,30 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)
   header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%20Feed)
   header-link-text-2:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
+    comment: >-
+      Added: 
+
+      Removed: 
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About)
 header-link-text-0: ""
 header-link-text-1: ""
