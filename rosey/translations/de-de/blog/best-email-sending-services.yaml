@@ -12,9 +12,9 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
@@ -33,10 +33,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
@@ -119,33 +118,30 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=Blog)
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=RSS%20Feed)
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=About)
+    comment: "Added:  About<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=RSS%20Feed)"
 blog:/blog/best-email-sending-services/: >-
   Wenn Sie eine E-Mail-Kampagne **versenden**, erwarten Sie, *dass* diese Ihre
   Leser erreicht, oder? Was aber, wenn die E-Mails direkt in den Spam-Ordnern
@@ -207,6 +203,6 @@ blog:/blog/best-email-sending-services/: >-
   aber bedenken Sie, dass Bilder bei der Zustellung in den Posteingang Probleme
   verursachen können – insbesondere, wenn sie falsch verwendet oder in
   Massen-E-Mails von Unternehmen enthalten sind, in denen sie versendet werden
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""

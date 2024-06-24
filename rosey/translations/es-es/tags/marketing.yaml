@@ -12,40 +12,37 @@ _inputs:
           comment: Text to translate on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs:
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
         - heading: Already translated (es-es)
           comment: Text already translated on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs: []
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=Blog)
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=About)
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+    comment: "Added:  About<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=A\
+      bout)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=B\
+      log)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=R\
+      SS%20Feed)"
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""

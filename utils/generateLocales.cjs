@@ -66,11 +66,7 @@ function processContentTranslationKey(
   baseFileData,
   oldLocaleData
 ) {
-  if (
-    !translatedString ||
-    translatedString === oldLocaleData[keyName]?.value ||
-    md.render(translatedString) === oldLocaleData[keyName]?.value
-  ) {
+  if (!translatedString || translatedString === oldLocaleData[keyName]?.value) {
     return !localeData[keyName]
       ? {
           original: baseFileData[keyName]?.original,
@@ -80,6 +76,28 @@ function processContentTranslationKey(
       : localeData[keyName];
   }
   // Write the value to the locales
+
+  // console.log(
+  //   'original:',
+  //   baseFileData[keyName]?.original,
+  //   'value:',
+  //   translatedString,
+  //   'isNewTranslation:',
+  //   true
+  // );
+  if (md.render(translatedString) === oldLocaleData[keyName]?.value) {
+    return {
+      original: baseFileData[keyName]?.original,
+      value: translatedString,
+      isNewTranslation: true,
+    };
+  }
+  console.log(
+    'Translated String: ',
+    translatedString.slice(0, 50),
+    'oldLocaleData[keyName]?.value: ',
+    oldLocaleData[keyName]?.value.slice(0, 50)
+  );
   return {
     original: baseFileData[keyName]?.original,
     value: translatedString,
@@ -215,15 +233,9 @@ async function generateLocale(locale) {
 
       Object.keys(data).forEach((key) => {
         if (!localeData[key] || data[key].isNewTranslation) {
-          const isKeyMarkdown = key.slice(0, 10).includes('markdown:');
-          const isKeyBlog = key.slice(0, 8).includes('blog:');
-
           localeData[key] = {
             original: data[key].original,
-            value:
-              isKeyMarkdown || isKeyBlog
-                ? md.render(data[key].value)
-                : data[key].value,
+            value: data[key].value,
           };
         }
 
@@ -247,6 +259,8 @@ async function generateLocale(locale) {
           updatedKeys = [key];
         }
       });
+      // console.log('Keys to update: ', Object.keys(keysToUpdate));
+      // console.log('Uodated Keys: ', Object.keys(updatedKeys));
 
       if (updatedKeys.length > 0) {
         const yamlString = YAML.stringify(data);

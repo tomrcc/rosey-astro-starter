@@ -87,13 +87,21 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   diff.forEach((part) => {
     // green for additions, red for deletions
     if (part.added && part.value.trim().length > 1) {
-      return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
+      return (diffStringAdded = `${diffStringAdded} ${part.value}`);
     }
     if (part.removed && part.value.trim().length > 1) {
-      return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
+      return (diffStringRemoved = `${diffStringRemoved} ${part.value}`);
     }
   });
-  return `${diffStringAdded}\n${diffStringRemoved}`;
+  const addedString =
+    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
+  const removedString =
+    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : '';
+
+  console.log(addedString, removedString);
+  return addedString.length > 0 || removedString.length > 0
+    ? `${addedString}<br>${removedString}<br>`
+    : '';
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
@@ -135,22 +143,22 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
     untranslatedPhraseMarkdown
   );
 
-  console.log(
-    '👴 oldOriginalFromLocale: ',
-    oldOriginalFromLocale.slice(0, 50),
-    '\n',
-    '📝untranslatedPhraseMarkdown: ',
-    untranslatedPhraseMarkdown.slice(0, 50),
-    '\n',
-    '⚖️ diffString: ',
-    diffString
-  );
+  // console.log(
+  //   '👴 oldOriginalFromLocale: ',
+  //   oldOriginalFromLocale.slice(0, 50),
+  //   '\n',
+  //   '📝untranslatedPhraseMarkdown: ',
+  //   untranslatedPhraseMarkdown.slice(0, 50),
+  //   '\n',
+  //   '⚖️ diffString: ',
+  //   diffString
+  // );
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
     diffString.length > 0
-      ? `${diffString} \n ${locationString}`
-      : `${locationString}`;
+      ? `${diffString}<br>${locationString}`
+      : locationString;
 
   const isLabelConcat = originalPhraseTidied.length > 42;
 

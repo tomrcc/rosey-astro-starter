@@ -43,13 +43,13 @@ const pagePath = Astro.url.pathname;
           x-transition
           @click.outside="open = false">
           {
-            header.links.map((link, index) => {
+            header.links.map((link) => {
               return (
                 <li class="header__nav-item">
                   <a
                     class="header__nav-link"
                     href={link.link}
-                    data-rosey={generateRoseyID(`link-text-${index}`)}>
+                    data-rosey={generateRoseyID(`link-text-${link.text}`)}>
                     {link.text}
                   </a>
                 </li>

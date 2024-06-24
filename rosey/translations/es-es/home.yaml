@@ -13,9 +13,9 @@ _inputs:
             - /-left_right-1-heading-text
             - /-primary--button-text
             - /-secondary--button-text
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
             - markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i
             - markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag
         - heading: Already translated (es-es)
@@ -27,64 +27,51 @@ _inputs:
     hidden: false
     type: textarea
     options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop\
+      %20Starter)"
   /-left_right-1-heading-text:
     label: Keep what you need Delete the rest
     hidden: false
     type: textarea
     options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
+      u,Delete%20the%20rest)"
   /-primary--button-text:
     label: GitHub
     hidden: false
     type: text
     options: {}
-    comment: |2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
+    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
   /-secondary--button-text:
     label: CloudCannon
     hidden: false
     type: text
     options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: |2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
-  header-link-text-2:
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: |2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
+    comment: "Added:  About<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
   markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
@@ -98,10 +85,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
     context:
       open: false
       title: Untranslated Text
@@ -122,10 +108,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >2-
-      
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
     context:
       open: false
       title: Untranslated Text
@@ -162,8 +147,8 @@ _inputs:
 /-left_right-1-heading-text: ""
 /-primary--button-text: ""
 /-secondary--button-text: ""
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""
 markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i: ""
 markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag: ""
