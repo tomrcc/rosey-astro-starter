@@ -4,6 +4,12 @@ const {
   NodeHtmlMarkdown,
   NodeHtmlMarkdownOptions,
 } = require('node-html-markdown');
+
+const {
+  isDirectory,
+  readFileWithFallback,
+  readJsonFromFile,
+} = require('./helpers/file-helper');
 const nhm = new NodeHtmlMarkdown(
   /* options (optional) */ {},
   /* customTransformers (optional) */ undefined,
@@ -24,7 +30,11 @@ let locales = process.env.LOCALES?.toLowerCase().split(',') || [
   'fr-fr',
 ];
 
-function initDefaultInputs(data) {
+function getPageString(page) {
+  return page.replace('.html', '').replace('index', '');
+}
+
+function initDefaultInputs(data, page, locale) {
   // Create the inputs obj if there is none
   if (!data['_inputs']) {
     data['_inputs'] = {};
@@ -32,6 +42,7 @@ function initDefaultInputs(data) {
 
   // Create the page input object
   if (!data['_inputs']['$']) {
+    const pageString = getPageString(page);
     data['_inputs']['$'] = {
       type: 'object',
       comment: `[See ${pageString}](${baseURL}${pageString})`,
@@ -54,6 +65,94 @@ function initDefaultInputs(data) {
   }
 }
 
+function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
+  const originalPhrase = inputTranslationObj.original.trim();
+  // Turn into markdown
+  const markdownOriginal = nhm.translate(originalPhrase);
+  const oldMarkdownOriginal = oldLocaleData[inputKey]?.original
+    ? nhm.translate(oldLocaleData[inputKey].original)
+    : '';
+
+  // Get rid of any special characters in markdown
+  // Get rid of links in the markdown
+  const originalPhraseTidied = markdownOriginal
+    .trim()
+    // Remove all md links
+    .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+    // Remove special chars
+    .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
+
+  // Write the highlight string
+  // Add each entry to our _inputs obj
+  const markdownTextInput =
+    inputKey.slice(0, 10).includes('markdown:') ||
+    inputKey.slice(0, 10).includes('blog:');
+
+  const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
+
+  // TODO: Optimise this to only run diff if we find something in the checks.json
+  const diff = isStaticKeyInput
+    ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
+    : [];
+
+  let diffStringAdded = '';
+  let diffStringRemoved = '';
+  diff.forEach((part) => {
+    // green for additions, red for deletions
+    if (part.added) {
+      diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
+    }
+    if (part.removed) {
+      diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value;
+    }
+  });
+  const diffString = `${diffStringAdded} ${diffStringRemoved}`;
+
+  const inputType = markdownTextInput
+    ? 'markdown'
+    : originalPhrase.length < 20
+    ? 'text'
+    : 'textarea';
+
+  const options = markdownTextInput
+    ? {
+        bold: true,
+        format: 'p h1 h2 h3 h4',
+        italic: true,
+        link: true,
+        undo: true,
+        redo: true,
+        removeformat: true,
+        copyformatting: true,
+      }
+    : {};
+
+  const locationString = generateLocationString(originalPhraseTidied, page);
+  const joinedComment =
+    diffStringAdded.length > 0 || diffStringRemoved.length > 0
+      ? `${diffString} \n ${locationString}`
+      : `${locationString}`;
+
+  const formattedLabel =
+    originalPhraseTidied.length > 42
+      ? `${originalPhraseTidied.substring(0, 42)}...`
+      : originalPhraseTidied;
+
+  return {
+    label: formattedLabel,
+    hidden: originalPhrase === '' ? true : false,
+    type: inputType,
+    options: options,
+    comment: joinedComment,
+    context: {
+      open: false,
+      title: 'Untranslated Text',
+      icon: 'translate',
+      content: markdownOriginal,
+    },
+  };
+}
+
 function getTranslationHTMLFilename(translationFilename) {
   if (translationFilename === '404.yaml') {
     return '404.html';
@@ -66,40 +165,9 @@ function getTranslationHTMLFilename(translationFilename) {
   return translationFilename.replace('.yaml', '/index.html');
 }
 
-async function isDirectory(filepath) {
-  const stat = await fs.promises.stat(filepath);
-
-  return stat.isDirectory();
-}
-
-async function readFileWithFallback(filepath, fallbackString) {
-  try {
-    const buffer = await fs.promises.readFile(filepath);
-    return buffer.toString('utf-8') || fallbackString;
-  } catch (err) {
-    if (err.code === 'ENOENT') {
-      return fallbackString;
-    }
-    throw err;
-  }
-}
-
-async function readJsonFromFile(filepath) {
-  const contents = await readFileWithFallback(filepath, '{}');
-  return JSON.parse(contents);
-}
-
-function generateLocationString(markdownOriginal, page) {
+function generateLocationString(originalPhraseTidied, page) {
   // Limit each phrase to 3 words
   const urlHighlighterWordLength = 3;
-  // Get rid of any special characters in markdown
-  // Get rid of links in the markdown
-  const originalPhraseTidied = markdownOriginal
-    .trim()
-    // Remove all md links
-    .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
-    // Remove special chars
-    .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
   const originalPhraseArray = originalPhraseTidied.split(/[\n]+/);
   // Get the first and last line of the markdown so we only have complete lines in the highlight url
   const firstPhrase = originalPhraseArray[0];
@@ -125,7 +193,7 @@ function generateLocationString(markdownOriginal, page) {
   const encodedEndHighlight = encodeURI(endHighlight);
   const encodedOriginalPhrase = encodeURI(originalPhraseArray.join(' '));
 
-  const pageString = page.replace('.html', '').replace('index', '');
+  const pageString = getPageString(page);
   // Look to see if original phrase is 5 words or shorter
   // if it is fallback to the encoded original phrase for the highlight link
   return originalPhraseArrayByWord.length > urlHighlighterWordLength * 2
@@ -203,119 +271,45 @@ async function main(locale) {
         cleanedOutputFileData['urlTranslation'] = page;
       }
 
-      initDefaultInputs(cleanedOutputFileData);
+      initDefaultInputs(cleanedOutputFileData, page, locale);
 
-      inputFileData.keys.forEach((inputKey) => {
+      Object.keys(inputFileData.keys).forEach((inputKey) => {
         const inputTranslationObj = inputFileData.keys[inputKey];
         // If input exists on this page
         if (!inputTranslationObj.pages[page]) {
           return;
         }
 
-        const originalPhrase = inputTranslationObj.original.trim();
-        // Turn into markdown
-        const markdownOriginal = nhm.translate(originalPhrase);
-        const oldMarkdownOriginal = oldLocaleData[inputKey]?.original
-          ? nhm.translate(oldLocaleData[inputKey].original)
-          : '';
-
         // Only add the key to our output data if it still exists in base.json
         // If entry no longer exists in base.json it's content has changed in the visual editor
-        Object.keys(translationFileData).forEach((key) => {
-          if (inputKey === key) {
-            cleanedOutputFileData[key] = translationFileData[key];
-          }
-        });
+        if (translationFileData[inputKey]) {
+          cleanedOutputFileData[inputKey] = translationFileData[inputKey];
+        }
 
         // If entry doesn't exist in our output file, add it
         if (!cleanedOutputFileData[inputKey]) {
           cleanedOutputFileData[inputKey] = '';
         }
 
-        // Write the highlight string
-
-        // Add each entry to our _inputs obj
-        const markdownTextInput =
-          inputKey.slice(0, 10).includes('markdown:') ||
-          inputKey.slice(0, 10).includes('blog:');
-
-        const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
-
-        // TODO: Optimise this to only run diff if we find something in the checks.json
-        const diff = isStaticKeyInput
-          ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
-          : [];
-
-        let diffStringAdded = '';
-        let diffStringRemoved = '';
-        diff.forEach((part) => {
-          // green for additions, red for deletions
-          if (part.added) {
-            diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
-          }
-          if (part.removed) {
-            diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value;
-          }
-        });
-        const diffString = `${diffStringAdded} ${diffStringRemoved}`;
-
-        const inputType = markdownTextInput
-          ? 'markdown'
-          : originalPhrase.length < 20
-          ? 'text'
-          : 'textarea';
-
-        const options = markdownTextInput
-          ? {
-              bold: true,
-              format: 'p h1 h2 h3 h4',
-              italic: true,
-              link: true,
-              undo: true,
-              redo: true,
-              removeformat: true,
-              copyformatting: true,
-            }
-          : {};
-
-        const locationString = generateLocationString(markdownOriginal, page);
-        const joinedComment =
-          diffStringAdded.length > 0 || diffStringRemoved.length > 0
-            ? `${diffString} \n ${locationString}`
-            : `${locationString}`;
-
-        const formattedLabel =
-          originalPhraseTidied.length > 42
-            ? `${originalPhraseTidied.substring(0, 42)}...`
-            : originalPhraseTidied;
-
-        cleanedOutputFileData['_inputs'][inputKey] = {
-          label: formattedLabel,
-          hidden: originalPhrase === '' ? true : false,
-          type: inputType,
-          options: options,
-          comment: joinedComment,
-          context: {
-            open: false,
-            title: 'Untranslated Text',
-            icon: 'translate',
-            content: markdownOriginal,
-          },
-        };
+        cleanedOutputFileData['_inputs'][inputKey] = getInputConfig(
+          inputKey,
+          page,
+          inputTranslationObj,
+          oldLocaleData
+        );
 
         // Add each entry to page object group depending on whether they are translated or not
-        const unTranslatedPageGroup =
-          cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs;
-
-        const translatedPageGroup =
-          cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs;
-
         if (cleanedOutputFileData[inputKey].length > 0) {
-          translatedPageGroup.push(inputKey);
+          cleanedOutputFileData['_inputs']['$'].options.groups[1].inputs.push(
+            inputKey
+          );
         } else {
-          unTranslatedPageGroup.push(inputKey);
+          cleanedOutputFileData['_inputs']['$'].options.groups[0].inputs.push(
+            inputKey
+          );
         }
       });
+
       await fs.promises.writeFile(
         translationFilePath,
         YAML.stringify(cleanedOutputFileData)

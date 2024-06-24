@@ -10,6 +10,7 @@ const YAML = require('yaml');
 const markdownit = require('markdown-it');
 const md = markdownit();
 const path = require('path');
+const { isDirectory, readFileWithFallback } = require('./helpers/file-helper');
 
 const translationsDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
@@ -34,24 +35,6 @@ function getTranslationHTMLFilename(translationFilename) {
   }
 
   return translationFilename.replace('.yaml', '/index.html');
-}
-
-async function isDirectory(filepath) {
-  const stat = await fs.promises.stat(filepath);
-
-  return stat.isDirectory();
-}
-
-async function readFileWithFallback(filepath, fallbackString) {
-  try {
-    const buffer = await fs.promises.readFile(filepath);
-    return buffer.toString('utf-8') || fallbackString;
-  } catch (err) {
-    if (err.code === 'ENOENT') {
-      return fallbackString;
-    }
-    throw err;
-  }
 }
 
 function processUrlTranslationKey(
