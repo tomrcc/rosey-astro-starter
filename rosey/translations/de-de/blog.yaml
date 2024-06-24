@@ -10,14 +10,14 @@ _inputs:
           comment: Text to translate on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
           inputs:
-            - /blog/-header--link-text-0
-            - /blog/-header--link-text-1
-            - /blog/-header--link-text-2
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
           inputs: []
-  /blog/-header--link-text-0:
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
@@ -26,7 +26,7 @@ _inputs:
       ADDED: Blog
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Blog)
-  /blog/-header--link-text-1:
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
@@ -35,7 +35,7 @@ _inputs:
       ADDED: RSS Feed
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)
-  /blog/-header--link-text-2:
+  header-link-text-2:
     label: About
     hidden: false
     type: text
@@ -44,6 +44,6 @@ _inputs:
       ADDED: About
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=About)
-/blog/-header--link-text-0: ""
-/blog/-header--link-text-1: ""
-/blog/-header--link-text-2: ""
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""

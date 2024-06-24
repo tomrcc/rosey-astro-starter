@@ -10,14 +10,14 @@ _inputs:
           comment: Text to translate on
             [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs:
-            - /tags/email/-header--link-text-0
-            - /tags/email/-header--link-text-1
-            - /tags/email/-header--link-text-2
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs: []
-  /tags/email/-header--link-text-0:
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
@@ -26,7 +26,7 @@ _inputs:
       ADDED: Blog
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)
-  /tags/email/-header--link-text-1:
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
@@ -35,7 +35,7 @@ _inputs:
       ADDED: RSS Feed
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%20Feed)
-  /tags/email/-header--link-text-2:
+  header-link-text-2:
     label: About
     hidden: false
     type: text
@@ -44,6 +44,6 @@ _inputs:
       ADDED: About
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About)
-/tags/email/-header--link-text-0: ""
-/tags/email/-header--link-text-1: ""
-/tags/email/-header--link-text-2: ""
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""

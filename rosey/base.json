@@ -1,30 +1,6 @@
 {
   "version": 2,
   "keys": {
-    "/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
-    },
-    "/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
-    },
-    "/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
-    },
     "/-hero--heading-text": {
       "original": " Astro Bookshop Starter ",
       "value": null,
@@ -57,227 +33,11 @@
       },
       "total": 1
     },
-    "/404/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "404.html": 1
-      },
-      "total": 1
-    },
-    "/404/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "404.html": 1
-      },
-      "total": 1
-    },
-    "/404/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "404.html": 1
-      },
-      "total": 1
-    },
-    "/about/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "about/index.html": 1
-      },
-      "total": 1
-    },
-    "/about/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "about/index.html": 1
-      },
-      "total": 1
-    },
-    "/about/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "about/index.html": 1
-      },
-      "total": 1
-    },
     "/about/-hero--heading-text": {
       "original": " About page ",
       "value": null,
       "pages": {
         "about/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "blog/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "blog/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "blog/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/5-things-to-improve-you-email-templates/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "blog/5-things-to-improve-you-email-templates/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/5-things-to-improve-you-email-templates/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "blog/5-things-to-improve-you-email-templates/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/5-things-to-improve-you-email-templates/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "blog/5-things-to-improve-you-email-templates/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/best-email-sending-services/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "blog/best-email-sending-services/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/best-email-sending-services/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "blog/best-email-sending-services/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/best-email-sending-services/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "blog/best-email-sending-services/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/email-delivery-tips/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "blog/email-delivery-tips/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/email-delivery-tips/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "blog/email-delivery-tips/index.html": 1
-      },
-      "total": 1
-    },
-    "/blog/email-delivery-tips/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "blog/email-delivery-tips/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/email/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "tags/email/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/email/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "tags/email/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/email/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "tags/email/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/marketing/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "tags/marketing/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/marketing/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "tags/marketing/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/marketing/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "tags/marketing/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/technology/-header--link-text-0": {
-      "original": " Blog ",
-      "value": null,
-      "pages": {
-        "tags/technology/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/technology/-header--link-text-1": {
-      "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "tags/technology/index.html": 1
-      },
-      "total": 1
-    },
-    "/tags/technology/-header--link-text-2": {
-      "original": " About ",
-      "value": null,
-      "pages": {
-        "tags/technology/index.html": 1
       },
       "total": 1
     },
@@ -304,6 +64,57 @@
         "blog/email-delivery-tips/index.html": 1
       },
       "total": 1
+    },
+    "header-link-text-0": {
+      "original": " Blog ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/5-things-to-improve-you-email-templates/index.html": 1,
+        "blog/best-email-sending-services/index.html": 1,
+        "blog/email-delivery-tips/index.html": 1,
+        "blog/index.html": 1,
+        "index.html": 1,
+        "tags/email/index.html": 1,
+        "tags/marketing/index.html": 1,
+        "tags/technology/index.html": 1
+      },
+      "total": 10
+    },
+    "header-link-text-1": {
+      "original": " RSS Feed ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/5-things-to-improve-you-email-templates/index.html": 1,
+        "blog/best-email-sending-services/index.html": 1,
+        "blog/email-delivery-tips/index.html": 1,
+        "blog/index.html": 1,
+        "index.html": 1,
+        "tags/email/index.html": 1,
+        "tags/marketing/index.html": 1,
+        "tags/technology/index.html": 1
+      },
+      "total": 10
+    },
+    "header-link-text-2": {
+      "original": " About ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/5-things-to-improve-you-email-templates/index.html": 1,
+        "blog/best-email-sending-services/index.html": 1,
+        "blog/email-delivery-tips/index.html": 1,
+        "blog/index.html": 1,
+        "index.html": 1,
+        "tags/email/index.html": 1,
+        "tags/marketing/index.html": 1,
+        "tags/technology/index.html": 1
+      },
+      "total": 10
     },
     "markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i": {
       "original": "<p>A starting point for <strong>developers looking to build a website with Astro, using Bookshop components in CloudCannon</strong>. Create your own copy, and start creating your own components to use in the CloudCannon CMS.</p>\n",

@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs:
-            - /tags/technology/-header--link-text-0
-            - /tags/technology/-header--link-text-1
-            - /tags/technology/-header--link-text-2
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (de-de)
           comment: Text already translated on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs: []
-  /tags/technology/-header--link-text-0:
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
@@ -28,7 +28,7 @@ _inputs:
       ADDED: Blog
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=Blog)
-  /tags/technology/-header--link-text-1:
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
@@ -37,7 +37,7 @@ _inputs:
       ADDED: RSS Feed
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=RSS%20Feed)
-  /tags/technology/-header--link-text-2:
+  header-link-text-2:
     label: About
     hidden: false
     type: text
@@ -46,6 +46,6 @@ _inputs:
       ADDED: About
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=About)
-/tags/technology/-header--link-text-0: ""
-/tags/technology/-header--link-text-1: ""
-/tags/technology/-header--link-text-2: ""
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""

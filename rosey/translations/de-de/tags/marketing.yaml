@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs:
-            - /tags/marketing/-header--link-text-0
-            - /tags/marketing/-header--link-text-1
-            - /tags/marketing/-header--link-text-2
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
         - heading: Already translated (de-de)
           comment: Text already translated on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs: []
-  /tags/marketing/-header--link-text-0:
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
@@ -28,7 +28,7 @@ _inputs:
       ADDED: Blog
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=Blog)
-  /tags/marketing/-header--link-text-1:
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
@@ -37,7 +37,7 @@ _inputs:
       ADDED: RSS Feed
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=RSS%20Feed)
-  /tags/marketing/-header--link-text-2:
+  header-link-text-2:
     label: About
     hidden: false
     type: text
@@ -46,6 +46,6 @@ _inputs:
       ADDED: About
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=About)
-/tags/marketing/-header--link-text-0: ""
-/tags/marketing/-header--link-text-1: ""
-/tags/marketing/-header--link-text-2: ""
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""

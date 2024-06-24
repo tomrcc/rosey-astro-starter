@@ -9,20 +9,56 @@ _inputs:
         - heading: Still to translate (fr-fr)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
-            - /-header--link-text-0
-            - /-header--link-text-1
-            - /-header--link-text-2
             - /-hero--heading-text
             - /-left_right-1-heading-text
             - /-primary--button-text
             - /-secondary--button-text
+            - header-link-text-0
+            - header-link-text-1
+            - header-link-text-2
             - markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i
             - markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
           inputs: []
-  /-header--link-text-0:
+  /-hero--heading-text:
+    label: Astro Bookshop Starter
+    hidden: false
+    type: textarea
+    options: {}
+    comment: >-
+      
+      REMOVED: REMOVED:    
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
+  /-left_right-1-heading-text:
+    label: Keep what you need Delete the rest
+    hidden: false
+    type: textarea
+    options: {}
+    comment: >-
+      
+      REMOVED: REMOVED:    
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
+  /-primary--button-text:
+    label: GitHub
+    hidden: false
+    type: text
+    options: {}
+    comment: |-
+      
+      REMOVED: REMOVED:    
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
+  /-secondary--button-text:
+    label: CloudCannon
+    hidden: false
+    type: text
+    options: {}
+    comment: >-
+      
+      REMOVED: REMOVED:    
+       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
+  header-link-text-0:
     label: Blog
     hidden: false
     type: text
@@ -31,7 +67,7 @@ _inputs:
       ADDED: Blog
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)
-  /-header--link-text-1:
+  header-link-text-1:
     label: RSS Feed
     hidden: false
     type: text
@@ -40,7 +76,7 @@ _inputs:
       ADDED: RSS Feed
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)
-  /-header--link-text-2:
+  header-link-text-2:
     label: About
     hidden: false
     type: text
@@ -49,42 +85,6 @@ _inputs:
       ADDED: About
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)
-  /-hero--heading-text:
-    label: Astro Bookshop Starter
-    hidden: false
-    type: textarea
-    options: {}
-    comment: >-
-      ADDED: Astro Bookshop Starter
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Astro%20Bookshop%20Starter)
-  /-left_right-1-heading-text:
-    label: Keep what you need Delete the rest
-    hidden: false
-    type: textarea
-    options: {}
-    comment: >-
-      ADDED: Keep what you need. Delete the rest.
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20you,Delete%20the%20rest)
-  /-primary--button-text:
-    label: GitHub
-    hidden: false
-    type: text
-    options: {}
-    comment: |-
-      ADDED: GitHub
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)
-  /-secondary--button-text:
-    label: CloudCannon
-    hidden: false
-    type: text
-    options: {}
-    comment: >-
-      ADDED: CloudCannon
-       
-       [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)
   markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
@@ -98,10 +98,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      ADDED: A starting point for **developers looking to build a website with
-      Astro, using Bookshop components in CloudCannon**. Create your own copy,
-      and start creating your own components to use in the CloudCannon CMS.
+    comment: >2-
+      
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
     context:
@@ -124,35 +122,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      ADDED: To help save you time, some features are set up in this template,
-      like:
-
-
-      *
-      [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
-
-      * Blog with pagination, tags and
-      [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
-
-      * [Image
-      optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
-
-      * SEO Controls
-
-      * Responsive header and footer
-
-      * [Font Awesome Icons](https://fontawesome.com/search?o=r&m=free)
-
-      * Schemas for adding new pages
-
-      * Editable color pallete
-
-      * Markdown styles
-
-      * CloudCannon configuration
-
-      * CSS variables
+    comment: >2-
+      
        
        [See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
     context:
@@ -187,12 +158,12 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
-/-header--link-text-0: ""
-/-header--link-text-1: ""
-/-header--link-text-2: ""
 /-hero--heading-text: ""
 /-left_right-1-heading-text: ""
 /-primary--button-text: ""
 /-secondary--button-text: ""
+header-link-text-0: ""
+header-link-text-1: ""
+header-link-text-2: ""
 markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i: ""
 markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag: ""
