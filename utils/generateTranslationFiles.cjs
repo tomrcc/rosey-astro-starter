@@ -224,7 +224,7 @@ function generateLocationString(originalPhraseTidied, page) {
 async function main(locale) {
   // Get the Rosey generated data
 
-  const localePath = path.join(localesDirPath, locale, '.json');
+  const localePath = path.join(localesDirPath, `${locale}.json`);
   const oldLocaleData = await readJsonFromFile(localePath);
   const inputFileData = await readJsonFromFile(inputFilePath);
   const inputURLFileData = await readJsonFromFile(inputURLFilePath);
