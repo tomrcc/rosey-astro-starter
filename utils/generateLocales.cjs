@@ -10,7 +10,10 @@ const YAML = require('yaml');
 const markdownit = require('markdown-it');
 const md = markdownit();
 const path = require('path');
-const { isDirectory, readFileWithFallback } = require('./helpers/file-helper');
+const {
+  isDirectory,
+  readFileWithFallback,
+} = require('./helpers/file-helper.cjs');
 
 const translationsDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
@@ -56,8 +59,6 @@ function processUrlTranslationKey(
       value: translationEntry,
     };
   }
-
-  console.log(translationEntry);
 
   return {
     original: baseURLFileData[translationHTMLFilename]?.original,

@@ -9,7 +9,7 @@ const {
   isDirectory,
   readFileWithFallback,
   readJsonFromFile,
-} = require('./helpers/file-helper');
+} = require('./helpers/file-helper.cjs');
 const nhm = new NodeHtmlMarkdown(
   /* options (optional) */ {},
   /* customTransformers (optional) */ undefined,
@@ -65,56 +65,59 @@ function initDefaultInputs(data, page, locale) {
   }
 }
 
-function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
-  const originalPhrase = inputTranslationObj.original.trim();
-  // Turn into markdown
-  const markdownOriginal = nhm.translate(originalPhrase);
-  const oldMarkdownOriginal = oldLocaleData[inputKey]?.original
-    ? nhm.translate(oldLocaleData[inputKey].original)
-    : '';
+function formatMarkdown(markdown) {
+  return (
+    markdown
+      .trim()
+      // Remove all md links
+      .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+      // Remove special chars
+      .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '')
+  );
+}
 
-  // Get rid of any special characters in markdown
-  // Get rid of links in the markdown
-  const originalPhraseTidied = markdownOriginal
-    .trim()
-    // Remove all md links
-    .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
-    // Remove special chars
-    .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '');
-
-  // Write the highlight string
-  // Add each entry to our _inputs obj
-  const markdownTextInput =
-    inputKey.slice(0, 10).includes('markdown:') ||
-    inputKey.slice(0, 10).includes('blog:');
-
-  const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
-
-  // TODO: Optimise this to only run diff if we find something in the checks.json
-  const diff = isStaticKeyInput
-    ? Diff.diffWordsWithSpace(oldMarkdownOriginal, markdownOriginal)
-    : [];
+function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
+  const diff = Diff.diffWordsWithSpace(
+    oldOriginalFromLocale,
+    untranslatedPhraseMarkdown
+  );
 
   let diffStringAdded = '';
   let diffStringRemoved = '';
   diff.forEach((part) => {
     // green for additions, red for deletions
     if (part.added) {
-      diffStringAdded = 'ADDED: ' + diffStringAdded + part.value;
+      return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
     }
     if (part.removed) {
-      diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value;
+      return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
     }
   });
-  const diffString = `${diffStringAdded} ${diffStringRemoved}`;
+  return `${diffStringAdded}\n${diffStringRemoved}`;
+}
 
-  const inputType = markdownTextInput
+function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
+  const untranslatedPhrase = inputTranslationObj.original.trim();
+  // Turn into markdown
+  const untranslatedPhraseMarkdown = nhm.translate(untranslatedPhrase);
+  const oldOriginalFromLocale = oldLocaleData[inputKey]?.original
+    ? nhm.translate(oldLocaleData[inputKey].original)
+    : '';
+
+  const originalPhraseTidied = formatMarkdown(untranslatedPhraseMarkdown);
+
+  const isKeyMarkdown =
+    inputKey.slice(0, 10).includes('markdown:') ||
+    inputKey.slice(0, 10).includes('blog:');
+  const isStaticKeyInput = inputKey.slice(0, 10).includes('blog:');
+
+  const inputType = isKeyMarkdown
     ? 'markdown'
-    : originalPhrase.length < 20
+    : untranslatedPhrase.length < 20
     ? 'text'
     : 'textarea';
 
-  const options = markdownTextInput
+  const options = isKeyMarkdown
     ? {
         bold: true,
         format: 'p h1 h2 h3 h4',
@@ -127,9 +130,15 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
+  // Write the highlight string
+  // Add each entry to our _inputs obj
+  const diffString = isStaticKeyInput
+    ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
+    : '';
+
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
-    diffStringAdded.length > 0 || diffStringRemoved.length > 0
+    diffString.length > 0
       ? `${diffString} \n ${locationString}`
       : `${locationString}`;
 
@@ -140,7 +149,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
 
   return {
     label: formattedLabel,
-    hidden: originalPhrase === '' ? true : false,
+    hidden: untranslatedPhrase === '' ? true : false,
     type: inputType,
     options: options,
     comment: joinedComment,
@@ -148,7 +157,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       open: false,
       title: 'Untranslated Text',
       icon: 'translate',
-      content: markdownOriginal,
+      content: untranslatedPhraseMarkdown,
     },
   };
 }
@@ -215,7 +224,6 @@ async function main(locale) {
   const translationsFiles = await fs.promises.readdir(translationsLocalePath, {
     recursive: true,
   });
-  console.log(pages);
 
   await Promise.all(
     translationsFiles.map(async (fileNameWithExt) => {
