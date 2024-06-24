@@ -1,16 +1,12 @@
 ---
 import markdownit from 'markdown-it';
+import { v4 as uuidv4 } from 'uuid';
 const md = markdownit({ html: true });
 const { content } = Astro.props;
-import slugify from 'slugify';
 
-const generateRoseyID = (text: string) => {
-  const lowerCaseText = text.toLowerCase();
-  const formattedText = lowerCaseText.replaceAll(
-    /(?:__[*#])|\[(.*?)\]\(.*?\)/gm,
-    /$1/
-  );
-  return slugify(formattedText, { remove: /[.*,:\/]/g });
+const generateRoseyID = () => {
+  const uuid = uuidv4();
+  return `${Astro.url.pathname}-${Astro.self.name}-${uuid}`;
 };
 ---
 
@@ -18,6 +14,6 @@ const generateRoseyID = (text: string) => {
 <div
   class="markdown-text"
   data-rosey-ns="markdown"
-  data-rosey={generateRoseyID(content)}
+  data-rosey={generateRoseyID()}
   set:html={md.render(content)}
 />

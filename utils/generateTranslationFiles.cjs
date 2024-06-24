@@ -109,7 +109,6 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const isKeyMarkdown =
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
-  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
@@ -131,9 +130,10 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  const diffString = isKeyStatic
-    ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
-    : '';
+  const diffString = generateDiffString(
+    oldOriginalFromLocale,
+    untranslatedPhraseMarkdown
+  );
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
