@@ -93,7 +93,15 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
       return (diffStringRemoved = `${diffStringRemoved} ${part.value}`);
     }
   });
-  return `Added: ${diffStringAdded}\nRemoved:${diffStringRemoved}`;
+  const addedString =
+    diffString.diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
+  const removedString =
+    diffString.diffStringRemoved.length > 0
+      ? `Removed: ${diffStringRemoved}`
+      : '';
+  return addedString.length > 0 || removedString.length > 0
+    ? `${addedString}<br>${removedString}<br>`
+    : '';
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
@@ -135,22 +143,22 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
     untranslatedPhraseMarkdown
   );
 
-  console.log(
-    '👴 oldOriginalFromLocale: ',
-    oldOriginalFromLocale.slice(0, 50),
-    '\n',
-    '📝untranslatedPhraseMarkdown: ',
-    untranslatedPhraseMarkdown.slice(0, 50),
-    '\n',
-    '⚖️ diffString: ',
-    diffString
-  );
+  // console.log(
+  //   '👴 oldOriginalFromLocale: ',
+  //   oldOriginalFromLocale.slice(0, 50),
+  //   '\n',
+  //   '📝untranslatedPhraseMarkdown: ',
+  //   untranslatedPhraseMarkdown.slice(0, 50),
+  //   '\n',
+  //   '⚖️ diffString: ',
+  //   diffString
+  // );
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
     diffString.length > 0
-      ? `${diffString} \n ${locationString}`
-      : `${locationString}`;
+      ? `${diffString}<br>${locationString}`
+      : locationString;
 
   const isLabelConcat = originalPhraseTidied.length > 42;
 
