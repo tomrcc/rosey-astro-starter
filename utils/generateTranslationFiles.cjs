@@ -87,13 +87,13 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   diff.forEach((part) => {
     // green for additions, red for deletions
     if (part.added && part.value.trim().length > 1) {
-      return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
+      return (diffStringAdded = `${diffStringAdded} ${part.value}`);
     }
     if (part.removed && part.value.trim().length > 1) {
-      return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
+      return (diffStringRemoved = `${diffStringRemoved} ${part.value}`);
     }
   });
-  return `${diffStringAdded}\n${diffStringRemoved}`;
+  return `Added: ${diffStringAdded}\nRemoved:${diffStringRemoved}`;
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
