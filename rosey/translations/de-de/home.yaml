@@ -11,6 +11,9 @@ _inputs:
           inputs:
             - /-primary--button-text
             - /-secondary--button-text
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
             - markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag
         - heading: Already translated (de-de)
           comment: Text already translated on
@@ -18,9 +21,6 @@ _inputs:
           inputs:
             - /-hero--heading-text
             - /-left_right-1-heading-text
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
             - markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i
   /-hero--heading-text:
     label: Astro Bookshop Starter
@@ -51,25 +51,27 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+    comment: "Added:  About<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
   markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
@@ -145,9 +147,9 @@ _inputs:
 /-left_right-1-heading-text: Behalten Sie, was Sie brauchen. Löschen Sie den Rest
 /-primary--button-text: ""
 /-secondary--button-text: ""
-header-link-text-0: Blog
-header-link-text-1: RSS Feed
-header-link-text-2: Um
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""
 markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
   Ein Ausgangspunkt für Entwickler, die mit Astro eine Website erstellen möchten
   und Bookshop-Komponenten in CloudCannon verwenden. Erstellen Sie Ihre eigene

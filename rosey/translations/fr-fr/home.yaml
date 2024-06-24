@@ -13,9 +13,9 @@ _inputs:
             - /-left_right-1-heading-text
             - /-primary--button-text
             - /-secondary--button-text
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
             - markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i
             - markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag
         - heading: Already translated (fr-fr)
@@ -51,25 +51,27 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=CloudCannon)"
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+    comment: "Added:  About<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=RSS%20Feed)"
   markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i:
     label: A starting point for developers looking to...
     hidden: false
@@ -145,8 +147,8 @@ _inputs:
 /-left_right-1-heading-text: ""
 /-primary--button-text: ""
 /-secondary--button-text: ""
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""
 markdown:/-markdown-a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-i: ""
 markdown:/-markdown-to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pag: ""

@@ -10,36 +10,36 @@ _inputs:
           comment: Text to translate on
             [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs:
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
         - heading: Already translated (de-de)
           comment: Text already translated on
             [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs: []
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%2\
-      0Feed)"
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: "[See on
+    comment: "Added:  About<br><br><br>[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=About\
       )"
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%2\
+      0Feed)"
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""

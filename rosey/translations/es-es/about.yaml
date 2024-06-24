@@ -11,9 +11,9 @@ _inputs:
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - /about/-hero--heading-text
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
             - markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug
         - heading: Already translated (es-es)
           comment: Text already translated on
@@ -27,28 +27,28 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
       ge)"
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
-      )"
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: "[See on
+    comment: "Added:  About<br><br><br>[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
+      )"
   markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug:
     label: This is all about what we're _about_ like ...
     hidden: false
@@ -74,7 +74,7 @@ _inputs:
 
         ## A heading halfway through lel
 /about/-hero--heading-text: ""
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""
 markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug: ""

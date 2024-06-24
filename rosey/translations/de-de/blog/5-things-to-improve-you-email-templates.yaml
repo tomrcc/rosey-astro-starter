@@ -12,9 +12,9 @@ _inputs:
           comment: Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
-            - header-link-text-0
-            - header-link-text-1
-            - header-link-text-2
+            - header-link-text-About
+            - header-link-text-Blog
+            - header-link-text-RSS Feed
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
@@ -108,30 +108,30 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  header-link-text-0:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=Blog)"
-  header-link-text-1:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=RSS%20Feed)"
-  header-link-text-2:
+  header-link-text-About:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: "[See on
+    comment: "Added:  About<br><br><br>[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=About)"
+  header-link-text-Blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  Blog<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Blog)"
+  header-link-text-RSS Feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "Added:  RSS Feed<br><br><br>[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=RSS%20Feed)"
 blog:/blog/5-things-to-improve-you-email-templates/: >-
   ### Benutze ein ESP
 
@@ -189,6 +189,6 @@ blog:/blog/5-things-to-improve-you-email-templates/: >-
   mind and to always know that if you are sending out emails related to your
   business, be sure to follow-up with customers or clients and make sure that
   they are getting their emails in a timely manner. \|
-header-link-text-0: ""
-header-link-text-1: ""
-header-link-text-2: ""
+header-link-text-About: ""
+header-link-text-Blog: ""
+header-link-text-RSS Feed: ""

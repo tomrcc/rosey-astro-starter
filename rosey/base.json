@@ -65,7 +65,24 @@
       },
       "total": 1
     },
-    "header-link-text-0": {
+    "header-link-text-About": {
+      "original": " About ",
+      "value": null,
+      "pages": {
+        "404.html": 1,
+        "about/index.html": 1,
+        "blog/5-things-to-improve-you-email-templates/index.html": 1,
+        "blog/best-email-sending-services/index.html": 1,
+        "blog/email-delivery-tips/index.html": 1,
+        "blog/index.html": 1,
+        "index.html": 1,
+        "tags/email/index.html": 1,
+        "tags/marketing/index.html": 1,
+        "tags/technology/index.html": 1
+      },
+      "total": 10
+    },
+    "header-link-text-Blog": {
       "original": " Blog ",
       "value": null,
       "pages": {
@@ -82,25 +99,8 @@
       },
       "total": 10
     },
-    "header-link-text-1": {
+    "header-link-text-RSS Feed": {
       "original": " RSS Feed ",
-      "value": null,
-      "pages": {
-        "404.html": 1,
-        "about/index.html": 1,
-        "blog/5-things-to-improve-you-email-templates/index.html": 1,
-        "blog/best-email-sending-services/index.html": 1,
-        "blog/email-delivery-tips/index.html": 1,
-        "blog/index.html": 1,
-        "index.html": 1,
-        "tags/email/index.html": 1,
-        "tags/marketing/index.html": 1,
-        "tags/technology/index.html": 1
-      },
-      "total": 10
-    },
-    "header-link-text-2": {
-      "original": " About ",
       "value": null,
       "pages": {
         "404.html": 1,
