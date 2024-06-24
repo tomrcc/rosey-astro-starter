@@ -2,7 +2,7 @@
 import { header } from '../../../data/navigation.json';
 import Icon from '../utility/icon';
 const generateRoseyID = (text: string) => {
-  return `${Astro.url.pathname}-${Astro.self.name}-${Astro.props.key || ''}-${text}`;
+  return `${Astro.self.name}-${text}`;
 };
 const pagePath = Astro.url.pathname;
 ---
