@@ -75,6 +75,16 @@ function formatMarkdown(markdown) {
       .replaceAll(/[&\/\\#,+()$~%.":*?<>{}]/gm, '')
   );
 }
+function formatMarkdownForComments(markdown) {
+  return (
+    markdown
+      .trim()
+      // Remove all md links
+      .replaceAll(/(?:__[*#])|\[(.*?)\]\(.*?\)/gm, /$1/)
+      // Remove special chars
+      .replaceAll(/[&\/\\#+()$~%"*<>{}]/gm, '')
+  );
+}
 
 function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   const diff = Diff.diffWordsWithSpace(
@@ -95,11 +105,11 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   });
   const formattedDiffStringAdded =
     diffStringAdded.length > 0
-      ? `<p>Added: ${formatMarkdown(diffStringAdded)}</p>`
+      ? `<p>Added: ${formatMarkdownForComments(diffStringAdded)}</p>`
       : '';
   const formattedDiffStringRemoved =
     diffStringRemoved.length > 0
-      ? `<p>Removed: ${formatMarkdown(diffStringRemoved)}</p>`
+      ? `<p>Removed: ${formatMarkdownForComments(diffStringRemoved)}</p>`
       : '';
 
   const formattedStringCombined = nhm.translate(
@@ -118,6 +128,9 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
     : '';
 
   const originalPhraseTidied = formatMarkdown(untranslatedPhraseMarkdown);
+  const originalPhraseTidiedForComment = formatMarkdownForComments(
+    untranslatedPhraseMarkdown
+  );
 
   const isKeyStatic = inputKey.slice(0, 10).includes('static:');
   const isInputShortText = untranslatedPhrase.length < 20;
@@ -151,11 +164,11 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       ? `${diffString}\n\n${locationString}`
       : `${locationString}`;
 
-  const isLabelConcat = originalPhraseTidied.length > 42;
+  const isLabelConcat = originalPhraseTidiedForComment.length > 42;
 
   const formattedLabel = isLabelConcat
-    ? `${originalPhraseTidied.substring(0, 42)}...`
-    : originalPhraseTidied;
+    ? `${originalPhraseTidiedForComment.substring(0, 42)}...`
+    : originalPhraseTidiedForComment;
 
   const inputConfig = isLabelConcat
     ? {
