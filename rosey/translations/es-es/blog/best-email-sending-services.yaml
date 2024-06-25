@@ -59,9 +59,12 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
+    comment: >-
+      Removed: To make sure your emails reach their recipients this has changed.
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
     context:
       open: false
       title: Untranslated Text
@@ -69,8 +72,7 @@ _inputs:
       content: >-
         When you send an email campaign, you expect it to reach your readers,
         right? But what if the emails go straight to your subscribers’ spam
-        folders instead of their inboxes? To make sure your emails reach their
-        recipients this has changed.
+        folders instead of their inboxes?
 
 
         ### Use an ESP

@@ -7,10 +7,6 @@
 		"original": "about/index.html",
 		"value": "translated/index.html"
 	},
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
-	},
 	"index.html": {
 		"original": "index.html",
 		"value": "index.html"
@@ -26,6 +22,10 @@
 	"tags/technology/index.html": {
 		"original": "tags/technology/index.html",
 		"value": "tags/technology/index.html"
+	},
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
 	},
 	"blog/5-things-to-improve-you-email-templates/index.html": {
 		"original": "blog/5-things-to-improve-you-email-templates/index.html",
