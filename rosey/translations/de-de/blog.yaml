@@ -17,6 +17,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -38,6 +39,15 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)"
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Test%20Page\
+      )"
 about: Um
-blog: Blog
+blog: Nachricht
 rss-feed: RSS Feed
+test-page: Test Page Translated

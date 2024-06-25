@@ -20,6 +20,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -143,7 +144,16 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=Test%20Page)"
 about: Um
-blog: Blog
+blog: Nachricht
 rss-feed: RSS Feed
 static:/blog/best-email-sending-services/: ""
+test-page: Test Page Translated

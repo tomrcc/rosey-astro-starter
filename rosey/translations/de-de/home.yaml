@@ -22,6 +22,7 @@ _inputs:
             - rss-feed
             - static:hero-subheading-home-1
             - static:left-right-text-home-1
+            - test-page
   about:
     label: About
     hidden: false
@@ -147,9 +148,16 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Test%20Page)"
 about: Um
 astro-bookshop-starter: Astro Bookshop Anlasser
-blog: Blog
+blog: Nachricht
 cloudcannon: CloudCannon
 github: GitHub
 keep-what-you-need-delete-the-rest: Behalten Sie, was Sie brauchen. Den Rest löschen.
@@ -176,3 +184,4 @@ static:left-right-text-home-1: >-
   * Bildoptimierung
 
   * Etc...
+test-page: Test Page Translated

@@ -19,6 +19,7 @@ _inputs:
             - about-page
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -75,8 +76,17 @@ _inputs:
         This is all about what we're _about_ like what we're really _**about**_
 
         ## A heading halfway through lel
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Test%20Pag\
+      e)"
 about: Um
 about-page: Um Seite
-blog: Blog
+blog: Nachricht
 rss-feed: RSS Feed
 static:hero-subheading-about-1: ""
+test-page: Test Page Translated

@@ -16,6 +16,10 @@
       {
         "link": "/about/",
         "text": "About"
+      },
+      {
+        "link": "/test/",
+        "text": "Test Page"
       }
     ],
     "locales": [

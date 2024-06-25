@@ -13,6 +13,7 @@ _inputs:
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - static:/blog/email-delivery-tips/
+            - test-page
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
@@ -144,7 +145,16 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=Test%20Page)"
 about: Acerca de
 blog: Blog
 rss-feed: RSS Feed
 static:/blog/email-delivery-tips/: ""
+test-page: ""

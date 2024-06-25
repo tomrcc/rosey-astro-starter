@@ -15,6 +15,7 @@ _inputs:
             - keep-what-you-need-delete-the-rest
             - static:hero-subheading-home-1
             - static:left-right-text-home-1
+            - test-page
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
@@ -147,6 +148,13 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Test%20Page)"
 about: Á propos
 astro-bookshop-starter: ""
 blog: Nouvelles
@@ -156,3 +164,4 @@ keep-what-you-need-delete-the-rest: ""
 rss-feed: RSS Alimentation
 static:hero-subheading-home-1: ""
 static:left-right-text-home-1: ""
+test-page: ""

@@ -5,11 +5,15 @@
 	},
 	"blog": {
 		"original": " Blog ",
-		"value": "Blog"
+		"value": "Nachricht"
 	},
 	"rss-feed": {
 		"original": " RSS Feed ",
 		"value": "RSS Feed"
+	},
+	"test-page": {
+		"original": " Test Page ",
+		"value": "Test Page Translated"
 	},
 	"about-page": {
 		"original": " About page ",

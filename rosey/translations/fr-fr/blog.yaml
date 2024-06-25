@@ -9,7 +9,8 @@ _inputs:
         - heading: Still to translate (fr-fr)
           comment: Text to translate on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
-          inputs: []
+          inputs:
+            - test-page
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
@@ -38,6 +39,15 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)"
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Test%20Page\
+      )"
 about: Á propos
 blog: Nouvelles
 rss-feed: RSS Alimentation
+test-page: ""
