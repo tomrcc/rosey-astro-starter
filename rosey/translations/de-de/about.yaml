@@ -10,16 +10,23 @@ _inputs:
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
-            - /about/-hero--heading-text
-            - header-link-text-About
-            - header-link-text-Blog
-            - header-link-text-RSS Feed
-            - markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug
+            - about-page
         - heading: Already translated (de-de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs: []
-  /about/-hero--heading-text:
+          inputs:
+            - about
+            - blog
+            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
+            - rss-feed
+  about:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
+  about-page:
     label: About page
     hidden: false
     type: text
@@ -27,29 +34,14 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
       ge)"
-  header-link-text-About:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "Added:  About<br><br><br>[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
-  header-link-text-Blog:
+  blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "Added:  Blog<br><br><br>[See on
+    comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-  header-link-text-RSS Feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "Added:  RSS Feed<br><br><br>[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
-      )"
-  markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug:
+  markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
     label: This is all about what we're _about_ like ...
     hidden: false
     type: markdown
@@ -73,8 +65,19 @@ _inputs:
         This is all about what we're _about_ like what we're really _**about**_
 
         ## A heading halfway through lel
-/about/-hero--heading-text: ""
-header-link-text-About: ""
-header-link-text-Blog: ""
-header-link-text-RSS Feed: ""
-markdown:/about/-markdown-this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-throug: ""
+  rss-feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
+      )"
+about: Um
+about-page: ""
+blog: Blog
+markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
+  This is all about what we're *about* like what we're really ***about***
+
+  ## A heading halfway through lel
+rss-feed: RSS Feed

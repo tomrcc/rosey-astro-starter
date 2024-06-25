@@ -11,15 +11,31 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
-          inputs:
-            - header-link-text-About
-            - header-link-text-Blog
-            - header-link-text-RSS Feed
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
+            - about
+            - blog
             - blog:/blog/5-things-to-improve-you-email-templates/
+            - rss-feed
+  about:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=About)"
+  blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Blog)"
   blog:/blog/5-things-to-improve-you-email-templates/:
     label: |2-
        Use an ESP
@@ -36,9 +52,10 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
+    comment: >2-
+      
+       
+       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
     context:
       open: false
       title: Untranslated Text
@@ -55,7 +72,14 @@ _inputs:
         get around this issue.
 
 
-        This is a different second paragraph.
+        Be aware of what’s normal for your target customers’ inboxes. If you’re
+        sending out emails to people who are on Gmail and Yahoo accounts, then
+        there’s little chance they’ll get blocked because their addresses
+        haven’t been flagged as spam yet. But if you’re reaching out to people
+        with Outlook or AOL addresses, there’s a good chance your message will
+        get flagged as junk mail and end up in their spam folder before they
+        ever see it. Make sure you’re testing different types of addresses
+        before sending out any mass marketing campaigns.
 
 
         ### Double opt-in
@@ -108,30 +132,16 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  header-link-text-About:
-    label: About
-    hidden: false
-    type: text
-    options: {}
-    comment: "Added:  About<br><br><br>[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=About)"
-  header-link-text-Blog:
-    label: Blog
-    hidden: false
-    type: text
-    options: {}
-    comment: "Added:  Blog<br><br><br>[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=Blog)"
-  header-link-text-RSS Feed:
+  rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "Added:  RSS Feed<br><br><br>[See on
+    comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=RSS%20Feed)"
+about: Um
+blog: Blog
 blog:/blog/5-things-to-improve-you-email-templates/: >-
   ### Benutze ein ESP
 
@@ -189,6 +199,4 @@ blog:/blog/5-things-to-improve-you-email-templates/: >-
   mind and to always know that if you are sending out emails related to your
   business, be sure to follow-up with customers or clients and make sure that
   they are getting their emails in a timely manner. \|
-header-link-text-About: ""
-header-link-text-Blog: ""
-header-link-text-RSS Feed: ""
+rss-feed: RSS Feed

@@ -1,7 +1,14 @@
 ---
 import Icon from '../../utility/icon';
+import slugify from 'slugify';
+
 const generateRoseyID = (text: string) => {
-  return `${Astro.url.pathname}-${Astro.self.name}-${Astro.props.key || ''}-${text}`;
+  const lowerCaseText = text.toLowerCase();
+  const formattedText = lowerCaseText.replaceAll(
+    /(?:__[*#])|\[(.*?)\]\(.*?\)/gm,
+    /$1/
+  );
+  return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
 interface Props {
   button_text: string;
@@ -25,7 +32,7 @@ const hover_brightness = block.hover_brightness;
         </span>
       ) : null
     }
-    <span data-rosey={generateRoseyID('button-text')}>
+    <span data-rosey={generateRoseyID(block.button_text)}>
       {block.button_text}
     </span>
   </a>

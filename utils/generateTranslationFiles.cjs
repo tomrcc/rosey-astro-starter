@@ -86,22 +86,14 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   let diffStringRemoved = '';
   diff.forEach((part) => {
     // green for additions, red for deletions
-    if (part.added && part.value.trim().length > 1) {
-      return (diffStringAdded = `${diffStringAdded} ${part.value}`);
+    if (part.added) {
+      return (diffStringAdded = 'ADDED: ' + diffStringAdded + part.value);
     }
-    if (part.removed && part.value.trim().length > 1) {
-      return (diffStringRemoved = `${diffStringRemoved} ${part.value}`);
+    if (part.removed) {
+      return (diffStringRemoved = 'REMOVED: ' + diffStringRemoved + part.value);
     }
   });
-  const addedString =
-    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
-  const removedString =
-    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : '';
-
-  console.log(addedString, removedString);
-  return addedString.length > 0 || removedString.length > 0
-    ? `${addedString}<br>${removedString}<br>`
-    : '';
+  return `${diffStringAdded}\n${diffStringRemoved}`;
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
@@ -117,6 +109,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const isKeyMarkdown =
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
+  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
@@ -138,27 +131,15 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  const diffString = generateDiffString(
-    oldOriginalFromLocale,
-    untranslatedPhraseMarkdown
-  );
-
-  // console.log(
-  //   '👴 oldOriginalFromLocale: ',
-  //   oldOriginalFromLocale.slice(0, 50),
-  //   '\n',
-  //   '📝untranslatedPhraseMarkdown: ',
-  //   untranslatedPhraseMarkdown.slice(0, 50),
-  //   '\n',
-  //   '⚖️ diffString: ',
-  //   diffString
-  // );
+  const diffString = isKeyStatic
+    ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
+    : '';
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
     diffString.length > 0
-      ? `${diffString}<br>${locationString}`
-      : locationString;
+      ? `${diffString} \n ${locationString}`
+      : `${locationString}`;
 
   const isLabelConcat = originalPhraseTidied.length > 42;
 
