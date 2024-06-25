@@ -79,12 +79,12 @@ const headingGradientColor = block.heading.heading_gradient_color;
         {
           ENV_BOOKSHOP_LIVE ? (
             <Markdown
-              content={block.text.markdown_content}
+              content={block.subheading.markdown_content}
               roseyId="hero-subheading"
             />
           ) : (
             <Markdown
-              content={block.text.markdown_content}
+              content={block.subheading.markdown_content}
               roseyId={generateStaticRoseyId('hero-subheading')}
             />
           )
