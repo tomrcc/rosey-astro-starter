@@ -83,13 +83,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: and Rosey CloudCannon provides a UI for non-technical editors to
-      enter translations
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
     context:
       open: false
       title: Untranslated Text
