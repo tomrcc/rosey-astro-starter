@@ -132,6 +132,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
     untranslatedPhraseMarkdown
   );
 
+  // If key is static, we present editors with a diff to assist in adding/removing changes to the original
   const isKeyStatic = inputKey.slice(0, 10).includes('static:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
