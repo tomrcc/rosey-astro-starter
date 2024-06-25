@@ -12,6 +12,8 @@ _editables:
     redo: true
     removeformat: true
     copyformatting: true
+    numberedlist: true
+    bulletedlist: true
 collections_config:
   pages:
     path: src/content/pages
@@ -123,6 +125,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
   image_path:
     type: image
     comment: The path to the source file of the image to be optimized.

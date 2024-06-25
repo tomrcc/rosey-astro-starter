@@ -151,6 +151,8 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
         redo: true,
         removeformat: true,
         copyformatting: true,
+        bulletedlist: true,
+        numberedlist: true,
       }
     : {};
 
