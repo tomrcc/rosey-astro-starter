@@ -9,7 +9,8 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs: []
+          inputs:
+            - markdown:hero-subheading-1
         - heading: Already translated (de-de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
@@ -17,7 +18,6 @@ _inputs:
             - about
             - about-page
             - blog
-            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
     label: About
@@ -41,19 +41,11 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-  markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
+  markdown:hero-subheading-1:
     label: This is all about what we're _about_ like ...
     hidden: false
-    type: markdown
-    options:
-      bold: true
-      format: p h1 h2 h3 h4
-      italic: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: true
+    type: textarea
+    options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
       20all,halfway%20through%20lel)"
@@ -76,8 +68,5 @@ _inputs:
 about: Um
 about-page: Um Seite
 blog: Blog
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
-  This is all about what we're *about* like what we're really ***about***
-
-  ## A heading halfway through lel
+markdown:hero-subheading-1: ""
 rss-feed: RSS Feed

@@ -11,13 +11,13 @@ _inputs:
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - about-page
+            - markdown:hero-subheading-1
         - heading: Already translated (fr-fr)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - about
             - blog
-            - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
   about:
     label: About
@@ -41,19 +41,11 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Blog)"
-  markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel:
+  markdown:hero-subheading-1:
     label: This is all about what we're _about_ like ...
     hidden: false
-    type: markdown
-    options:
-      bold: true
-      format: p h1 h2 h3 h4
-      italic: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: true
+    type: textarea
+    options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
       20all,halfway%20through%20lel)"
@@ -76,10 +68,5 @@ _inputs:
 about: Á propos
 about-page: ""
 blog: Nouvelles
-markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
-  Tout dépend de ce que nous faisons, comme de ce que nous faisons vraiment
-
-  ## A à mi-chemin de lel
-
-  &nbsp;
+markdown:hero-subheading-1: ""
 rss-feed: RSS Alimentation

@@ -9,8 +9,8 @@ _inputs:
         - heading: Still to translate (es-es)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
-            - markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
-            - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
+            - markdown:hero-subheading-1
+            - markdown:left-right-text-1
         - heading: Already translated (es-es)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
@@ -63,43 +63,27 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
       u,Delete%20the%20rest)"
-  markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
-    label: A starting point for developers looking to...
+  markdown:hero-subheading-1:
+    label: This is all about what we're _about_ like ...
     hidden: false
-    type: markdown
-    options:
-      bold: true
-      format: p h1 h2 h3 h4
-      italic: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: true
+    type: textarea
+    options: {}
     comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
-      oint,the%20CloudCannon%20CMS)"
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=This%20is%20all,\
+      halfway%20through%20lel)"
     context:
       open: false
       title: Untranslated Text
       icon: translate
-      content: A starting point for **developers looking to build a multilingual
-        website with Astro, using Bookshop components in CloudCannon**. Create
-        your own copy, and start creating your own components to use in the
-        CloudCannon CMS.
-  markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
+      content: |-
+        This is all about what we're _about_ like what we're really _**about**_
+
+        ## A heading halfway through lel
+  markdown:left-right-text-1:
     label: To help save you time some features are se...
     hidden: false
-    type: markdown
-    options:
-      bold: true
-      format: p h1 h2 h3 h4
-      italic: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: true
+    type: textarea
+    options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
       ,CSS%20variables)"
@@ -148,6 +132,6 @@ blog: Blog
 cloudcannon: CloudCannon
 github: GitHub
 keep-what-you-need-delete-the-rest: Conserva lo que necesitas. Elimina el resto.
-markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
-markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
+markdown:hero-subheading-1: ""
+markdown:left-right-text-1: ""
 rss-feed: RSS Feed
