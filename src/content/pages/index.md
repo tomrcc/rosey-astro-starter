@@ -21,9 +21,10 @@ content_blocks:
     subheading:
       markdown_content: >-
         A starting point for **developers looking to build a multilingual
-        website with Astro, using Bookshop components in CloudCannon**. Create
-        your own copy, and start creating your own components to use in the
-        CloudCannon CMS.
+        website with Astro and Rosey, using Bookshop components in
+        CloudCannon**. CloudCannon provides a UI for non-technical editors to
+        enter translations. Create your own copy, and start creating your own
+        components to use in the CloudCannon CMS.
       color: '#393939'
     image:
       image_path: /src/assets/images/featured-image-5.jpg
