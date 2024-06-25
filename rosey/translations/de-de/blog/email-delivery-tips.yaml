@@ -2,51 +2,49 @@ urlTranslation: blog/email-delivery-tips/index.html
 _inputs:
   $:
     type: object
-    comment: >-
-      [See
-      blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
+    comment: "[See
+      blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog\
+      /email-delivery-tips/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
-          comment: >-
-            Text to translate on
+          comment: Text to translate on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - static:/blog/email-delivery-tips/
-            - test-page
         - heading: Already translated (de-de)
-          comment: >-
-            Text already translated on
+          comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=About)"
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=Blog)"
   rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=RSS%20Feed)"
   static:/blog/email-delivery-tips/:
     label: When you send an email campaign, you expec...
     hidden: false
@@ -62,9 +60,9 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=When%20you%20send,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
@@ -152,11 +150,11 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/#:~:text=Test%20Page)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=Test%20Page)"
 about: Um
 blog: Nachricht
 rss-feed: RSS Feed
-static:/blog/email-delivery-tips/: ''
+static:/blog/email-delivery-tips/: ""
 test-page: Translated Link
