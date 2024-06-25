@@ -86,22 +86,23 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
   let diffStringRemoved = '';
   diff.forEach((part) => {
     // green for additions, red for deletions
-    if (part.added && part.value.trim().length > 1) {
+    if (part.added && part.value.trim().length > 0) {
       return (diffStringAdded = `${diffStringAdded} ${part.value}`);
     }
-    if (part.removed && part.value.trim().length > 1) {
+    if (part.removed && part.value.trim().length > 0) {
       return (diffStringRemoved = `${diffStringRemoved} ${part.value}`);
     }
   });
-  const addedString =
-    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : '';
-  const removedString =
-    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : '';
+  const formattedDiffStringAdded =
+    diffStringAdded.length > 0 ? `<p>Added: ${diffStringAdded}</p>` : '';
+  const formattedDiffStringRemoved =
+    diffStringRemoved.length > 0 ? `<p>Removed: ${diffStringRemoved}</p>` : '';
 
-  console.log(addedString, removedString);
-  return addedString.length > 0 || removedString.length > 0
-    ? `${addedString}<br>${removedString}<br>`
-    : '';
+  const formattedStringCombined = nhm.translate(
+    `${formattedDiffStringAdded}${formattedDiffStringRemoved}`
+  );
+
+  return formattedStringCombined;
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
@@ -117,6 +118,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const isKeyMarkdown =
     inputKey.slice(0, 10).includes('markdown:') ||
     inputKey.slice(0, 10).includes('blog:');
+  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyMarkdown
@@ -138,27 +140,15 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
       }
     : {};
 
-  const diffString = generateDiffString(
-    oldOriginalFromLocale,
-    untranslatedPhraseMarkdown
-  );
-
-  // console.log(
-  //   '👴 oldOriginalFromLocale: ',
-  //   oldOriginalFromLocale.slice(0, 50),
-  //   '\n',
-  //   '📝untranslatedPhraseMarkdown: ',
-  //   untranslatedPhraseMarkdown.slice(0, 50),
-  //   '\n',
-  //   '⚖️ diffString: ',
-  //   diffString
-  // );
+  const diffString = isKeyStatic
+    ? generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown)
+    : '';
 
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
     diffString.length > 0
-      ? `${diffString}<br>${locationString}`
-      : locationString;
+      ? `${diffString}\n\n${locationString}`
+      : `${locationString}`;
 
   const isLabelConcat = originalPhraseTidied.length > 42;
 
