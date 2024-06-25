@@ -12,6 +12,7 @@ _inputs:
             - astro-bookshop-starter
             - cloudcannon
             - github
+            - markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables
         - heading: Already translated (de-de)
           comment: Text already translated on
@@ -20,7 +21,6 @@ _inputs:
             - about
             - blog
             - keep-what-you-need-delete-the-rest
-            - markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms
             - rss-feed
   about:
     label: About
@@ -63,7 +63,7 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Keep%20what%20yo\
       u,Delete%20the%20rest)"
-  markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
+  markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms:
     label: A starting point for developers looking to...
     hidden: false
     type: markdown
@@ -83,9 +83,10 @@ _inputs:
       open: false
       title: Untranslated Text
       icon: translate
-      content: A starting point for **developers looking to build a website with
-        Astro, using Bookshop components in CloudCannon**. Create your own copy,
-        and start creating your own components to use in the CloudCannon CMS.
+      content: A starting point for **developers looking to build a multilingual
+        website with Astro, using Bookshop components in CloudCannon**. Create
+        your own copy, and start creating your own components to use in the
+        CloudCannon CMS.
   markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables:
     label: To help save you time some features are se...
     hidden: false
@@ -147,13 +148,6 @@ blog: Blog
 cloudcannon: ""
 github: ""
 keep-what-you-need-delete-the-rest: Behalten Sie, was Sie brauchen. Den Rest löschen.
-markdown:a-starting-point-for-developers-looking-to-build-a-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: >-
-  Ein Ausgangspunkt für Entwickler, die mit **Astro eine Website erstellen
-  möchten und dabei Bookshop-Komponenten in CloudCannon verwenden**. Erstellen
-  Sie Ihre eigene Kopie und beginnen Sie mit der Erstellung Ihrer eigenen
-  Komponenten zur Verwendung im CloudCannon CMS.
-
-
-  &nbsp;
+markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms: ""
 markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables: ""
 rss-feed: RSS Feed
