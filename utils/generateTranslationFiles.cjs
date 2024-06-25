@@ -115,7 +115,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
 
   const originalPhraseTidied = formatMarkdown(untranslatedPhraseMarkdown);
 
-  const isKeyStatic = inputKey.startsWith('static:');
+  const isKeyStatic = inputKey.slice(0, 10).includes('static:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
   const inputType = isKeyStatic
