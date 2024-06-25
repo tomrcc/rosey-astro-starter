@@ -21,15 +21,15 @@
 	},
 	"astro-bookshop-starter": {
 		"original": " Astro Bookshop Starter ",
-		"value": " Astro Bookshop Starter "
+		"value": "Astro Bookshop Anlasser"
 	},
 	"cloudcannon": {
 		"original": " CloudCannon ",
-		"value": " CloudCannon "
+		"value": "CloudCannon"
 	},
 	"github": {
 		"original": " GitHub ",
-		"value": " GitHub "
+		"value": "GitHub"
 	},
 	"keep-what-you-need-delete-the-rest": {
 		"original": " Keep what you need. Delete the rest. ",
@@ -37,7 +37,7 @@
 	},
 	"markdown:a-starting-point-for-developers-looking-to-build-a-multilingual-website-with-astro-using-bookshop-components-in-cloudcannon-create-your-own-copy-and-start-creating-your-own-components-to-use-in-the-cloudcannon-cms": {
 		"original": "<p>A starting point for <strong>developers looking to build a multilingual website with Astro, using Bookshop components in CloudCannon</strong>. Create your own copy, and start creating your own components to use in the CloudCannon CMS.</p>\n",
-		"value": "<p>&lt;p&gt;&lt;p&gt;&lt;p&gt;&lt;p&gt;&lt;p&gt;&lt;p&gt;&lt;p&gt;A starting point for &lt;strong&gt;developers looking to build a multilingual website with Astro, using Bookshop components in CloudCannon&lt;/strong&gt;. Create your own copy, and start creating your own components to use in the CloudCannon CMS.&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</p>\n"
+		"value": "<p>Ein Ausgangspunkt für Entwickler, die mit Astro eine mehrsprachige Website erstellen möchten und dabei Bookshop-Komponenten in CloudCannon verwenden. Erstellen Sie Ihre eigene Kopie und beginnen Sie mit der Erstellung Ihrer eigenen Komponenten zur Verwendung im CloudCannon CMS.</p>\n"
 	},
 	"markdown:to-help-save-you-time-some-features-are-set-up-in-this-template-like-bookshop-blog-with-pagination-tags-and-snippets-image-optimization-seo-controls-responsive-header-and-footer-font-awesome-icons-schemas-for-adding-new-pages-editable-color-pallete-markdown-styles-cloudcannon-configuration-css-variables": {
 		"original": "<p>To help save you time, some features are set up in this template, like:</p>\n<ul>\n<li><a href=\"https://cloudcannon.com/documentation/guides/bookshop-astro-guide/\">Bookshop</a></li>\n<li>Blog with pagination, tags and <a href=\"https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx\">snippets</a></li>\n<li><a href=\"https://docs.astro.build/en/guides/images/#image--astroassets\">Image optimization</a></li>\n<li>SEO Controls</li>\n<li>Responsive header and footer</li>\n<li><a href=\"https://fontawesome.com/search?o=r&amp;m=free\">Font Awesome Icons</a></li>\n<li>Schemas for adding new pages</li>\n<li>Editable color pallete</li>\n<li>Markdown styles</li>\n<li>CloudCannon configuration</li>\n<li>CSS variables</li>\n</ul>\n",
