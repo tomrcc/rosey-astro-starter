@@ -88,10 +88,17 @@ const imageSrc =
             {block.heading.heading_text}
           </h2>
           <div class="mb-4" style={`color: ${block.text.color};`}>
-            <Markdown
-              content={block.text.markdown_content}
-              roseyId={generateStaticRoseyId('left-right-text')}
-            />
+            {ENV_BOOKSHOP_LIVE ? (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId="left-right-text"
+              />
+            ) : (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId={generateStaticRoseyId('left-right-text')}
+              />
+            )}
           </div>
           {block.button && <Button {...block.button} />}
         </div>
@@ -106,10 +113,17 @@ const imageSrc =
             {block.heading.heading_text}
           </h2>
           <div class="mb-4" style={`color: ${block.text.color};`}>
-            <Markdown
-              content={block.text.markdown_content}
-              roseyId={generateStaticRoseyId('left-right-text')}
-            />
+            {ENV_BOOKSHOP_LIVE ? (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId="left-right-text"
+              />
+            ) : (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId={generateStaticRoseyId('left-right-text')}
+              />
+            )}
           </div>
           {block.button && <Button {...block.button} />}
         </div>
