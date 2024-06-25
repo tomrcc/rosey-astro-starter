@@ -13,7 +13,11 @@ const generateRoseyID = (text: string) => {
   return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
 const generateStaticRoseyId = (text: string) => {
-  const pageName = Astro.url.pathname === '/' ? 'home' : Astro.url.pathname.replace('/index.html', '').replaceAll('/', '')
+  const pageName =
+    Astro.url.pathname === '/'
+      ? 'home'
+      : Astro.url.pathname?.replace('/index.html', '').replaceAll('/', '') ||
+        'page';
   const keyNumber = Astro.props.key || '1';
   return `${text}-${pageName}-${keyNumber}`;
 };
