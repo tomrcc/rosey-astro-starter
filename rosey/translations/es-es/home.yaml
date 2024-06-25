@@ -83,6 +83,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
       oint,the%20CloudCannon%20CMS)"
@@ -108,6 +110,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
       ,CSS%20variables)"

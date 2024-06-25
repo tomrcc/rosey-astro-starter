@@ -57,6 +57,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
       #:~:text=When%20you%20send,a%20timely%20manner)"
