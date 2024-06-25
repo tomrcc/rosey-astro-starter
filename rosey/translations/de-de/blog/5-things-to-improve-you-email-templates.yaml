@@ -2,21 +2,19 @@ urlTranslation: blog/5-things-to-improve-you-email-templates/index.html
 _inputs:
   $:
     type: object
-    comment: >-
-      [See
-      blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
+    comment: "[See
+      blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuar\
+      y.cloudvent.net/blog/5-things-to-improve-you-email-templates/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de-de)
-          comment: >-
-            Text to translate on
+          comment: Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
             - static:/blog/5-things-to-improve-you-email-templates/
         - heading: Already translated (de-de)
-          comment: >-
-            Text already translated on
+          comment: Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
             - about
@@ -27,25 +25,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=About)"
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Blog)"
   rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=RSS%20Feed)"
   static:/blog/5-things-to-improve-you-email-templates/:
     label: |2-
        Use an ESP
@@ -64,9 +62,9 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
@@ -136,4 +134,4 @@ _inputs:
 about: Um
 blog: Nachricht
 rss-feed: RSS Feed
-static:/blog/5-things-to-improve-you-email-templates/: ''
+static:/blog/5-things-to-improve-you-email-templates/: ""
