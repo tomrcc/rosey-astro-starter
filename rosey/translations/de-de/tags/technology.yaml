@@ -11,7 +11,8 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
-          inputs: []
+          inputs:
+            - test-page
         - heading: Already translated (de-de)
           comment: Text already translated on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
@@ -43,6 +44,15 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       RSS%20Feed)"
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
+      Test%20Page)"
 about: Um
 blog: Nachricht
 rss-feed: RSS Feed
+test-page: ""

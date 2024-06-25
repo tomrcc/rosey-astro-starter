@@ -8,7 +8,8 @@ _inputs:
       groups:
         - heading: Still to translate (de-de)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
-          inputs: []
+          inputs:
+            - test-page
         - heading: Already translated (de-de)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
@@ -147,6 +148,13 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=Test%20Page)"
 about: Um
 astro-bookshop-starter: Astro Bookshop Anlasser
 blog: Nachricht
@@ -176,3 +184,4 @@ static:left-right-text-home-1: >-
   * Bildoptimierung
 
   * Etc...
+test-page: ""

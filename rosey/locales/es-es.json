@@ -11,6 +11,10 @@
 		"original": " RSS Feed ",
 		"value": "RSS Feed"
 	},
+	"test-page": {
+		"original": " Test Page ",
+		"value": " Test Page "
+	},
 	"about-page": {
 		"original": " About page ",
 		"value": "acerca de la página"
