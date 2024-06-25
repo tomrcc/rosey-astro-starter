@@ -17,7 +17,7 @@
 	},
 	"static:hero-subheading-1": {
 		"original": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n",
-		"value": "Hier geht es darum, worum es bei uns geht, also darum, worum es uns wirklich geht\n\nEin Kurs auf halbem Weg durch LEL"
+		"value": "Hier geht es darum, worum es bei uns geht, also darum, worum es uns wirklich geht\n\n## Ein Kurs auf halbem Weg durch LEL"
 	},
 	"astro-bookshop-starter": {
 		"original": " Astro Bookshop Starter ",
