@@ -52,9 +52,12 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
-      you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
+    comment: >-
+      Removed: Different yo.
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
     context:
       open: false
       title: Untranslated Text
@@ -68,7 +71,7 @@ _inputs:
         accepted by the major ISPs. An ESP that offers multiple IP addresses, or
         one that allows you to use your own IP address if necessary. ISPs often
         block messages from unknown senders, so having your own IP address helps
-        get around this issue. Different yo.
+        get around this issue.
 
 
         ### Double opt-in

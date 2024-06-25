@@ -49,9 +49,15 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
+    comment: >-
+      Added: this has changed
+
+
+      Removed: successfully, follow these email delivery tips
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
     context:
       open: false
       title: Untranslated Text
@@ -60,7 +66,7 @@ _inputs:
         When you send an email campaign, you expect it to reach your readers,
         right? But what if the emails go straight to your subscribers’ spam
         folders instead of their inboxes? To make sure your emails reach their
-        recipients successfully, follow these email delivery tips.
+        recipients this has changed.
 
 
         ### Use an ESP
