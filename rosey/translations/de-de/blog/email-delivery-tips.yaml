@@ -13,7 +13,6 @@ _inputs:
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
             - static:/blog/email-delivery-tips/
-            - test-page
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
@@ -21,6 +20,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -157,4 +157,4 @@ about: Um
 blog: Nachricht
 rss-feed: RSS Feed
 static:/blog/email-delivery-tips/: ""
-test-page: Test Page Translsted
+test-page: Test Page Translated

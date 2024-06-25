@@ -11,7 +11,6 @@ _inputs:
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - static:hero-subheading-about-1
-            - test-page
         - heading: Already translated (de-de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
@@ -20,6 +19,7 @@ _inputs:
             - about-page
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -89,4 +89,4 @@ about-page: Um Seite
 blog: Nachricht
 rss-feed: RSS Feed
 static:hero-subheading-about-1: ""
-test-page: Test Page Translsted
+test-page: Test Page Translated

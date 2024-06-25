@@ -11,8 +11,7 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
-          inputs:
-            - test-page
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
@@ -20,6 +19,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -55,4 +55,4 @@ _inputs:
 about: Um
 blog: Nachricht
 rss-feed: RSS Feed
-test-page: Test Page Translsted
+test-page: Test Page Translated

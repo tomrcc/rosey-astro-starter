@@ -9,8 +9,7 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
-          inputs:
-            - test-page
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
@@ -18,6 +17,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - test-page
   about:
     label: About
     hidden: false
@@ -50,4 +50,4 @@ _inputs:
 about: Um
 blog: Nachricht
 rss-feed: RSS Feed
-test-page: Test Page Translsted
+test-page: Test Page Translated

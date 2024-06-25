@@ -3,10 +3,6 @@
 		"original": " About ",
 		"value": "Acerca de"
 	},
-	"about-page": {
-		"original": " About page ",
-		"value": "acerca de la página"
-	},
 	"blog": {
 		"original": " Blog ",
 		"value": "Blog"
@@ -15,13 +11,17 @@
 		"original": " RSS Feed ",
 		"value": "RSS Feed"
 	},
-	"static:hero-subheading-about-1": {
-		"original": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n",
-		"value": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n"
-	},
 	"test-page": {
 		"original": " Test Page ",
 		"value": " Test Page "
+	},
+	"about-page": {
+		"original": " About page ",
+		"value": "acerca de la página"
+	},
+	"static:hero-subheading-about-1": {
+		"original": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n",
+		"value": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n"
 	},
 	"astro-bookshop-starter": {
 		"original": " Astro Bookshop Starter ",
