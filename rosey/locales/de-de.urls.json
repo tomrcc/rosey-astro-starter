@@ -7,6 +7,14 @@
 		"original": "about/index.html",
 		"value": "translated/index.html"
 	},
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
+	},
+	"index.html": {
+		"original": "index.html",
+		"value": "index.html"
+	},
 	"tags/email/index.html": {
 		"original": "tags/email/index.html",
 		"value": "tags/email/index.html"
@@ -14,10 +22,6 @@
 	"tags/marketing/index.html": {
 		"original": "tags/marketing/index.html",
 		"value": "tags/marketing/index.html"
-	},
-	"index.html": {
-		"original": "index.html",
-		"value": "index.html"
 	},
 	"tags/technology/index.html": {
 		"original": "tags/technology/index.html",
@@ -34,9 +38,5 @@
 	"blog/email-delivery-tips/index.html": {
 		"original": "blog/email-delivery-tips/index.html",
 		"value": "blog/email-delivery-tips/index.html"
-	},
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
 	}
 }

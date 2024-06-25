@@ -10,7 +10,7 @@ _inputs:
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
-            - static:hero-subheading-1
+            - static:hero-subheading-about-1
         - heading: Already translated (de-de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
@@ -49,7 +49,7 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
       )"
-  static:hero-subheading-1:
+  static:hero-subheading-about-1:
     label: This is all about what we're _about_ like ...
     hidden: false
     type: markdown
@@ -62,9 +62,13 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
-      20all,halfway%20through%20lel)"
+    comment: >-
+      Added: This is all about what we're \_about\_ like what we're really
+      \_about\_ A heading halfway through lel
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
     context:
       open: false
       title: Untranslated Text
@@ -77,4 +81,4 @@ about: Um
 about-page: Um Seite
 blog: Blog
 rss-feed: RSS Feed
-static:hero-subheading-1: ""
+static:hero-subheading-about-1: ""
