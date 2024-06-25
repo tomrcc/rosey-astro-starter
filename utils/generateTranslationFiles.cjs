@@ -94,9 +94,19 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
     }
   });
   const formattedDiffStringAdded =
-    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}<br>` : '';
+    diffStringAdded.length > 0
+      ? `Added: ${diffStringAdded}
+    
+
+    `
+      : '';
   const formattedDiffStringRemoved =
-    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}<br>` : '';
+    diffStringRemoved.length > 0
+      ? `Removed: ${diffStringRemoved}
+    
+      
+    `
+      : '';
   return `${formattedDiffStringAdded}${formattedDiffStringRemoved}`;
 }
 
