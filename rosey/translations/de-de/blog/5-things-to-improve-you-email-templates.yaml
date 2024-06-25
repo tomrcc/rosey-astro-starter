@@ -52,18 +52,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      ADDED: ADDED: ADDED: ADDED: Awholeparagraphchanged!
-
-      REMOVED: REMOVED: REMOVED: REMOVED: Beawareofwhat’s normal for your target
-      customers’ inboxes. If you’re sending out emails to people who are on
-      Gmail and Yahoo accounts, then there’s little chance they’ll get blocked
-      because their addresses haven’t been flagged as spam yet. But if you’re
-      reaching out to people with Outlook or AOL addresses, there’s a good
-      chance your message will get flagged as junk mail and end up in their spam
-      folder before they ever see it. Make sure you’re testing different types
-      of addresses before sending out any mass marketing campaigns. 
-       [See on page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
