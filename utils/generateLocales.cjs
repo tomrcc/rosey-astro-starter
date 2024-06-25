@@ -221,7 +221,7 @@ async function generateLocale(locale) {
           localeData[key] = {
             original: data[key].original,
             value:
-              isKeyMarkdown || isKeyBlog
+              (isKeyMarkdown || isKeyBlog) && data[key].isNewTranslation
                 ? md.render(data[key].value)
                 : data[key].value,
           };
