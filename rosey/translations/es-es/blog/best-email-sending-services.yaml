@@ -12,7 +12,7 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
-            - blog:/blog/best-email-sending-services/
+            - static:/blog/best-email-sending-services/
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
@@ -36,7 +36,15 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=Blog)"
-  blog:/blog/best-email-sending-services/:
+  rss-feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=RSS%20Feed)"
+  static:/blog/best-email-sending-services/:
     label: When you send an email campaign you expect...
     hidden: false
     type: markdown
@@ -134,15 +142,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=RSS%20Feed)"
 about: Acerca de
 blog: Blog
-blog:/blog/best-email-sending-services/: ""
 rss-feed: RSS Feed
+static:/blog/best-email-sending-services/: ""

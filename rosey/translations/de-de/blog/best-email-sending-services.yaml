@@ -11,14 +11,14 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs: []
+          inputs:
+            - static:/blog/best-email-sending-services/
         - heading: Already translated (de-de)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
             - about
             - blog
-            - blog:/blog/best-email-sending-services/
             - rss-feed
   about:
     label: About
@@ -36,7 +36,15 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=Blog)"
-  blog:/blog/best-email-sending-services/:
+  rss-feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=RSS%20Feed)"
+  static:/blog/best-email-sending-services/:
     label: When you send an email campaign you expect...
     hidden: false
     type: markdown
@@ -134,75 +142,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=RSS%20Feed)"
 about: Um
 blog: Blog
-blog:/blog/best-email-sending-services/: >-
-  Wenn Sie eine E-Mail-Kampagne **versenden**, erwarten Sie, *dass* diese Ihre
-  Leser erreicht, oder? Was aber, wenn die E-Mails direkt in den Spam-Ordnern
-  Ihrer Abonnenten landen und nicht in deren Posteingängen? Um sicherzustellen,
-  dass Ihre E-Mails ihre Empfänger erfolgreich erreichen, befolgen Sie diese
-  Tipps zur E-Mail-Zustellung.
-
-
-  Fügen Sie eine Änderung hinzu
-
-
-  ### Verwenden Sie einen ESP.
-
-
-  Verwenden Sie einen E-Mail-Dienstanbieter (ESP), der von
-  E-Mail-Zertifizierungsdiensten Dritter getestet wurde. Dadurch wird
-  sichergestellt, dass Ihre E-Mails von den großen ISPs akzeptiert werden. Ein
-  ESP, das mehrere IP-Adressen bietet, oder eines, das es Ihnen ermöglicht, bei
-  Bedarf auch Ihre eigenen IP-Mehrfachleitungen und diesmal auch die Adresse zu
-  verwenden. ISPs blockieren häufig Nachrichten von unbekannten Absendern. Eine
-  eigene IP-Adresse hilft also, dieses Problem zu umgehen. Seien Sie sich
-  darüber im Klaren, was für die Posteingänge Ihrer Zielkunden normal ist. Wenn
-  Sie E-Mails an Personen senden, die Gmail- und Yahoo-Konten haben, ist die
-  Wahrscheinlichkeit gering, dass diese blockiert werden, da ihre Adressen noch
-  nicht als Spam gekennzeichnet wurden. Wenn Sie sich jedoch an Personen mit
-  Outlook- oder AOL-Adressen wenden, besteht eine gute Chance, dass Ihre
-  Nachricht als Junk-Mail markiert wird und im Spam-Ordner landet, bevor sie sie
-  jemals sehen. Stellen Sie sicher, dass Sie verschiedene Adresstypen testen,
-  bevor Sie Massenmarketingkampagnen versenden.
-
-
-  ### Double-Opt-In
-
-
-  Bevor Sie eine Kampagne mit einem E-Mail-Marketing-Tool versenden, stellen Sie
-  sicher, dass Sie die Erlaubnis Ihrer Abonnenten haben, ihnen E-Mails zu
-  senden. Sie können dies tun, indem Sie sie bei der Anmeldung fragen oder ein
-  Kontrollkästchen in das Abonnementformular einfügen, in dem Sie gefragt
-  werden, ob sie in Zukunft Marketingmitteilungen von Ihnen erhalten möchten.
-  Nutzen Sie Double-Opt-In beim Versenden von Marketing-E-Mails. Das bedeutet,
-  dass der Empfänger dem Erhalt von E-Mails von Ihnen zuvor zugestimmt haben
-  muss, bevor er Inhalte in seinem Posteingang oder auf seinen Mobilgeräten
-  sehen kann. Dies trägt dazu bei, zu verhindern, dass sich Personen für
-  Newsletter anmelden, die sie nicht möchten, und kann zum Schutz vor
-  Spam-Beschwerden von Benutzern beitragen, die nicht wussten, dass sie sich
-  überhaupt für etwas angemeldet haben.
-
-
-  ### Halten Sie Ihre Inhalte kurz und bündig
-
-
-  Ihre Kunden möchten keine langen E-Mails voller Text lesen, also halten Sie
-  Ihre Nachrichten kurz und bündig. Wenn Sie mehrere Produkte bewerben möchten,
-  teilen Sie jedes Produktangebot in eine eigene E-Mail auf, anstatt eine
-  seitenlange Nachricht mit mehreren darin eingebetteten Links zu senden. Auf
-  diese Weise können Kunden leicht finden, was sie suchen, ohne die ganze Seite
-  scrollen zu müssen. Gehen Sie mit Bildern sparsam um (wenn überhaupt). Sie
-  könnten versucht sein, in jede E-Mail, die Sie versenden, ein Bild einzufügen,
-  aber bedenken Sie, dass Bilder bei der Zustellung in den Posteingang Probleme
-  verursachen können – insbesondere, wenn sie falsch verwendet oder in
-  Massen-E-Mails von Unternehmen enthalten sind, in denen sie versendet werden
 rss-feed: RSS Feed
+static:/blog/best-email-sending-services/: ""

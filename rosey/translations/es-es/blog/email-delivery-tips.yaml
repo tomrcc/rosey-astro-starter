@@ -12,7 +12,7 @@ _inputs:
           comment: Text to translate on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
           inputs:
-            - blog:/blog/email-delivery-tips/
+            - static:/blog/email-delivery-tips/
         - heading: Already translated (es-es)
           comment: Text already translated on
             [blog/email-delivery-tips/](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/)
@@ -36,7 +36,15 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
       #:~:text=Blog)"
-  blog:/blog/email-delivery-tips/:
+  rss-feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
+      #:~:text=RSS%20Feed)"
+  static:/blog/email-delivery-tips/:
     label: When you send an email campaign you expect...
     hidden: false
     type: markdown
@@ -134,15 +142,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  rss-feed:
-    label: RSS Feed
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
-      #:~:text=RSS%20Feed)"
 about: Acerca de
 blog: Blog
-blog:/blog/email-delivery-tips/: ""
 rss-feed: RSS Feed
+static:/blog/email-delivery-tips/: ""

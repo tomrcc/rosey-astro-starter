@@ -12,7 +12,10 @@ const generateRoseyID = (text: string) => {
   );
   return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
-
+const generateStaticRoseyId = (text: string) => {
+  const keyNumber = Astro.props.key || '1';
+  return `${text}-${keyNumber}`;
+};
 interface Props {
   background_color: string;
   heading: {
@@ -64,7 +67,10 @@ const headingGradientColor = block.heading.heading_gradient_color;
         {block.heading.heading_text}
       </h1>
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>
-        <Markdown content={block.subheading.markdown_content} />
+        <Markdown
+          content={block.subheading.markdown_content}
+          roseyId={generateStaticRoseyId('hero-subheading')}
+        />
       </div>
       <div class="buttons">
         {
