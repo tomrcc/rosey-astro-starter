@@ -91,9 +91,10 @@ _inputs:
       title: Untranslated Text
       icon: translate
       content: A starting point for **developers looking to build a multilingual
-        website with Astro, using Bookshop components in CloudCannon**. Create
-        your own copy, and start creating your own components to use in the
-        CloudCannon CMS.
+        website with Astro and Rosey, using Bookshop components in
+        CloudCannon**. CloudCannon provides a UI for non-technical editors to
+        enter translations. Create your own copy, and start creating your own
+        components to use in the CloudCannon CMS.
   static:left-right-text-home-1:
     label: To help save you time some features are se...
     hidden: false

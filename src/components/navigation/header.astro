@@ -10,7 +10,7 @@ const generateRoseyID = (text: string) => {
   );
   return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
-const pagePath = Astro.url.pathname;
+const pagePath = Astro.url.pathname || 'page';
 ---
 
 <header

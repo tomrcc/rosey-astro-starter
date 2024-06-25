@@ -32,7 +32,7 @@ const readingTime = Math.floor(wordCount / 183);
 const dateObj = new Date(date);
 
 const posts = await getCollection('blog');
-const roseyId = Astro.url.pathname;
+const roseyId = Astro.url.pathname || 'page';
 ---
 
 <Layout {...props}>

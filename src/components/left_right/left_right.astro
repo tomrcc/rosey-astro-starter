@@ -13,7 +13,15 @@ const generateRoseyID = (text: string) => {
   return slugify(formattedText, { remove: /[.*,:\/]/g });
 };
 const generateStaticRoseyId = (text: string) => {
-  const pageName = Astro.url.pathname === '/' ? 'home' : Astro.url.pathname.replace('/index.html', '').replaceAll('/', '')
+  let pageName = '';
+  if (Astro.url.pathname) {
+    pageName =
+      Astro.url.pathname === '/'
+        ? 'home'
+        : Astro.url.pathname?.replace('/index.html', '').replaceAll('/', '');
+  } else {
+    pageName = 'page';
+  }
   const keyNumber = Astro.props.key || '1';
   return `${text}-${pageName}-${keyNumber}`;
 };
@@ -80,10 +88,17 @@ const imageSrc =
             {block.heading.heading_text}
           </h2>
           <div class="mb-4" style={`color: ${block.text.color};`}>
-            <Markdown
-              content={block.text.markdown_content}
-              roseyId={generateStaticRoseyId('left-right-text')}
-            />
+            {ENV_BOOKSHOP_LIVE ? (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId="left-right-text"
+              />
+            ) : (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId={generateStaticRoseyId('left-right-text')}
+              />
+            )}
           </div>
           {block.button && <Button {...block.button} />}
         </div>
@@ -98,10 +113,17 @@ const imageSrc =
             {block.heading.heading_text}
           </h2>
           <div class="mb-4" style={`color: ${block.text.color};`}>
-            <Markdown
-              content={block.text.markdown_content}
-              roseyId={generateStaticRoseyId('left-right-text')}
-            />
+            {ENV_BOOKSHOP_LIVE ? (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId="left-right-text"
+              />
+            ) : (
+              <Markdown
+                content={block.text.markdown_content}
+                roseyId={generateStaticRoseyId('left-right-text')}
+              />
+            )}
           </div>
           {block.button && <Button {...block.button} />}
         </div>
