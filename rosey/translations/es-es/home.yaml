@@ -56,7 +56,7 @@ _inputs:
     options: {}
     comment: "[See on page](https://glamorous-sanctuary.cloudvent.net/#:~:text=GitHub)"
   keep-what-you-need-delete-the-rest:
-    label: Keep what you need Delete the rest
+    label: Keep what you need. Delete the rest.
     hidden: false
     type: textarea
     options: {}
@@ -96,7 +96,7 @@ _inputs:
         enter translations. Create your own copy, and start creating your own
         components to use in the CloudCannon CMS.
   static:left-right-text-home-1:
-    label: To help save you time some features are se...
+    label: To help save you time, some features are s...
     hidden: false
     type: markdown
     options:
