@@ -3,10 +3,6 @@
 		"original": " About ",
 		"value": "Á propos"
 	},
-	"about-page": {
-		"original": " About page ",
-		"value": " About page "
-	},
 	"blog": {
 		"original": " Blog ",
 		"value": "Nouvelles"
@@ -14,6 +10,10 @@
 	"rss-feed": {
 		"original": " RSS Feed ",
 		"value": "RSS Alimentation"
+	},
+	"about-page": {
+		"original": " About page ",
+		"value": " About page "
 	},
 	"static:hero-subheading-about-1": {
 		"original": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n",

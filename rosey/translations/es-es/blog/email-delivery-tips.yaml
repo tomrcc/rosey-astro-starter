@@ -45,7 +45,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/email-delivery-tips/\
       #:~:text=RSS%20Feed)"
   static:/blog/email-delivery-tips/:
-    label: When you send an email campaign you expect...
+    label: When you send an email campaign, you expec...
     hidden: false
     type: markdown
     options:

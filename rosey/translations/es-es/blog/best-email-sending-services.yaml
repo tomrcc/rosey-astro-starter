@@ -45,7 +45,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=RSS%20Feed)"
   static:/blog/best-email-sending-services/:
-    label: When you send an email campaign you expect...
+    label: When you send an email campaign, you expec...
     hidden: false
     type: markdown
     options:
