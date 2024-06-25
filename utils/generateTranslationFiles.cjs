@@ -94,28 +94,13 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
     }
   });
   const formattedDiffStringAdded =
-    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : false;
+    diffStringAdded.length > 0 ? `<p>Added: ${diffStringAdded}</p>` : '';
   const formattedDiffStringRemoved =
-    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : false;
+    diffStringRemoved.length > 0 ? `<p>Removed: ${diffStringRemoved}</p>` : '';
 
-  const formattedStringCombined =
-    formattedDiffStringRemoved && formattedDiffStringAdded
-      ? `${formattedDiffStringAdded}
-
-
-  ${formattedDiffStringRemoved}
-  `
-      : formattedDiffStringAdded
-      ? `
-  ${formattedDiffStringAdded}
-
-  `
-      : formattedDiffStringRemoved
-      ? `
-  ${formattedDiffStringRemoved}
-
-  `
-      : '';
+  const formattedStringCombined = nhm.translate(
+    `${formattedDiffStringAdded}${formattedDiffStringRemoved}`
+  );
 
   return formattedStringCombined;
 }
@@ -162,7 +147,7 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   const locationString = generateLocationString(originalPhraseTidied, page);
   const joinedComment =
     diffString.length > 0
-      ? `${diffString} \n ${locationString}`
+      ? `${diffString}\n\n${locationString}`
       : `${locationString}`;
 
   const isLabelConcat = originalPhraseTidied.length > 42;
