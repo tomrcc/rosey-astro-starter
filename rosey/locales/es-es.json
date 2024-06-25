@@ -17,7 +17,7 @@
 	},
 	"markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel": {
 		"original": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through lel</h2>\n",
-		"value": "<p>&lt;p&gt;This is all about what we're &lt;em&gt;about&lt;/em&gt; like what we're really &lt;em&gt;&lt;strong&gt;about&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;\n&lt;h2&gt;A heading halfway through&lt;/h2&gt;</p>\n"
+		"value": "<p>This is all about what we're <em>about</em> like what we're really <em><strong>about</strong></em></p>\n<h2>A heading halfway through</h2>\n"
 	},
 	"astro-bookshop-starter": {
 		"original": " Astro Bookshop Starter ",
