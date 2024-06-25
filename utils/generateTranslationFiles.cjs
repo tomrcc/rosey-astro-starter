@@ -94,20 +94,30 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
     }
   });
   const formattedDiffStringAdded =
-    diffStringAdded.length > 0
-      ? `Added: ${diffStringAdded}
-    
-
-    `
-      : '';
+    diffStringAdded.length > 0 ? `Added: ${diffStringAdded}` : false;
   const formattedDiffStringRemoved =
-    diffStringRemoved.length > 0
-      ? `Removed: ${diffStringRemoved}
-    
-      
-    `
+    diffStringRemoved.length > 0 ? `Removed: ${diffStringRemoved}` : false;
+
+  const formattedStringCombined =
+    formattedDiffStringRemoved && formattedDiffStringAdded
+      ? `${formattedDiffStringAdded}
+
+
+  ${formattedDiffStringRemoved}
+  `
+      : formattedDiffStringAdded
+      ? `
+  ${formattedDiffStringAdded}
+
+  `
+      : formattedDiffStringRemoved
+      ? `
+  ${formattedDiffStringRemoved}
+
+  `
       : '';
-  return `${formattedDiffStringAdded}${formattedDiffStringRemoved}`;
+
+  return formattedStringCombined;
 }
 
 function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
