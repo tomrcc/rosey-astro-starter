@@ -1,7 +1,7 @@
 ---
 import markdownit from 'markdown-it';
 const md = markdownit({ html: true });
-const { content } = Astro.props;
+const { content, roseyId } = Astro.props;
 import slugify from 'slugify';
 
 const generateRoseyID = (text: string) => {
@@ -18,6 +18,6 @@ const generateRoseyID = (text: string) => {
 <div
   class="markdown-text"
   data-rosey-ns="markdown"
-  data-rosey={generateRoseyID(content)}
+  data-rosey={generateRoseyID(roseyId)}
   set:html={md.render(content)}
 />

@@ -115,19 +115,16 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
 
   const originalPhraseTidied = formatMarkdown(untranslatedPhraseMarkdown);
 
-  const isKeyMarkdown =
-    inputKey.slice(0, 10).includes('markdown:') ||
-    inputKey.slice(0, 10).includes('blog:');
-  const isKeyStatic = inputKey.slice(0, 10).includes('blog:');
+  const isKeyStatic = inputKey.startsWith('static:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
-  const inputType = isKeyMarkdown
+  const inputType = isKeyStatic
     ? 'markdown'
     : isInputShortText
     ? 'text'
     : 'textarea';
 
-  const options = isKeyMarkdown
+  const options = isKeyStatic
     ? {
         bold: true,
         format: 'p h1 h2 h3 h4',
