@@ -75,11 +75,11 @@ _inputs:
       )"
 about: Á propos
 about-page: ""
-blog: Blog
+blog: Nouvelles
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
   Tout dépend de ce que nous faisons, comme de ce que nous faisons vraiment
 
   ## A à mi-chemin de lel
 
   &nbsp;
-rss-feed: RSS Feed
+rss-feed: RSS Alimentation
