@@ -36,7 +36,7 @@
 		"value": "Conserva lo que necesitas. Elimina el resto."
 	},
 	"static:hero-subheading-home-1": {
-		"original": "<p>A starting point for <strong>developers looking to build a multilingual website with Astro, using Bookshop components in CloudCannon</strong>. Create your own copy, and start creating your own components to use in the CloudCannon CMS.</p>\n",
+		"original": "<p>A starting point for <strong>developers looking to build a multilingual website with Astro and Rosey, using Bookshop components in CloudCannon</strong>. CloudCannon provides a UI for non-technical editors to enter translations. Create your own copy, and start creating your own components to use in the CloudCannon CMS.</p>\n",
 		"value": "<p>A starting point for <strong>developers looking to build a multilingual website with Astro, using Bookshop components in CloudCannon</strong>. Create your own copy, and start creating your own components to use in the CloudCannon CMS.</p>\n"
 	},
 	"static:left-right-text-home-1": {
