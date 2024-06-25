@@ -8,8 +8,7 @@ _inputs:
       groups:
         - heading: Still to translate (de-de)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
-          inputs:
-            - static:left-right-text-home-1
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [](https://glamorous-sanctuary.cloudvent.net/)
@@ -22,6 +21,7 @@ _inputs:
             - keep-what-you-need-delete-the-rest
             - rss-feed
             - static:hero-subheading-home-1
+            - static:left-right-text-home-1
   about:
     label: About
     hidden: false
@@ -83,6 +83,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
       oint,the%20CloudCannon%20CMS)"
@@ -108,6 +110,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
       ,CSS%20variables)"
@@ -160,4 +164,15 @@ static:hero-subheading-home-1: >-
 
 
   &nbsp;
-static:left-right-text-home-1: ""
+static:left-right-text-home-1: >-
+  Um Ihnen Zeit zu sparen, sind in dieser Vorlage einige Funktionen
+  eingerichtet, wie zum Beispiel:
+
+
+  * Bookshop
+
+  * Blog mit Paginierung, Tags und Snippets
+
+  * Bildoptimierung
+
+  * Etc...

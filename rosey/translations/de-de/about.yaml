@@ -62,6 +62,8 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
+      bulletedlist: true
+      numberedlist: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
       20all,halfway%20through%20lel)"
