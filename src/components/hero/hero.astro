@@ -76,10 +76,19 @@ const headingGradientColor = block.heading.heading_gradient_color;
         {block.heading.heading_text}
       </h1>
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>
-        <Markdown
-          content={block.subheading.markdown_content}
-          roseyId={generateStaticRoseyId('hero-subheading')}
-        />
+        {
+          ENV_BOOKSHOP_LIVE ? (
+            <Markdown
+              content={block.text.markdown_content}
+              roseyId="hero-subheading"
+            />
+          ) : (
+            <Markdown
+              content={block.text.markdown_content}
+              roseyId={generateStaticRoseyId('hero-subheading')}
+            />
+          )
+        }
       </div>
       <div class="buttons">
         {
