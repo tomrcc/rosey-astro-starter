@@ -52,12 +52,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Removed: Different yo.
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/#:~:text=Use%20an,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
+      you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text
@@ -133,6 +130,6 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=RSS%20Feed)"
 about: Á propos
-blog: Blog
+blog: Nouvelles
 blog:/blog/5-things-to-improve-you-email-templates/: ""
-rss-feed: RSS Feed
+rss-feed: RSS Alimentation

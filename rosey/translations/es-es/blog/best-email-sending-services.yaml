@@ -49,15 +49,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: this has changed
-
-
-      Removed: successfully, follow these email delivery tips
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/#:~:text=When%20you%20send,a%20timely%20manner)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
+      ervices/#:~:text=When%20you%20send,a%20timely%20manner)"
     context:
       open: false
       title: Untranslated Text

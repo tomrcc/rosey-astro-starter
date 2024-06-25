@@ -9,13 +9,13 @@ _inputs:
         - heading: Still to translate (de-de)
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs:
-            - about-page
+          inputs: []
         - heading: Already translated (de-de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
             - about
+            - about-page
             - blog
             - markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel
             - rss-feed
@@ -74,7 +74,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
       )"
 about: Um
-about-page: ""
+about-page: Um Seite
 blog: Blog
 markdown:this-is-all-about-what-we're-about-like-what-we're-really-about-##-a-heading-halfway-through-lel: |-
   This is all about what we're *about* like what we're really ***about***
