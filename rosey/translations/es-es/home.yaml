@@ -83,13 +83,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: This is all about what we're \_about\_ like what we're really
-      \_\*\*about\*\*\_ ## A heading halfway through lel
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=This%20is%20all,halfway%20through%20lel)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=This%20is%20all,\
+      halfway%20through%20lel)"
     context:
       open: false
       title: Untranslated Text
@@ -111,22 +107,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: To help save you time, some features are set up in this template,
-      like: \*
-      \[Bookshop\](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
-      \* Blog with pagination, tags and
-      \[snippets\](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
-      \* \[Image
-      optimization\](https://docs.astro.build/en/guides/images/#image--astroassets)
-      \* SEO Controls \* Responsive header and footer \* \[Font Awesome
-      Icons\](https://fontawesome.com/search?o=r&m=free) \* Schemas for adding
-      new pages \* Editable color pallete \* Markdown styles \* CloudCannon
-      configuration \* CSS variables
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
     context:
       open: false
       title: Untranslated Text
