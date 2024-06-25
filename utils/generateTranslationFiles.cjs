@@ -94,9 +94,13 @@ function generateDiffString(oldOriginalFromLocale, untranslatedPhraseMarkdown) {
     }
   });
   const formattedDiffStringAdded =
-    diffStringAdded.length > 0 ? `<p>Added: ${diffStringAdded}</p>` : '';
+    diffStringAdded.length > 0
+      ? `<p>Added: ${formatMarkdown(diffStringAdded)}</p>`
+      : '';
   const formattedDiffStringRemoved =
-    diffStringRemoved.length > 0 ? `<p>Removed: ${diffStringRemoved}</p>` : '';
+    diffStringRemoved.length > 0
+      ? `<p>Removed: ${formatMarkdown(diffStringRemoved)}</p>`
+      : '';
 
   const formattedStringCombined = nhm.translate(
     `${formattedDiffStringAdded}${formattedDiffStringRemoved}`
