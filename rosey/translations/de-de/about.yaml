@@ -62,13 +62,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: This is all about what we're \_about\_ like what we're really
-      \_about\_ A heading halfway through lel
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%20all,halfway%20through%20lel)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
+      20all,halfway%20through%20lel)"
     context:
       open: false
       title: Untranslated Text

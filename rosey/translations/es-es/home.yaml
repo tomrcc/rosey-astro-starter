@@ -83,15 +83,9 @@ _inputs:
       redo: true
       removeformat: true
       copyformatting: true
-    comment: >-
-      Added: A starting point for developers looking to build a multilingual
-      website with Astro using Bookshop components in CloudCannon Create your
-      own copy and start creating your own components to use in the CloudCannon
-      CMS
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
     context:
       open: false
       title: Untranslated Text
