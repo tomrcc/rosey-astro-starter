@@ -241,7 +241,7 @@ async function generateLocale(locale) {
 
       let updatedKeys = [];
       Object.keys(keysToUpdate).forEach((key) => {
-        if (data[key]) {
+        if (data[key] || data[key] === '') {
           data[key] = keysToUpdate[key];
           updatedKeys = [key];
         }
