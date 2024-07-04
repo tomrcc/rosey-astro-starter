@@ -133,6 +133,9 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   );
 
   // If key is static, we present editors with a diff to assist in adding/removing changes to the original
+  // In this iteration, all static inputs are type markdown
+  // Meaning the parent container needs to be a block element (like a <div>) that can contain other elements
+  // Add a namespace using the data-rosey-ns="static" wherever there is a data-rosey="" tag present
   const isKeyStatic = inputKey.slice(0, 10).includes('static:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
