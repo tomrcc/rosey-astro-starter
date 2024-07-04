@@ -1,15 +1,15 @@
 {
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
+	"404.html": {
+		"original": "404.html",
+		"value": "404.html"
 	},
 	"about/index.html": {
 		"original": "about/index.html",
 		"value": "translated/index.html"
 	},
-	"404.html": {
-		"original": "404.html",
-		"value": "404.html"
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
 	},
 	"index.html": {
 		"original": "index.html",
@@ -18,6 +18,10 @@
 	"tags/email/index.html": {
 		"original": "tags/email/index.html",
 		"value": "tags/email/index.html"
+	},
+	"test/index.html": {
+		"original": "test/index.html",
+		"value": "test/index.html"
 	},
 	"tags/marketing/index.html": {
 		"original": "tags/marketing/index.html",
