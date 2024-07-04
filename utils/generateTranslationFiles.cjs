@@ -311,7 +311,7 @@ async function main(locale) {
       const translationFileData = await YAML.parse(translationFileString);
 
       // Create the url key
-      if (translationFileData['urlTranslation'].length > 0) {
+      if (translationFileData['urlTranslation']?.length > 0) {
         cleanedOutputFileData['urlTranslation'] =
           translationFileData['urlTranslation'];
       } else {
