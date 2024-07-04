@@ -1,0 +1,85 @@
+urlTranslation: test/index.html
+_inputs:
+  $:
+    type: object
+    comment: "[See test/](https://glamorous-sanctuary.cloudvent.net/test/)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Still to translate (es-es)
+          comment: Text to translate on
+            [test/](https://glamorous-sanctuary.cloudvent.net/test/)
+          inputs:
+            - about
+            - blog
+            - rss-feed
+            - static:hero-subheading-test-1
+            - test
+            - test-page
+        - heading: Already translated (es-es)
+          comment: Text already translated on
+            [test/](https://glamorous-sanctuary.cloudvent.net/test/)
+          inputs: []
+  about:
+    label: About
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=About)"
+  blog:
+    label: Blog
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=Blog)"
+  rss-feed:
+    label: RSS Feed
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=RSS%20Feed)"
+  static:hero-subheading-test-1:
+    label: A test page
+    hidden: false
+    type: markdown
+    options:
+      bold: true
+      format: p h1 h2 h3 h4
+      italic: true
+      link: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
+      bulletedlist: true
+      numberedlist: true
+    comment: >-
+      Added: A test page
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=A%20test%20page)
+  test:
+    label: Test
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=Test)"
+  test-page:
+    label: Test Page
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=Test%20Page\
+      )"
+about: ""
+blog: ""
+rss-feed: ""
+static:hero-subheading-test-1: ""
+test: ""
+test-page: ""

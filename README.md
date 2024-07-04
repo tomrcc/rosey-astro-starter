@@ -1,20 +1,47 @@
+TODO: Put screenshot/video left right of translation workflow here
+
 # Astro Rosey Starter
 
-If you're looking for some help getting a multilingual site up and running in Astro using CloudCannon's CMS, get in touch with our [sales team](mailto:sales@cloudcannon.com) - we offer migrations starting from $500, depending on the size of the site. Otherwise feel free to use this starter to get your own translation workflow up and running in CloudCannon.
+Use this starter to get your own translation workflow up and running in CloudCannon's CMS with Rosey and Bookshop, or to copy into your existing project.
 
-TODO: Put screenshot here of translation workflow here
-TODO: How to add your own Rosey tags to new components
-TODO: What if there multiple uses of the same phrase/word
-TODO: How blog and other long form text differs from component text and how to add other namespaces like blog using docs as an example
+This starter uses Rosey, an open source translation workflow for SSGs. We run scripts in the site's postbuild to generate inputs that a user can enter translations into. Rosey then uses the provided translations to generate a multilingual site.
 
-Notes
-This is best used if you don't want the layout to change between languages - if you want to control the layout unique to each locale, use the split by directory approach.
-Why Rosey is useful compared to the standard split-by-dir approach:
-Consider an editor adds a new left right to a page.
-They have to go to the version of that page in each language in CC and add the component with content unique to that language.
-The component could have a bunch of other things to set up other than content (stylings etc.) which the editor would have to manually replicate across all languages on the site.
-With Rosey the component is added in the english version, and for each locale we have defined in our env variables, a translation file will appear for the new left right content.
-Each page has all of its text copy laid out in a form, with inputs for translations, and links to see the original version highlighted in context on the page.
+CloudCannon also offers migration services - get in touch with our [sales team](mailto:sales@cloudcannon.com) if you'd like to discuss this further.
+
+## Why is this useful?
+
+This approach separates your content and your layouts. Change the layout and styling in one place, and have those changes reflected across all the languages you translate to.
+
+### Example
+
+- An editor adds a new left-right block to a page.
+- The component could have plenty of other things to set up other than content (eg. style choices) which the editor would have to manually replicate across all languages on the site.
+- They have to go to the version of that page in each language in CC and add the component with content unique to that language.
+
+- With Rosey the component is added in the English version, and for each locale we have defined in our environment variables, a translation entry will appear for the new left right content.
+- Each page has all of its text copy laid out in a form, with inputs for translations, and links to see the original version highlighted in context on the page.
+
+## How to add your own Rosey tags to components
+
+Add a tag of data-rosey="example-key" to an HTML element containing text, with a key for Rosey to use to keep track of that piece of text content.
+
+#### Static id vs dynamic id
+
+We need to make sure for each piece of unique content, we generate a unique id for Rosey.
+By default, we use the pattern of using the slugified text content as the data-rosey id.
+This ensures that if there are any duplicate entries - they share a key, and if the content changes
+
+- All static tags are markdown by default
+  TODO: Duplicate phrases/words
+  TODO: Adding this to an existing project
+  TODO: Why is this useful?
+  This is best used if you don't want the layout to change between languages - if you want to control the layout unique to each locale, use the split by directory approach.
+  Why Rosey is useful compared to the standard split-by-dir approach:
+  Consider an editor adds a new left right to a page.
+  They have to go to the version of that page in each language in CC and add the component with content unique to that language.
+  The component could have a bunch of other things to set up other than content (stylings etc.) which the editor would have to manually replicate across all languages on the site.
+  With Rosey the component is added in the english version, and for each locale we have defined in our env variables, a translation file will appear for the new left right content.
+  Each page has all of its text copy laid out in a form, with inputs for translations, and links to see the original version highlighted in context on the page.
 
 Note: Not tested with another 'main' lang other than english
 Not tested with an integration (yet)
@@ -354,8 +381,18 @@ Shows how to set global CSS variables in Astro, to set commonly used values like
 
 Extra work could be done to write a `node fs` script to write said values from a data file to the appropriate places in the code, which would then allow editors to control sitewide styles like page max-width and padding.
 
-### Coming Soon
+### Coming Soon / Stretch Goals
 
-- Scheduling blog posts for a future date
-- Editor links to colors data file
-- Writing CSS vars (padding, page max-width, etc.) through an editable data file
+- Translations in the visual editor with Bookshop
+  - Have switch input: showTranslationsInVisualEditor
+  - A select is hidden/shown depending on the value of showTranslationsInVisualEditor with the values of the env var LOCALES
+  - A range of inputs for each locale is hidden/shown depending on the value of showTranslationsInVisualEditor
+  - In the component with the translated text
+    - If in visual editor && showTranslationsInVisualEditor is true
+      - Display the translated input value as the text in the component for whatever locale is selected in the select input
+    - Else display the original version
+  - In generateTranslationFiles.cjs loop through our pages and see if there are any components with translations in the component front matter, and write that to our translations data files
+  - Conversely, we could overwrite component front matter when we get a new translation via the translations data files
+  - Could display a tooltip within the fallback that tells the editor to save and wait for build to finish before we see duplicate entries overwritten, and before the component front matter translation and the translation data files are synced up with each other.
+- Detect whether a duplicate entry with a translation exists already when creating a new entry
+- Integrate with smartling/deepl/chatgpt or something similar
