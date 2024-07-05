@@ -24,7 +24,7 @@ const translationFilesDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
 
 const baseURL = process.env.BASEURL || 'http://localhost:4321/';
-let locales = process.env.LOCALES?.toLowerCase().split(',') || ['nl'];
+const locales = process.env.LOCALES?.toLowerCase().split(',') || ['nl', 'es'];
 
 function getPageString(page) {
   return page.replace('.html', '').replace('index', '');
@@ -303,10 +303,13 @@ async function main(locale) {
 
       let cleanedOutputFileData = {};
 
-      // Ensure nested pages have parent folders created
+      // Ensure nested pages have parent folders
       const pageHasParentFolder = pageName.includes('/');
       if (pageHasParentFolder) {
-        const parentFolder = pageName.split('/')[0];
+        const parentFolder = pageName.substring(
+          0,
+          pageName.lastIndexOf('/') + 1
+        );
         const parentFolderFilePath = path.join(
           translationFilesDirPath,
           locale,
