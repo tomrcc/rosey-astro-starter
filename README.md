@@ -2,22 +2,31 @@ TODO: Put screenshot/video left right of translation workflow here
 
 # Astro Rosey Starter
 
-Use this starter to get your own translation workflow up and running in CloudCannon's CMS with Rosey and Bookshop, or to copy into your existing project.
+A starting point for developers looking to build a multilingual website with Astro, Rosey, and Bookshop components in CloudCannon.
+
+Use this starter to start building a site with your own translation workflow up and running in CloudCannon's CMS with Rosey and Bookshop, or to copy into your existing project.
 
 This starter uses Rosey, an open source translation workflow for SSGs. We run scripts in the site's postbuild to generate inputs that a user can enter translations into. Rosey then uses the provided translations to generate a multilingual site.
 
-Create your own copy, and start creating your own components to use in the CloudCannon CMS. Build components with `.jsx` or `.astro`.
+Create your own copy, and start creating your own components that editors can use in the CloudCannon CMS to build and maintain pages. Build components with either `.jsx` or `.astro`.
 
 To try to cut down on setup time this starter template also includes some commonly used [features](#features) in CloudCannon.
 
 This template is aimed at helping developers build sites quickly, rather than providing editors with a fully built editable site.
 If you are an editor looking for an already built template, have a look at [CloudCannon's templates page](https://cloudcannon.com/templates/).
 
+## How it works
+
 Rosey generates a base.json file wherever it detects a `data-rosey=""` tag in your built site.
+
 From this `base.json` file we run a script that creates a translations file for each locale listed in your `LOCALES` environment variable.
+
 Editors can see an input for each translation in the CloudCannon UI, and can enter a translated value, with links to see the original version highlighted in context on the page.
+
 We then run a script in our postbuild to generate the [locale files that Rosey expects](https://rosey.app/docs/#creating-locale-files) to create our multilingual site from.
+
 Rosey then uses these locales files, to generate a multilingual site.
+
 Add locale codes (eg. es, es-es) to the site's environment variables to see a new folder with all of the original site's data-rosey tag mentions, split by page.
 
 CloudCannon offers migration services if needed for larger SSG projects wanting a new multilingual workflow - get in touch with our [sales team](mailto:sales@cloudcannon.com) if you'd like to discuss this further.
@@ -25,7 +34,9 @@ CloudCannon offers migration services if needed for larger SSG projects wanting 
 ## Why is this useful?
 
 This approach separates your content and your layouts. Change the layout and styling in one place, and have those changes reflected across all the languages you translate to.
+
 You provide an original, and translations, and Rosey does the rest.
+
 Rosey redirects the site visitor to the locale that matches their browser language settings, or if their locale is not supported, directs them to the default version.
 
 ### Example
@@ -52,23 +63,27 @@ Rosey redirects the site visitor to the locale that matches their browser langua
 ## Adding Translations
 
 Add a tag of data-rosey="example-key" to an HTML element containing text, with a key for Rosey to use to keep track of that piece of text content.
+
 Once our build finishes, we can publish our translations on `staging` to our `main` branch, and Rosey will use them to generate a multilingual site for us.
+
 To create your own components that add inputs to our translation files, add a `data-rosey=""` tag, following the format provided in the placeholder components.
 
 #### Static id vs dynamic id
 
 We need to make sure for each piece of unique content, we generate a unique id for Rosey.
+
 By default, we use the slugified text content as the data-rosey id.
+
 This ensures that if there are any duplicate entries - they share a key, and if the translation changes all mentions are updated.
+
 At the same time, it means that no keys overlap that aren't meant to.
 
 The downside of this approach is that when the original text changes, it counts as a whole new key and we need to enter a new translation - that is the old one is not preserved.
-For larger blocks of text this approach doesn't work so well, so we create a static rosey id - an id that doesn't change when the original text changes.
+For this reason, for larger blocks of text the default approach of using the content itself as an id doesn't work so well, so we create a static rosey id - an id that doesn't change when the original text changes.
+
 The challenge for creating these static ids is ensuring they're unique.
 We can use the page slug or the index of the component the text is contained in, in combination with some input text to make sure there are no overlaps.
 In this starter, all static rosey ids are markdown inputs for simplicity, but the generate scripts could be changed to allow for non-markdown static rosey-ids if needed.
-
-A starting point for developers looking to build a multilingual website with Astro, Rosey, and Bookshop components in CloudCannon.
 
 ## Environment Variables
 
