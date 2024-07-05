@@ -7,21 +7,21 @@
 		"original": "about/index.html",
 		"value": "translated/index.html"
 	},
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
-	},
 	"index.html": {
 		"original": "index.html",
 		"value": "index.html"
 	},
-	"tags/email/index.html": {
-		"original": "tags/email/index.html",
-		"value": "tags/email/index.html"
-	},
 	"test/index.html": {
 		"original": "test/index.html",
 		"value": "test/index.html"
+	},
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
+	},
+	"tags/email/index.html": {
+		"original": "tags/email/index.html",
+		"value": "tags/email/index.html"
 	},
 	"tags/marketing/index.html": {
 		"original": "tags/marketing/index.html",

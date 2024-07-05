@@ -11,11 +11,7 @@ const {
 const translationsDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
 
-const locales = process.env.LOCALES?.toLowerCase().split(',') || [
-  'es-es',
-  'de-de',
-  'fr-fr',
-];
+const locales = process.env.LOCALES?.toLowerCase().split(',') || ['nl', 'es'];
 
 function getTranslationPath(locale, translationFilename) {
   return path.join(translationsDirPath, locale, translationFilename);

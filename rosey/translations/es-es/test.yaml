@@ -56,12 +56,9 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: >-
-      Added: A test page
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=A%20test%20page)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/test/#:~:text=A%20test%20\
+      page)"
   test:
     label: Test
     hidden: false
