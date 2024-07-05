@@ -24,11 +24,7 @@ const translationFilesDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
 
 const baseURL = process.env.BASEURL || 'http://localhost:4321/';
-let locales = process.env.LOCALES?.toLowerCase().split(',') || [
-  'es-es',
-  'de-de',
-  'fr-fr',
-];
+let locales = process.env.LOCALES?.toLowerCase().split(',') || ['nl'];
 
 function getPageString(page) {
   return page.replace('.html', '').replace('index', '');
@@ -251,7 +247,6 @@ function generateLocationString(originalPhraseTidied, page) {
 
 async function main(locale) {
   // Get the Rosey generated data
-
   const localePath = path.join(localesDirPath, `${locale}.json`);
   const oldLocaleData = await readJsonFromFile(localePath);
   const inputFileData = await readJsonFromFile(inputFilePath);
@@ -260,10 +255,15 @@ async function main(locale) {
   const pages = Object.keys(inputURLFileData.keys);
 
   const translationsLocalePath = path.join(translationFilesDirPath, locale);
+
+  console.log(`📂 ${translationsLocalePath} ensuring folder exists`);
+  await fs.promises.mkdir(translationsLocalePath, { recursive: true });
+
   const translationsFiles = await fs.promises.readdir(translationsLocalePath, {
     recursive: true,
   });
 
+  // Remove translations pages no longer present in the base.json file
   await Promise.all(
     translationsFiles.map(async (fileNameWithExt) => {
       const filePath = path.join(translationsLocalePath, fileNameWithExt);
@@ -274,7 +274,6 @@ async function main(locale) {
 
       const fileNameHTMLFormatted = getTranslationHTMLFilename(fileNameWithExt);
 
-      // Remove translations pages no longer present in the base.json file
       if (!pages.includes(fileNameHTMLFormatted)) {
         console.log(
           `❌ Deleting ${fileNameHTMLFormatted}(${filePath}), since it doesn't exist in the pages in our base.json`
@@ -303,6 +302,18 @@ async function main(locale) {
       );
 
       let cleanedOutputFileData = {};
+
+      // Ensure nested pages have parent folders created
+      const pageHasParentFolder = pageName.includes('/');
+      if (pageHasParentFolder) {
+        const parentFolder = pageName.split('/')[0];
+        const parentFolderFilePath = path.join(
+          translationFilesDirPath,
+          locale,
+          parentFolder
+        );
+        await fs.promises.mkdir(parentFolderFilePath, { recursive: true });
+      }
 
       const translationFileString = await readFileWithFallback(
         translationFilePath,
