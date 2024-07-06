@@ -8,6 +8,10 @@ _inputs:
       groups:
         - heading: Still to translate (jp)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
+          inputs: []
+        - heading: Already translated (jp)
+          comment: Text already translated on
+            [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
             - about
             - astro-bookshop-starter
@@ -18,10 +22,6 @@ _inputs:
             - rss-feed
             - static:hero-subheading-home-1
             - static:left-right-text-home-1
-        - heading: Already translated (jp)
-          comment: Text already translated on
-            [](https://glamorous-sanctuary.cloudvent.net/)
-          inputs: []
   about:
     label: About
     hidden: false
@@ -147,12 +147,44 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
-about: ""
-astro-bookshop-starter: ""
-blog: ""
-cloudcannon: ""
-github: ""
-keep-what-you-need-delete-the-rest: ""
-rss-feed: ""
-static:hero-subheading-home-1: ""
-static:left-right-text-home-1: ""
+about: について
+astro-bookshop-starter: アストロブックショップスターター
+blog: ブログ
+cloudcannon: CloudCannon
+github: GitHub
+keep-what-you-need-delete-the-rest: 必要なものを保管してください。残りを削除します。
+rss-feed: RSSフィード
+static:hero-subheading-home-1: "**CloudCannon の Bookshop コンポーネントを使用して、Astro と
+  Rosey で多言語 Web サイトを構築しようとしている開発者のための出発点です**。 CloudCannon
+  は、技術者以外の編集者が翻訳を入力するための UI を提供します。独自のコピーを作成し、CloudCannon CMS
+  で使用する独自のコンポーネントの作成を開始します。"
+static:left-right-text-home-1: >-
+  時間を節約するために、このテンプレートには次のようないくつかの機能が設定されています。
+
+
+  * <a href="https://cloudcannon.com/documentation/guides/bookshop-astro-guide/"
+  target="_blank" rel="noopener">Bookshop</a>
+
+  * <a
+  href="https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx"
+  target="_blank" rel="noopener">ページネーション、タグ、スニペットを使用したブログ</a>
+
+  * <a href="https://docs.astro.build/en/guides/images/#image--astroassets"
+  target="_blank" rel="noopener">画像の最適化</a>
+
+  * SEO コントロール
+
+  * レスポンシブなヘッダーとフッター
+
+  * <a href="https://fontawesome.com/search?o=r&amp;m=free" target="_blank"
+  rel="noopener">素晴らしいフォントのアイコン</a>
+
+  * 新しいページを追加するためのスキーマ
+
+  * 編集可能なカラーパレット
+
+  * マークダウンスタイル
+
+  * CloudCannon の設定
+
+  * CSS変数

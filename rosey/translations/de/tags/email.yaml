@@ -9,14 +9,14 @@ _inputs:
         - heading: Still to translate (de)
           comment: Text to translate on
             [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
+          inputs: []
+        - heading: Already translated (de)
+          comment: Text already translated on
+            [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Already translated (de)
-          comment: Text already translated on
-            [tags/email/](https://glamorous-sanctuary.cloudvent.net/tags/email/)
-          inputs: []
   about:
     label: About
     hidden: false
@@ -40,6 +40,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/email/#:~:text=RSS%2\
       0Feed)"
-about: ""
-blog: ""
-rss-feed: ""
+about: Um
+blog: Blog
+rss-feed: RSS-Feed

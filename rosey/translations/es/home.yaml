@@ -8,6 +8,10 @@ _inputs:
       groups:
         - heading: Still to translate (es)
           comment: Text to translate on [](https://glamorous-sanctuary.cloudvent.net/)
+          inputs: []
+        - heading: Already translated (es)
+          comment: Text already translated on
+            [](https://glamorous-sanctuary.cloudvent.net/)
           inputs:
             - about
             - astro-bookshop-starter
@@ -18,10 +22,6 @@ _inputs:
             - rss-feed
             - static:hero-subheading-home-1
             - static:left-right-text-home-1
-        - heading: Already translated (es)
-          comment: Text already translated on
-            [](https://glamorous-sanctuary.cloudvent.net/)
-          inputs: []
   about:
     label: About
     hidden: false
@@ -147,12 +147,46 @@ _inputs:
         * CloudCannon configuration
 
         * CSS variables
-about: ""
-astro-bookshop-starter: ""
-blog: ""
-cloudcannon: ""
-github: ""
-keep-what-you-need-delete-the-rest: ""
-rss-feed: ""
-static:hero-subheading-home-1: ""
-static:left-right-text-home-1: ""
+about: Acerca de
+astro-bookshop-starter: Astro Bookshop Arrancador
+blog: Blog
+cloudcannon: CloudCannon
+github: GitHub
+keep-what-you-need-delete-the-rest: Conserva lo que necesitas. Elimina el resto.
+rss-feed: RSS Feed
+static:hero-subheading-home-1: Un punto de partida para **desarrolladores que
+  buscan crear un sitio web multilingüe con Astro y Rosey, utilizando
+  componentes de Bookshop en CloudCannon**. CloudCannon proporciona una interfaz
+  de usuario para que los editores no técnicos ingresen traducciones. Cree su
+  propia copia y comience a crear sus propios componentes para usar en
+  CloudCannon CMS.
+static:left-right-text-home-1: >-
+  Para ayudarle a ahorrar tiempo, algunas funciones están configuradas en esta
+  plantilla, como:
+
+
+  *
+  [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
+
+  * Blog con paginación, etiquetas y
+  [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx).
+
+  * <a href="https://docs.astro.build/en/guides/images/#image--astroassets"
+  target="_blank" rel="noopener">Optimización de imagen</a>
+
+  * Controles de SEO
+
+  * Encabezado y pie de página responsivos
+
+  * <a href="https://fontawesome.com/search?o=r&amp;m=free" target="_blank"
+  rel="noopener">Font Awesome Icons</a>
+
+  * Esquemas para agregar nuevas páginas
+
+  * Paleta de colores editable
+
+  * Estilos de rebajas
+
+  * Configuración de CloudCannon
+
+  * Variables CSS

@@ -11,14 +11,14 @@ _inputs:
         - heading: Still to translate (es)
           comment: Text to translate on
             [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
+          inputs: []
+        - heading: Already translated (es)
+          comment: Text already translated on
+            [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Already translated (es)
-          comment: Text already translated on
-            [tags/marketing/](https://glamorous-sanctuary.cloudvent.net/tags/marketing/)
-          inputs: []
   about:
     label: About
     hidden: false
@@ -43,6 +43,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/marketing/#:~:text=R\
       SS%20Feed)"
-about: ""
-blog: ""
-rss-feed: ""
+about: Acerca de
+blog: Blog
+rss-feed: RSS Feed

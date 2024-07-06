@@ -58,7 +58,7 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
       ample%20about%20page)"
-about: ""
-blog: ""
-rss-feed: ""
+about: について
+blog: ブログ
+rss-feed: RSSフィード
 static:hero-subheading-about-1: ""

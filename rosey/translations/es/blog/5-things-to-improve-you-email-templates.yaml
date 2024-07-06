@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
           inputs:
-            - about
-            - blog
-            - rss-feed
             - static:/blog/5-things-to-improve-you-email-templates/
         - heading: Already translated (es)
           comment: Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
-          inputs: []
+          inputs:
+            - about
+            - blog
+            - rss-feed
   about:
     label: About
     hidden: false
@@ -131,7 +131,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-about: ""
-blog: ""
-rss-feed: ""
+about: Acerca de
+blog: Blog
+rss-feed: RSS Feed
 static:/blog/5-things-to-improve-you-email-templates/: ""

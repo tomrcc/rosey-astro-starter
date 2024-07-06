@@ -11,14 +11,14 @@ _inputs:
         - heading: Still to translate (fr)
           comment: Text to translate on
             [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
+          inputs: []
+        - heading: Already translated (fr)
+          comment: Text already translated on
+            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Already translated (fr)
-          comment: Text already translated on
-            [tags/technology/](https://glamorous-sanctuary.cloudvent.net/tags/technology/)
-          inputs: []
   about:
     label: About
     hidden: false
@@ -43,6 +43,6 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/tags/technology/#:~:text=\
       RSS%20Feed)"
-about: ""
-blog: ""
-rss-feed: ""
+about: À propos
+blog: Blog
+rss-feed: RSS Feed

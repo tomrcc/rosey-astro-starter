@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
-            - about
-            - blog
-            - rss-feed
             - static:/blog/best-email-sending-services/
         - heading: Already translated (de)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs: []
+          inputs:
+            - about
+            - blog
+            - rss-feed
   about:
     label: About
     hidden: false
@@ -143,7 +143,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-about: ""
-blog: ""
-rss-feed: ""
+about: Um
+blog: Blog
+rss-feed: RSS-Feed
 static:/blog/best-email-sending-services/: ""
