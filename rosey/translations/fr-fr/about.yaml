@@ -10,7 +10,6 @@ _inputs:
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
-            - about-page
             - static:hero-subheading-about-1
             - test-page
         - heading: Already translated (fr-fr)
@@ -27,14 +26,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About)"
-  about-page:
-    label: About page
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=About%20pa\
-      ge)"
   blog:
     label: Blog
     hidden: false
@@ -51,7 +42,7 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=RSS%20Feed\
       )"
   static:hero-subheading-about-1:
-    label: This is all about what we're _about_ like ...
+    label: " An example about page."
     hidden: false
     type: markdown
     options:
@@ -65,17 +56,16 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=This%20is%\
-      20all,halfway%20through%20lel)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: |-
-        This is all about what we're _about_ like what we're really _**about**_
+    comment: >-
+      Added: An example page.
 
-        ## A heading halfway through lel
+
+      Removed: This is all about what we're \_about\_ like what we're really \_
+      \_ A heading halfway through lel
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20example%20about%20page)
   test-page:
     label: Test Page
     hidden: false
@@ -85,7 +75,6 @@ _inputs:
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Test%20Pag\
       e)"
 about: Á propos
-about-page: ""
 blog: Nouvelles
 rss-feed: RSS Alimentation
 static:hero-subheading-about-1: ""
