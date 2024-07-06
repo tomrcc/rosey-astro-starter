@@ -6,41 +6,42 @@
     "color": "#393939",
     "links": [
       {
+        "link": "/about/",
+        "text": "About"
+      },
+      {
         "link": "/blog/",
         "text": "Blog"
       },
       {
         "link": "/feed.xml",
         "text": "RSS Feed"
-      },
-      {
-        "link": "/about/",
-        "text": "About"
-      },
-      {
-        "link": "/test/",
-        "text": "Test Page"
       }
     ],
     "locales": [
       {
-        "code": "es-es",
+        "code": "es",
         "name": "Espanol",
         "flag": "/images/flags/spain-flag-png-large.png"
       },
       {
-        "code": "de-de",
+        "code": "de",
         "name": "Deutsch",
         "flag": "/images/flags/germany-flag.png"
       },
       {
-        "code": "fr-fr",
+        "code": "fr",
         "name": "French",
         "flag": "/images/flags/france-flag.png"
       },
       {
         "code": "en",
         "name": "English (US)",
+        "flag": "/images/flags/usa-flag.jpeg"
+      },
+      {
+        "code": "jp",
+        "name": "日本語",
         "flag": "/images/flags/usa-flag.jpeg"
       }
     ]
