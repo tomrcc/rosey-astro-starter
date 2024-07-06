@@ -23,10 +23,6 @@
 		"original": "tags/marketing/index.html",
 		"value": "tags/marketing/index.html"
 	},
-	"tags/technology/index.html": {
-		"original": "tags/technology/index.html",
-		"value": "tags/technology/index.html"
-	},
 	"blog/5-things-to-improve-you-email-templates/index.html": {
 		"original": "blog/5-things-to-improve-you-email-templates/index.html",
 		"value": "blog/5-things-to-improve-you-email-templates/index.html"
@@ -38,5 +34,9 @@
 	"blog/email-delivery-tips/index.html": {
 		"original": "blog/email-delivery-tips/index.html",
 		"value": "blog/email-delivery-tips/index.html"
+	},
+	"tags/technology/index.html": {
+		"original": "tags/technology/index.html",
+		"value": "tags/technology/index.html"
 	}
 }
