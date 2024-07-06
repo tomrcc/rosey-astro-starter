@@ -9,14 +9,14 @@ _inputs:
         - heading: Still to translate (fr)
           comment: Text to translate on
             [404](https://glamorous-sanctuary.cloudvent.net/404)
+          inputs: []
+        - heading: Already translated (fr)
+          comment: Text already translated on
+            [404](https://glamorous-sanctuary.cloudvent.net/404)
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Already translated (fr)
-          comment: Text already translated on
-            [404](https://glamorous-sanctuary.cloudvent.net/404)
-          inputs: []
   about:
     label: About
     hidden: false

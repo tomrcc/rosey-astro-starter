@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
-            - about
-            - blog
-            - rss-feed
             - static:/blog/best-email-sending-services/
         - heading: Already translated (fr)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs: []
+          inputs:
+            - about
+            - blog
+            - rss-feed
   about:
     label: About
     hidden: false
