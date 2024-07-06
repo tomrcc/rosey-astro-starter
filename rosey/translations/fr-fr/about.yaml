@@ -56,16 +56,9 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
-    comment: >-
-      Added: An example page.
-
-
-      Removed: This is all about what we're \_about\_ like what we're really \_
-      \_ A heading halfway through lel
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20example%20about%20page)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
+      ample%20about%20page)"
   test-page:
     label: Test Page
     hidden: false
