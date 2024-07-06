@@ -107,6 +107,13 @@ collections_config:
         comment: Enter the URL language code
       flag:
         type: image
+      locales:
+        type: array
+      locales[*]:
+        options:
+          preview:
+            icon: translate
+
 collection_groups:
   - heading: Pages
     collections:
