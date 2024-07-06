@@ -7,13 +7,13 @@
 		"original": "about/index.html",
 		"value": "about/index.html"
 	},
-	"index.html": {
-		"original": "index.html",
-		"value": "index.html"
-	},
 	"blog/index.html": {
 		"original": "blog/index.html",
 		"value": "blog/index.html"
+	},
+	"index.html": {
+		"original": "index.html",
+		"value": "index.html"
 	},
 	"tags/email/index.html": {
 		"original": "tags/email/index.html",
@@ -27,6 +27,10 @@
 		"original": "tags/technology/index.html",
 		"value": "tags/technology/index.html"
 	},
+	"blog/5-things-to-improve-you-email-templates/index.html": {
+		"original": "blog/5-things-to-improve-you-email-templates/index.html",
+		"value": "blog/5-things-to-improve-you-email-templates/index.html"
+	},
 	"blog/best-email-sending-services/index.html": {
 		"original": "blog/best-email-sending-services/index.html",
 		"value": "blog/best-email-sending-services/index.html"
@@ -34,9 +38,5 @@
 	"blog/email-delivery-tips/index.html": {
 		"original": "blog/email-delivery-tips/index.html",
 		"value": "blog/email-delivery-tips/index.html"
-	},
-	"blog/5-things-to-improve-you-email-templates/index.html": {
-		"original": "blog/5-things-to-improve-you-email-templates/index.html",
-		"value": "blog/5-things-to-improve-you-email-templates/index.html"
 	}
 }
