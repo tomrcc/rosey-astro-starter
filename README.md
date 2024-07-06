@@ -2,17 +2,17 @@ TODO: Put screenshot/video left right of translation workflow here
 
 # Astro Rosey Starter
 
-A starting point for developers looking to build a multilingual website with Astro, Rosey, and Bookshop components in CloudCannon.
+A starting point for developers looking to build a multilingual website with Astro, Rosey, using Bookshop's component based approach to building and editing sites in CloudCannon.
 
-Use this starter to start building a site with your own translation workflow up and running in CloudCannon's CMS with Rosey and Bookshop, or to copy into your existing project.
+This starter comes with a translation workflow set up in CloudCannon's CMS with Rosey and Bookshop, to provide UI for non-technical editors and translators to control a site's content and translations.
 
-This starter uses Rosey, an open source translation workflow for SSGs. We run scripts in the site's postbuild to generate inputs that a user can enter translations into. Rosey then uses the provided translations to generate a multilingual site.
+Rosey is an open source translation workflow for SSGs. We run custom `node fs` scripts in the site's postbuild to generate inputs that a user can enter translations into. Rosey then uses the provided translations to generate a multilingual site.
 
-Create your own copy, and start creating your own components that editors can use in the CloudCannon CMS to build and maintain pages. Build components with either `.jsx` or `.astro`.
+Create your own copy, and start creating your own components that editors can use in the CloudCannon CMS to build and maintain pages. Add `data-rosey` tags to text content that you want to be included in the translations. Build components with either `.jsx` or `.astro`.
 
 To try to cut down on setup time this starter template also includes some commonly used [features](#features) in CloudCannon.
 
-This template is aimed at helping developers build sites quickly, rather than providing editors with a fully built editable site.
+This template is aimed at helping developers build multilingual sites quickly or referencing how to migrate your existing SSG setup to use this workflow, rather than providing editors with a fully built editable site.
 If you are an editor looking for an already built template, have a look at [CloudCannon's templates page](https://cloudcannon.com/templates/).
 
 ## How it works
@@ -25,11 +25,17 @@ Editors can see an input for each translation in the CloudCannon UI, and can ent
 
 We then run a script in our postbuild to generate the [locale files that Rosey expects](https://rosey.app/docs/#creating-locale-files) to create our multilingual site from.
 
-Rosey then uses these locales files, to generate a multilingual site.
+Rosey then uses these locales files to generate a multilingual site.
 
 Add locale codes (eg. es, es-es) to the site's environment variables to see a new folder with all of the original site's data-rosey tag mentions, split by page.
 
-CloudCannon offers migration services if needed for larger SSG projects wanting a new multilingual workflow - get in touch with our [sales team](mailto:sales@cloudcannon.com) if you'd like to discuss this further.
+You can enter whatever locale code you like, and a version of your site will be built at that URL.
+
+On each translation page, a URL input exists that allows editors to define a translated URL for that page to build at.
+
+Remove the placeholder locales, and delete the corresponding folders in the `rosey/translations` directory, and the corresponding `.json` files in the `rosey/locales` directory.
+
+CloudCannon offers migration services if needed for larger SSG projects wanting help migrating to a new multilingual workflow - get in touch with our [sales team](mailto:sales@cloudcannon.com) if you'd like to discuss this further.
 
 ## Why is this useful?
 
@@ -43,30 +49,33 @@ Rosey redirects the site visitor to the locale that matches their browser langua
 
 - An editor adds a new left-right block to a page.
 - The component could have plenty of other things to set up other than content (eg. style choices) which the editor would have to manually replicate across all languages on the site.
-- They have to go to the version of that page in each language in CC and add the component with content unique to that language.
-- With Rosey the component is added in the English version, and for each locale we have defined in our environment variables, a translation entry will appear for the new left right content.
+- They have to go to the version of that page in each language in CloudCannon and add the component with the translated content for that language.
+- With Rosey, the component is added in the English version, and for each locale we have defined in our environment variables, a translation entry will appear for the new left right content.
 - Each page has all of its text copy laid out in a form, with inputs for translations, and links to see the original version highlighted in context on the page.
 
 ## Getting Started
 
 - To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/rosey-astro/), and click `Use this template` to make your own copy, copy both branches - `staging` and `main`.
 - Build the site on CloudCannon using your `staging` branch.
-- Add the environment variable `BASEURL=<your-staging-site-url.cloudvent.net>` to the staging site, replacing the placeholder with your staging site's cloudvent.net address.
+- Add the environment variable `BASEURL=adjective-noun.cloudvent.net` to the staging site, replacing the placeholder with your staging site's cloudvent.net address.
 - On CloudCannon, build another site - your production site - from your main branch.
 - On your production site, change the environment variable `TRANSLATE=true`. This should be the only environment variable you need on that site. You can delete the other initially populated ones that belong on staging.
 - On the staging site, add the locales you want to translate to to the `LOCALES` environment variable, with each locale separated by a comma eg. `es-es,ko-kr,no-no` or `es,kr,no`.
-- Add the environment variable `SYNC_PATHS=/rosey/` to the staging site.
-- Enter a translation, wait for the build to finish, and publish to your production site.
+- Save, let the build finish, and refresh the page
+- In translations you can see new folders for the locales you entered. Delete the placeholder ones if not used.
+- Enter a translation, save and wait for the build to finish, then publish to your production site.
 - Navigate to the adjective-noun.cloudvent.net address for your production site, and see Rosey redirect to your default browser language.
 - You should see your entered translation on the page you entered a translation for on your staging site.
 
 ## Adding Translations
 
-Add a tag of data-rosey="example-key" to an HTML element containing text, with a key for Rosey to use to keep track of that piece of text content.
+Add a tag of `data-rosey="example-key"` to an HTML element containing text, with a key for Rosey to use to keep track of that piece of text content.
 
-Once our build finishes, we can publish our translations on `staging` to our `main` branch, and Rosey will use them to generate a multilingual site for us.
+Tag values need to be unique for Rosey to keep track of what translations go where, so you will need to generate an id as demonstrated in this template. See below for more information.
 
-To create your own components that add inputs to our translation files, add a `data-rosey=""` tag, following the format provided in the placeholder components.
+Once we rebuild the site, we can see inputs for our translations on `staging`. Once we enter a translation, save and wait for the build to finish, we can publish to our `main` branch, and Rosey will our translations to generate a multilingual site for us.
+
+To create your own components that add inputs to our translation files, add a `data-rosey=""` tag, following a format similar to the one provided in the placeholder components.
 
 #### Static id vs dynamic id
 
@@ -78,27 +87,31 @@ This ensures that if there are any duplicate entries - they share a key, and if 
 
 At the same time, it means that no keys overlap that aren't meant to.
 
-The downside of this approach is that when the original text changes, it counts as a whole new key and we need to enter a new translation - that is the old one is not preserved.
-For this reason, for larger blocks of text the default approach of using the content itself as an id doesn't work so well, so we create a static rosey id - an id that doesn't change when the original text changes.
+The downside of this approach is that when the original text changes, it counts as a whole new key and we need to enter a new translation - that is, the old one is not preserved.
+For this reason, for larger blocks of text the default approach of using the content itself as an id doesn't work well, so we can instead create a static rosey id. An id independent of the content, meaning it doesn't change when the original text changes, and preserves old translations.
+We then run a diff over it to help editors see what was changed on changes to the original.
 
 The challenge for creating these static ids is ensuring they're unique.
-We can use the page slug or the index of the component the text is contained in, in combination with some input text to make sure there are no overlaps.
+We can use the page slug or the index of the component the text is contained in, in combination with some input text to make sure there are no overlaps in ids.
+
 In this starter, all static rosey ids are markdown inputs for simplicity, but the generate scripts could be changed to allow for non-markdown static rosey-ids if needed.
 
 ## Environment Variables
 
-The `SYNC_PATHS=/rosey/` environment variable tells CloudCannon to sync the generated data in the `/rosey/` directory from our postbuild back to the source repository.
+The `SYNC_PATHS=/rosey/` environment variable tells CloudCannon to sync the generated data in the `/rosey/` directory from our postbuild back to the source repository. We only want this to happen on staging.
 
 The `TRANSLATE=true` environment variable tells Rosey to generate a site from the data in the locales folder.
 Only set this to `true` on the production site.
-Setting this to `true` on our staging site will interfere with CloudCannon's UI, and mean we can't enter translations, or edit pages.
+We also don't run the generate scripts if `TRANSLATE=true`, as the locales we generate the multilingual site from are already in place, meaning we don't need to run it again. It has the added bonus of meaning we only need the one environment variable on our production site.
+Setting this to `true` on our staging site will interfere with CloudCannon's UI, and means we can't enter translations, or edit pages.
+This is why we need a staging to production publishing workflow.
 
 The `LOCALES=fr-fr,de-de,es-es` tells CloudCannon to generate locale files for language codes 'fr-fr', 'de-de', and 'es-es'.
 Set this value to whichever languages you would like to generate with Rosey.
 Language codes should follow the placeholder format provided, and are separated by a comma.
+Deleting the old placeholder rosey files is left to the developer setting up the site.
 
-The `BASEURL=https://adjective-noun.cloudvent.net/` is used to generate locations of the phrase you are translating.
-This would usually be set to our staging site's preview URL, although extra logic could be added to send you to the translated version (main/production site's preview URL) instead.
+The `BASEURL=https://adjective-noun.cloudvent.net/` is used to generate the links to the phrase you are translating, on the staging (untranslated) site.
 
 ## Local Development & Testing
 
@@ -109,19 +122,17 @@ npm i
 npm start
 ```
 
-To run Rosey locally:
+To run Rosey locally (handy for debugging):
 
 ```bash
-hugo
-npx rosey generate --source public
-node utils/generateTranslationFiles.js
-node utils/generateLocales.js
+npm run build
+./.cloudcannon/postbuild
 ```
 
-To generate a multilingual site locally, run this after running the above commands:
+If you get a permission error for running the postbuild locally, you can try changing the permissions for that file with:
 
 ```bash
-npx rosey build --source public --dest public_translated
+chmod u+x ./.cloudcannon/postbuild
 ```
 
 ### Commands
@@ -135,12 +146,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Local Development
-
-1. Clone the repository
-2. Run `npm install`
-3. Run `npm start`
 
 ## Other Features
 
@@ -164,14 +169,36 @@ To add a new component:
 interface Props {
   background_color: string;
   text_color: string;
+  text: string;
 }
+
+const generateRoseyID = (text: string) => {
+  const lowerCaseText = text.toLowerCase();
+  const formattedText = lowerCaseText.replaceAll(
+    /(?:__[*#])|\[(.*?)\]\(.*?\)/gm,
+    /$1/
+  );
+  return slugify(formattedText, { remove: /[.*,:\/]/g });
+};
+const generateStaticRoseyId = (text: string) => {
+  if (!Astro.url.pathname) {
+    return text;
+  }
+  const pageName =
+    Astro.url.pathname === '/'
+      ? 'home'
+      : Astro.url.pathname?.replace('/index.html', '').replaceAll('/', '');
+
+  const keyNumber = Astro.props.key || '1';
+  return `${text}-${pageName}-${keyNumber}`;
+};
 
 const block = Astro.props;
 ---
 
 <section style={`background-color: ${block.background_color}; color: ${block.text_color};`}>
   <div class="container">
-    Replace me
+    <p data-rosey={generateRoseyID(block.text)}>{block.text}</p>
   </div>
 </section>
 
@@ -203,6 +230,7 @@ spec:
 blueprint:
   background_color: '#ffffff'
   text_color: '#000000'
+  text: Hello World
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -222,6 +250,8 @@ The blog pages in this template use MDX to allow for snippets. Snippets allow yo
 A common layout, with changing markdown content is favored for these kinds of text heavy pages, rather than using Bookshop components - which are defined and managed in your markdown pages frontmatter.
 
 These text heavy pages will be edited in CloudCannon's content editor, rather than the visual editor used for building pages with Bookshop components.
+
+For the main page content, rosey ids are statically generated via the page url, so that translations are preserved between changes to the original content, and a diff is shown to help editors update their translations.
 
 ### Image Optimization
 
@@ -349,6 +379,7 @@ Demonstrates using data files to:
 - Populate select inputs in CloudCannon. This is powerful for allowing editors to make styling changes to the page, within a set design system populated by an editable data file.
 - Set sitewide values such as the overall site SEO settings.
 - Control header and footer data to allow editors control over navigation.
+- Enter translations for text content
 
 ### Schemas
 
@@ -373,7 +404,7 @@ Shows how to set global CSS variables in Astro, to set commonly used values like
 
 Extra work could be done to write a `node fs` script to write said values from a data file to the appropriate places in the code, which would then allow editors to control sitewide styles like page max-width and padding.
 
-### Coming Soon / Stretch Goals
+### Stretch Goals
 
 - Translations in the visual editor with Bookshop
   - Have switch input: showTranslationsInVisualEditor
