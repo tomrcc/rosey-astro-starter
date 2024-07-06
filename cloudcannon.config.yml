@@ -103,6 +103,16 @@ collections_config:
         type: color
       icons:
         comment: Add an icon from the list of [Font Awesome icons](https://fontawesome.com/search?o=r&m=free). Then add it to the ```src/components/utility/icon.jsx``` file, following the existing pattern.
+      code:
+        comment: Enter the URL language code
+      flag:
+        type: image
+      locales:
+        type: array
+      locales[*]:
+        options:
+          preview:
+            icon: translate
 
 collection_groups:
   - heading: Pages
