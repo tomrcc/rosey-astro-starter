@@ -13,7 +13,6 @@ _inputs:
             - about
             - blog
             - rss-feed
-            - test-page
         - heading: Already translated (es)
           comment: Text already translated on
             [blog/](https://glamorous-sanctuary.cloudvent.net/blog/)
@@ -39,15 +38,6 @@ _inputs:
     options: {}
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=RSS%20Feed)"
-  test-page:
-    label: Test Page
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/#:~:text=Test%20Page\
-      )"
 about: ""
 blog: ""
 rss-feed: ""
-test-page: ""

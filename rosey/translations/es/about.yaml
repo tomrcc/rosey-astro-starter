@@ -14,7 +14,6 @@ _inputs:
             - blog
             - rss-feed
             - static:hero-subheading-about-1
-            - test-page
         - heading: Already translated (es)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
@@ -59,16 +58,7 @@ _inputs:
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
       ample%20about%20page)"
-  test-page:
-    label: Test Page
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=Test%20Pag\
-      e)"
 about: ""
 blog: ""
 rss-feed: ""
 static:hero-subheading-about-1: ""
-test-page: ""

@@ -11,10 +11,6 @@
 		"original": " RSS Feed ",
 		"value": " RSS Feed "
 	},
-	"test-page": {
-		"original": " Test Page ",
-		"value": " Test Page "
-	},
 	"static:hero-subheading-about-1": {
 		"original": "<h3>An example <strong>about</strong> page.</h3>\n",
 		"value": "<h3>An example <strong>about</strong> page.</h3>\n"

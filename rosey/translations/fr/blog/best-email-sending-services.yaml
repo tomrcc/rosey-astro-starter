@@ -16,7 +16,6 @@ _inputs:
             - blog
             - rss-feed
             - static:/blog/best-email-sending-services/
-            - test-page
         - heading: Already translated (fr)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
@@ -144,16 +143,7 @@ _inputs:
         sending out emails related to your business, be sure to follow-up with
         customers or clients and make sure that they are getting their emails in
         a timely manner.
-  test-page:
-    label: Test Page
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
-      ervices/#:~:text=Test%20Page)"
 about: ""
 blog: ""
 rss-feed: ""
 static:/blog/best-email-sending-services/: ""
-test-page: ""
