@@ -2,14 +2,15 @@ urlTranslation: blog/a-test-page/index.html
 _inputs:
   $:
     type: object
-    comment: "[See
-      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-\
-      page/)"
+    comment: >-
+      [See
+      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de)
-          comment: Text to translate on
+          comment: >-
+            Text to translate on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - about
@@ -17,7 +18,8 @@ _inputs:
             - rss-feed
             - static:/blog/a-test-page/
         - heading: Already translated (de)
-          comment: Text already translated on
+          comment: >-
+            Text already translated on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs: []
   about:
@@ -25,25 +27,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =About)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=About)
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =Blog)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=Blog)
   rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =RSS%20Feed)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=RSS%20Feed)
   static:/blog/a-test-page/:
     label: All you have to learn _here_ is how to hav...
     hidden: false
@@ -158,7 +160,68 @@ _inputs:
         clouds in our world. Let your heart be your guide. We have a fantastic
         little sky! We’re trying to teach you a technique here and how to use
         it.
-about: ""
-blog: ""
-rss-feed: ""
-static:/blog/a-test-page/: ""
+about: ''
+blog: ''
+rss-feed: ''
+static:/blog/a-test-page/: >-
+  **Hier** müssen Sie nur lernen, wie man *Spaß* hat. Stellen Sie sich einfach
+  vor, Sie wären ein Flüstern, das über einen Berg schwebt. Als
+  <sup>Schöpfer</sup> musst du allmächtige <sub>Entscheidungen</sub> treffen. Da
+  sind wir.
+
+
+  ---
+
+
+  Wir werfen hier ein paar alte graue Wolken rein, schleichen einfach herum und
+  haben Spaß. Nur acht Farben, die Sie brauchen. Das ist der lustige Teil.
+  Setzen Sie es ein und lassen Sie es in Ruhe. Weg von den kleinen
+  Weihnachtsbaum-Sachen, die wir in der Schule gebastelt haben.
+
+
+  ```yaml
+
+  code:
+    an_object_key:
+      options: {}
+      another_thing:
+        - an array item
+        - another array item
+  ```
+
+
+  Lass dir Zeit. Geschwindigkeit kommt später. Sie können Flüsse biegen. Aber
+  wenn ich nach Hause komme, ist das Einzige, worüber ich Macht habe, der Müll.
+  Lasst uns heute wild werden. Wenn Sie nicht glauben, dass jeder Tag ein guter
+  Tag ist, versuchen Sie, ein paar zu verpassen. Du wirst sehen. Spielen Sie mit
+  den Winkeln. Wir müssen uns nicht verpflichten. Wir spielen hier nur.
+
+
+  Ein weiterer Codeblock:
+
+
+  ```html
+
+  <div>
+    <h1>This is a test for HTML code blocks</h1>
+    <p>A paragraph</p>
+  </div>
+
+  ```
+
+
+  Mischen Sie Ihre Farbe marmoriert, nicht tot. Bäume verdecken eine Vielzahl
+  von Sünden. Die einzige Voraussetzung ist, dass es glücklich macht. Wenn es
+  dich glücklich macht, dann ist es gut. Wenn Sie es auf Ihre Weise tun, können
+  Sie überall hingehen, wo Sie möchten. Wir werden eine super Zeit haben.
+  Spielen Sie nicht den ganzen Tag damit herum.
+
+
+  ![](/images/blog/featured-image-2.jpg)
+
+
+  Wir haben alle schon einmal etwas Schlamm angerührt. Es ist wunderschön – und
+  wir haben noch nicht einmal etwas daran gemacht. Lasst uns ein paar glückliche
+  kleine Wolken in unsere Welt bringen. Lassen Sie sich von Ihrem Herzen leiten.
+  Wir haben einen fantastischen kleinen Himmel! Wir versuchen Ihnen hier eine
+  Technik und deren Anwendung beizubringen.
