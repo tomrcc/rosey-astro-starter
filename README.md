@@ -407,9 +407,9 @@ Extra work could be done to write a `node fs` script to write said values from a
 ### Stretch Goals
 
 - Test snippets in the translation workflow
+- Handle right aligned languages like jp
 - Integrate with smartling/deepl/chatgpt or something similar
 - Detect whether a duplicate entry with a translation exists already when creating a new entry
-- Handle right aligned languages like jp
 - Translations in the visual editor with Bookshop
   - Have switch input: showTranslationsInVisualEditor
   - A select is hidden/shown depending on the value of showTranslationsInVisualEditor with the values of the env var LOCALES

@@ -3,7 +3,7 @@ paths:
   static: 'public'
   uploads: public/images
 _editables:
-  content:
+  content: &markdown_options
     bold: true
     format: p h1 h2 h3 h4
     italic: true
@@ -12,8 +12,15 @@ _editables:
     redo: true
     removeformat: true
     copyformatting: true
-    numberedlist: true
     bulletedlist: true
+    numberedlist: true
+    blockquote: true
+    superscript: true
+    subscript: true
+    code: true
+    horizontalrule: true
+    image: true
+    snippet: true
 collections_config:
   pages:
     path: src/content/pages
@@ -126,17 +133,7 @@ collection_groups:
 _inputs:
   markdown_content:
     type: markdown
-    options:
-      bold: true
-      format: p h1 h2 h3 h4
-      italic: true
-      link: true
-      undo: true
-      redo: true
-      removeformat: true
-      copyformatting: true
-      bulletedlist: true
-      numberedlist: true
+    options: *markdown_options
   image_path:
     type: image
     comment: The path to the source file of the image to be optimized.
