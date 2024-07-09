@@ -62,6 +62,13 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
+      blockquote: true
+      superscript: true
+      subscript: true
+      code: true
+      horizontalrule: true
+      image: true
+      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
