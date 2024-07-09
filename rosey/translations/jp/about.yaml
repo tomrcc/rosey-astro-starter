@@ -10,14 +10,14 @@ _inputs:
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
           inputs:
-            - about
-            - blog
-            - rss-feed
             - static:hero-subheading-about-1
         - heading: Already translated (jp)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs: []
+          inputs:
+            - about
+            - blog
+            - rss-feed
   about:
     label: About
     hidden: false
@@ -55,6 +55,13 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
+      blockquote: true
+      superscript: true
+      subscript: true
+      code: true
+      horizontalrule: true
+      image: true
+      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
       ample%20about%20page)"

@@ -11,8 +11,7 @@ _inputs:
         - heading: Still to translate (de)
           comment: Text to translate on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
-          inputs:
-            - static:/blog/5-things-to-improve-you-email-templates/
+          inputs: []
         - heading: Already translated (de)
           comment: Text already translated on
             [blog/5-things-to-improve-you-email-templates/](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-you-email-templates/)
@@ -20,6 +19,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - static:/blog/5-things-to-improve-you-email-templates/
   about:
     label: About
     hidden: false
@@ -62,6 +62,13 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
+      blockquote: true
+      superscript: true
+      subscript: true
+      code: true
+      horizontalrule: true
+      image: true
+      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/5-things-to-improve-\
       you-email-templates/#:~:text=Use%20an,a%20timely%20manner)"
@@ -134,4 +141,69 @@ _inputs:
 about: Um
 blog: Blog
 rss-feed: RSS-Feed
-static:/blog/5-things-to-improve-you-email-templates/: ""
+static:/blog/5-things-to-improve-you-email-templates/: >-
+  ## Benutze ein ESP
+
+
+  Verwenden Sie einen E-Mail-Dienstanbieter (ESP), der von
+  E-Mail-Zertifizierungsdiensten Dritter getestet wurde. Dadurch wird
+  sichergestellt, dass Ihre E-Mails von den großen ISPs akzeptiert werden. Ein
+  ESP, das mehrere IP-Adressen bietet, oder eines, das Ihnen bei Bedarf die
+  Verwendung Ihrer eigenen IP-Adresse ermöglicht. ISPs blockieren häufig
+  Nachrichten von unbekannten Absendern. Eine eigene IP-Adresse hilft also,
+  dieses Problem zu umgehen.
+
+
+  ## Double-Opt-In
+
+
+  Bevor Sie eine Kampagne mit einem E-Mail-Marketing-Tool versenden, stellen Sie
+  sicher, dass Sie die Erlaubnis Ihrer Abonnenten haben, ihnen E-Mails zu
+  senden. Sie können dies tun, indem Sie sie bei der Anmeldung fragen oder ein
+  Kontrollkästchen in das Abonnementformular einfügen, in dem Sie gefragt
+  werden, ob sie in Zukunft Marketingmitteilungen von Ihnen erhalten möchten.
+
+
+  Nutzen Sie Double-Opt-In beim Versenden von Marketing-E-Mails. Das bedeutet,
+  dass der Empfänger dem Erhalt von E-Mails von Ihnen zuvor zugestimmt haben
+  muss, bevor er Inhalte in seinem Posteingang oder auf seinen Mobilgeräten
+  sehen kann. Dies trägt dazu bei, zu verhindern, dass sich Personen für
+  Newsletter anmelden, die sie nicht möchten, und kann zum Schutz vor
+  Spam-Beschwerden von Benutzern beitragen, die nicht wussten, dass sie sich
+  überhaupt für etwas angemeldet haben.
+
+
+  ## Halten Sie Ihre Inhalte kurz und bündig
+
+
+  Ihre Kunden möchten keine langen E-Mails voller Text lesen, also halten Sie
+  Ihre Nachrichten kurz und bündig. Wenn Sie mehrere Produkte bewerben möchten,
+  teilen Sie jedes Produktangebot in eine eigene E-Mail auf, anstatt eine
+  seitenlange Nachricht mit mehreren darin eingebetteten Links zu senden. Auf
+  diese Weise können Kunden leicht finden, was sie suchen, ohne die ganze Seite
+  scrollen zu müssen.
+
+
+  Gehen Sie mit Bildern sparsam um (wenn überhaupt). Sie könnten versucht sein,
+  in jede E-Mail, die Sie versenden, ein Bild einzufügen, aber bedenken Sie,
+  dass Bilder bei der Posteingangszustellung Probleme verursachen können –
+  insbesondere, wenn sie falsch verwendet oder in Massen-E-Mails von Unternehmen
+  enthalten sind, bei denen der Empfänger dies tut Ich weiß nicht, wer sie
+  geschickt hat. Wenn du gehst
+
+
+  ## Verfolgung
+
+
+  Wählen Sie einen zuverlässigen ESP, der es Ihnen ermöglicht, Öffnungen und
+  Klicks zu verfolgen, damit Sie herausfinden können, welche Arten von
+  Nachrichten für Ihr Publikum am besten geeignet sind.
+
+
+  ## Senden Sie Ihre beste E-Mail
+
+
+  Denken Sie also daran und denken Sie immer daran, dass Sie beim Versenden von
+  E-Mails, die sich auf Ihr Unternehmen beziehen, darauf achten, mit Kunden oder
+  Klienten in Kontakt zu treten und sicherzustellen, dass sie ihre E-Mails
+  rechtzeitig erhalten.

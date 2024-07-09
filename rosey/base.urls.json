@@ -19,6 +19,12 @@
       "pages": {},
       "total": 0
     },
+    "blog/a-test-page/index.html": {
+      "original": "blog/a-test-page/index.html",
+      "value": null,
+      "pages": {},
+      "total": 0
+    },
     "blog/best-email-sending-services/index.html": {
       "original": "blog/best-email-sending-services/index.html",
       "value": null,
@@ -39,6 +45,12 @@
     },
     "index.html": {
       "original": "index.html",
+      "value": null,
+      "pages": {},
+      "total": 0
+    },
+    "tags/Testing/index.html": {
+      "original": "tags/Testing/index.html",
       "value": null,
       "pages": {},
       "total": 0

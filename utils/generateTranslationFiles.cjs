@@ -153,6 +153,13 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
         copyformatting: true,
         bulletedlist: true,
         numberedlist: true,
+        blockquote: true,
+        superscript: true,
+        subscript: true,
+        code: true,
+        horizontalrule: true,
+        image: true,
+        snippet: true,
       }
     : {};
 

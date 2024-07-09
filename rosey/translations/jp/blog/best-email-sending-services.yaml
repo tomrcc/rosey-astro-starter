@@ -12,14 +12,14 @@ _inputs:
           comment: Text to translate on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
           inputs:
-            - about
-            - blog
-            - rss-feed
             - static:/blog/best-email-sending-services/
         - heading: Already translated (jp)
           comment: Text already translated on
             [blog/best-email-sending-services/](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-services/)
-          inputs: []
+          inputs:
+            - about
+            - blog
+            - rss-feed
   about:
     label: About
     hidden: false
@@ -59,6 +59,13 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
+      blockquote: true
+      superscript: true
+      subscript: true
+      code: true
+      horizontalrule: true
+      image: true
+      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/best-email-sending-s\
       ervices/#:~:text=When%20you%20send,a%20timely%20manner)"

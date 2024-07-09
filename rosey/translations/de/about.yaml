@@ -9,8 +9,7 @@ _inputs:
         - heading: Still to translate (de)
           comment: Text to translate on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
-          inputs:
-            - static:hero-subheading-about-1
+          inputs: []
         - heading: Already translated (de)
           comment: Text already translated on
             [about/](https://glamorous-sanctuary.cloudvent.net/about/)
@@ -18,6 +17,7 @@ _inputs:
             - about
             - blog
             - rss-feed
+            - static:hero-subheading-about-1
   about:
     label: About
     hidden: false
@@ -55,10 +55,17 @@ _inputs:
       copyformatting: true
       bulletedlist: true
       numberedlist: true
+      blockquote: true
+      superscript: true
+      subscript: true
+      code: true
+      horizontalrule: true
+      image: true
+      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
       ample%20about%20page)"
 about: Um
 blog: Blog
 rss-feed: RSS-Feed
-static:hero-subheading-about-1: ""
+static:hero-subheading-about-1: "## Ein **Beispiel** zur Seite."
