@@ -2,21 +2,23 @@ urlTranslation: blog/a-test-page/index.html
 _inputs:
   $:
     type: object
-    comment: "[See
-      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-\
-      page/)"
+    comment: >-
+      [See
+      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de)
-          comment: Text to translate on
+          comment: >-
+            Text to translate on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - about
             - blog
             - rss-feed
         - heading: Already translated (de)
-          comment: Text already translated on
+          comment: >-
+            Text already translated on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - static:/blog/a-test-page/
@@ -25,25 +27,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =About)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=About)
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =Blog)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=Blog)
   rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =RSS%20Feed)"
+    comment: >-
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=RSS%20Feed)
   static:/blog/a-test-page/:
     label: All you have to learn _here_ is how to hav...
     hidden: false
@@ -117,7 +119,7 @@ _inputs:
         Another code block:
 
 
-        ```
+        ```html
 
         <div>
           <h1>This is a test for HTML code blocks</h1>
@@ -145,9 +147,9 @@ _inputs:
 
 
         Testing an alert message snippet in the translations workflow
-about: ""
-blog: ""
-rss-feed: ""
+about: ''
+blog: ''
+rss-feed: ''
 static:/blog/a-test-page/: >-
   **Hier** müssen Sie nur lernen, wie man *Spaß* hat. Stellen Sie sich einfach
   vor, Sie wären ein Flüstern, das über einen Berg schwebt. Als
@@ -208,5 +210,10 @@ static:/blog/a-test-page/: >-
   Wir haben alle schon einmal etwas Schlamm angerührt. Es ist wunderschön – und
   wir haben noch nicht einmal etwas daran gemacht. Lasst uns ein paar glückliche
   kleine Wolken in unsere Welt bringen. Lassen Sie sich von Ihrem Herzen leiten.
-  Wir haben einen fantastischen kleinen Himmel! Wir versuchen Ihnen hier eine
-  Technik und deren Anwendung beizubringen.
+  Wir haben einen fantastischen kleinen Himmel! <SnippetsTint
+  tint_color="#F7B2AD">Some tint text</SnippetsTint>Some tint text. Wir
+  versuchen Ihnen hier eine Technik und deren Anwendung beizubringen.
+
+
+  <SnippetsAlert background_color="#F2E2D2" alert_message="Testing an alert
+  message snippet in the translations workflow" color="#034AD8" icon="Egg"/>
