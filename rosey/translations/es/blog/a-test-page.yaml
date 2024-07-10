@@ -66,16 +66,9 @@ _inputs:
       horizontalrule: true
       image: true
       snippet: true
-    comment: >-
-      Added: Testing some tinted textWe Testing an alert message snippet in the
-      translations workflow
-
-
-      Removed: We
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=All%20you%20have,the%20translations%20workflow)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =All%20you%20have,the%20translations%20workflow)"
     context:
       open: false
       title: Untranslated Text
