@@ -68,7 +68,7 @@ _inputs:
       snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =All%20you%20have,to%20use%20it)"
+      =All%20you%20have,the%20translations%20workflow)"
     context:
       open: false
       title: Untranslated Text
@@ -132,9 +132,12 @@ _inputs:
 
         We have all at one time or another mixed some mud. It’s beautiful - and
         we haven’t even done anything to it yet. Let’s make some happy little
-        clouds in our world. Let your heart be your guide. We have a fantastic
-        little sky! We’re trying to teach you a technique here and how to use
-        it.
+        clouds in our world. Let your heart be your guide. Testing some tinted
+        textWe have a fantastic little sky! We’re trying to teach you a
+        technique here and how to use it.
+
+
+        Testing an alert message snippet in the translations workflow
 about: ""
 blog: ""
 rss-feed: ""
@@ -158,7 +161,7 @@ static:/blog/a-test-page/: >-
 
   code:
     an_object_key:
-      options: {}
+      options:
       another_thing:
         - an array item
         - another array item
@@ -198,5 +201,10 @@ static:/blog/a-test-page/: >-
   Wir haben alle schon einmal etwas Schlamm angerührt. Es ist wunderschön – und
   wir haben noch nicht einmal etwas daran gemacht. Lasst uns ein paar glückliche
   kleine Wolken in unsere Welt bringen. Lassen Sie sich von Ihrem Herzen leiten.
-  Wir haben einen fantastischen kleinen Himmel! Wir versuchen Ihnen hier eine
-  Technik und deren Anwendung beizubringen.
+  Wir haben einen fantastischen kleinen Himmel! <SnippetsTint
+  tint_color="#F7B2AD">Some tint text</SnippetsTint>Some tint text. Wir
+  versuchen Ihnen hier eine Technik und deren Anwendung beizubringen.
+
+
+  <SnippetsAlert background_color="#F2E2D2" alert_message="Testing an alert
+  message snippet in the translations workflow" color="#034AD8" icon="Egg"/>

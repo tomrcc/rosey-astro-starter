@@ -68,7 +68,7 @@ _inputs:
       snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =All%20you%20have,to%20use%20it)"
+      =All%20you%20have,the%20translations%20workflow)"
     context:
       open: false
       title: Untranslated Text
@@ -132,9 +132,12 @@ _inputs:
 
         We have all at one time or another mixed some mud. It’s beautiful - and
         we haven’t even done anything to it yet. Let’s make some happy little
-        clouds in our world. Let your heart be your guide. We have a fantastic
-        little sky! We’re trying to teach you a technique here and how to use
-        it.
+        clouds in our world. Let your heart be your guide. Testing some tinted
+        textWe have a fantastic little sky! We’re trying to teach you a
+        technique here and how to use it.
+
+
+        Testing an alert message snippet in the translations workflow
 about: ""
 blog: ""
 rss-feed: ""
