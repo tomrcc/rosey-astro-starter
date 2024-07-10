@@ -180,10 +180,10 @@ static:/blog/a-test-page/: >-
 
   ```html
 
-  <div>
-    <h1>This is a test for HTML code blocks</h1>
-    <p>A paragraph</p>
-  </div>
+  &lt;div&gt;
+    &lt;h1&gt;This is a test for HTML code blocks&lt;/h1&gt;
+    &lt;p&gt;A paragraph&lt;/p&gt;
+  &lt;/div&gt;
 
   ```
 
