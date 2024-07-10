@@ -7,21 +7,17 @@
 		"original": "about/index.html",
 		"value": "about/index.html"
 	},
-	"index.html": {
-		"original": "index.html",
-		"value": "index.html"
-	},
 	"blog/index.html": {
 		"original": "blog/index.html",
 		"value": "blog/index.html"
 	},
+	"index.html": {
+		"original": "index.html",
+		"value": "index.html"
+	},
 	"tags/Testing/index.html": {
 		"original": "tags/Testing/index.html",
 		"value": "tags/Testing/index.html"
-	},
-	"tags/email/index.html": {
-		"original": "tags/email/index.html",
-		"value": "tags/email/index.html"
 	},
 	"tags/marketing/index.html": {
 		"original": "tags/marketing/index.html",
@@ -30,6 +26,10 @@
 	"tags/technology/index.html": {
 		"original": "tags/technology/index.html",
 		"value": "tags/technology/index.html"
+	},
+	"tags/email/index.html": {
+		"original": "tags/email/index.html",
+		"value": "tags/email/index.html"
 	},
 	"blog/5-things-to-improve-you-email-templates/index.html": {
 		"original": "blog/5-things-to-improve-you-email-templates/index.html",

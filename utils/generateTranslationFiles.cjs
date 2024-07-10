@@ -23,7 +23,8 @@ const inputURLFilePath = './rosey/base.urls.json';
 const translationFilesDirPath = './rosey/translations';
 const localesDirPath = './rosey/locales';
 
-const baseURL = process.env.BASEURL || 'http://localhost:4321/';
+const baseURL =
+  process.env.BASEURL || 'https://glamorous-sanctuary.cloudvent.net/';
 const locales = process.env.LOCALES?.toLowerCase().split(',') || ['nl', 'es'];
 
 function getPageString(page) {

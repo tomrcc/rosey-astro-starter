@@ -8,18 +8,18 @@ _inputs:
     options:
       place_groups_below: false
       groups:
-        - heading: Still to translate (de)
+        - heading: Still to translate (nl)
           comment: Text to translate on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - about
             - blog
             - rss-feed
-        - heading: Already translated (de)
+            - static:/blog/a-test-page/
+        - heading: Already translated (nl)
           comment: Text already translated on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
-          inputs:
-            - static:/blog/a-test-page/
+          inputs: []
   about:
     label: About
     hidden: false
@@ -141,71 +141,4 @@ _inputs:
 about: ""
 blog: ""
 rss-feed: ""
-static:/blog/a-test-page/: >-
-  **Hier** müssen Sie nur lernen, wie man *Spaß* hat. Stellen Sie sich einfach
-  vor, Sie wären ein Flüstern, das über einen Berg schwebt. Als
-  <sup>Schöpfer</sup> musst du allmächtige <sub>Entscheidungen</sub> treffen. Da
-  sind wir.
-
-
-  ---
-
-
-  Wir werfen hier ein paar alte graue Wolken rein, schleichen einfach herum und
-  haben Spaß. Nur acht Farben, die Sie brauchen. Das ist der lustige Teil.
-  Setzen Sie es ein und lassen Sie es in Ruhe. Weg von den kleinen
-  Weihnachtsbaum-Sachen, die wir in der Schule gebastelt haben.
-
-
-  ```yaml
-
-  code:
-    an_object_key:
-      options:
-      another_thing:
-        - an array item
-        - another array item
-  ```
-
-
-  Lass dir Zeit. Geschwindigkeit kommt später. Sie können Flüsse biegen. Aber
-  wenn ich nach Hause komme, ist das Einzige, worüber ich Macht habe, der Müll.
-  Lasst uns heute wild werden. Wenn Sie nicht glauben, dass jeder Tag ein guter
-  Tag ist, versuchen Sie, ein paar zu verpassen. Du wirst sehen. Spielen Sie mit
-  den Winkeln. Wir müssen uns nicht verpflichten. Wir spielen hier nur.
-
-
-  Ein weiterer Codeblock:
-
-
-  ```html
-
-  &lt;div&gt;
-    &lt;h1&gt;This is a test for HTML code blocks&lt;/h1&gt;
-    &lt;p&gt;A paragraph&lt;/p&gt;
-  &lt;/div&gt;
-
-  ```
-
-
-  Mischen Sie Ihre Farbe marmoriert, nicht tot. Bäume verdecken eine Vielzahl
-  von Sünden. Die einzige Voraussetzung ist, dass es glücklich macht. Wenn es
-  dich glücklich macht, dann ist es gut. Wenn Sie es auf Ihre Weise tun, können
-  Sie überall hingehen, wo Sie möchten. Wir werden eine super Zeit haben.
-  Spielen Sie nicht den ganzen Tag damit herum.
-
-
-  ![](/images/blog/featured-image-2.jpg)
-
-
-  Wir haben alle schon einmal etwas Schlamm angerührt. Es ist wunderschön – und
-  wir haben noch nicht einmal etwas daran gemacht. Lasst uns ein paar glückliche
-  kleine Wolken in unsere Welt bringen. Lassen Sie sich von Ihrem Herzen leiten.
-  Wir haben einen fantastischen kleinen Himmel! <SnippetsTint
-  tint_color="#F7B2AD">Some tint text</SnippetsTint>Some tint text. Wir
-  versuchen Ihnen hier eine Technik und deren Anwendung beizubringen.
-
-
-  <SnippetsAlert background_color="#F2E2D2" alert_message="Testing an alert
-  message snippet in the translations workflow changed!" color="#034AD8"
-  icon="Egg"/>
+static:/blog/a-test-page/: ""
