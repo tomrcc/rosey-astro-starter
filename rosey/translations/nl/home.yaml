@@ -92,16 +92,9 @@ _inputs:
       horizontalrule: true
       image: true
       snippet: true
-    comment: >-
-      Added: A starting point for developers looking to build a multilingual
-      website with Astro and Rosey, using Bookshop components in CloudCannon.
-      CloudCannon provides a UI for non-technical editors to enter translations.
-      Create your own copy, and start creating your own components to use in the
-      CloudCannon CMS.
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20point,the%20CloudCannon%20CMS)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
+      oint,the%20CloudCannon%20CMS)"
     context:
       open: false
       title: Untranslated Text
@@ -133,16 +126,9 @@ _inputs:
       horizontalrule: true
       image: true
       snippet: true
-    comment: >-
-      Added: To help save you time, some features are set up in this template,
-      like: Bookshop Blog with pagination, tags and snippets Image optimization
-      SEO Controls Responsive header and footer Font Awesome Icons Schemas for
-      adding new pages Editable color pallete Markdown styles CloudCannon
-      configuration CSS variables
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
     context:
       open: false
       title: Untranslated Text

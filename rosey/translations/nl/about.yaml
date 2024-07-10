@@ -62,12 +62,9 @@ _inputs:
       horizontalrule: true
       image: true
       snippet: true
-    comment: >-
-      Added: An example about page.
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20example%20about%20page)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
+      ample%20about%20page)"
 about: ""
 blog: ""
 rss-feed: ""
