@@ -138,9 +138,9 @@ _inputs:
 
 
         Testing an alert message snippet in the translations workflow
-about: ''
-blog: ''
-rss-feed: ''
+about: ""
+blog: ""
+rss-feed: ""
 static:/blog/a-test-page/: >-
   **Hier** müssen Sie nur lernen, wie man *Spaß* hat. Stellen Sie sich einfach
   vor, Sie wären ein Flüstern, das über einen Berg schwebt. Als
@@ -207,4 +207,5 @@ static:/blog/a-test-page/: >-
 
 
   <SnippetsAlert background_color="#F2E2D2" alert_message="Testing an alert
-  message snippet in the translations workflow changed!" color="#034AD8" icon="Egg"/>
+  message snippet in the translations workflow changed!" color="#034AD8"
+  icon="Egg"/>
