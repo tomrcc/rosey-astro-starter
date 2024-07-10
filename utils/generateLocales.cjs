@@ -150,6 +150,7 @@ async function processTranslation(
 
 // The generateLocales function runs on each separate locale
 async function generateLocale(locale) {
+  const mdxParser = await import('@mdx-js/mdx');
   const baseFile = await fs.promises.readFile('./rosey/base.json');
   const baseFileData = JSON.parse(baseFile.toString('utf-8')).keys;
   const baseURLsFile = await fs.promises.readFile('./rosey/base.urls.json');
@@ -217,7 +218,7 @@ async function generateLocale(locale) {
             original: data[key].original,
             value:
               isKeyStatic && data[key].isNewTranslation
-                ? md.render(data[key].value)
+                ? mdxParser.evaluateSync(data[key].value).default()
                 : data[key].value,
           };
         }
@@ -228,6 +229,8 @@ async function generateLocale(locale) {
       });
     })
   );
+
+  console.log(localeData);
 
   await Promise.all(
     Object.keys(localeDataEntries).map(async (filename) => {
