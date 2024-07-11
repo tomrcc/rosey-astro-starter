@@ -54,6 +54,10 @@
     "color": "#ffffff",
     "links": [
       {
+        "link": "/about/",
+        "text": "About"
+      },
+      {
         "link": "/blog/",
         "text": "Blog"
       },

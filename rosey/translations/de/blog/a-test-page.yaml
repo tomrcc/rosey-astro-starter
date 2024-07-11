@@ -65,15 +65,9 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-    comment: >-
-      Added: We
-
-
-      Removed: Testing some tinted textWe
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=All%20you%20have,to%20use%20it)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =All%20you%20have,to%20use%20it)"
     context:
       open: false
       title: Untranslated Text
@@ -203,11 +197,8 @@ static:/blog/a-test-page/: >-
   Wir haben alle schon einmal etwas Schlamm angerührt. Es ist wunderschön – und
   wir haben noch nicht einmal etwas daran gemacht. Lasst uns ein paar glückliche
   kleine Wolken in unsere Welt bringen. Lassen Sie sich von Ihrem Herzen leiten.
-  Wir haben einen fantastischen kleinen Himmel! <SnippetsTint
-  tint_color="#F7B2AD">Some tint text</SnippetsTint>Some tint text. Wir
-  versuchen Ihnen hier eine Technik und deren Anwendung beizubringen.
+  Wir haben einen fantastischen kleinen Himmel!
 
 
-  <SnippetsAlert background_color="#F2E2D2" alert_message="Testing an alert
-  message snippet in the translations workflow changed!" color="#034AD8"
-  icon="Egg"/>
+  Some tint text. Wir versuchen Ihnen hier eine Technik und deren Anwendung
+  beizubringen.
