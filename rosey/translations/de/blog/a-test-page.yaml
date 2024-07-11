@@ -2,23 +2,21 @@ urlTranslation: blog/a-test-page/index.html
 _inputs:
   $:
     type: object
-    comment: >-
-      [See
-      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
+    comment: "[See
+      blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-\
+      page/)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (de)
-          comment: >-
-            Text to translate on
+          comment: Text to translate on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - about
             - blog
             - rss-feed
         - heading: Already translated (de)
-          comment: >-
-            Text already translated on
+          comment: Text already translated on
             [blog/a-test-page/](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/)
           inputs:
             - static:/blog/a-test-page/
@@ -27,25 +25,25 @@ _inputs:
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=About)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =About)"
   blog:
     label: Blog
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=Blog)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =Blog)"
   rss-feed:
     label: RSS Feed
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=RSS%20Feed)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =RSS%20Feed)"
   static:/blog/a-test-page/:
     label: All you have to learn _here_ is how to hav...
     hidden: false
@@ -67,15 +65,9 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-    comment: >-
-      Added: We
-
-
-      Removed: Testing some tinted textWe
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=All%20you%20have,to%20use%20it)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =All%20you%20have,to%20use%20it)"
     context:
       open: false
       title: Untranslated Text
@@ -142,9 +134,9 @@ _inputs:
 
         We have a fantastic little sky! We’re trying to teach you a technique
         here and how to use it.
-about: ''
-blog: ''
-rss-feed: ''
+about: ""
+blog: ""
+rss-feed: ""
 static:/blog/a-test-page/: >-
   **Hier** müssen Sie nur lernen, wie man *Spaß* hat. Stellen Sie sich einfach
   vor, Sie wären ein Flüstern, das über einen Berg schwebt. Als
@@ -208,4 +200,5 @@ static:/blog/a-test-page/: >-
   Wir haben einen fantastischen kleinen Himmel!
 
 
-  Wir versuchen Ihnen hier eine Technik und deren Anwendung beizubringen.
+  Some tint text. Wir versuchen Ihnen hier eine Technik und deren Anwendung
+  beizubringen.
