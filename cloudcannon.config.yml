@@ -58,7 +58,6 @@ collections_config:
     disable_file_actions: true
   posts:
     path: src/content/blog
-    parser: front-matter
     output: true
     url: '/blog/[full_slug]/'
     _enabled_editors:
