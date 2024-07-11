@@ -7,10 +7,6 @@
 		"original": "about/index.html",
 		"value": "about/index.html"
 	},
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
-	},
 	"index.html": {
 		"original": "index.html",
 		"value": "index.html"
@@ -26,6 +22,10 @@
 	"tags/marketing/index.html": {
 		"original": "tags/marketing/index.html",
 		"value": "tags/marketing/index.html"
+	},
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
 	},
 	"tags/technology/index.html": {
 		"original": "tags/technology/index.html",

@@ -406,14 +406,16 @@ Extra work could be done to write a `node fs` script to write said values from a
 
 ### Stretch Goals
 
-- Test snippets in the translation workflow
-  - Remove all mentions of mdx
-  - Remove snippets
-  - If this is a 'component driven' approach to building, set up a 'content driven' approach with Alto
-    - Hybrid
-      - Exclude content heavy pages from the Rosey workflow and set up with a content directory approach
-        - Eg. es/docs and docs
-      - Where does Rosey build the pages eg. es/es/docs/, or just es/docs
+- If this is workflow is better for a 'component driven' approach to building a website, set up a 'content driven' approach with Alto
+  - Content Driven
+    - Separate pages by directory eg /es/docs and /docs
+    - Use i18n to handle common parts of the site
+      - Set this up nicely in the data editor
+  - Hybrid?
+    - Exclude content heavy pages from the Rosey workflow and set up with a content directory approach
+      - Eg. es/docs and docs
+    - Tricky parts
+      - Where does Rosey build the pages that are using the content dir approach eg. es/es/docs/, or just es/docs
 - Handle right aligned languages like jp
 - Integrate with smartling/deepl/chatgpt or something similar
 - Detect whether a duplicate entry with a translation exists already when creating a new entry
