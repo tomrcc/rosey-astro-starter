@@ -15,10 +15,6 @@
 		"original": "index.html",
 		"value": "index.html"
 	},
-	"tags/Testing/index.html": {
-		"original": "tags/Testing/index.html",
-		"value": "tags/Testing/index.html"
-	},
 	"tags/email/index.html": {
 		"original": "tags/email/index.html",
 		"value": "tags/email/index.html"
@@ -27,17 +23,21 @@
 		"original": "tags/marketing/index.html",
 		"value": "tags/marketing/index.html"
 	},
+	"tags/Testing/index.html": {
+		"original": "tags/Testing/index.html",
+		"value": "tags/Testing/index.html"
+	},
 	"tags/technology/index.html": {
 		"original": "tags/technology/index.html",
 		"value": "tags/technology/index.html"
 	},
-	"blog/5-things-to-improve-you-email-templates/index.html": {
-		"original": "blog/5-things-to-improve-you-email-templates/index.html",
-		"value": "blog/5-things-to-improve-you-email-templates/index.html"
-	},
 	"blog/a-test-page/index.html": {
 		"original": "blog/a-test-page/index.html",
 		"value": "blog/a-test-page/index.html"
+	},
+	"blog/5-things-to-improve-you-email-templates/index.html": {
+		"original": "blog/5-things-to-improve-you-email-templates/index.html",
+		"value": "blog/5-things-to-improve-you-email-templates/index.html"
 	},
 	"blog/best-email-sending-services/index.html": {
 		"original": "blog/best-email-sending-services/index.html",
