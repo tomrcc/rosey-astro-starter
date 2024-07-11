@@ -124,15 +124,9 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-    comment: >-
-      Added: tags
-
-
-      Removed: , tags snippets
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
+      ,CSS%20variables)"
     context:
       open: false
       title: Untranslated Text

@@ -65,12 +65,9 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-    comment: >-
-      Removed: Testing an alert message snippet in the translations workflow
-
-
-      [See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=All%20you%20have,to%20use%20it)
+    comment: "[See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
+      =All%20you%20have,to%20use%20it)"
     context:
       open: false
       title: Untranslated Text
