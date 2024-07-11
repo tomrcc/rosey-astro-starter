@@ -61,7 +61,6 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/about/#:~:text=%20An%20ex\
       ample%20about%20page)"

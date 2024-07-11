@@ -65,10 +65,12 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-      snippet: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text\
-      =All%20you%20have,the%20translations%20workflow)"
+    comment: >-
+      Removed: Testing an alert message snippet in the translations workflow
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/blog/a-test-page/#:~:text=All%20you%20have,to%20use%20it)
     context:
       open: false
       title: Untranslated Text
@@ -96,7 +98,6 @@ _inputs:
             another_thing:
               - an array item
               - another array item
-
         ```
 
 
@@ -117,7 +118,6 @@ _inputs:
           <p>A paragraph</p>
         </div>
 
-
         ```
 
 
@@ -135,9 +135,6 @@ _inputs:
         clouds in our world. Let your heart be your guide. Testing some tinted
         textWe have a fantastic little sky! We’re trying to teach you a
         technique here and how to use it.
-
-
-        Testing an alert message snippet in the translations workflow
 about: ""
 blog: ""
 rss-feed: ""
