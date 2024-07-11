@@ -160,7 +160,6 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
         code: true,
         horizontalrule: true,
         image: true,
-        snippet: true,
       }
     : {};
 
