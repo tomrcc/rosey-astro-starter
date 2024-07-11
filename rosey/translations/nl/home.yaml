@@ -91,7 +91,6 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-      snippet: true
     comment: "[See on
       page](https://glamorous-sanctuary.cloudvent.net/#:~:text=A%20starting%20p\
       oint,the%20CloudCannon%20CMS)"
@@ -125,10 +124,15 @@ _inputs:
       code: true
       horizontalrule: true
       image: true
-      snippet: true
-    comment: "[See on
-      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save\
-      ,CSS%20variables)"
+    comment: >-
+      Added: tags
+
+
+      Removed: , tags snippets
+
+
+      [See on
+      page](https://glamorous-sanctuary.cloudvent.net/#:~:text=To%20help%20save,CSS%20variables)
     context:
       open: false
       title: Untranslated Text
@@ -140,8 +144,7 @@ _inputs:
         *
         [Bookshop](https://cloudcannon.com/documentation/guides/bookshop-astro-guide/)
 
-        * Blog with pagination, tags and
-        [snippets](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx)
+        * Blog with pagination and tags
 
         * [Image
         optimization](https://docs.astro.build/en/guides/images/#image--astroassets)
