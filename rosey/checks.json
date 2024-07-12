@@ -5,23 +5,23 @@
     "total": 12,
     "states": {
       "current": 12,
-      "unused": 0,
+      "outdated": 0,
       "missing": 0,
-      "outdated": 0
+      "unused": 0
     },
     "keys": {
       "astro-bookshop-starter": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "rss-feed": "current",
-      "github": "current",
-      "cloudcannon": "current",
-      "blog": "current",
-      "static:/blog/email-delivery-tips/": "current",
       "static:hero-subheading-about-1": "current",
-      "static:hero-subheading-home-1": "current",
-      "static:left-right-text-home-1": "current",
+      "keep-what-you-need-delete-the-rest": "current",
+      "blog": "current",
+      "rss-feed": "current",
+      "static:/blog/a-test-page/": "current",
+      "cloudcannon": "current",
       "about": "current",
-      "static:/blog/a-test-page/": "current"
+      "static:/blog/email-delivery-tips/": "current",
+      "github": "current",
+      "static:hero-subheading-home-1": "current",
+      "static:left-right-text-home-1": "current"
     }
   },
   "de.urls": {
@@ -35,26 +35,26 @@
       "unused": 8
     },
     "keys": {
-      "keep-what-you-need-delete-the-rest": "missing",
-      "rss-feed": "missing",
+      "blog/a-test-page/index.html": "unused",
+      "about/index.html": "unused",
+      "astro-bookshop-starter": "missing",
       "static:/blog/a-test-page/": "missing",
+      "blog/email-delivery-tips/index.html": "unused",
+      "tags/Testing/index.html": "unused",
+      "static:hero-subheading-home-1": "missing",
+      "blog/index.html": "unused",
+      "github": "missing",
+      "404.html": "unused",
+      "rss-feed": "missing",
+      "cloudcannon": "missing",
+      "static:hero-subheading-about-1": "missing",
+      "blog": "missing",
+      "index.html": "unused",
       "tags/email/index.html": "unused",
       "static:/blog/email-delivery-tips/": "missing",
+      "keep-what-you-need-delete-the-rest": "missing",
       "about": "missing",
-      "blog": "missing",
-      "about/index.html": "unused",
-      "tags/Testing/index.html": "unused",
-      "blog/index.html": "unused",
-      "static:hero-subheading-home-1": "missing",
-      "index.html": "unused",
-      "static:hero-subheading-about-1": "missing",
-      "static:left-right-text-home-1": "missing",
-      "blog/a-test-page/index.html": "unused",
-      "github": "missing",
-      "astro-bookshop-starter": "missing",
-      "blog/email-delivery-tips/index.html": "unused",
-      "404.html": "unused",
-      "cloudcannon": "missing"
+      "static:left-right-text-home-1": "missing"
     }
   },
   "es": {
@@ -62,85 +62,27 @@
     "baseTotal": 12,
     "total": 12,
     "states": {
-      "unused": 0,
-      "current": 12,
       "outdated": 0,
-      "missing": 0
+      "current": 12,
+      "missing": 0,
+      "unused": 0
     },
     "keys": {
+      "static:hero-subheading-about-1": "current",
+      "blog": "current",
+      "static:/blog/a-test-page/": "current",
+      "static:/blog/email-delivery-tips/": "current",
+      "cloudcannon": "current",
+      "keep-what-you-need-delete-the-rest": "current",
+      "astro-bookshop-starter": "current",
       "github": "current",
       "static:hero-subheading-home-1": "current",
-      "about": "current",
-      "astro-bookshop-starter": "current",
       "rss-feed": "current",
-      "cloudcannon": "current",
-      "static:left-right-text-home-1": "current",
-      "blog": "current",
-      "static:/blog/email-delivery-tips/": "current",
-      "static:/blog/a-test-page/": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "static:hero-subheading-about-1": "current"
+      "about": "current",
+      "static:left-right-text-home-1": "current"
     }
   },
   "es.urls": {
-    "current": false,
-    "baseTotal": 12,
-    "total": 8,
-    "states": {
-      "outdated": 0,
-      "current": 0,
-      "unused": 8,
-      "missing": 12
-    },
-    "keys": {
-      "cloudcannon": "missing",
-      "blog/a-test-page/index.html": "unused",
-      "about": "missing",
-      "static:hero-subheading-home-1": "missing",
-      "static:/blog/email-delivery-tips/": "missing",
-      "blog/index.html": "unused",
-      "404.html": "unused",
-      "rss-feed": "missing",
-      "static:left-right-text-home-1": "missing",
-      "tags/Testing/index.html": "unused",
-      "static:hero-subheading-about-1": "missing",
-      "blog/email-delivery-tips/index.html": "unused",
-      "github": "missing",
-      "static:/blog/a-test-page/": "missing",
-      "astro-bookshop-starter": "missing",
-      "about/index.html": "unused",
-      "blog": "missing",
-      "keep-what-you-need-delete-the-rest": "missing",
-      "index.html": "unused",
-      "tags/email/index.html": "unused"
-    }
-  },
-  "fr": {
-    "current": true,
-    "baseTotal": 12,
-    "total": 12,
-    "states": {
-      "missing": 0,
-      "current": 12,
-      "unused": 0,
-      "outdated": 0
-    },
-    "keys": {
-      "cloudcannon": "current",
-      "static:hero-subheading-about-1": "current",
-      "rss-feed": "current",
-      "keep-what-you-need-delete-the-rest": "current",
-      "about": "current",
-      "github": "current",
-      "astro-bookshop-starter": "current",
-      "static:/blog/a-test-page/": "current",
-      "static:/blog/email-delivery-tips/": "current",
-      "static:left-right-text-home-1": "current",
-      "blog": "current",
-      "static:hero-subheading-home-1": "current"
-    }
-  },
-  "fr.urls": {
     "current": false,
     "baseTotal": 12,
     "total": 8,
@@ -151,26 +93,84 @@
       "unused": 8
     },
     "keys": {
-      "static:/blog/a-test-page/": "missing",
-      "static:left-right-text-home-1": "missing",
-      "about/index.html": "unused",
-      "about": "missing",
-      "tags/email/index.html": "unused",
-      "blog/index.html": "unused",
       "keep-what-you-need-delete-the-rest": "missing",
-      "rss-feed": "missing",
-      "cloudcannon": "missing",
-      "static:/blog/email-delivery-tips/": "missing",
-      "github": "missing",
-      "static:hero-subheading-about-1": "missing",
-      "blog/email-delivery-tips/index.html": "unused",
-      "tags/Testing/index.html": "unused",
+      "astro-bookshop-starter": "missing",
       "static:hero-subheading-home-1": "missing",
+      "github": "missing",
+      "404.html": "unused",
+      "tags/Testing/index.html": "unused",
+      "about/index.html": "unused",
+      "cloudcannon": "missing",
+      "blog/index.html": "unused",
+      "tags/email/index.html": "unused",
+      "blog/a-test-page/index.html": "unused",
+      "rss-feed": "missing",
+      "blog/email-delivery-tips/index.html": "unused",
       "blog": "missing",
       "index.html": "unused",
-      "blog/a-test-page/index.html": "unused",
+      "static:hero-subheading-about-1": "missing",
+      "static:/blog/a-test-page/": "missing",
+      "static:/blog/email-delivery-tips/": "missing",
+      "static:left-right-text-home-1": "missing",
+      "about": "missing"
+    }
+  },
+  "fr": {
+    "current": true,
+    "baseTotal": 12,
+    "total": 12,
+    "states": {
+      "current": 12,
+      "missing": 0,
+      "unused": 0,
+      "outdated": 0
+    },
+    "keys": {
+      "astro-bookshop-starter": "current",
+      "cloudcannon": "current",
+      "static:/blog/email-delivery-tips/": "current",
+      "rss-feed": "current",
+      "static:left-right-text-home-1": "current",
+      "blog": "current",
+      "about": "current",
+      "github": "current",
+      "static:hero-subheading-about-1": "current",
+      "static:hero-subheading-home-1": "current",
+      "keep-what-you-need-delete-the-rest": "current",
+      "static:/blog/a-test-page/": "current"
+    }
+  },
+  "fr.urls": {
+    "current": false,
+    "baseTotal": 12,
+    "total": 8,
+    "states": {
+      "outdated": 0,
+      "unused": 8,
+      "current": 0,
+      "missing": 12
+    },
+    "keys": {
+      "keep-what-you-need-delete-the-rest": "missing",
       "astro-bookshop-starter": "missing",
-      "404.html": "unused"
+      "blog/a-test-page/index.html": "unused",
+      "blog/email-delivery-tips/index.html": "unused",
+      "tags/Testing/index.html": "unused",
+      "tags/email/index.html": "unused",
+      "404.html": "unused",
+      "about": "missing",
+      "static:hero-subheading-about-1": "missing",
+      "static:/blog/email-delivery-tips/": "missing",
+      "rss-feed": "missing",
+      "static:hero-subheading-home-1": "missing",
+      "index.html": "unused",
+      "blog": "missing",
+      "github": "missing",
+      "about/index.html": "unused",
+      "blog/index.html": "unused",
+      "cloudcannon": "missing",
+      "static:/blog/a-test-page/": "missing",
+      "static:left-right-text-home-1": "missing"
     }
   },
   "jp": {
@@ -178,24 +178,24 @@
     "baseTotal": 12,
     "total": 12,
     "states": {
+      "current": 12,
       "outdated": 0,
       "missing": 0,
-      "current": 12,
       "unused": 0
     },
     "keys": {
-      "rss-feed": "current",
-      "github": "current",
-      "static:/blog/a-test-page/": "current",
       "blog": "current",
+      "cloudcannon": "current",
+      "about": "current",
+      "static:left-right-text-home-1": "current",
+      "astro-bookshop-starter": "current",
+      "static:hero-subheading-home-1": "current",
+      "static:/blog/email-delivery-tips/": "current",
+      "static:/blog/a-test-page/": "current",
       "keep-what-you-need-delete-the-rest": "current",
       "static:hero-subheading-about-1": "current",
-      "cloudcannon": "current",
-      "static:left-right-text-home-1": "current",
-      "about": "current",
-      "static:/blog/email-delivery-tips/": "current",
-      "astro-bookshop-starter": "current",
-      "static:hero-subheading-home-1": "current"
+      "github": "current",
+      "rss-feed": "current"
     }
   },
   "jp.urls": {
@@ -203,32 +203,32 @@
     "baseTotal": 12,
     "total": 8,
     "states": {
-      "unused": 8,
       "outdated": 0,
-      "missing": 12,
-      "current": 0
+      "current": 0,
+      "unused": 8,
+      "missing": 12
     },
     "keys": {
-      "static:hero-subheading-about-1": "missing",
       "astro-bookshop-starter": "missing",
-      "index.html": "unused",
-      "about": "missing",
-      "rss-feed": "missing",
-      "keep-what-you-need-delete-the-rest": "missing",
-      "blog/email-delivery-tips/index.html": "unused",
-      "github": "missing",
-      "cloudcannon": "missing",
-      "about/index.html": "unused",
-      "static:/blog/email-delivery-tips/": "missing",
       "static:hero-subheading-home-1": "missing",
       "blog/index.html": "unused",
+      "github": "missing",
+      "static:/blog/a-test-page/": "missing",
+      "tags/email/index.html": "unused",
+      "404.html": "unused",
+      "blog/a-test-page/index.html": "unused",
+      "cloudcannon": "missing",
+      "index.html": "unused",
+      "about": "missing",
+      "static:hero-subheading-about-1": "missing",
+      "about/index.html": "unused",
+      "blog/email-delivery-tips/index.html": "unused",
+      "keep-what-you-need-delete-the-rest": "missing",
+      "static:left-right-text-home-1": "missing",
+      "rss-feed": "missing",
       "blog": "missing",
       "tags/Testing/index.html": "unused",
-      "tags/email/index.html": "unused",
-      "static:left-right-text-home-1": "missing",
-      "404.html": "unused",
-      "static:/blog/a-test-page/": "missing",
-      "blog/a-test-page/index.html": "unused"
+      "static:/blog/email-delivery-tips/": "missing"
     }
   }
 }
