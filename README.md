@@ -1,4 +1,4 @@
-TODO: Put screenshot/video left right of translation workflow here
+TODO: Put screenshot/video of translation workflow here
 
 # Astro Rosey Starter
 
@@ -118,6 +118,8 @@ In this starter, we use a data-rosey-ns to add a namespace of static, or markdow
 If a namespace of static is added to a key, the key is a markdown input and gets run through a diff to show a translator any changes to the original version.
 The old translation is preserved between changes to the original.
 If a namespace of markdown is added to a key, the key is a markdown input, but does not get run through a diff, as changes to the original will result in the translation being wiped, and a new translation required.
+
+All translations will be saved in your git history, so if a translation is accidentally wiped and you need to get it back, you can go to the files git history to retrieve it.
 
 ## Environment Variables
 
