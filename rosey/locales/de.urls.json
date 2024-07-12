@@ -3,13 +3,13 @@
 		"original": "404.html",
 		"value": "404.html"
 	},
-	"blog/index.html": {
-		"original": "blog/index.html",
-		"value": "blog/index.html"
-	},
 	"about/index.html": {
 		"original": "about/index.html",
 		"value": "about/index.html"
+	},
+	"blog/index.html": {
+		"original": "blog/index.html",
+		"value": "blog/index.html"
 	},
 	"index.html": {
 		"original": "index.html",
@@ -23,12 +23,12 @@
 		"original": "tags/email/index.html",
 		"value": "tags/email/index.html"
 	},
-	"blog/email-delivery-tips/index.html": {
-		"original": "blog/email-delivery-tips/index.html",
-		"value": "blog/email-delivery-tips/index.html"
-	},
 	"blog/a-test-page/index.html": {
 		"original": "blog/a-test-page/index.html",
 		"value": "blog/a-test-page/index.html"
+	},
+	"blog/email-delivery-tips/index.html": {
+		"original": "blog/email-delivery-tips/index.html",
+		"value": "blog/email-delivery-tips/index.html"
 	}
 }
