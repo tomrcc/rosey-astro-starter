@@ -67,6 +67,26 @@ Rosey redirects the site visitor to the locale that matches their browser langua
 - Navigate to the adjective-noun.cloudvent.net address for your production site, and see Rosey redirect to your default browser language.
 - You should see your entered translation on the page you entered a translation for on your staging site.
 
+## Adding this workflow to an existing site
+
+- Ensure you have a staging -> production publishing workflow set up on CloudCannon
+- Set up environment variables on each
+- Add /rosey/ and /utils/ folder
+- Add and install the required packages to dev dependencies
+  ```json
+      "markdown-it": "^14.1.0",
+      "file-system": "^2.2.2",
+      "node-html-markdown": "^1.3.0",
+      "rosey": "^2.0.5",
+      "slugify": "^1.6.6",
+      "yaml": "^2.4.2",
+      "netlify-cli": "^17.20.1",
+      "diff": "^5.2.0",
+  ```
+- Add translations collection to cloudcannon.config
+- Add commands to postbuild
+- Add Rosey tags to necessary html tags
+
 ## Adding Translations
 
 Add a tag of `data-rosey="example-key"` to an HTML element containing text, with a key for Rosey to use to keep track of that piece of text content.
@@ -94,7 +114,10 @@ We then run a diff over it to help editors see what was changed on changes to th
 The challenge for creating these static ids is ensuring they're unique.
 We can use the page slug or the index of the component the text is contained in, in combination with some input text to make sure there are no overlaps in ids.
 
-In this starter, all static rosey ids are markdown inputs for simplicity, but the generate scripts could be changed to allow for non-markdown static rosey-ids if needed.
+In this starter, we use a data-rosey-ns to add a namespace of static, or markdown to our keys.
+If a namespace of static is added to a key, the key is a markdown input and gets run through a diff to show a translator any changes to the original version.
+The old translation is preserved between changes to the original.
+If a namespace of markdown is added to a key, the key is a markdown input, but does not get run through a diff, as changes to the original will result in the translation being wiped, and a new translation required.
 
 ## Environment Variables
 
@@ -417,8 +440,11 @@ Extra work could be done to write a `node fs` script to write said values from a
     - Tricky parts
       - Where does Rosey build the pages that are using the content dir approach eg. es/es/docs/, or just es/docs
 - Handle right aligned languages like jp
-- Integrate with smartling/deepl/chatgpt or something similar
-- Detect whether a duplicate entry with a translation exists already when creating a new entry
+- Integrate with an automatic translation service like smartling/deepl/chatgpt or something similar
+  - Send away untranslated values
+  - Receive auto generated translation
+  - Editors can check and edit the results in CC data editor
+- Check whether a duplicate entry with a translation exists already when creating a new entry
 - Translations in the visual editor with Bookshop
   - Have switch input: showTranslationsInVisualEditor
   - A select is hidden/shown depending on the value of showTranslationsInVisualEditor with the values of the env var LOCALES

@@ -133,15 +133,18 @@ function getInputConfig(inputKey, page, inputTranslationObj, oldLocaleData) {
   // Meaning the parent container needs to be a block element (like a <div>) that can contain other elements
   // Add a namespace using the data-rosey-ns="static" wherever there is a data-rosey="" tag present
   const isKeyStatic = inputKey.slice(0, 10).includes('static:');
+  const isKeyStaticOrMarkdown =
+    inputKey.slice(0, 10).includes('static:') ||
+    inputKey.slice(0, 10).includes('markdown:');
   const isInputShortText = untranslatedPhrase.length < 20;
 
-  const inputType = isKeyStatic
+  const inputType = isKeyStaticOrMarkdown
     ? 'markdown'
     : isInputShortText
     ? 'text'
     : 'textarea';
 
-  const options = isKeyStatic
+  const options = isKeyStaticOrMarkdown
     ? {
         bold: true,
         format: 'p h1 h2 h3 h4',

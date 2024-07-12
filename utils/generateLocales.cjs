@@ -211,12 +211,14 @@ async function generateLocale(locale) {
 
       Object.keys(data).forEach((key) => {
         if (!localeData[key] || data[key].isNewTranslation) {
-          const isKeyStatic = key.slice(0, 10).includes('static:');
+          const isKeyStaticOrMarkdown =
+            key.slice(0, 10).includes('static:') ||
+            key.slice(0, 10).includes('markdown:');
 
           localeData[key] = {
             original: data[key].original,
             value:
-              isKeyStatic && data[key].isNewTranslation
+              isKeyStaticOrMarkdown && data[key].isNewTranslation
                 ? md.render(data[key].value)
                 : data[key].value,
           };
